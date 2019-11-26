@@ -1,0 +1,565 @@
+<?xml version="1.0"?>
+<gpx xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="http://www.delorme.com" xmlns="http://www.topografix.com/GPX/1/1">
+  <wpt lat="35.906564" lon="-118.482883">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>yikes (3)</name>
+    <desc />
+  </wpt>
+  <wpt lat="36.104754" lon="-118.457206">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>wrapid (4+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.577993" lon="-118.556407">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>white maiden's (4)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.998294" lon="-118.481008">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>westwall (5)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.430903" lon="-118.823736">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>warmup ledge (2)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.623795" lon="-118.490404">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>wallow rock (3+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="36.031820" lon="-118.470549">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>vortex (5)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.892528" lon="-118.464819">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>upper salmon falls (6)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.473235" lon="-118.716263">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>upper richbar (3-)</name>
+    <desc />
+  </wpt>
+  <wpt lat="36.107587" lon="-118.456406">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>upper freeman creek falls (4+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.535047" lon="-118.640497">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>upper bailmore (2+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.477592" lon="-118.710421">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>unnamed (3+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.802240" lon="-118.453548">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>tombstone rapid (4)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.493514" lon="-118.699812">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>toilet bowl (5+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.806030" lon="-118.453735">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>the wall (4)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.753743" lon="-118.423387">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>the park (2+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="36.030432" lon="-118.470243">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>the gauntlet (5)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.825398" lon="-118.464800">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>the flume (4+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.958836" lon="-118.480409">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>the corner bakery</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.790959" lon="-118.449056">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>tequila (4)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.426753" lon="-118.831555">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>take-out rapid (2+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.595788" lon="-118.518642">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>take 5 rapid (2+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.549608" lon="-118.615167">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>swim test (2)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.599827" lon="-118.505951">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>swim rapid (2)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.950819" lon="-118.482183">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>swim rapid (2)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.541199" lon="-118.622086">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>surprise (3+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.428731" lon="-118.825391">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>surf wave (2)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.573521" lon="-118.563107">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>sundown falls (3+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.848691" lon="-118.451759">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>squashed paddler (5)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.866920" lon="-118.448230">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>jam car (3)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.870743" lon="-118.453851">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>passing lane (3+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.844758" lon="-118.450130">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>sock-em dog (5)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.572893" lon="-118.565101">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>silver staircase (3)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.944950" lon="-118.478199">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>sidewinder (4+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.872248" lon="-118.455685">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>screaming right turn (4)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.902838" lon="-118.473590">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>satan's slot (4+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.555694" lon="-118.584874">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>royal flush (5)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.988857" lon="-118.480944">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>respect (4+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.779253" lon="-118.442452">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>powerhouse (3+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.532248" lon="-118.656331">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>pinball (4)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.791651" lon="-118.450021">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>pepsi (3)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.599552" lon="-118.501821">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>oscar's nightmare (3)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.479836" lon="-118.742238">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>nude beach (3+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.895916" lon="-118.467098">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>gangbang (4)</name>
+    <desc />
+  </wpt>
+  <wpt lat="36.089310" lon="-118.465479">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>needlerock falls (4+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="36.012264" lon="-118.472580">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>metamorphosis (4+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.484085" lon="-118.711628">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>lucas creek (3)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.481215" lon="-118.711707">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>lucas creek falls (5)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.889246" lon="-118.464429">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>lower salmon falls (5)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.474856" lon="-118.729001">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>lower richbar (2)</name>
+    <desc />
+  </wpt>
+  <wpt lat="36.106188" lon="-118.457504">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>lower freeman creek falls (5)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.534596" lon="-118.642619">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>lower bailmore (3+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="36.040647" lon="-118.470324">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>little bean (4)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.970577" lon="-118.485544">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>limestone plus (3)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.772889" lon="-118.434520">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>lil' mama (2)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.908010" lon="-118.486422">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>laura's left-hand turn (3)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.904180" lon="-118.474766">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>kelly's hole (3+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.960711" lon="-118.477376">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>joe's diner (4)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.600020" lon="-118.497073">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>it's a dilly (3)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.424764" lon="-118.825532">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>island rapid (2+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.491252" lon="-118.710905">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>island falls (4/5)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.538465" lon="-118.633433">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>horseshoe falls (4)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.575049" lon="-118.528998">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>hobo rapid (3)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.538987" lon="-118.628868">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>hari kari (4)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.900321" lon="-118.469642">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>hairy ferry (4)</name>
+    <desc />
+  </wpt>
+  <wpt lat="36.016228" lon="-118.468012">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>four-mile rapid (4+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.556840" lon="-118.606788">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>fish trap rapid (2)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.493179" lon="-118.705791">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>fin rock (4+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.557021" lon="-118.583331">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>false flush / prep h (3+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.757832" lon="-118.421198">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>ewing's (3-)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.636254" lon="-118.485566">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>entrance rapid (2+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.476460" lon="-118.711923">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>ender spot (2)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.597789" lon="-118.509084">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>end of swim rapid</name>
+    <desc />
+  </wpt>
+  <wpt lat="36.088315" lon="-118.466722">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>downhill (4+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.551824" lon="-118.614990">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>delonegha rapid (2)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.428220" lon="-118.825083">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>del's ferry</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.792656" lon="-118.449806">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>decision time</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.568778" lon="-118.580609">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>dead man's curve (4)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.473595" lon="-118.713272">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>daugherty creek (3-)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.861400" lon="-118.449580">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>red rock (3)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.427591" lon="-118.824976">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>coltrane rapid</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.537543" lon="-118.651110">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>china drop (2+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.999221" lon="-118.479397">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>chaos (4-)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.911628" lon="-118.488054">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>chamise (3)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.815939" lon="-118.458040">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>cable rapid (4)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.966090" lon="-118.479993">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>brush creek (3)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.942093" lon="-118.481021">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>bombs away (5)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.884155" lon="-118.455052">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>bombay (4)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.901642" lon="-118.471895">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>black bottom falls (4+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.766672" lon="-118.431458">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>big daddy (3-)</name>
+    <desc />
+  </wpt>
+  <wpt lat="36.039778" lon="-118.471558">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>big bean (5)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.957524" lon="-118.478188">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>betty's bakery (3)</name>
+    <desc />
+  </wpt>
+  <wpt lat="36.009076" lon="-118.476580">
+    <time>2019-02-15T15:25:42.268Z</time>
+    <name>basalt (4+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="36.022553" lon="-118.465831">
+    <time>2019-02-15T15:25:42.2689343Z</time>
+    <name>the maze (4)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.962740" lon="-118.479734">
+    <time>2019-02-15T15:25:42.2689343Z</time>
+    <name>the greasy spoon</name>
+    <desc />
+  </wpt>
+  <wpt lat="36.082379" lon="-118.470345">
+    <time>2019-02-15T15:25:42.2689343Z</time>
+    <name>slalom (4+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.763515" lon="-118.428015">
+    <time>2019-02-15T15:25:42.2689343Z</time>
+    <name>sidewinder (2)</name>
+    <desc />
+  </wpt>
+  <wpt lat="36.014891" lon="-118.468708">
+    <time>2019-02-15T15:25:42.2689343Z</time>
+    <name>rincon aisle (4+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.761763" lon="-118.423341">
+    <time>2019-02-15T15:25:42.2689343Z</time>
+    <name>little james (2)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.963474" lon="-118.480754">
+    <time>2019-02-15T15:25:42.2689343Z</time>
+    <name>limestone (4)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.915208" lon="-118.486555">
+    <time>2019-02-15T15:25:42.2689343Z</time>
+    <name>helicopter rock (4+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.835580" lon="-118.452717">
+    <time>2019-02-15T15:25:42.2689343Z</time>
+    <name>golf course (4)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.821605" lon="-118.459948">
+    <time>2019-02-15T15:25:42.2689343Z</time>
+    <name>fender bender (5)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.931074" lon="-118.485837">
+    <time>2019-02-15T15:25:42.2689343Z</time>
+    <name>fairview rapid (3)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.976845" lon="-118.486458">
+    <time>2019-02-15T15:25:42.2689343Z</time>
+    <name>carson falls (5)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.796733" lon="-118.452208">
+    <time>2019-02-15T15:25:42.2689343Z</time>
+    <name>buzzard's perch (3+)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.843635" lon="-118.450839">
+    <time>2019-02-16T03:39:20.018Z</time>
+    <name>dog hole</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.885150" lon="-118.457010">
+    <time>2019-05-06T17:18:00.5978628Z</time>
+    <name>answer the bell (4)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.858100" lon="-118.452230">
+    <time>2019-05-06T17:38:09.3615736Z</time>
+    <name>screaming left turn (4)</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.882470" lon="-118.455210">
+    <time>2019-05-06T17:50:04.9936784Z</time>
+    <name>seven minutes in heaven (3)</name>
+    <desc />
+  </wpt>
+  <trk>
+    <name>José Pino (0)</name>
+    <desc>José Pino (0)</desc>
+    <trkseg>
+      <trkpt lat="34.155356" lon="-118.838811">
+        <ele>278.00</ele>
+        <time>2019-04-22T14:42:00Z</time>
+        <desc />
+        <fix>none</fix>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
