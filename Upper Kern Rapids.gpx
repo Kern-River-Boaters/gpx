@@ -550,16 +550,4 @@
     <name>seven minutes in heaven (3)</name>
     <desc />
   </wpt>
-  <trk>
-    <name>José Pino (0)</name>
-    <desc>José Pino (0)</desc>
-    <trkseg>
-      <trkpt lat="34.155356" lon="-118.838811">
-        <ele>278.00</ele>
-        <time>2019-04-22T14:42:00Z</time>
-        <desc />
-        <fix>none</fix>
-      </trkpt>
-    </trkseg>
-  </trk>
 </gpx>
