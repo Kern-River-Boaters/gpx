@@ -1,0 +1,2035 @@
+﻿<?xml version="1.0" encoding="utf-8"?><gpx creator="Garmin Desktop App" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/ActivityExtension/v1 http://www8.garmin.com/xmlschemas/ActivityExtensionv1.xsd http://www.garmin.com/xmlschemas/AdventuresExtensions/v1 http://www8.garmin.com/xmlschemas/AdventuresExtensionv1.xsd http://www.garmin.com/xmlschemas/PressureExtension/v1 http://www.garmin.com/xmlschemas/PressureExtensionv1.xsd http://www.garmin.com/xmlschemas/TripExtensions/v1 http://www.garmin.com/xmlschemas/TripExtensionsv1.xsd http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1 http://www.garmin.com/xmlschemas/TripMetaDataExtensionsv1.xsd http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1 http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensionsv1.xsd http://www.garmin.com/xmlschemas/CreationTimeExtension/v1 http://www.garmin.com/xmlschemas/CreationTimeExtensionsv1.xsd http://www.garmin.com/xmlschemas/AccelerationExtension/v1 http://www.garmin.com/xmlschemas/AccelerationExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.garmin.com/xmlschemas/VideoExtension/v1 http://www.garmin.com/xmlschemas/VideoExtensionv1.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtrx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:trp="http://www.garmin.com/xmlschemas/TripExtensions/v1" xmlns:adv="http://www.garmin.com/xmlschemas/AdventuresExtensions/v1" xmlns:prs="http://www.garmin.com/xmlschemas/PressureExtension/v1" xmlns:tmd="http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1" xmlns:vptm="http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1" xmlns:ctx="http://www.garmin.com/xmlschemas/CreationTimeExtension/v1" xmlns:gpxacc="http://www.garmin.com/xmlschemas/AccelerationExtension/v1" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:vidx1="http://www.garmin.com/xmlschemas/VideoExtension/v1">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2019-02-15T15:14:22Z</time>
+    <bounds maxlat="36.107587963342667" maxlon="-118.42119801789522" minlat="35.424764016643167" minlon="-118.83155596442521" />
+  </metadata>
+
+  <wpt lat="36.009076964110136" lon="-118.47658001817763">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>basalt (4+)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.957524990662932" lon="-118.47818800248206">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>betty's bakery (3)</name>
+    <cmt>three shoals. the first has a boof boulder on the left (but use the right side of it). read and run the rest. road scout.</cmt>
+    <desc>three shoals. the first has a boof boulder on the left (but use the right side of it). read and run the rest. road scout.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="36.039778031408787" lon="-118.4715580008924">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>big bean (5)</name>
+    <cmt>read and run, watching for the pyramid boulder center right. your goal: get behind that boulder with left to right momentum.</cmt>
+    <desc>read and run, watching for the pyramid boulder center right. your goal: get behind that boulder with left to right momentum.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.766672994941473" lon="-118.43145897611976">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>big daddy (3-)</name>
+    <cmt>a mini version of the wall (left turn into a drop). for fun, try to catch the eddy on the right above the drop.</cmt>
+    <desc>a mini version of the wall (left turn into a drop). for fun, try to catch the eddy on the right above the drop.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.901642004027963" lon="-118.47189503721893">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>black bottom falls / shell shock (4+)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.884155007079244" lon="-118.45505202189088">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>bombay (4)</name>
+    <cmt>rock dodging leads to a near-riverwide ledge with seemingly five different places to drop. run center-right to an eddy above the ledge on the right, then ferry to your spot. i like to go over left. medium scout of the drop right. rocky route on the extreme right avoids the ledge.</cmt>
+    <desc>rock dodging leads to a near-riverwide ledge with seemingly five different places to drop. run center-right to an eddy above the ledge on the right, then ferry to your spot. i like to go over left. medium scout of the drop right. rocky route on the extreme right avoids the ledge.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.94209399074316" lon="-118.48102100193501">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>bombs away (5)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.96609003841877" lon="-118.4799939673394">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>brush creek rapid (3)</name>
+    <cmt>two shoals separated by a right-turn pool. at low water enter left then immediately ferry to the center-right behind the large rock. the second shoal has more water center-left. road scout.</cmt>
+    <desc>two shoals separated by a right-turn pool. at low water enter left then immediately ferry to the center-right behind the large rock. the second shoal has more water center-left. road scout.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.796733014285564" lon="-118.45220896415412">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>buzzard's perch (3+)</name>
+    <cmt>read and run but beware of current that pushes you to the right into trees towards the end.</cmt>
+    <desc>read and run but beware of current that pushes you to the right into trees towards the end.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.815939977765083" lon="-118.45804000273347">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>cable rapid (4)</name>
+    <cmt>long rock and boulder slope with only a few small drops. more water center-right until the bend, then center-left.</cmt>
+    <desc>long rock and boulder slope with only a few small drops. more water center-right until the bend, then center-left.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.976845026016235" lon="-118.48645800724626">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>carson falls (5)</name>
+    <cmt>12-footer, backed up by a center rock, so pick a rightward drop point. seemingly a deep channel after the drop. scout right. walk left.</cmt>
+    <desc>12-footer, backed up by a center rock, so pick a rightward drop point. seemingly a deep channel after the drop. scout right. walk left.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.911628035828471" lon="-118.48805400542915">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>chamise (3)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.99922101944685" lon="-118.47939700819552">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>chaos (4-)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.537543026730418" lon="-118.65111001767218">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>china drop (2+)</name>
+    <cmt>playspot at 350 cfs</cmt>
+    <desc>playspot at 350 cfs</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.427591986954212" lon="-118.82497600279748">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>coltrane rapid</name>
+    <cmt>wave train center right. another good place for ferry practice.</cmt>
+    <desc>wave train center right. another good place for ferry practice.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.866924999281764" lon="-118.4482330083847">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>corral creek rapid (3)</name>
+    <cmt>shoal.</cmt>
+    <desc>shoal.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.473595978692174" lon="-118.71327297762036">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>daugherty creek rapid (3-)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.568778021261096" lon="-118.58060999773443">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>dead man's curve (4)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.792656978592277" lon="-118.44980604015291">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>decision time</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.428220964968204" lon="-118.82508303970098">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>del's ferry</name>
+    <cmt>ferry back and forth. he who eddies out highest wins.</cmt>
+    <desc>ferry back and forth. he who eddies out highest wins.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.551824029535055" lon="-118.61499097198248">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>delonegha rapid (2)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="36.088315034285188" lon="-118.46672298386693">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>downhill (4+)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.597789967432618" lon="-118.50908403284848">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>end of swim rapid</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.476460997015238" lon="-118.71192399412394">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>ender spot (2)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.636254018172622" lon="-118.48556600511074">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>entrance rapid (2+)</name>
+    <cmt>longish, fun, fast-moving warmup at at medium flows.</cmt>
+    <desc>longish, fun, fast-moving warmup at at medium flows.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.757832014933228" lon="-118.42119801789522">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>ewing's (3-)</name>
+    <cmt>kernville's cash register. play spots above and below at various flows.</cmt>
+    <desc>kernville's cash register. play spots above and below at various flows.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.931074973195791" lon="-118.48583799786866">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>fairview rapid (3)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.557021982967854" lon="-118.583331014961">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>false flush / preparation h (3+)</name>
+    <cmt>considered a 4 over 2500cfs.</cmt>
+    <desc>considered a 4 over 2500cfs.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.82160597667098" lon="-118.45994898118079">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>fender bender (5)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.493179960176349" lon="-118.7057919614017">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>fin rock (4+)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.556840011849999" lon="-118.60678802244365">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>fish trap rapid (2)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="36.016228990629315" lon="-118.46801295876503">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>four-mile rapid (4+)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.900321016088128" lon="-118.4696429874748">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>gangbang (4)</name>
+    <cmt>hole on center-right likes to grab multiple boats and hold them simultaneously.</cmt>
+    <desc>hole on center-right likes to grab multiple boats and hold them simultaneously.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.835580034181476" lon="-118.45271799713373">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>golf course rapid (4+)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.53898798301816" lon="-118.62886897288263">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>hari kari (4)</name>
+    <cmt>fast slope entry with rocks or holes (flow) into a right hand turn, immediately followed by a large hole and a wavetrain. enter center or center-left and quickly start working some rightward momentum before the turn and hole. tough scout right.</cmt>
+    <desc>fast slope entry with rocks or holes (flow) into a right hand turn, immediately followed by a large hole and a wavetrain. enter center or center-left and quickly start working some rightward momentum before the turn and hole. tough scout right.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.915208030492067" lon="-118.48655599169433">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>helicopter rock (4+)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.575049025937915" lon="-118.52899800986052">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>hobo rapid (3)</name>
+    <cmt>accelerating left hand bend leads to a drop. center-left is the easy line. center-right takes you over a pourover into a hole. then a lengthy, fun run-out.</cmt>
+    <desc>accelerating left hand bend leads to a drop. center-left is the easy line. center-right takes you over a pourover into a hole. then a lengthy, fun run-out.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.538465036079288" lon="-118.63343300297856">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>horseshoe falls (4)</name>
+    <cmt>a good sloped entry with rocks or holes (flow) into a right hand turn followed by three ledges. there's time to roll up after the entry, but beware of a sieve on the left just after the turn. the second ledge sports the "falls," a large pourover rock. whether you punch it, or go left or right of it will determine your line down the first ledge. get that crosscurrent momentum going. exit the third ledge center or right. note that the current then pillows up against a boulder, so eddy right to watch your comrades. the hole is swimmable at 3500 right down the center -- it flushes.</cmt>
+    <desc>a good sloped entry with rocks or holes (flow) into a right hand turn followed by three ledges. there's time to roll up after the entry, but beware of a sieve on the left just after the turn. the second ledge sports the "falls," a large pourover rock. whether you punch it, or go left or right of it will determine your line down the first ledge. get that crosscurrent momentum going. exit the third ledge center or right. note that the current then pillows up against a boulder, so eddy right to watch your comrades. the hole is swimmable at 3500 right down the center -- it flushes.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.491252960637212" lon="-118.71090500615537">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>island falls (4/5)</name>
+    <cmt>left is a 4. right is a 5.</cmt>
+    <desc>left is a 4. right is a 5.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.424764016643167" lon="-118.82553298026323">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>island rapid (2+)</name>
+    <cmt>either way around the island works. nice boof on the left. then line up to punch the island hole ceter-right.</cmt>
+    <desc>either way around the island works. nice boof on the left. then line up to punch the island hole ceter-right.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.600020978599787" lon="-118.49707301706076">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>it's a dilly (3)</name>
+    <cmt>long rocky shoal into a right-hand turn. the dilly rock is on the left, creating a nasty-looking hole at medium flows. avoid it center-right and negotiate the following two easy ledges as you wish.</cmt>
+    <desc>long rocky shoal into a right-hand turn. the dilly rock is on the left, creating a nasty-looking hole at medium flows. avoid it center-right and negotiate the following two easy ledges as you wish.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.960711035877466" lon="-118.47737696953118">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>joe's diner (4)</name>
+    <cmt>large boulder center-right creates a hole and a lateral breaking wave, backed up in the center by a rock. enter center left and punch the lateral to go right of the rock or surf it to go left. or start center and avoid the lateral but run into another smaller hole. easy scout left.</cmt>
+    <desc>large boulder center-right creates a hole and a lateral breaking wave, backed up in the center by a rock. enter center left and punch the lateral to go right of the rock or surf it to go left. or start center and avoid the lateral but run into another smaller hole. easy scout left.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.904180966317654" lon="-118.47476600669324">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>kelly's hole (3+)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.908010993152857" lon="-118.486422970891">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>laura's left-hand turn (3)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.772889014333487" lon="-118.43452096916735">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>lil' mama / rebar rapid (2)</name>
+    <cmt>left (less water) or right of the island on a minimal slope. a piece of rebar protrudes upstream center-right about 2/3 of the way down, visible at low flows.</cmt>
+    <desc>left (less water) or right of the island on a minimal slope. a piece of rebar protrudes upstream center-right about 2/3 of the way down, visible at low flows.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.970577038824558" lon="-118.48554496653378">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>limestone plus (3)</name>
+    <cmt>paddle and portage upstream to start your run with a fun rapid, the last on the forks.</cmt>
+    <desc>paddle and portage upstream to start your run with a fun rapid, the last on the forks.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.963474968448281" lon="-118.48075403831899">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>limestone rapid (4)</name>
+    <cmt>the river narrows to a riverwide ledge hole. rating goes up at flows above 1500 or so. easy scout on the left.</cmt>
+    <desc>the river narrows to a riverwide ledge hole. rating goes up at flows above 1500 or so. easy scout on the left.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="36.040647989138961" lon="-118.47032401710749">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>little bean (4)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.761763965710998" lon="-118.42334101907909">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>little james (2)</name>
+    <cmt>another wide gentle slope. a great hole develops center to center-right at high water. punch it.</cmt>
+    <desc>another wide gentle slope. a great hole develops center to center-right at high water. punch it.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.534596033394337" lon="-118.64261998794973">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>lower bailmore (3+)</name>
+    <cmt>drop into a few fun breaking waves, negotiate the right hand turn, exit center through some more waves, and run the class 2 run-out.</cmt>
+    <desc>drop into a few fun breaking waves, negotiate the right hand turn, exit center through some more waves, and run the class 2 run-out.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="36.106188017874956" lon="-118.45750498585403">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>lower freeman creek falls (5)</name>
+    <cmt>at 700cfs, our group entered extreme right, worked right next to the brush, then ferried left before the right wall hole. decent scout right. easy walk left.</cmt>
+    <desc>at 700cfs, our group entered extreme right, worked right next to the brush, then ferried left before the right wall hole. decent scout right. easy walk left.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.474856030195951" lon="-118.72900103218853">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>lower richbar rapid (2)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.889246007427573" lon="-118.46442902460694">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>lower salmon falls (5)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.48121596686542" lon="-118.71170799247921">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>lucas creek falls (5+/p)</name>
+    <cmt>portage left. scout right.</cmt>
+    <desc>portage left. scout right.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.484085008502007" lon="-118.71162802912295">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>lucas creek rapid (3+)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="36.01226401515305" lon="-118.47258000634611">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>metamorphosis (4+)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="36.08931097202003" lon="-118.46547902561724">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>needlerock falls (4+)</name>
+    <cmt>stay right and fight off the swirly currents.</cmt>
+    <desc>stay right and fight off the swirly currents.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.895916996523738" lon="-118.46709899604321">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>no time (4)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.479836976155639" lon="-118.74223899096251">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>nude beach rapid (3+)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.599552011117339" lon="-118.50182102993131">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>oscar's nightmare (3+)</name>
+    <cmt>fast-moving entry into a house rock with a rock sieve left of it and a slot right of it. you must commit to go either far left or far right, left being much easier. probes and boats _seem_ to pass through the slot if there's trouble; not the same with rafts.</cmt>
+    <desc>fast-moving entry into a house rock with a rock sieve left of it and a slot right of it. you must commit to go either far left or far right, left being much easier. probes and boats _seem_ to pass through the slot if there's trouble; not the same with rafts.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.791651988402009" lon="-118.45002103596926">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>pepsi (3)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.532248010858893" lon="-118.6563310213387">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>pinball (4)</name>
+    <cmt>boulder garden with many possible routes. the two main drops are at the beginning and the middle of the rapid. in the middle, there's a group of boulders called "the four bears." running through the bears is an advanced move. after that it's class 3. the easiest route is to enter center and get left quick, working the gentler slope there. a slight harder route is to enter center, get into the current center-right, and follow it just past the sharktooth rock, whereupon you move left to avoid the bears and hit a more straightforward drop. or you can exit that current right of the bears and get into some changing currents amongst the other rocks. i think there's a sieve a bit further down on the right.</cmt>
+    <desc>boulder garden with many possible routes. the two main drops are at the beginning and the middle of the rapid. in the middle, there's a group of boulders called "the four bears." running through the bears is an advanced move. after that it's class 3. the easiest route is to enter center and get left quick, working the gentler slope there. a slight harder route is to enter center, get into the current center-right, and follow it just past the sharktooth rock, whereupon you move left to avoid the bears and hit a more straightforward drop. or you can exit that current right of the bears and get into some changing currents amongst the other rocks. i think there's a sieve a bit further down on the right.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.779253980144858" lon="-118.44245200976729">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>powerhouse rapid (3+)</name>
+    <cmt>long rapid, the rocky entry being the most difficult part for beginners. great wave trains at high water.</cmt>
+    <desc>long rapid, the rocky entry being the most difficult part for beginners. great wave trains at high water.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.988857969641685" lon="-118.48094497807324">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>respect (4+)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="36.014891993254423" lon="-118.46870899200439">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>rincon aisle (4+)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.555694038048387" lon="-118.58487403951585">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>royal flush (5)</name>
+    <cmt>portage right.</cmt>
+    <desc>portage right.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.90283801779151" lon="-118.47359002567828">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>satan's slot (4+)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.872248010709882" lon="-118.45568502321839">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>screaming right turn (4)</name>
+    <cmt>river turns against a wall and funnels into a drop backed up by a rock and then a boulder, both in the center. eddies left and right above the drop. get some right-to-left momentum and exit right of the rock. medium scout up the hill on the left.</cmt>
+    <desc>river turns against a wall and funnels into a drop backed up by a rock and then a boulder, both in the center. eddies left and right above the drop. get some right-to-left momentum and exit right of the rock. medium scout up the hill on the left.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.763515029102564" lon="-118.42801501974463">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>sidewinder (2)</name>
+    <cmt>left of the island is fun at high flow. otherwise, a wide and gentle slope on the right has a couple of waves at the bottom.</cmt>
+    <desc>left of the island is fun at high flow. otherwise, a wide and gentle slope on the right has a couple of waves at the bottom.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.944950040429831" lon="-118.47819998860359">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>sidewinder (4+)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.572893032804132" lon="-118.56510196812451">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>silver staircase (3)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="36.082379976287484" lon="-118.4703459776938">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>slalom (4+)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.844758972525597" lon="-118.45013000071049">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>sock-em dog (5)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.870743962004781" lon="-118.45385198481381">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>springhill north (3+)</name>
+    <cmt>read and run boulder garden with a couple small drops.</cmt>
+    <desc>read and run boulder garden with a couple small drops.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.869447030127048" lon="-118.45050601288676">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>springhill south (3)</name>
+    <cmt>gentle slope with boulders.</cmt>
+    <desc>gentle slope with boulders.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.848691007122397" lon="-118.45175902359188">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>squashed paddler (5)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.573521004989743" lon="-118.56310799717903">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>sundown falls (3+)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.428731003776193" lon="-118.82539199665189">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>surf wave (2)</name>
+    <cmt>gentle wave to learn on.</cmt>
+    <desc>gentle wave to learn on.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.541199967265129" lon="-118.62208600156009">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>surprise (3+)</name>
+    <cmt>fun wave train. boulder at the end hidden at about 1500. easily avoided with a tad of right to left momentum down the main channel.</cmt>
+    <desc>fun wave train. boulder at the end hidden at about 1500. easily avoided with a tad of right to left momentum down the main channel.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.950819971039891" lon="-118.48218399100006">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>swim rapid (2)</name>
+    <cmt>let the raft paddlers jump out and swim this corner to finish the run.</cmt>
+    <desc>let the raft paddlers jump out and swim this corner to finish the run.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.599827021360397" lon="-118.50595196709037">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>swim rapid (2)1</name>
+    <cmt>swim on down, catch the eddy on the left. nice-sized swirly eddy line so keep swimming until you break it.</cmt>
+    <desc>swim on down, catch the eddy on the left. nice-sized swirly eddy line so keep swimming until you break it.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.549608021974564" lon="-118.61516799777746">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>swim test (2)</name>
+    <cmt>practice some swimming before the big5.</cmt>
+    <desc>practice some swimming before the big5.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.595788033679128" lon="-118.51864200085402">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>take 5 rapid (2+)</name>
+    <cmt>nice rest spot, followed by a cool boof center or take the easier line left.</cmt>
+    <desc>nice rest spot, followed by a cool boof center or take the easier line left.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.426753964275122" lon="-118.83155596442521">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>take_out rapid (2+)</name>
+    <cmt>two boulders in the center channel. a ledge at the end. watch out for gates and/or tubers.</cmt>
+    <desc>two boulders in the center channel. a ledge at the end. watch out for gates and/or tubers.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.790959978476167" lon="-118.44905602745712">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>tequila (4)</name>
+    <cmt>very rocky and shallow slope. would be a nasty swim. you can just cruise right/center-right avoiding the rocks or holes (depending on the flow) or find an eddy on the left for a better look before committing to a route.</cmt>
+    <desc>very rocky and shallow slope. would be a nasty swim. you can just cruise right/center-right avoiding the rocks or holes (depending on the flow) or find an eddy on the left for a better look before committing to a route.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.958836004137993" lon="-118.4804099611938">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>the corner bakery</name>
+    <cmt>third shoal on betty's. playspot at certain flows?</cmt>
+    <desc>third shoal on betty's. playspot at certain flows?</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.825398033484817" lon="-118.46480000764132">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>the flume (4+)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="36.030432041734457" lon="-118.4702439699322">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>the gauntlet (5)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.96274096518755" lon="-118.4797349665314">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>the greasy spoon</name>
+    <cmt>rock jumble towards the end of the limestone run-out on the center-right (rafts get stuck, swimmers get beat). avoid by exiting center-left.</cmt>
+    <desc>rock jumble towards the end of the limestone run-out on the center-right (rafts get stuck, swimmers get beat). avoid by exiting center-left.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="36.022553974762559" lon="-118.4658319875598">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>the maze (4)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.753743993118405" lon="-118.4233870357275">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>the park (2+)</name>
+    <cmt>man-made rapid has several eddies, holes, and waves for those of you without shuttle. pin spot center halfway down. a slalom course can occassionally be found here.</cmt>
+    <desc>man-made rapid has several eddies, holes, and waves for those of you without shuttle. pin spot center halfway down. a slalom course can occassionally be found here.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.806030975654721" lon="-118.45373597927392">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>the wall (4)</name>
+    <cmt>nice sized drop after a left turn. easier route is to enter left and join the main channel after the turn. otherwise, enter center-right and catch the eddy on the right next to the wall and line up for the drop. tough scout on left.</cmt>
+    <desc>nice sized drop after a left turn. easier route is to enter left and join the main channel after the turn. otherwise, enter center-right and catch the eddy on the right next to the wall and line up for the drop. tough scout on left.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.493514984846115" lon="-118.69981298223138">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>toilet bowl (5+)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.802240008488297" lon="-118.45354897901416">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>tombstone rapid (4)</name>
+    <cmt>read and run until the island on the left ends, then quickly move left and line up for the drop. i run the drop left. rocky run-out.</cmt>
+    <desc>read and run until the island on the left ends, then quickly move left and line up for the drop. i run the drop left. rocky run-out.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.477592973038554" lon="-118.71042103506625">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>unnamed (3+)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.535047985613346" lon="-118.64049701951444">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>upper bailmore (2+)</name>
+    <cmt>can be rocky. more water on the left.</cmt>
+    <desc>can be rocky. more water on the left.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="36.107587963342667" lon="-118.45640603452921">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>upper freeman creek falls (4+)</name>
+    <cmt>drop in center left, read and run, avoid the room-sized boulder at the end, left or right.</cmt>
+    <desc>drop in center left, read and run, avoid the room-sized boulder at the end, left or right.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.473235975950956" lon="-118.7162639759481">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>upper richbar rapid (3-)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.892528025433421" lon="-118.46481903456151">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>upper salmon falls (6)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="36.031820001080632" lon="-118.47054999321699">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>vortex (5)</name>
+    <cmt>dangerous cave situation if you miss the move. scout left. short walk left, scrambling a boulder or two.</cmt>
+    <desc>dangerous cave situation if you miss the move. scout left. short walk left, scrambling a boulder or two.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.623795995488763" lon="-118.4904049616307">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>wallow rock (3+)</name>
+    <cmt>a series of smallish boulder dodging drops culminated with a huge boulder blocking the center channel on a medium drop. enter left and eddy turn into the main current. heads up -- one more easy class 3 rapid to go.</cmt>
+    <desc>a series of smallish boulder dodging drops culminated with a huge boulder blocking the center channel on a medium drop. enter left and eddy turn into the main current. heads up -- one more easy class 3 rapid to go.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.430903006345034" lon="-118.82373698987067">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>warmup ledge (2)</name>
+    <cmt>practice ferries and some surfing on this gentle slope.</cmt>
+    <desc>practice ferries and some surfing on this gentle slope.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.998294986784458" lon="-118.48100800998509">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>westwall (aka confusion) (5)</name>
+    <cmt>negotiate the drop on the right, then hard ferry left in front of the dangerous sieves under the whale boulder. from there, punch the hole you're staring at. scout right. easy walk left if you put in before that hole. longer to avoid the whole rapid.</cmt>
+    <desc>negotiate the drop on the right, then hard ferry left in front of the dangerous sieves under the whale boulder. from there, punch the hole you're staring at. scout right. easy walk left if you put in before that hole. longer to avoid the whole rapid.</desc>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.577993001788855" lon="-118.55640700086951">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>white maiden's walkway (4)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="36.104754963889718" lon="-118.4572060033679">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>wrapid (4+)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="35.906564025208354" lon="-118.48288396373391">
+    <time>2019-02-04T00:41:22Z</time>
+    <name>yikes (3)</name>
+    <sym>Danger Area</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2019-02-04T00:41:22Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+</gpx>
