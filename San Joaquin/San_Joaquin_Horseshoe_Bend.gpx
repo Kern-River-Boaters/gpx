@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="GDAL 3.0.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ogr="http://osgeo.org/gdal" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<metadata><bounds minlat="37.109737299999999" minlon="-119.512949599999999" maxlat="37.149211299999997" maxlon="-119.454999999999998"/></metadata>              
+<wpt lat="37.144403" lon="-119.455">
+  <name>Redinger Dam put-in</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="37.145599997407601" lon="-119.460997581482005">
+  <name>Easy put-in</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="37.1452851" lon="-119.4621899">
+  <name>Staff Gauge</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="37.1373695" lon="-119.4644364">
+  <name>Study Rapid 4</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="37.1216928" lon="-119.4667156">
+  <name>Two Holes 3+</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="37.1190705" lon="-119.4664739">
+  <name>Rapid 3</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="37.113714" lon="-119.4693117">
+  <name>Long and Shallow 4</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="37.1099882" lon="-119.4795398">
+  <name>Four Holes 4</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="37.1097373" lon="-119.4820895">
+  <name>Little Dog 4</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="37.1101929" lon="-119.4829612">
+  <name>Big Dog 5</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="37.1123076" lon="-119.4848505">
+  <name>Wa Hoo! 3</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="37.1143524" lon="-119.4859153">
+  <name>Constriction 3+</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="37.1151181" lon="-119.4864035">
+  <name>Soul Surfer 3</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="37.1369348" lon="-119.4890531">
+  <name>Powerhouse Hole 3+</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="37.1478119" lon="-119.5035266">
+  <name>Take-out Rt</name>
+  <extensions>
+  </extensions>
+</wpt>
+<wpt lat="37.1492113" lon="-119.5129496">
+  <name>Smalley Take-Out</name>
+  <extensions>
+  </extensions>
+</wpt>
+</gpx>

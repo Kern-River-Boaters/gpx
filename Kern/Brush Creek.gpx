@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<gpx xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="http://www.delorme.com" xmlns="http://www.topografix.com/GPX/1/1">
+  <wpt lat="35.971331" lon="-118.465240">
+    <time>2019-06-15T00:43:20.5987918Z</time>
+    <name>brush put-in</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.966166" lon="-118.477912">
+    <time>2019-06-15T00:43:20.5987918Z</time>
+    <name>brush take-out</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.971215" lon="-118.465271">
+    <time>2019-06-29T21:16:18Z</time>
+    <name>Rt Away RtRtLt</name>
+    <desc>Right Away: Right Right Left</</desc>
+  </wpt>
+  <wpt lat="35.969520" lon="-118.467904">
+    <time>2019-06-29T21:26:36Z</time>
+    <name>15: Rt of Ctr</name>
+    <desc>Fifteen Ft: Right of Center</desc>
+  </wpt>
+  <wpt lat="35.970109" lon="-118.468969">
+    <time>2019-06-29T21:38:56Z</time>
+    <name>Cfn Drp RtRstr</name>
+    <desc>Coffin Drop (Fuzzy Bunny): Right of Rooster Tail</desc>
+  </wpt>
+  <wpt lat="35.970148" lon="-118.469934">
+    <time>2019-06-29T21:41:27Z</time>
+    <name>29 JUN 2:41p</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.970697" lon="-118.471295">
+    <time>2019-06-29T21:49:23Z</time>
+    <name>Birdbath</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.970382" lon="-118.473460">
+    <time>2019-06-29T21:54:37Z</time>
+    <name>Piton Rock:Far Right</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.969760" lon="-118.473684">
+    <time>2019-06-29T22:07:09Z</time>
+    <name>Portage</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.968760" lon="-118.474602">
+    <time>2019-06-29T22:10:45Z</time>
+    <name>Javelin</name>
+    <desc />
+  </wpt>
+  <wpt lat="35.967099" lon="-118.476279">
+    <time>2019-06-29T22:25:09Z</time>
+    <name>Z Tree</name>
+    <desc />
+  </wpt>
+</gpx>
