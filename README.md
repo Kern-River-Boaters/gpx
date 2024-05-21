@@ -10,6 +10,4 @@ Currently, the best way to import this is using a PC web brower and opening http
 
 # Other resources
 Many river (Salt, Grand Canyon, Green, etc.) GPX files are available from https://rivermaps.net/pages/gps-waypoints. 
-I recommend breaking them up into different categories, campsites, milestones, POI, and rapids.  Additionally, I recommend breaking apart the files into 99 waypoints or less as there is a warning in the Garmin Explorer App incidicating the collection is too large.  The parseRiverMaps.py script in this repo automates this process.  Additionally, it appends the rapid class to the waypoint name.
-
-
+I recommend breaking them up into different categories, campsites, milestones, POI, and rapids.  Additionally, the files should be a max of 99 waypoints as that seems to be a Collection size limitation in some Garmin devices.  To assist with this preprocessing, I have included a parseRiverMaps.py script to automate breaking apart the GPX into multiple GPX files.
