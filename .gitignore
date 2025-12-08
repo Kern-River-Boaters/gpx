@@ -1,0 +1,34 @@
+# Obsidian configuration and temporary files (volatile/device-specific)
+.obsidian/workspace.json
+.obsidian/app.json
+.obsidian/workspaces.json
+.obsidian/workspace-mobile.json
+.obsidian/temp.json
+.obsidian/cache/
+.obsidian/backups/
+.zettel-notes/
+.trash/
+
+# System and OS-generated files/directories
+.DS_Store
+Thumbs.db
+desktop.ini
+node_modules/
+
+# IDE and Editor configuration directories
+.vscode/
+.idea/
+
+# General temporary/log files
+*.bak
+*.tmp
+*.log
+
+# Plugin-specific data (Use cautiously - only if you want to regenerate this data locally)
+.obsidian/plugins/*/data.json
+.obsidian/themes/*/data.json
+.smart-connections/
+.pro/copilot-index-*.json
+
+_.obsidian/.trashed-1767323378-workspace-mobile.json
+_.obsidian/.trashed-1767323455-workspace-mobile.json

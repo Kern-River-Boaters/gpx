@@ -1,0 +1,61 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.647445,
+          35.531672
+        ]
+      },
+      "properties": {
+        "name": "china gardens pc",
+        "desc": "china gardens pc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.451915,
+          35.803274
+        ]
+      },
+      "properties": {
+        "name": "halfway pc",
+        "desc": "halfway pc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.447146,
+          35.864038
+        ]
+      },
+      "properties": {
+        "name": "springhill pc",
+        "desc": "springhill pc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.456945,
+          35.815262
+        ]
+      },
+      "properties": {
+        "name": "thunderbird pc",
+        "desc": "thunderbird pc"
+      }
+    }
+  ]
+}

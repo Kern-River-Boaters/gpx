@@ -1,0 +1,145 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.46524,
+          35.971331
+        ]
+      },
+      "properties": {
+        "name": "brush put-in",
+        "desc": "brush put-in"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.477912,
+          35.966166
+        ]
+      },
+      "properties": {
+        "name": "brush take-out",
+        "desc": "brush take-out"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.465271,
+          35.971215
+        ]
+      },
+      "properties": {
+        "name": "Rt Away RtRtLt",
+        "desc": "Rt Away RtRtLt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.467904,
+          35.96952
+        ]
+      },
+      "properties": {
+        "name": "15: Rt of Ctr",
+        "desc": "15: Rt of Ctr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.468969,
+          35.970109
+        ]
+      },
+      "properties": {
+        "name": "Cfn Drp RtRstr",
+        "desc": "Cfn Drp RtRstr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.471295,
+          35.970697
+        ]
+      },
+      "properties": {
+        "name": "Birdbath",
+        "desc": "Birdbath"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.47346,
+          35.970382
+        ]
+      },
+      "properties": {
+        "name": "Piton Rock:Far Right",
+        "desc": "Piton Rock:Far Right"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.473684,
+          35.96976
+        ]
+      },
+      "properties": {
+        "name": "Portage",
+        "desc": "Portage"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.474602,
+          35.96876
+        ]
+      },
+      "properties": {
+        "name": "Javelin",
+        "desc": "Javelin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.476279,
+          35.967099
+        ]
+      },
+      "properties": {
+        "name": "Z Tree",
+        "desc": "Z Tree"
+      }
+    }
+  ]
+}

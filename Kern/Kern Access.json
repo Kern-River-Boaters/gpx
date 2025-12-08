@@ -1,0 +1,495 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.452259,
+          35.85372
+        ]
+      },
+      "properties": {
+        "name": "thunder put-in",
+        "desc": "thunder put-in"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.48441,
+          35.639054
+        ]
+      },
+      "properties": {
+        "name": "slippery rock put in",
+        "desc": "slippery rock put in"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.526633,
+          35.581829
+        ]
+      },
+      "properties": {
+        "name": "sandy put in",
+        "desc": "sandy put in"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.465114,
+          35.892929
+        ]
+      },
+      "properties": {
+        "name": "salmon portage out",
+        "desc": "salmon portage out"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.463797,
+          35.888101
+        ]
+      },
+      "properties": {
+        "name": "salmon portage in",
+        "desc": "salmon portage in"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.743157,
+          35.481331
+        ]
+      },
+      "properties": {
+        "name": "richbar take-out",
+        "desc": "richbar take-out"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.700643,
+          35.493313
+        ]
+      },
+      "properties": {
+        "name": "richbar 4/5 put-in",
+        "desc": "richbar 4/5 put-in"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.711494,
+          35.486966
+        ]
+      },
+      "properties": {
+        "name": "richbar 3+ put-in (portage)",
+        "desc": "richbar 3+ put-in (portage)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.710876,
+          35.480499
+        ]
+      },
+      "properties": {
+        "name": "richbar 3+ put-in (no portage)",
+        "desc": "richbar 3+ put-in (no portage)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.833782,
+          35.426246
+        ]
+      },
+      "properties": {
+        "name": "rancheria take-out",
+        "desc": "rancheria take-out"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.828555,
+          35.42677
+        ]
+      },
+      "properties": {
+        "name": "rancheria put-in sin",
+        "desc": "rancheria put-in sin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.826007,
+          35.427444
+        ]
+      },
+      "properties": {
+        "name": "rancheria put-in",
+        "desc": "rancheria put-in"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.424322,
+          35.752244
+        ]
+      },
+      "properties": {
+        "name": "park take-out",
+        "desc": "park take-out"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.52913,
+          35.574644
+        ]
+      },
+      "properties": {
+        "name": "miracle put-in",
+        "desc": "miracle put-in"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.489584,
+          35.614343
+        ]
+      },
+      "properties": {
+        "name": "Lower Kern Raft launch",
+        "desc": "Lower Kern Raft launch"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.481684,
+          35.949891
+        ]
+      },
+      "properties": {
+        "name": "limestone take-out",
+        "desc": "limestone take-out"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.486703,
+          35.968703
+        ]
+      },
+      "properties": {
+        "name": "limestone put-in",
+        "desc": "limestone put-in"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.435307,
+          35.775131
+        ]
+      },
+      "properties": {
+        "name": "lickety put-in (kr3)",
+        "desc": "lickety put-in (kr3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.437424,
+          36.133662
+        ]
+      },
+      "properties": {
+        "name": "forks put-in",
+        "desc": "forks put-in"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.49239,
+          35.918938
+        ]
+      },
+      "properties": {
+        "name": "fairview take-out",
+        "desc": "fairview take-out"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.484968,
+          35.940091
+        ]
+      },
+      "properties": {
+        "name": "fairview put-in",
+        "desc": "fairview put-in"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.66372,
+          35.531391
+        ]
+      },
+      "properties": {
+        "name": "democrat take-out",
+        "desc": "democrat take-out"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.465581,
+          35.893737
+        ]
+      },
+      "properties": {
+        "name": "chamise take-out",
+        "desc": "chamise take-out"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.491339,
+          35.917946
+        ]
+      },
+      "properties": {
+        "name": "chamise put-in",
+        "desc": "chamise put-in"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.452906,
+          35.806416
+        ]
+      },
+      "properties": {
+        "name": "camp3 put-in",
+        "desc": "camp3 put-in"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.435482,
+          35.775485
+        ]
+      },
+      "properties": {
+        "name": "cables take-out (kr3)",
+        "desc": "cables take-out (kr3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.457695,
+          35.816253
+        ]
+      },
+      "properties": {
+        "name": "cables put-in",
+        "desc": "cables put-in"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.477912,
+          35.966166
+        ]
+      },
+      "properties": {
+        "name": "brush take-out",
+        "desc": "brush take-out"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.46524,
+          35.971331
+        ]
+      },
+      "properties": {
+        "name": "brush put-in",
+        "desc": "brush put-in"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.616654,
+          35.547881
+        ]
+      },
+      "properties": {
+        "name": "big 5 put-in",
+        "desc": "big 5 put-in"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.451996,
+          35.853922
+        ]
+      },
+      "properties": {
+        "name": "ant canyon take-out",
+        "desc": "ant canyon take-out"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.458963,
+          35.885211
+        ]
+      },
+      "properties": {
+        "name": "ant canyon put-in",
+        "desc": "ant canyon put-in"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.479702,
+          35.966571
+        ]
+      },
+      "properties": {
+        "name": "alternative limestone",
+        "desc": "alternative limestone"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.482678,
+          35.953966
+        ]
+      },
+      "properties": {
+        "name": "alternate limestone",
+        "desc": "alternate limestone"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.446114,
+          35.784513
+        ]
+      },
+      "properties": {
+        "name": "riverkern put-in",
+        "desc": "riverkern put-in"
+      }
+    }
+  ]
+}

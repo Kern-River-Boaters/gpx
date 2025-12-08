@@ -1,0 +1,1 @@
+```map-view{"name": "Sanity Check", "lat": 48.8584,"lon": 2.2945, "zoom": 15}

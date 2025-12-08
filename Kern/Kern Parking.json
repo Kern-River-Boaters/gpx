@@ -1,0 +1,187 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.458691,
+          35.88612
+        ]
+      },
+      "properties": {
+        "name": "ant canyon parking",
+        "desc": "ant canyon parking"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.61631,
+          35.547554
+        ]
+      },
+      "properties": {
+        "name": "big 5 parking",
+        "desc": "big 5 parking"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.464907,
+          35.893441
+        ]
+      },
+      "properties": {
+        "name": "chamise parking",
+        "desc": "chamise parking"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.451973,
+          35.853117
+        ]
+      },
+      "properties": {
+        "name": "corral creek parking",
+        "desc": "corral creek parking"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.452122,
+          35.853069
+        ]
+      },
+      "properties": {
+        "name": "corral creek pg",
+        "desc": "corral creek pg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.6625,
+          35.530747
+        ]
+      },
+      "properties": {
+        "name": "democrat parking",
+        "desc": "democrat parking"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.45061,
+          36.137398
+        ]
+      },
+      "properties": {
+        "name": "forks parking",
+        "desc": "forks parking"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.487443,
+          35.969441
+        ]
+      },
+      "properties": {
+        "name": "limestone parking",
+        "desc": "limestone parking"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.728739,
+          35.474233
+        ]
+      },
+      "properties": {
+        "name": "lower richbar pg",
+        "desc": "lower richbar pg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.531222,
+          35.575248
+        ]
+      },
+      "properties": {
+        "name": "miracle pg",
+        "desc": "miracle pg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.830947,
+          35.424211
+        ]
+      },
+      "properties": {
+        "name": "rancheria parking",
+        "desc": "rancheria parking"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.483941,
+          35.640495
+        ]
+      },
+      "properties": {
+        "name": "slippery rock parking",
+        "desc": "slippery rock parking"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.722349,
+          35.475764
+        ]
+      },
+      "properties": {
+        "name": "upper richbar pg",
+        "desc": "upper richbar pg"
+      }
+    }
+  ]
+}

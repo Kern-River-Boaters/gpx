@@ -1,0 +1,971 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.482883,
+          35.906564
+        ]
+      },
+      "properties": {
+        "name": "yikes (3)",
+        "desc": "yikes (3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.457206,
+          36.104754
+        ]
+      },
+      "properties": {
+        "name": "wrapid (4+)",
+        "desc": "wrapid (4+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.481008,
+          35.998294
+        ]
+      },
+      "properties": {
+        "name": "westwall (5)",
+        "desc": "westwall (5)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.470549,
+          36.03182
+        ]
+      },
+      "properties": {
+        "name": "vortex (5)",
+        "desc": "vortex (5)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.464819,
+          35.892528
+        ]
+      },
+      "properties": {
+        "name": "upper salmon falls (6)",
+        "desc": "upper salmon falls (6)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.456406,
+          36.107587
+        ]
+      },
+      "properties": {
+        "name": "upper freeman creek falls (4+)",
+        "desc": "upper freeman creek falls (4+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.453548,
+          35.80224
+        ]
+      },
+      "properties": {
+        "name": "tombstone rapid (4)",
+        "desc": "tombstone rapid (4)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.453735,
+          35.80603
+        ]
+      },
+      "properties": {
+        "name": "the wall (4)",
+        "desc": "the wall (4)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.423387,
+          35.753743
+        ]
+      },
+      "properties": {
+        "name": "the park (2+)",
+        "desc": "the park (2+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.470243,
+          36.030432
+        ]
+      },
+      "properties": {
+        "name": "the gauntlet (5)",
+        "desc": "the gauntlet (5)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.4648,
+          35.825398
+        ]
+      },
+      "properties": {
+        "name": "the flume (4+)",
+        "desc": "the flume (4+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.480409,
+          35.958836
+        ]
+      },
+      "properties": {
+        "name": "the corner bakery",
+        "desc": "the corner bakery"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.449056,
+          35.790959
+        ]
+      },
+      "properties": {
+        "name": "tequila (4)",
+        "desc": "tequila (4)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.482183,
+          35.950819
+        ]
+      },
+      "properties": {
+        "name": "swim rapid (2)",
+        "desc": "swim rapid (2)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.451759,
+          35.848691
+        ]
+      },
+      "properties": {
+        "name": "squashed paddler (5)",
+        "desc": "squashed paddler (5)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.44823,
+          35.86692
+        ]
+      },
+      "properties": {
+        "name": "jam car (3)",
+        "desc": "jam car (3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.453851,
+          35.870743
+        ]
+      },
+      "properties": {
+        "name": "passing lane (3+)",
+        "desc": "passing lane (3+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.45013,
+          35.844758
+        ]
+      },
+      "properties": {
+        "name": "sock-em dog (5)",
+        "desc": "sock-em dog (5)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.478199,
+          35.94495
+        ]
+      },
+      "properties": {
+        "name": "sidewinder (4+)",
+        "desc": "sidewinder (4+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.455685,
+          35.872248
+        ]
+      },
+      "properties": {
+        "name": "screaming right turn (4)",
+        "desc": "screaming right turn (4)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.47359,
+          35.902838
+        ]
+      },
+      "properties": {
+        "name": "satan's slot (4+)",
+        "desc": "satan's slot (4+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.480944,
+          35.988857
+        ]
+      },
+      "properties": {
+        "name": "respect (4+)",
+        "desc": "respect (4+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.442452,
+          35.779253
+        ]
+      },
+      "properties": {
+        "name": "powerhouse (3+)",
+        "desc": "powerhouse (3+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.450021,
+          35.791651
+        ]
+      },
+      "properties": {
+        "name": "pepsi (3)",
+        "desc": "pepsi (3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.467098,
+          35.895916
+        ]
+      },
+      "properties": {
+        "name": "gangbang (4)",
+        "desc": "gangbang (4)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.465479,
+          36.08931
+        ]
+      },
+      "properties": {
+        "name": "needlerock falls (4+)",
+        "desc": "needlerock falls (4+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.47258,
+          36.012264
+        ]
+      },
+      "properties": {
+        "name": "metamorphosis (4+)",
+        "desc": "metamorphosis (4+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.464429,
+          35.889246
+        ]
+      },
+      "properties": {
+        "name": "lower salmon falls (5)",
+        "desc": "lower salmon falls (5)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.457504,
+          36.106188
+        ]
+      },
+      "properties": {
+        "name": "lower freeman creek falls (5)",
+        "desc": "lower freeman creek falls (5)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.470324,
+          36.040647
+        ]
+      },
+      "properties": {
+        "name": "little bean (4)",
+        "desc": "little bean (4)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.485544,
+          35.970577
+        ]
+      },
+      "properties": {
+        "name": "limestone plus (3)",
+        "desc": "limestone plus (3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.43452,
+          35.772889
+        ]
+      },
+      "properties": {
+        "name": "lil' mama (2)",
+        "desc": "lil' mama (2)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.486422,
+          35.90801
+        ]
+      },
+      "properties": {
+        "name": "laura's left-hand turn (3)",
+        "desc": "laura's left-hand turn (3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.474766,
+          35.90418
+        ]
+      },
+      "properties": {
+        "name": "kelly's hole (3+)",
+        "desc": "kelly's hole (3+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.477376,
+          35.960711
+        ]
+      },
+      "properties": {
+        "name": "joe's diner (4)",
+        "desc": "joe's diner (4)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.469642,
+          35.900321
+        ]
+      },
+      "properties": {
+        "name": "hairy ferry (4)",
+        "desc": "hairy ferry (4)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.468012,
+          36.016228
+        ]
+      },
+      "properties": {
+        "name": "four-mile rapid (4+)",
+        "desc": "four-mile rapid (4+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.421198,
+          35.757832
+        ]
+      },
+      "properties": {
+        "name": "ewing's (3-)",
+        "desc": "ewing's (3-)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.466722,
+          36.088315
+        ]
+      },
+      "properties": {
+        "name": "downhill (4+)",
+        "desc": "downhill (4+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.449806,
+          35.792656
+        ]
+      },
+      "properties": {
+        "name": "decision time",
+        "desc": "decision time"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.44958,
+          35.8614
+        ]
+      },
+      "properties": {
+        "name": "red rock (3)",
+        "desc": "red rock (3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.479397,
+          35.999221
+        ]
+      },
+      "properties": {
+        "name": "chaos (4-)",
+        "desc": "chaos (4-)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.488054,
+          35.911628
+        ]
+      },
+      "properties": {
+        "name": "chamise (3)",
+        "desc": "chamise (3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.45804,
+          35.815939
+        ]
+      },
+      "properties": {
+        "name": "cable rapid (4)",
+        "desc": "cable rapid (4)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.479993,
+          35.96609
+        ]
+      },
+      "properties": {
+        "name": "brush creek (3)",
+        "desc": "brush creek (3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.481021,
+          35.942093
+        ]
+      },
+      "properties": {
+        "name": "bombs away (5)",
+        "desc": "bombs away (5)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.455052,
+          35.884155
+        ]
+      },
+      "properties": {
+        "name": "bombay (4)",
+        "desc": "bombay (4)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.471895,
+          35.901642
+        ]
+      },
+      "properties": {
+        "name": "black bottom falls (4+)",
+        "desc": "black bottom falls (4+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.431458,
+          35.766672
+        ]
+      },
+      "properties": {
+        "name": "big daddy (3-)",
+        "desc": "big daddy (3-)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.471558,
+          36.039778
+        ]
+      },
+      "properties": {
+        "name": "big bean (5)",
+        "desc": "big bean (5)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.478188,
+          35.957524
+        ]
+      },
+      "properties": {
+        "name": "betty's bakery (3)",
+        "desc": "betty's bakery (3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.47658,
+          36.009076
+        ]
+      },
+      "properties": {
+        "name": "basalt (4+)",
+        "desc": "basalt (4+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.465831,
+          36.022553
+        ]
+      },
+      "properties": {
+        "name": "the maze (4)",
+        "desc": "the maze (4)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.479734,
+          35.96274
+        ]
+      },
+      "properties": {
+        "name": "the greasy spoon",
+        "desc": "the greasy spoon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.470345,
+          36.082379
+        ]
+      },
+      "properties": {
+        "name": "slalom (4+)",
+        "desc": "slalom (4+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.428015,
+          35.763515
+        ]
+      },
+      "properties": {
+        "name": "sidewinder (2)",
+        "desc": "sidewinder (2)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.468708,
+          36.014891
+        ]
+      },
+      "properties": {
+        "name": "rincon aisle (4+)",
+        "desc": "rincon aisle (4+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.423341,
+          35.761763
+        ]
+      },
+      "properties": {
+        "name": "little james (2)",
+        "desc": "little james (2)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.480754,
+          35.963474
+        ]
+      },
+      "properties": {
+        "name": "limestone (4)",
+        "desc": "limestone (4)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.486555,
+          35.915208
+        ]
+      },
+      "properties": {
+        "name": "helicopter rock (4+)",
+        "desc": "helicopter rock (4+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.452717,
+          35.83558
+        ]
+      },
+      "properties": {
+        "name": "golf course (4)",
+        "desc": "golf course (4)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.459948,
+          35.821605
+        ]
+      },
+      "properties": {
+        "name": "fender bender (5)",
+        "desc": "fender bender (5)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.485837,
+          35.931074
+        ]
+      },
+      "properties": {
+        "name": "fairview rapid (3)",
+        "desc": "fairview rapid (3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.486458,
+          35.976845
+        ]
+      },
+      "properties": {
+        "name": "carson falls (5)",
+        "desc": "carson falls (5)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.452208,
+          35.796733
+        ]
+      },
+      "properties": {
+        "name": "buzzard's perch (3+)",
+        "desc": "buzzard's perch (3+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.450839,
+          35.843635
+        ]
+      },
+      "properties": {
+        "name": "dog hole",
+        "desc": "dog hole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.45701,
+          35.88515
+        ]
+      },
+      "properties": {
+        "name": "answer the bell (4)",
+        "desc": "answer the bell (4)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.45223,
+          35.8581
+        ]
+      },
+      "properties": {
+        "name": "screaming left turn (4)",
+        "desc": "screaming left turn (4)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.45521,
+          35.88247
+        ]
+      },
+      "properties": {
+        "name": "seven minutes in heaven (3)",
+        "desc": "seven minutes in heaven (3)"
+      }
+    }
+  ]
+}

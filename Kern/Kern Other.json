@@ -1,0 +1,705 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.615476,
+          35.549905
+        ]
+      },
+      "properties": {
+        "name": "178 bridge",
+        "desc": "178 bridge"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.522448,
+          35.590881
+        ]
+      },
+      "properties": {
+        "name": "borel road to miracle",
+        "desc": "borel road to miracle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.476897,
+          35.967199
+        ]
+      },
+      "properties": {
+        "name": "brush creek",
+        "desc": "brush creek"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.465986,
+          35.973687
+        ]
+      },
+      "properties": {
+        "name": "brush trail",
+        "desc": "brush trail"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.447562,
+          35.786446
+        ]
+      },
+      "properties": {
+        "name": "bubble beach",
+        "desc": "bubble beach"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.45503,
+          35.809355
+        ]
+      },
+      "properties": {
+        "name": "cable hole",
+        "desc": "cable hole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.450823,
+          35.851099
+        ]
+      },
+      "properties": {
+        "name": "corral creek",
+        "desc": "corral creek"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.691625,
+          35.499111
+        ]
+      },
+      "properties": {
+        "name": "cow flat creek",
+        "desc": "cow flat creek"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.465404,
+          36.050332
+        ]
+      },
+      "properties": {
+        "name": "coyote hole",
+        "desc": "coyote hole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.712079,
+          35.471232
+        ]
+      },
+      "properties": {
+        "name": "daugherty creek",
+        "desc": "daugherty creek"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.67481,
+          35.525468
+        ]
+      },
+      "properties": {
+        "name": "democrat dam",
+        "desc": "democrat dam"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.657874,
+          35.529038
+        ]
+      },
+      "properties": {
+        "name": "democrat turnoff",
+        "desc": "democrat turnoff"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.498223,
+          35.598312
+        ]
+      },
+      "properties": {
+        "name": "dilly hole",
+        "desc": "dilly hole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.450839,
+          35.843636
+        ]
+      },
+      "properties": {
+        "name": "dog hole",
+        "desc": "dog hole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.482975,
+          35.993128
+        ]
+      },
+      "properties": {
+        "name": "dry meadow creek",
+        "desc": "dry meadow creek"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.46599,
+          36.060212
+        ]
+      },
+      "properties": {
+        "name": "durwood creek",
+        "desc": "durwood creek"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.465666,
+          36.061753
+        ]
+      },
+      "properties": {
+        "name": "durwood fall",
+        "desc": "durwood fall"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.467032,
+          36.060661
+        ]
+      },
+      "properties": {
+        "name": "durwood lodge",
+        "desc": "durwood lodge"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.467955,
+          36.016579
+        ]
+      },
+      "properties": {
+        "name": "end of forks trail",
+        "desc": "end of forks trail"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.486379,
+          35.969166
+        ]
+      },
+      "properties": {
+        "name": "forks trail",
+        "desc": "forks trail"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.466635,
+          35.974056
+        ]
+      },
+      "properties": {
+        "name": "helipad",
+        "desc": "helipad"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.51951,
+          35.600033
+        ]
+      },
+      "properties": {
+        "name": "hole alley",
+        "desc": "hole alley"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.826478,
+          35.424562
+        ]
+      },
+      "properties": {
+        "name": "island hole",
+        "desc": "island hole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.486465,
+          35.968287
+        ]
+      },
+      "properties": {
+        "name": "johnsondale bridge",
+        "desc": "johnsondale bridge"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.584903,
+          35.563685
+        ]
+      },
+      "properties": {
+        "name": "jump rock",
+        "desc": "jump rock"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.635129,
+          35.538692
+        ]
+      },
+      "properties": {
+        "name": "jump rock1",
+        "desc": "jump rock1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.524555,
+          35.588007
+        ]
+      },
+      "properties": {
+        "name": "kr2 borel powerhouse",
+        "desc": "kr2 borel powerhouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.477234,
+          35.94586
+        ]
+      },
+      "properties": {
+        "name": "kr3 diversion",
+        "desc": "kr3 diversion"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.436314,
+          35.776177
+        ]
+      },
+      "properties": {
+        "name": "kr3 powerhouse",
+        "desc": "kr3 powerhouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.539166,
+          35.581111
+        ]
+      },
+      "properties": {
+        "name": "krt wave",
+        "desc": "krt wave"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.708963,
+          35.484225
+        ]
+      },
+      "properties": {
+        "name": "lucas creek",
+        "desc": "lucas creek"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.481017,
+          35.986149
+        ]
+      },
+      "properties": {
+        "name": "maytag hole",
+        "desc": "maytag hole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.533221,
+          35.576167
+        ]
+      },
+      "properties": {
+        "name": "miracle hot springs",
+        "desc": "miracle hot springs"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.466143,
+          36.090197
+        ]
+      },
+      "properties": {
+        "name": "needlerock creek",
+        "desc": "needlerock creek"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.743627,
+          35.481549
+        ]
+      },
+      "properties": {
+        "name": "nude beach",
+        "desc": "nude beach"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.748,
+          35.469396
+        ]
+      },
+      "properties": {
+        "name": "peochacho creek",
+        "desc": "peochacho creek"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.467671,
+          36.048068
+        ]
+      },
+      "properties": {
+        "name": "peppermint creek",
+        "desc": "peppermint creek"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.511397,
+          35.59868
+        ]
+      },
+      "properties": {
+        "name": "playspot",
+        "desc": "playspot"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.419829,
+          35.75834
+        ]
+      },
+      "properties": {
+        "name": "primo's",
+        "desc": "primo's"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.823474,
+          35.430889
+        ]
+      },
+      "properties": {
+        "name": "rancheria paddle start",
+        "desc": "rancheria paddle start"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.639433,
+          35.535683
+        ]
+      },
+      "properties": {
+        "name": "rope swing",
+        "desc": "rope swing"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.465683,
+          35.896529
+        ]
+      },
+      "properties": {
+        "name": "salmon creek",
+        "desc": "salmon creek"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.477489,
+          36.052448
+        ]
+      },
+      "properties": {
+        "name": "short forks trail",
+        "desc": "short forks trail"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.479717,
+          36.07586
+        ]
+      },
+      "properties": {
+        "name": "short forks turn-off",
+        "desc": "short forks turn-off"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.725118,
+          35.473926
+        ]
+      },
+      "properties": {
+        "name": "stark creek",
+        "desc": "stark creek"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.586054,
+          35.555121
+        ]
+      },
+      "properties": {
+        "name": "surf wave",
+        "desc": "surf wave"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.660771,
+          35.532005
+        ]
+      },
+      "properties": {
+        "name": "swim out",
+        "desc": "swim out"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.420255,
+          35.75511
+        ]
+      },
+      "properties": {
+        "name": "the hut",
+        "desc": "the hut"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.485165,
+          35.993917
+        ]
+      },
+      "properties": {
+        "name": "the teacups",
+        "desc": "the teacups"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.453607,
+          35.799948
+        ]
+      },
+      "properties": {
+        "name": "the tombstone",
+        "desc": "the tombstone"
+      }
+    }
+  ]
+}

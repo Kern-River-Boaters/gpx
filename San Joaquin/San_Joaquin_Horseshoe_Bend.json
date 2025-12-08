@@ -1,0 +1,271 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.512949,
+          37.149211
+        ]
+      },
+      "properties": {
+        "name": "Smalley Take-Out",
+        "desc": "Smalley Take-Out"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.503526,
+          37.147811
+        ]
+      },
+      "properties": {
+        "name": "Take-out Rt",
+        "desc": "Take-out Rt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.489053,
+          37.136934
+        ]
+      },
+      "properties": {
+        "name": "Powerhouse Hole 3+",
+        "desc": "Powerhouse Hole 3+"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.486403,
+          37.115118
+        ]
+      },
+      "properties": {
+        "name": "Soul Surfer 3",
+        "desc": "Soul Surfer 3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.485915,
+          37.114352
+        ]
+      },
+      "properties": {
+        "name": "Constriction 3+",
+        "desc": "Constriction 3+"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.48485,
+          37.112307
+        ]
+      },
+      "properties": {
+        "name": "Wa Hoo! 3",
+        "desc": "Wa Hoo! 3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.482961,
+          37.110192
+        ]
+      },
+      "properties": {
+        "name": "Big Dog 5",
+        "desc": "Big Dog 5"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.482089,
+          37.109737
+        ]
+      },
+      "properties": {
+        "name": "Little Dog 4",
+        "desc": "Little Dog 4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.479539,
+          37.109988
+        ]
+      },
+      "properties": {
+        "name": "Four Holes 4",
+        "desc": "Four Holes 4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.469311,
+          37.113714
+        ]
+      },
+      "properties": {
+        "name": "Long and Shallow 4",
+        "desc": "Long and Shallow 4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.466473,
+          37.11907
+        ]
+      },
+      "properties": {
+        "name": "Two Holes 3+",
+        "desc": "Two Holes 3+"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.468948,
+          37.125513
+        ]
+      },
+      "properties": {
+        "name": "Scenic Corridor 3",
+        "desc": "Scenic Corridor 3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.466469,
+          37.1326
+        ]
+      },
+      "properties": {
+        "name": "Study Rapid 4",
+        "desc": "Study Rapid 4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.462189,
+          37.145285
+        ]
+      },
+      "properties": {
+        "name": "Staff Gauge",
+        "desc": "Staff Gauge"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.460997,
+          37.145599
+        ]
+      },
+      "properties": {
+        "name": "Easy put-in",
+        "desc": "Easy put-in"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.455,
+          37.144403
+        ]
+      },
+      "properties": {
+        "name": "Redinger Dam put-in",
+        "desc": "Redinger Dam put-in"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.4897,
+          37.138185
+        ]
+      },
+      "properties": {
+        "name": "Powerhouse Surf 2",
+        "desc": "Powerhouse Surf 2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.490405,
+          37.139276
+        ]
+      },
+      "properties": {
+        "name": "Powerhouse Access",
+        "desc": "Powerhouse Access"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.467918,
+          37.116766
+        ]
+      },
+      "properties": {
+        "name": "Rapid 3",
+        "desc": "Rapid 3"
+      }
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.490812,
+          35.918413
+        ]
+      },
+      "properties": {
+        "name": "calkins flat pc",
+        "desc": "calkins flat pc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.453646,
+          35.809242
+        ]
+      },
+      "properties": {
+        "name": "camp 3 cg",
+        "desc": "camp 3 cg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.421449,
+          35.762621
+        ]
+      },
+      "properties": {
+        "name": "camp james",
+        "desc": "camp james"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.490775,
+          35.928664
+        ]
+      },
+      "properties": {
+        "name": "fairview cg",
+        "desc": "fairview cg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.456455,
+          35.873959
+        ]
+      },
+      "properties": {
+        "name": "gold ledge cg",
+        "desc": "gold ledge cg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.449912,
+          35.796263
+        ]
+      },
+      "properties": {
+        "name": "headquarters cg",
+        "desc": "headquarters cg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.529361,
+          35.574161
+        ]
+      },
+      "properties": {
+        "name": "hobo cg",
+        "desc": "hobo cg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.458188,
+          35.82814
+        ]
+      },
+      "properties": {
+        "name": "hospital flat cg",
+        "desc": "hospital flat cg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.477322,
+          35.962818
+        ]
+      },
+      "properties": {
+        "name": "limestone cg",
+        "desc": "limestone cg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.732949,
+          35.479087
+        ]
+      },
+      "properties": {
+        "name": "live oak pg",
+        "desc": "live oak pg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.524116,
+          35.580511
+        ]
+      },
+      "properties": {
+        "name": "sandy flats cg",
+        "desc": "sandy flats cg"
+      }
+    }
+  ]
+}

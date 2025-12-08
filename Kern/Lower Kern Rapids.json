@@ -1,0 +1,579 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.556407,
+          35.577993
+        ]
+      },
+      "properties": {
+        "name": "white maiden's (4)",
+        "desc": "white maiden's (4)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.823736,
+          35.430903
+        ]
+      },
+      "properties": {
+        "name": "warmup ledge (2)",
+        "desc": "warmup ledge (2)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.490404,
+          35.623795
+        ]
+      },
+      "properties": {
+        "name": "wallow rock (3+)",
+        "desc": "wallow rock (3+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.716263,
+          35.473235
+        ]
+      },
+      "properties": {
+        "name": "upper richbar (3-)",
+        "desc": "upper richbar (3-)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.640497,
+          35.535047
+        ]
+      },
+      "properties": {
+        "name": "upper bailmore (2+)",
+        "desc": "upper bailmore (2+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.710421,
+          35.477592
+        ]
+      },
+      "properties": {
+        "name": "unnamed (3+)",
+        "desc": "unnamed (3+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.699812,
+          35.493514
+        ]
+      },
+      "properties": {
+        "name": "toilet bowl (5+)",
+        "desc": "toilet bowl (5+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.831555,
+          35.426753
+        ]
+      },
+      "properties": {
+        "name": "take-out rapid (2+)",
+        "desc": "take-out rapid (2+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.518642,
+          35.595788
+        ]
+      },
+      "properties": {
+        "name": "take 5 rapid (2+)",
+        "desc": "take 5 rapid (2+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.615167,
+          35.549608
+        ]
+      },
+      "properties": {
+        "name": "swim test (2)",
+        "desc": "swim test (2)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.505951,
+          35.599827
+        ]
+      },
+      "properties": {
+        "name": "swim rapid (2)",
+        "desc": "swim rapid (2)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.622086,
+          35.541199
+        ]
+      },
+      "properties": {
+        "name": "surprise (3+)",
+        "desc": "surprise (3+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.825391,
+          35.428731
+        ]
+      },
+      "properties": {
+        "name": "surf wave (2)",
+        "desc": "surf wave (2)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.563107,
+          35.573521
+        ]
+      },
+      "properties": {
+        "name": "sundown falls (3+)",
+        "desc": "sundown falls (3+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.565101,
+          35.572893
+        ]
+      },
+      "properties": {
+        "name": "silver staircase (3)",
+        "desc": "silver staircase (3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.584874,
+          35.555694
+        ]
+      },
+      "properties": {
+        "name": "royal flush (5)",
+        "desc": "royal flush (5)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.656331,
+          35.532248
+        ]
+      },
+      "properties": {
+        "name": "pinball (4)",
+        "desc": "pinball (4)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.501821,
+          35.599552
+        ]
+      },
+      "properties": {
+        "name": "oscar's nightmare (3)",
+        "desc": "oscar's nightmare (3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.742238,
+          35.479836
+        ]
+      },
+      "properties": {
+        "name": "nude beach (3+)",
+        "desc": "nude beach (3+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.711628,
+          35.484085
+        ]
+      },
+      "properties": {
+        "name": "lucas creek (3)",
+        "desc": "lucas creek (3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.711707,
+          35.481215
+        ]
+      },
+      "properties": {
+        "name": "lucas creek falls (5)",
+        "desc": "lucas creek falls (5)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.729001,
+          35.474856
+        ]
+      },
+      "properties": {
+        "name": "lower richbar (2)",
+        "desc": "lower richbar (2)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.642619,
+          35.534596
+        ]
+      },
+      "properties": {
+        "name": "lower bailmore (3+)",
+        "desc": "lower bailmore (3+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.497073,
+          35.60002
+        ]
+      },
+      "properties": {
+        "name": "it's a dilly (3)",
+        "desc": "it's a dilly (3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.825532,
+          35.424764
+        ]
+      },
+      "properties": {
+        "name": "island rapid (2+)",
+        "desc": "island rapid (2+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.710905,
+          35.491252
+        ]
+      },
+      "properties": {
+        "name": "island falls (4/5)",
+        "desc": "island falls (4/5)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.633433,
+          35.538465
+        ]
+      },
+      "properties": {
+        "name": "horseshoe falls (4)",
+        "desc": "horseshoe falls (4)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.528998,
+          35.575049
+        ]
+      },
+      "properties": {
+        "name": "hobo rapid (3)",
+        "desc": "hobo rapid (3)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.628868,
+          35.538987
+        ]
+      },
+      "properties": {
+        "name": "hari kari (4)",
+        "desc": "hari kari (4)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.606788,
+          35.55684
+        ]
+      },
+      "properties": {
+        "name": "fish trap rapid (2)",
+        "desc": "fish trap rapid (2)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.705791,
+          35.493179
+        ]
+      },
+      "properties": {
+        "name": "fin rock (4+)",
+        "desc": "fin rock (4+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.583331,
+          35.557021
+        ]
+      },
+      "properties": {
+        "name": "false flush / prep h (3+)",
+        "desc": "false flush / prep h (3+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.485566,
+          35.636254
+        ]
+      },
+      "properties": {
+        "name": "entrance rapid (2+)",
+        "desc": "entrance rapid (2+)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.711923,
+          35.47646
+        ]
+      },
+      "properties": {
+        "name": "ender spot (2)",
+        "desc": "ender spot (2)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.509084,
+          35.597789
+        ]
+      },
+      "properties": {
+        "name": "end of swim rapid",
+        "desc": "end of swim rapid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.61499,
+          35.551824
+        ]
+      },
+      "properties": {
+        "name": "delonegha rapid (2)",
+        "desc": "delonegha rapid (2)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.825083,
+          35.42822
+        ]
+      },
+      "properties": {
+        "name": "del's ferry",
+        "desc": "del's ferry"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.580609,
+          35.568778
+        ]
+      },
+      "properties": {
+        "name": "dead man's curve (4)",
+        "desc": "dead man's curve (4)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.713272,
+          35.473595
+        ]
+      },
+      "properties": {
+        "name": "daugherty creek (3-)",
+        "desc": "daugherty creek (3-)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.824976,
+          35.427591
+        ]
+      },
+      "properties": {
+        "name": "coltrane rapid",
+        "desc": "coltrane rapid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.65111,
+          35.537543
+        ]
+      },
+      "properties": {
+        "name": "china drop (2+)",
+        "desc": "china drop (2+)"
+      }
+    }
+  ]
+}
