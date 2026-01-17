@@ -1,34 +1,51 @@
-# Obsidian configuration and temporary files (volatile/device-specific)
-.obsidian/workspace.json
-.obsidian/app.json
-.obsidian/workspaces.json
-.obsidian/workspace-mobile.json
-.obsidian/temp.json
+# =========================================================
+# MASTER OBSIDIAN .GITIGNORE
+# Suitable for: GitHub, Bitbucket, Mobile, Desktop, Work
+# =========================================================
+
+# --- SECTION 1: The "Anti-Conflict" Zone ---
+# These files change constantly. Syncing them causes merge conflicts.
+# NEVER un-ignore these.
+.obsidian/workspace*
 .obsidian/cache/
 .obsidian/backups/
-.zettel-notes/
-.trash/
+.obsidian/temp.json
+.obsidian/daily_notes.json
 
-# System and OS-generated files/directories
+# --- SECTION 2: AI & Large Data Protection ---
+# Vector DBs and AI indexes are too large/volatile for Git sync.
+.smart-connections/
+.pro/
+copilot-index-*.json
+
+# --- SECTION 3: System & OS Junk ---
 .DS_Store
 Thumbs.db
 desktop.ini
-node_modules/
-
-# IDE and Editor configuration directories
-.vscode/
-.idea/
-
-# General temporary/log files
-*.bak
+.Trash-1000/
+.trash/
 *.tmp
+*.bak
 *.log
 
-# Plugin-specific data (Use cautiously - only if you want to regenerate this data locally)
-.obsidian/plugins/*/data.json
-.obsidian/themes/*/data.json
-.smart-connections/
-.pro/copilot-index-*.json
+# --- SECTION 4: Developer/Project Files ---
+# If you keep code snippets or projects inside your vault
+.git/
+.idea/
+.vscode/
+node_modules/
+__pycache__/
+*.ipynb_checkpoints/
 
-_.obsidian/.trashed-1767323378-workspace-mobile.json
-_.obsidian/.trashed-1767323455-workspace-mobile.json
+# --- SECTION 5: Configuration (Allowed) ---
+# We deliberately DO NOT ignore these, so your settings/plugins sync.
+# .obsidian/app.json
+# .obsidian/appearance.json
+# .obsidian/community-plugins.json
+# .obsidian/plugins/
+# .obsidian/snippets/
+
+# --- SECTION 6: Emergency Fixes ---
+# Handle occasional conflict files if they get generated
+*conflict*
+*.sync-conflict-*
