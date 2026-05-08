@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" version="1.1" creator="Garmin Explore">
+  <wpt lat="42.6489" lon="-123.5856">
+    <name>grave crk launch</name>
+    <desc>Mile 0</desc>
+  </wpt>
+  <wpt lat="42.6496" lon="-123.6062">
+    <name>rainie falls</name>
+    <desc>Class V (Mile 1.8)</desc>
+  </wpt>
+  <wpt lat="42.6663" lon="-123.6496">
+    <name>whisky crk cabn</name>
+    <desc>Mile 3.2</desc>
+  </wpt>
+  <wpt lat="42.6680" lon="-123.6885">
+    <name>black bar ldg</name>
+    <desc>Mile 10 Take-out</desc>
+  </wpt>
+
+  <wpt lat="42.7019" lon="-123.8047">
+    <name>zane grey cabn</name>
+    <desc>Mile 17</desc>
+  </wpt>
+  <wpt lat="42.7188" lon="-123.8764">
+    <name>mule creek cyn</name>
+    <desc>The Jaws (Mile 20)</desc>
+  </wpt>
+  <wpt lat="42.7161" lon="-123.8824">
+    <name>coffee pot</name>
+    <desc>Mile 21.3</desc>
+  </wpt>
+  <wpt lat="42.7145" lon="-123.8865">
+    <name>blossom bar</name>
+    <desc>Class IV (Mile 22.8)</desc>
+  </wpt>
+  <wpt lat="42.7122" lon="-123.8889">
+    <name>marial lodge</name>
+    <desc>Mile 23.5 Take-out</desc>
+  </wpt>
+
+  <wpt lat="42.7118" lon="-123.8962">
+    <name>stair crk falls</name>
+    <desc>Mile 23.7</desc>
+  </wpt>
+  <wpt lat="42.7095" lon="-123.9184">
+    <name>paradise lodge</name>
+    <desc>Mile 26 Take-out</desc>
+  </wpt>
+  <wpt lat="42.7115" lon="-123.9712">
+    <name>tate crk slide</name>
+    <desc>Mile 28</desc>
+  </wpt>
+  <wpt lat="42.6328" lon="-124.0488">
+    <name>foster bar take</name>
+    <desc>Mile 34 Final</desc>
+  </wpt>
+</gpx>
