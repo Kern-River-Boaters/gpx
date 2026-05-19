@@ -117,6 +117,10 @@ KRB/
 │   │   └── add_tags_to_markdown.py # Bulk tagging utility
 │   ├── Schemas/
 │   │   └── tag_schema.json        # Hierarchical tag definitions
+│   ├── Tests/                      # Leaflet plugin capability tests
+│   │   ├── Test_LayerControl.md   # Layer switching tests
+│   │   ├── Test_MapView.md        # Map View plugin tests
+│   │   └── Test_TileLayers.md     # Tile server tests
 │   └── 00_SOPs/
 │       ├── Setup_Guide.md                      # Plugin installation, mobile setup
 │       ├── Android_Touch_Controls_Known_Issues.md  # Android gesture troubleshooting
