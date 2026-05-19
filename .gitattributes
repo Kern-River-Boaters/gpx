@@ -1,0 +1,15 @@
+# 1. Handle all text files automatically
+* text=auto
+
+# 2. Explicitly force tools/code files to use LF (highly recommended)
+*.md text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.py text eol=lf
+
+# 3. Ensure binary files are never messed with
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
