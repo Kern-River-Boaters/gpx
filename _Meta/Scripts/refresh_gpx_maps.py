@@ -30,7 +30,7 @@ MAP_START_MARKER = "<!-- BEGIN AUTO-GENERATED MAP -->"
 MAP_END_MARKER = "<!-- END AUTO-GENERATED MAP -->"
 
 # Bounding box buffer (degrees) - prevents waypoints from being cut off at edges
-BBOX_BUFFER = 0.01  # ~1km padding
+BBOX_BUFFER = 0.003  # ~300m padding (tighter fit)
 
 def get_mtime(path):
     """Returns file modification time, or 0 if file doesn't exist."""
@@ -139,9 +139,16 @@ osmLayer: true
 darkMode: false
 
 # --- MOBILE CONTROLS ---
+# Enable panning and zooming
 lock: false
+dragging: true
+# Remove "use two fingers" overlay but keep pinch zoom working
 gestureHandling: false
+# Enable zoom controls
 scrollWheelZoom: true
+touchZoom: true
+doubleClickZoom: true
+# Hide broken "Show all markers" button
 showAllMarkers: false
 
 geojson: [[{json_filename}]]

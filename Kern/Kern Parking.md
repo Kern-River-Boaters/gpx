@@ -17,7 +17,7 @@ id: map_ee71bcd3
 
 # --- CENTERING ---
 # bounds: used by "reset zoom" button
-bounds: [[35.41421097867191, -118.8409470191598], [36.14739803433418, -118.44061003230512]]
+bounds: [[35.42121097867191, -118.8339470191598], [36.14039803433418, -118.44761003230512]]
 # lat/long/zoom: initial view on map load
 lat: 35.780805
 long: -118.640779
@@ -31,9 +31,16 @@ osmLayer: true
 darkMode: false
 
 # --- MOBILE CONTROLS ---
+# Enable panning and zooming
 lock: false
+dragging: true
+# Remove "use two fingers" overlay but keep pinch zoom working
 gestureHandling: false
+# Enable zoom controls
 scrollWheelZoom: true
+touchZoom: true
+doubleClickZoom: true
+# Hide broken "Show all markers" button
 showAllMarkers: false
 
 geojson: [[Kern Parking.json]]

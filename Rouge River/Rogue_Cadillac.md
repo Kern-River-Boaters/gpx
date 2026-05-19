@@ -15,7 +15,7 @@ id: map_8e9bd414
 
 # --- CENTERING ---
 # bounds: used by "reset zoom" button
-bounds: [[42.622800000000005, -124.0588], [42.7288, -123.5756]]
+bounds: [[42.6298, -124.0518], [42.7218, -123.5826]]
 # lat/long/zoom: initial view on map load
 lat: 42.675800
 long: -123.817200
@@ -29,9 +29,16 @@ osmLayer: true
 darkMode: false
 
 # --- MOBILE CONTROLS ---
+# Enable panning and zooming
 lock: false
+dragging: true
+# Remove "use two fingers" overlay but keep pinch zoom working
 gestureHandling: false
+# Enable zoom controls
 scrollWheelZoom: true
+touchZoom: true
+doubleClickZoom: true
+# Hide broken "Show all markers" button
 showAllMarkers: false
 
 geojson: [[Rogue_Cadillac.json]]

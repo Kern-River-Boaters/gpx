@@ -16,7 +16,7 @@ id: map_bfde0138
 
 # --- CENTERING ---
 # bounds: used by "reset zoom" button
-bounds: [[37.099737000000005, -119.52294900000001], [37.159211, -119.445]]
+bounds: [[37.106737, -119.515949], [37.152211, -119.452]]
 # lat/long/zoom: initial view on map load
 lat: 37.129474
 long: -119.483975
@@ -30,9 +30,16 @@ osmLayer: true
 darkMode: false
 
 # --- MOBILE CONTROLS ---
+# Enable panning and zooming
 lock: false
+dragging: true
+# Remove "use two fingers" overlay but keep pinch zoom working
 gestureHandling: false
+# Enable zoom controls
 scrollWheelZoom: true
+touchZoom: true
+doubleClickZoom: true
+# Hide broken "Show all markers" button
 showAllMarkers: false
 
 geojson: [[San_Joaquin_Horseshoe_Bend.json]]

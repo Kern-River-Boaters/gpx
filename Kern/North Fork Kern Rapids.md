@@ -18,7 +18,7 @@ id: map_b1dde91e
 
 # --- CENTERING ---
 # bounds: used by "reset zoom" button
-bounds: [[35.743743, -118.49805400000001], [36.117587, -118.411198]]
+bounds: [[35.750743, -118.491054], [36.110587, -118.418198]]
 # lat/long/zoom: initial view on map load
 lat: 35.930665
 long: -118.454626
@@ -32,9 +32,16 @@ osmLayer: true
 darkMode: false
 
 # --- MOBILE CONTROLS ---
+# Enable panning and zooming
 lock: false
+dragging: true
+# Remove "use two fingers" overlay but keep pinch zoom working
 gestureHandling: false
+# Enable zoom controls
 scrollWheelZoom: true
+touchZoom: true
+doubleClickZoom: true
+# Hide broken "Show all markers" button
 showAllMarkers: false
 
 geojson: [[North Fork Kern Rapids.json]]

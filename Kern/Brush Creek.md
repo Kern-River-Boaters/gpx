@@ -17,7 +17,7 @@ id: map_09aa3f74
 
 # --- CENTERING ---
 # bounds: used by "reset zoom" button
-bounds: [[35.956166, -118.48791200000001], [35.981331, -118.45523999999999]]
+bounds: [[35.963166, -118.480912], [35.974331, -118.46224]]
 # lat/long/zoom: initial view on map load
 lat: 35.968749
 long: -118.471576
@@ -31,9 +31,16 @@ osmLayer: true
 darkMode: false
 
 # --- MOBILE CONTROLS ---
+# Enable panning and zooming
 lock: false
+dragging: true
+# Remove "use two fingers" overlay but keep pinch zoom working
 gestureHandling: false
+# Enable zoom controls
 scrollWheelZoom: true
+touchZoom: true
+doubleClickZoom: true
+# Hide broken "Show all markers" button
 showAllMarkers: false
 
 geojson: [[Brush Creek.json]]
