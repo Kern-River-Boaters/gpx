@@ -113,11 +113,11 @@ def generate_map_block(base_name, json_filename, bounds, center):
     if max_range > 0.5:
         zoom = 11
     elif max_range > 0.2:
-        zoom = 12
-    elif max_range > 0.1:
         zoom = 13
-    else:
+    elif max_range > 0.1:
         zoom = 14
+    else:
+        zoom = 15
 
     return f"""{MAP_START_MARKER}
 {TICKS}leaflet
@@ -134,9 +134,15 @@ zoom: {zoom}
 # --- VISUALS ---
 height: 600px
 minZoom: 5
-maxZoom: 18
-osmLayer: true
+maxZoom: 20
 darkMode: false
+
+# --- TILE LAYERS ---
+# Default: OpenStreetMap
+# To use satellite: comment osmLayer and uncomment tileServer line
+osmLayer: true
+# Satellite imagery (Esri): uncomment to use
+# tileServer: https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{{z}}/{{y}}/{{x}}
 
 # --- MOBILE CONTROLS ---
 # Enable panning and zooming

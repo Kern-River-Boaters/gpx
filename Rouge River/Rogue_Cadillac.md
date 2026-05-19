@@ -19,14 +19,20 @@ bounds: [[42.6298, -124.0518], [42.7218, -123.5826]]
 # lat/long/zoom: initial view on map load
 lat: 42.675800
 long: -123.817200
-zoom: 12
+zoom: 13
 
 # --- VISUALS ---
 height: 600px
 minZoom: 5
-maxZoom: 18
-osmLayer: true
+maxZoom: 20
 darkMode: false
+
+# --- TILE LAYERS ---
+# Default: OpenStreetMap
+# To use satellite: comment osmLayer and uncomment tileServer line
+osmLayer: true
+# Satellite imagery (Esri): uncomment to use
+# tileServer: https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}
 
 # --- MOBILE CONTROLS ---
 # Enable panning and zooming
