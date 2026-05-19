@@ -1,12 +1,49 @@
-# Kern River Boater GPX Collections
-These Garmin GPX files are optimized for the Garmin Instinct, which has a 15-character name limit.
+# River Boater GPX Collections for Garmin Instinct
 
-## Instructions
-To import these files, follow these steps:
+[![License](https://img.shields.io/badge/license-Copyrighted%20/%20Free%20Use-blue.svg)](LICENSE)
+*Please read the full [LICENSE](LICENSE) for liability shields, whitewater safety warnings, and canyon GPS accuracy limitations before using these files.*
 
-* On your Garmin watch, add the map view for the kayak activity.
-* Import each file as a new collection using Garmin Explore. Note that you can import the waypoint file as either Tracks or Routes.
-* Select all the waypoints in each collection to set an icon. I recommend using the icons that render nicely on the Instinct: ![Garmin Icons](garmin-icons.png)
+This repository contains a curated library of pre-processed GPX collections for rivers like the **Kern and others** that are not covered by commercial guidebooks. I have collected these files from local boaters and sources who have granted permission, and they are fully cleared for public redistribution here. 
 
-# Other Resources
-You can find GPX files for many other rivers (such as Salt, Grand Canyon, Green, etc.) at RiverMaps. I recommend breaking them up into different categories, including campsites, milestones, points of interest (POI), and rapids. Additionally, keep the files to a maximum of 99 waypoints, as some Garmin devices have a collection size limitation. To assist with preprocessing, I’ve included a parseRiverMaps.py script that automates breaking apart the GPX into multiple files.
+All curated files in this repo are pre-optimized specifically for the Garmin Instinct series to ensure critical information remains visible on the water.
+
+## Why This Tool Exists
+
+On multi-day river trips, rafters often have the luxury of flipping through a physical RiverMaps guidebook to track upcoming rapids, monitor progress, and read beta. As a kayaker, you don't have that freedom—you need your hands on the paddle and your eyes on the line. 
+
+This project was born out of the need to know exactly where you are and what is coming up next without fumbling with wet paper maps. It leverages the Garmin Instinct’s high-visibility, high-contrast screen and wrist-based waypoint navigation feature. By processing raw data into shortened, descriptive tags, you can drop your eyes to your wrist mid-river and instantly see the classification and distance of the upcoming rapid.
+
+## Garmin Instinct & Explore Limitations
+
+The `parseRiverMaps.py` script included in this repo specifically designs around the unique hardware constraints of the Garmin Instinct series (including the Instinct 1, 2, 2X, and 3) and the quirks of the Garmin Explore platform:
+
+* **15-Character Name Limit & Smart Abbreviation:** The Garmin Instinct display aggressively truncates waypoint names on its map data fields and navigation lists. If a waypoint name is too long, the watch cuts it off, often hiding the vital rapid classification. To fix this, the script derives a highly readable, shortened name directly from the original long name:
+    * **Category Sorting:** The script reads the prepended two-character prefix in the original name (`R-` for Rapids, `C-` for Campgrounds, `P-` for Points of Interest, and `M-` for Mile Markers) to sort them into clean, separate files. This allows you to easily assign distinct custom icons for each category in Garmin Explore.
+    * **Space/Vowel-Stripping & Beta Extraction:** It then completely slices *off* that two-character prefix, removes all spaces by capitalizing the first letter of each word, and extracts the numerical rapid rating from the description text. To guarantee everything fits perfectly within the strict 15-character constraint without losing readability, the script calculates the remaining space. If the name is too long, it dynamically strips out the vowels (while keeping the very first letter intact so the word shapes remain recognizable) and appends the rapid class directly to the end. For example, a long waypoint originally named `R-Granite Gorge Rapid` with a `(Class 5)` description is elegantly compressed into **`GrntGrgRpd5`**. 
+* **The 99-Waypoint Sync Threshold:** Garmin Explore explicitly flags any collection with over 100 waypoints as a "large collection," which can trigger app warnings or cause the sync pipeline to fail entirely. The script splits data into clean, manageable collections capped at exactly 99 waypoints each, sitting safely under the limit.
+
+---
+
+## Instructions for Our Curated Collections
+To import the pre-built, curated collections provided in this repo, follow these steps:
+
+1. On your Garmin watch, add the map view for your kayak activity profile.
+2. Import each file as a new collection using the **Garmin Explore** app or web portal. Note that you can import the waypoint files as either Tracks or Routes.
+3. **Manually Bulk-Assign Icons:** Because the standard GPX schema does not reliably map proprietary Garmin icons during an import, Garmin Explore will often default your waypoints to generic pins. To fix this, tap "Select All" within your newly imported collection inside the Garmin Explore app, and manually set the proper high-visibility icon (e.g., a tent for camps, a rapid symbol for rapids). Icons that render beautifully on the Instinct's dual-window display include:
+
+![Garmin Icons](garmin-icons.png)
+
+---
+
+## Processing Your Own RiverMaps GPX Data 
+
+For rivers that have an official RiverMaps guidebook (such as the Salt, Grand Canyon, Green, etc.), I do not host or curate those files here because RiverMaps already does an excellent job maintaining them. You can download their official GPS waypoint files for public download at no charge directly from their site:
+**[RiverMaps GPS Waypoints Download](https://rivermaps.net/pages/gps-waypoints)**
+
+To assist with your own preprocessing of those files, I’ve included the `parseRiverMaps.py` script in this repository. 
+
+**Note:** *This script was built and tested specifically for formatting RiverMaps GPX files only.* It automates breaking apart their specific GPX structure, extracting the rapid class from the descriptions, and compressing the names for Garmin compatibility.
+
+### ⚠️ Legal Disclaimer for `parseRiverMaps.py`
+> This repository does not host or distribute proprietary data from commercial publishers like RiverMaps. To use the `parseRiverMaps.py` tool on external RiverMaps files, you must acquire your own raw files directly from the link above and accept their Terms and Conditions, which prohibit copying or distributing their files. The script is provided strictly for your personal use to format coordinate data and generic waypoint names for physical device limitations; it is not meant to bypass copyright on creative descriptions, proprietary notes, or subjective hazard warnings.
+> 
