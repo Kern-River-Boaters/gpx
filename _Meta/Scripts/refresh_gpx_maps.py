@@ -98,12 +98,16 @@ def generate_map_markdown(base_name, json_filename, bounds, center):
     Generate Obsidian-compatible Leaflet map markdown.
 
     MOBILE FIX STRATEGY:
+    - Use bounds parameter for "reset zoom" button functionality
     - Use explicit lat/long/zoom for reliable initial view
     - Disable gestureHandling (removes "use two fingers" overlay)
     - Enable lock: false for single-finger panning
-    - Disable broken "Show all markers" button
+    - Hide broken "Show all markers" button (zooms to 0,0)
     """
     map_id = hashlib.md5(base_name.encode()).hexdigest()[:8]
+
+    # Format bounds as JSON for Leaflet plugin
+    bounds_json = json.dumps(bounds)
 
     # Calculate zoom level based on bounding box size
     # Smaller area = more zoom
@@ -133,7 +137,10 @@ related: "[[{json_filename}]]"
 {TICKS}leaflet
 id: map_{map_id}
 
-# --- CENTERING (Explicit coordinates for reliability) ---
+# --- CENTERING ---
+# bounds: used by "reset zoom" button
+bounds: {bounds_json}
+# lat/long/zoom: initial view on map load
 lat: {center[0]:.6f}
 long: {center[1]:.6f}
 zoom: {zoom}
@@ -154,8 +161,8 @@ gestureHandling: false
 # Explicitly enable touch interactions
 scrollWheelZoom: true
 
-# --- DISABLE BROKEN CONTROLS ---
-# "Show all markers" button zooms to (0,0) - disable it
+# --- HIDE BROKEN CONTROLS ---
+# "Show all markers" button is broken (zooms to 0,0 Ivory Coast)
 showAllMarkers: false
 
 geojson: [[{json_filename}]]

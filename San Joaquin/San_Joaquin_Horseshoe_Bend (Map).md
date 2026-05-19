@@ -14,7 +14,10 @@ tags:
 ```leaflet
 id: map_bfde0138
 
-# --- CENTERING (Explicit coordinates for reliability) ---
+# --- CENTERING ---
+# bounds: used by "reset zoom" button
+bounds: [[37.099737000000005, -119.52294900000001], [37.159211, -119.445]]
+# lat/long/zoom: initial view on map load
 lat: 37.129474
 long: -119.483975
 zoom: 14
@@ -35,8 +38,8 @@ gestureHandling: false
 # Explicitly enable touch interactions
 scrollWheelZoom: true
 
-# --- DISABLE BROKEN CONTROLS ---
-# "Show all markers" button zooms to (0,0) - disable it
+# --- HIDE BROKEN CONTROLS ---
+# "Show all markers" button is broken (zooms to 0,0 Ivory Coast)
 showAllMarkers: false
 
 geojson: [[San_Joaquin_Horseshoe_Bend.json]]

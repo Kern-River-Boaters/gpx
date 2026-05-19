@@ -16,7 +16,10 @@ tags:
 ```leaflet
 id: map_b1dde91e
 
-# --- CENTERING (Explicit coordinates for reliability) ---
+# --- CENTERING ---
+# bounds: used by "reset zoom" button
+bounds: [[35.743743, -118.49805400000001], [36.117587, -118.411198]]
+# lat/long/zoom: initial view on map load
 lat: 35.930665
 long: -118.454626
 zoom: 12
@@ -37,8 +40,8 @@ gestureHandling: false
 # Explicitly enable touch interactions
 scrollWheelZoom: true
 
-# --- DISABLE BROKEN CONTROLS ---
-# "Show all markers" button zooms to (0,0) - disable it
+# --- HIDE BROKEN CONTROLS ---
+# "Show all markers" button is broken (zooms to 0,0 Ivory Coast)
 showAllMarkers: false
 
 geojson: [[North Fork Kern Rapids.json]]

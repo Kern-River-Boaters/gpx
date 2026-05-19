@@ -15,7 +15,10 @@ tags:
 ```leaflet
 id: map_529532ed
 
-# --- CENTERING (Explicit coordinates for reliability) ---
+# --- CENTERING ---
+# bounds: used by "reset zoom" button
+bounds: [[35.52167200647295, -118.65744503051043], [35.87403802037239, -118.43714595936238]]
+# lat/long/zoom: initial view on map load
 lat: 35.697855
 long: -118.547295
 zoom: 12
@@ -36,8 +39,8 @@ gestureHandling: false
 # Explicitly enable touch interactions
 scrollWheelZoom: true
 
-# --- DISABLE BROKEN CONTROLS ---
-# "Show all markers" button zooms to (0,0) - disable it
+# --- HIDE BROKEN CONTROLS ---
+# "Show all markers" button is broken (zooms to 0,0 Ivory Coast)
 showAllMarkers: false
 
 geojson: [[Kern Picnic Areas.json]]

@@ -13,7 +13,10 @@ tags:
 ```leaflet
 id: map_8e9bd414
 
-# --- CENTERING (Explicit coordinates for reliability) ---
+# --- CENTERING ---
+# bounds: used by "reset zoom" button
+bounds: [[42.622800000000005, -124.0588], [42.7288, -123.5756]]
+# lat/long/zoom: initial view on map load
 lat: 42.675800
 long: -123.817200
 zoom: 12
@@ -34,8 +37,8 @@ gestureHandling: false
 # Explicitly enable touch interactions
 scrollWheelZoom: true
 
-# --- DISABLE BROKEN CONTROLS ---
-# "Show all markers" button zooms to (0,0) - disable it
+# --- HIDE BROKEN CONTROLS ---
+# "Show all markers" button is broken (zooms to 0,0 Ivory Coast)
 showAllMarkers: false
 
 geojson: [[Rogue_Cadillac.json]]

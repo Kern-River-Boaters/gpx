@@ -15,7 +15,10 @@ tags:
 ```leaflet
 id: map_ee71bcd3
 
-# --- CENTERING (Explicit coordinates for reliability) ---
+# --- CENTERING ---
+# bounds: used by "reset zoom" button
+bounds: [[35.41421097867191, -118.8409470191598], [36.14739803433418, -118.44061003230512]]
+# lat/long/zoom: initial view on map load
 lat: 35.780805
 long: -118.640779
 zoom: 11
@@ -36,8 +39,8 @@ gestureHandling: false
 # Explicitly enable touch interactions
 scrollWheelZoom: true
 
-# --- DISABLE BROKEN CONTROLS ---
-# "Show all markers" button zooms to (0,0) - disable it
+# --- HIDE BROKEN CONTROLS ---
+# "Show all markers" button is broken (zooms to 0,0 Ivory Coast)
 showAllMarkers: false
 
 geojson: [[Kern Parking.json]]
