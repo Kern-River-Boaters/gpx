@@ -1,0 +1,187 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.5856,
+          42.6489
+        ]
+      },
+      "properties": {
+        "name": "grave crk launch",
+        "desc": "Mile 0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.6062,
+          42.6496
+        ]
+      },
+      "properties": {
+        "name": "rainie falls",
+        "desc": "Class V (Mile 1.8)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.6496,
+          42.6663
+        ]
+      },
+      "properties": {
+        "name": "whisky crk cabn",
+        "desc": "Mile 3.2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.6885,
+          42.668
+        ]
+      },
+      "properties": {
+        "name": "black bar ldg",
+        "desc": "Mile 10 Take-out"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.8047,
+          42.7019
+        ]
+      },
+      "properties": {
+        "name": "zane grey cabn",
+        "desc": "Mile 17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.8764,
+          42.7188
+        ]
+      },
+      "properties": {
+        "name": "mule creek cyn",
+        "desc": "The Jaws (Mile 20)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.8824,
+          42.7161
+        ]
+      },
+      "properties": {
+        "name": "coffee pot",
+        "desc": "Mile 21.3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.8865,
+          42.7145
+        ]
+      },
+      "properties": {
+        "name": "blossom bar",
+        "desc": "Class IV (Mile 22.8)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.8889,
+          42.7122
+        ]
+      },
+      "properties": {
+        "name": "marial lodge",
+        "desc": "Mile 23.5 Take-out"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.8962,
+          42.7118
+        ]
+      },
+      "properties": {
+        "name": "stair crk falls",
+        "desc": "Mile 23.7"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.9184,
+          42.7095
+        ]
+      },
+      "properties": {
+        "name": "paradise lodge",
+        "desc": "Mile 26 Take-out"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.9712,
+          42.7115
+        ]
+      },
+      "properties": {
+        "name": "tate crk slide",
+        "desc": "Mile 28"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.0488,
+          42.6328
+        ]
+      },
+      "properties": {
+        "name": "foster bar take",
+        "desc": "Mile 34 Final"
+      }
+    }
+  ]
+}

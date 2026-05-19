@@ -1,21 +1,21 @@
 ---
 tags:
   - type/map
-related: "[[San_Joaquin_Horseshoe_Bend.json]]"
+related: "[[Rogue_Cadillac.json]]"
 ---
 
 > [!WARNING] DO NOT EDIT
-> Data Source: [[San_Joaquin_Horseshoe_Bend.json]]
+> Data Source: [[Rogue_Cadillac.json]]
 
 ```leaflet
-id: map_bfde0138
+id: map_8e9bd414
 
 # --- CENTERING (Bounds-based for mobile compatibility) ---
 # Primary: fitBounds uses the bounding box
-bounds: [[37.099737000000005, -119.52294900000001], [37.159211, -119.445]]
+bounds: [[42.622800000000005, -124.0588], [42.7288, -123.5756]]
 # Fallback: explicit center if bounds fail
-lat: 37.129474
-long: -119.483975
+lat: 42.675800
+long: -123.817200
 zoom: 13
 
 # --- VISUALS ---
@@ -34,5 +34,5 @@ gestureHandling: false
 # Explicitly enable touch interactions
 scrollWheelZoom: true
 
-geojson: [[San_Joaquin_Horseshoe_Bend.json]]
+geojson: [[Rogue_Cadillac.json]]
 ```
