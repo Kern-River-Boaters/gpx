@@ -46,4 +46,83 @@ To assist with your own preprocessing of those files, I’ve included the `parse
 
 ### ⚠️ Legal Disclaimer for `parseRiverMaps.py`
 > This repository does not host or distribute proprietary data from commercial publishers like RiverMaps. To use the `parseRiverMaps.py` tool on external RiverMaps files, you must acquire your own raw files directly from the link above and accept their Terms and Conditions, which prohibit copying or distributing their files. The script is provided strictly for your personal use to format coordinate data and generic waypoint names for physical device limitations; it is not meant to bypass copyright on creative descriptions, proprietary notes, or subjective hazard warnings.
-> 
+
+---
+
+## Using This Vault in Obsidian
+
+This repository is also structured as an **Obsidian vault** with interactive GPX waypoint maps that work on desktop and mobile.
+
+### Quick Start
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/user/KRB.git
+   cd KRB
+   ```
+
+2. **Open in Obsidian**:
+   - File → Open Folder as Vault → Select `KRB/`
+
+3. **Install required plugins**:
+   - Settings → Community Plugins → Browse
+   - Install and enable: **Leaflet** and **Dataview**
+
+4. **View interactive maps**:
+   - Open `Kern/Lower Kern Rapids (Map).md`
+   - Maps render with all waypoints and support single-finger panning on mobile
+
+For detailed setup instructions (including mobile configuration), see [`_Meta/00_SOPs/Setup_Guide.md`](_Meta/00_SOPs/Setup_Guide.md).
+
+### Updating Maps from GPX Files
+
+If you add new `.gpx` files or modify existing ones:
+
+```bash
+# Install Python dependencies (first time only)
+pip install -r requirements.txt
+
+# Regenerate all maps
+python _Meta/Scripts/refresh_gpx_maps.py
+```
+
+This automatically:
+- Converts GPX waypoints to GeoJSON (`.json` data files)
+- Generates Leaflet map markdown (`(Map).md` files)
+- Only updates maps if GPX source is newer than existing JSON
+
+---
+
+## Repository Structure
+
+```
+KRB/
+├── Kern/                           # Kern River waypoints
+│   ├── *.gpx                      # Source GPX files
+│   ├── *.json                     # Auto-generated GeoJSON data
+│   └── * (Map).md                 # Auto-generated Leaflet maps
+├── San Joaquin/                    # San Joaquin River waypoints
+├── Rouge River/                    # Rogue River waypoints
+├── RiverMaps/                      # RiverMaps GPX parser (Garmin Instinct)
+│   └── parseRiverMaps.py          # 15-char name compression, 99-waypoint splitting
+├── _Meta/                          # Vault infrastructure
+│   ├── Scripts/
+│   │   ├── refresh_gpx_maps.py    # GPX → GeoJSON + Leaflet converter
+│   │   └── add_tags_to_markdown.py # Bulk tagging utility
+│   ├── Schemas/
+│   │   └── tag_schema.json        # Hierarchical tag definitions
+│   └── 00_SOPs/
+│       ├── Setup_Guide.md         # Plugin installation, mobile setup
+│       └── Tagging_Strategy.md    # Tag usage guide
+├── .obsidian/                      # Obsidian configuration (tracked in git)
+│   ├── plugins/                   # Leaflet and Dataview settings
+│   └── community-plugins.json     # Enabled plugins list
+├── requirements.txt                # Python dependencies
+├── KRB.code-workspace             # VS Code workspace configuration
+├── CLAUDE.md                       # AI assistant context
+├── LICENSE                         # Liability disclaimers
+└── README.md                       # This file
+```
+
+---
+
