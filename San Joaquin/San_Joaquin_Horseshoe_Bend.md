@@ -13,9 +13,6 @@ tags:
 Your manual notes go here.
 
 <!-- BEGIN AUTO-GENERATED MAP -->
-> [!WARNING] AUTO-GENERATED CONTENT
-> This map is automatically generated from [[San_Joaquin_Horseshoe_Bend.json]]. Do not edit this section - changes will be overwritten.
-
 ```leaflet
 id: map_bfde0138
 

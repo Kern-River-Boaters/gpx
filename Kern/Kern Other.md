@@ -14,9 +14,6 @@ tags:
 Notes...
 
 <!-- BEGIN AUTO-GENERATED MAP -->
-> [!WARNING] AUTO-GENERATED CONTENT
-> This map is automatically generated from [[Kern Other.json]]. Do not edit this section - changes will be overwritten.
-
 ```leaflet
 id: map_a4672552
 

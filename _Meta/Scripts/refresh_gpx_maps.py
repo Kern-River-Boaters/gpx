@@ -120,9 +120,6 @@ def generate_map_block(base_name, json_filename, bounds, center):
         zoom = 14
 
     return f"""{MAP_START_MARKER}
-> [!WARNING] AUTO-GENERATED CONTENT
-> This map is automatically generated from [[{json_filename}]]. Do not edit this section - changes will be overwritten.
-
 {TICKS}leaflet
 id: map_{map_id}
 

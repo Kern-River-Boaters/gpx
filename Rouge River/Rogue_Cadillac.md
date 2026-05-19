@@ -10,9 +10,6 @@ tags:
 # Rogue_Cadillac
 
 <!-- BEGIN AUTO-GENERATED MAP -->
-> [!WARNING] AUTO-GENERATED CONTENT
-> This map is automatically generated from [[Rogue_Cadillac.json]]. Do not edit this section - changes will be overwritten.
-
 ```leaflet
 id: map_8e9bd414
 

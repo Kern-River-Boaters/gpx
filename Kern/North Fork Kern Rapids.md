@@ -15,9 +15,6 @@ tags:
 Notes...
 
 <!-- BEGIN AUTO-GENERATED MAP -->
-> [!WARNING] AUTO-GENERATED CONTENT
-> This map is automatically generated from [[North Fork Kern Rapids.json]]. Do not edit this section - changes will be overwritten.
-
 ```leaflet
 id: map_b1dde91e
 

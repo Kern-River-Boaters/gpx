@@ -14,9 +14,6 @@ tags:
 Notes...
 
 <!-- BEGIN AUTO-GENERATED MAP -->
-> [!WARNING] AUTO-GENERATED CONTENT
-> This map is automatically generated from [[Brush Creek.json]]. Do not edit this section - changes will be overwritten.
-
 ```leaflet
 id: map_09aa3f74
 
