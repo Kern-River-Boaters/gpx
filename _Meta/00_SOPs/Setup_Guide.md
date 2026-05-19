@@ -111,6 +111,21 @@ Choose one of:
    python _Meta/Scripts/refresh_gpx_maps.py
    ```
 
+### Issue: "Show all markers" button zooms to Ivory Coast (0, 0)
+**Cause**: Known Leaflet plugin bug when using GeoJSON-only maps (no inline markers)  
+**Why it happens**: 
+- The button calculates bounds from the `mapMarkers` array in plugin data
+- With GeoJSON-only maps, this array is empty: `"mapMarkers": []`
+- Empty array defaults to coordinates (0, 0) = Gulf of Guinea, Ivory Coast
+- Plugin doesn't fall back to GeoJSON bounds calculation
+
+**Our fix**: Disabled the button with `showAllMarkers: false` since we don't use inline markers. The "reset zoom" button works correctly using the `bounds` parameter.
+
+**Alternative fixes** (if you need the button):
+1. Add at least one inline marker to the map (Leaflet can then calculate bounds)
+2. File a bug report with Javalent (plugin developer) to handle GeoJSON-only maps
+3. See [Obsidian Leaflet GitHub Issues](https://github.com/javalent/obsidian-leaflet/issues)
+
 ### Issue: No waypoints visible
 **Cause**: GeoJSON file not loading  
 **Fix**: Check that `San_Joaquin_Horseshoe_Bend.json` exists in same folder as map
