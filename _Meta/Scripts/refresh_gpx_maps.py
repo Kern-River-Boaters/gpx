@@ -120,41 +120,50 @@ def generate_map_block(base_name, json_filename, bounds, center):
         zoom = 15
 
     return f"""{MAP_START_MARKER}
-{TICKS}leaflet
-id: map_{map_id}
+## Street Map
 
-# --- CENTERING ---
-# bounds: used by "reset zoom" button
+{TICKS}leaflet
+id: map_{map_id}_street
 bounds: {bounds_json}
-# lat/long/zoom: initial view on map load
 lat: {center[0]:.6f}
 long: {center[1]:.6f}
 zoom: {zoom}
-
-# --- VISUALS ---
 height: 600px
 minZoom: 5
 maxZoom: 20
-darkMode: false
-
-# --- TILE LAYERS ---
-# Default: OpenStreetMap
-# To use satellite: comment osmLayer and uncomment tileServer line
 osmLayer: true
-# Satellite imagery (Esri): uncomment to use
-# tileServer: https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{{z}}/{{y}}/{{x}}
-
-# --- MOBILE CONTROLS ---
-# Enable panning and zooming
+darkMode: false
 lock: false
 dragging: true
-# Remove "use two fingers" overlay but keep pinch zoom working
 gestureHandling: false
-# Enable zoom controls
 scrollWheelZoom: true
 touchZoom: true
 doubleClickZoom: true
-# Hide broken "Show all markers" button
+showAllMarkers: false
+
+geojson: [[{json_filename}]]
+{TICKS}
+
+## Satellite Map
+
+{TICKS}leaflet
+id: map_{map_id}_satellite
+bounds: {bounds_json}
+lat: {center[0]:.6f}
+long: {center[1]:.6f}
+zoom: {zoom}
+height: 600px
+minZoom: 5
+maxZoom: 20
+osmLayer: false
+tileServer: https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{{z}}/{{y}}/{{x}}
+darkMode: false
+lock: false
+dragging: true
+gestureHandling: false
+scrollWheelZoom: true
+touchZoom: true
+doubleClickZoom: true
 showAllMarkers: false
 
 geojson: [[{json_filename}]]
