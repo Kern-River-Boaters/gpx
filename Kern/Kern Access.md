@@ -11,8 +11,6 @@ tags:
 
 # Kern Access
 
-Notes...
-
 <!-- BEGIN AUTO-GENERATED MAP -->
 ```leaflet
 id: map_5e23a4b4

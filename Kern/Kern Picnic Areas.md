@@ -11,8 +11,6 @@ tags:
 
 # Kern Picnic Areas
 
-Notes...
-
 <!-- BEGIN AUTO-GENERATED MAP -->
 ```leaflet
 id: map_529532ed

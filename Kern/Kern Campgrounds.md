@@ -11,8 +11,6 @@ tags:
 
 # Kern Campgrounds
 
-Notes...
-
 <!-- BEGIN AUTO-GENERATED MAP -->
 ```leaflet
 id: map_c96ef2b5

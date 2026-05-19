@@ -12,8 +12,6 @@ tags:
 
 # Lower Kern Rapids
 
-Notes...
-
 <!-- BEGIN AUTO-GENERATED MAP -->
 ```leaflet
 id: map_947ece13

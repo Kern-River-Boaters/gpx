@@ -11,8 +11,6 @@ tags:
 
 # Kern Other
 
-Notes...
-
 <!-- BEGIN AUTO-GENERATED MAP -->
 ```leaflet
 id: map_a4672552

@@ -10,8 +10,6 @@ tags:
 
 # San_Joaquin_Horseshoe_Bend
 
-Your manual notes go here.
-
 <!-- BEGIN AUTO-GENERATED MAP -->
 ```leaflet
 id: map_bfde0138

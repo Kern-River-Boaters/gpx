@@ -11,8 +11,6 @@ tags:
 
 # Brush Creek
 
-Notes...
-
 <!-- BEGIN AUTO-GENERATED MAP -->
 ```leaflet
 id: map_09aa3f74

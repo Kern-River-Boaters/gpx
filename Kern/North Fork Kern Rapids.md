@@ -12,8 +12,6 @@ tags:
 
 # North Fork Kern Rapids
 
-Notes...
-
 <!-- BEGIN AUTO-GENERATED MAP -->
 ```leaflet
 id: map_b1dde91e

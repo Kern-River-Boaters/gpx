@@ -11,8 +11,6 @@ tags:
 
 # Kern Parking
 
-Notes...
-
 <!-- BEGIN AUTO-GENERATED MAP -->
 ```leaflet
 id: map_ee71bcd3
