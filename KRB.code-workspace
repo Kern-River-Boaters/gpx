@@ -1,0 +1,154 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "name": "🌊 KRB (Kern River Boater GPX)"
+    }
+  ],
+  "settings": {
+    // Editor Settings
+    "editor.wordWrap": "on",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+
+    // Markdown Settings
+    "markdown.preview.breaks": true,
+    "[markdown]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true
+    },
+
+    // Python Settings (for parseRiverMaps.py and map scripts)
+    "[python]": {
+      "editor.defaultFormatter": "ms-python.black-formatter",
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+      }
+    },
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+
+    // Git Settings (Public GitHub)
+    "git.enabled": true,
+    "git.autorefresh": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+
+    // GitLens Settings
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.currentLine.enabled": true,
+
+    // Prettier Settings
+    "prettier.proseWrap": "always",
+    "prettier.printWidth": 120,
+
+    // File Explorer
+    "files.exclude": {
+      "**/.obsidian/workspace.json": true,
+      "**/.git": false,
+      "**/__pycache__": true,
+      "**/*.pyc": true
+    },
+
+    // Search
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/__pycache__": true,
+      "**/.obsidian/plugins": true
+    },
+
+    // File Associations
+    "files.associations": {
+      "*.gpx": "xml",
+      "*.json": "json"
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      // Markdown
+      "yzhang.markdown-all-in-one",
+      "esbenp.prettier-vscode",
+      "davidanson.vscode-markdownlint",
+
+      // Python (for scripts)
+      "ms-python.python",
+      "ms-python.black-formatter",
+
+      // Git
+      "eamodio.gitlens",
+
+      // XML/GPX support
+      "redhat.vscode-xml",
+
+      // GitHub integration
+      "github.vscode-pull-request-github"
+    ]
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Python: Current File",
+        "type": "debugpy",
+        "request": "launch",
+        "program": "${file}",
+        "console": "integratedTerminal",
+        "justMyCode": true
+      },
+      {
+        "name": "Parse RiverMaps GPX",
+        "type": "debugpy",
+        "request": "launch",
+        "program": "${workspaceFolder}/RiverMaps/parseRiverMaps.py",
+        "args": ["${input:gpxFile}"],
+        "console": "integratedTerminal"
+      },
+      {
+        "name": "Refresh Static Maps",
+        "type": "debugpy",
+        "request": "launch",
+        "program": "${workspaceFolder}/refreshStaticMarkdownMaps.py",
+        "console": "integratedTerminal"
+      }
+    ],
+    "inputs": [
+      {
+        "id": "gpxFile",
+        "type": "promptString",
+        "description": "Enter path to RiverMaps GPX file to parse"
+      }
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Refresh All Static Maps",
+        "type": "shell",
+        "command": "python",
+        "args": [
+          "refreshStaticMarkdownMaps.py"
+        ],
+        "problemMatcher": [],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      },
+      {
+        "label": "Process RiverMaps GPX",
+        "type": "shell",
+        "command": "python",
+        "args": [
+          "RiverMaps/parseRiverMaps.py",
+          "${input:gpxFile}"
+        ],
+        "problemMatcher": []
+      }
+    ]
+  }
+}
