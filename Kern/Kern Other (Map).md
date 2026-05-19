@@ -15,11 +15,12 @@ tags:
 ```leaflet
 id: map_a4672552
 
-# --- CENTERING (Fixed) ---
-# We explicitly tell Leaflet where to look.
-# We do NOT use 'bounds' (which breaks easily).
-lat: 35.755238
-long: -118.544282
+# --- CENTERING (Bounds-based for mobile compatibility) ---
+# Primary: fitBounds uses the bounding box
+bounds: [[35.414562012776734, -118.83647803984583], [36.10019702300429, -118.40982900165021]]
+# Fallback: explicit center if bounds fail
+lat: 35.757380
+long: -118.623154
 zoom: 13
 
 # --- VISUALS ---
@@ -27,16 +28,20 @@ height: 600px
 minZoom: 5
 maxZoom: 18
 osmLayer: true
-# Prevents "Black Map" on mobile dark mode
+# Prevent black map on mobile dark mode
 darkMode: false
 
-# --- MOBILE CONTROLS (Unlocked) ---
-# 'lock: false' -> Enables One-Finger Panning
+# --- MOBILE CONTROLS ---
+# Enable single-finger panning
 lock: false
-# 'gestureHandling: false' -> Removes "Two finger" warning
+# Remove "use two fingers" overlay
 gestureHandling: false
-# 'scrollWheelZoom: true' -> Enables zoom
+# Explicitly enable touch interactions
 scrollWheelZoom: true
+
+# --- FIX "SHOW ALL MARKERS" BUTTON ---
+# Auto-zoom to GeoJSON extent instead of (0,0)
+zoomFeatures: true
 
 geojson: [[Kern Other.json]]
 ```

@@ -15,11 +15,12 @@ tags:
 ```leaflet
 id: map_ee71bcd3
 
-# --- CENTERING (Fixed) ---
-# We explicitly tell Leaflet where to look.
-# We do NOT use 'bounds' (which breaks easily).
-lat: 35.712372
-long: -118.564750
+# --- CENTERING (Bounds-based for mobile compatibility) ---
+# Primary: fitBounds uses the bounding box
+bounds: [[35.41421097867191, -118.8409470191598], [36.14739803433418, -118.44061003230512]]
+# Fallback: explicit center if bounds fail
+lat: 35.780805
+long: -118.640779
 zoom: 13
 
 # --- VISUALS ---
@@ -27,16 +28,20 @@ height: 600px
 minZoom: 5
 maxZoom: 18
 osmLayer: true
-# Prevents "Black Map" on mobile dark mode
+# Prevent black map on mobile dark mode
 darkMode: false
 
-# --- MOBILE CONTROLS (Unlocked) ---
-# 'lock: false' -> Enables One-Finger Panning
+# --- MOBILE CONTROLS ---
+# Enable single-finger panning
 lock: false
-# 'gestureHandling: false' -> Removes "Two finger" warning
+# Remove "use two fingers" overlay
 gestureHandling: false
-# 'scrollWheelZoom: true' -> Enables zoom
+# Explicitly enable touch interactions
 scrollWheelZoom: true
+
+# --- FIX "SHOW ALL MARKERS" BUTTON ---
+# Auto-zoom to GeoJSON extent instead of (0,0)
+zoomFeatures: true
 
 geojson: [[Kern Parking.json]]
 ```

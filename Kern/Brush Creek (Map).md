@@ -15,11 +15,12 @@ tags:
 ```leaflet
 id: map_09aa3f74
 
-# --- CENTERING (Fixed) ---
-# We explicitly tell Leaflet where to look.
-# We do NOT use 'bounds' (which breaks easily).
-lat: 35.969504
-long: -118.471462
+# --- CENTERING (Bounds-based for mobile compatibility) ---
+# Primary: fitBounds uses the bounding box
+bounds: [[35.956166, -118.48791200000001], [35.981331, -118.45523999999999]]
+# Fallback: explicit center if bounds fail
+lat: 35.968749
+long: -118.471576
 zoom: 13
 
 # --- VISUALS ---
@@ -27,16 +28,20 @@ height: 600px
 minZoom: 5
 maxZoom: 18
 osmLayer: true
-# Prevents "Black Map" on mobile dark mode
+# Prevent black map on mobile dark mode
 darkMode: false
 
-# --- MOBILE CONTROLS (Unlocked) ---
-# 'lock: false' -> Enables One-Finger Panning
+# --- MOBILE CONTROLS ---
+# Enable single-finger panning
 lock: false
-# 'gestureHandling: false' -> Removes "Two finger" warning
+# Remove "use two fingers" overlay
 gestureHandling: false
-# 'scrollWheelZoom: true' -> Enables zoom
+# Explicitly enable touch interactions
 scrollWheelZoom: true
+
+# --- FIX "SHOW ALL MARKERS" BUTTON ---
+# Auto-zoom to GeoJSON extent instead of (0,0)
+zoomFeatures: true
 
 geojson: [[Brush Creek.json]]
 ```

@@ -1,7 +1,10 @@
 ---
 tags:
+  - region/oregon
+  - river/rogue
+  - season/year_round
+  - status/verified
   - type/map
-related: "[[Rogue_Cadillac.json]]"
 ---
 
 > [!WARNING] DO NOT EDIT
@@ -33,6 +36,10 @@ lock: false
 gestureHandling: false
 # Explicitly enable touch interactions
 scrollWheelZoom: true
+
+# --- FIX "SHOW ALL MARKERS" BUTTON ---
+# Auto-zoom to GeoJSON extent instead of (0,0)
+zoomFeatures: true
 
 geojson: [[Rogue_Cadillac.json]]
 ```

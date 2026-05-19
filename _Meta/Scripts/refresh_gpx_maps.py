@@ -102,6 +102,7 @@ def generate_map_markdown(base_name, json_filename, bounds, center):
     - Provide lat/long/zoom as fallback
     - Disable gestureHandling (removes "use two fingers" overlay)
     - Enable lock: false for single-finger panning
+    - Enable zoomFeatures to auto-zoom GeoJSON on "Show all markers"
     """
     map_id = hashlib.md5(base_name.encode()).hexdigest()[:8]
 
@@ -143,6 +144,10 @@ lock: false
 gestureHandling: false
 # Explicitly enable touch interactions
 scrollWheelZoom: true
+
+# --- FIX "SHOW ALL MARKERS" BUTTON ---
+# Auto-zoom to GeoJSON extent instead of (0,0)
+zoomFeatures: true
 
 geojson: [[{json_filename}]]
 {TICKS}

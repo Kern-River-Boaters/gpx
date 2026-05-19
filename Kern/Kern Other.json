@@ -54,7 +54,7 @@
       },
       "properties": {
         "name": "brush trail",
-        "desc": "brush trail"
+        "desc": "watch out for ticks!"
       }
     },
     {
@@ -82,7 +82,7 @@
       },
       "properties": {
         "name": "cable hole",
-        "desc": "cable hole"
+        "desc": "great playspot ledge at flows of 500 and up."
       }
     },
     {
@@ -180,7 +180,7 @@
       },
       "properties": {
         "name": "dilly hole",
-        "desc": "dilly hole"
+        "desc": "looks like a keeper at higher flows."
       }
     },
     {
@@ -208,7 +208,7 @@
       },
       "properties": {
         "name": "dry meadow creek",
-        "desc": "dry meadow creek"
+        "desc": "ends with some cool, smooth slides."
       }
     },
     {
@@ -278,7 +278,7 @@
       },
       "properties": {
         "name": "forks trail",
-        "desc": "forks trail"
+        "desc": "trail on the east side of the river (across the bridge from the parking lot) goes north four miles into the forks."
       }
     },
     {
@@ -292,7 +292,7 @@
       },
       "properties": {
         "name": "helipad",
-        "desc": "helipad"
+        "desc": "park here. walk east down the dirt road a few hundred feet, then turn south onto the trail to the put-in."
       }
     },
     {
@@ -306,7 +306,7 @@
       },
       "properties": {
         "name": "hole alley",
-        "desc": "hole alley"
+        "desc": "walled section with a series of holes to play in or, sometimes, get stuck in."
       }
     },
     {
@@ -320,7 +320,7 @@
       },
       "properties": {
         "name": "island hole",
-        "desc": "island hole"
+        "desc": "excellent playspot between 500 and 800 cfs. steep and retentive. catch it from river right. note: you only get one roll attempt before getting beat up on the next rock ledge."
       }
     },
     {
@@ -348,7 +348,7 @@
       },
       "properties": {
         "name": "jump rock",
-        "desc": "jump rock"
+        "desc": "a 35-footer. not sure about the minimum flow required."
       }
     },
     {
@@ -362,7 +362,7 @@
       },
       "properties": {
         "name": "jump rock1",
-        "desc": "jump rock1"
+        "desc": "an 18-footer. seal launch it?"
       }
     },
     {
@@ -376,7 +376,7 @@
       },
       "properties": {
         "name": "kr2 borel powerhouse",
-        "desc": "kr2 borel powerhouse"
+        "desc": "water diverted from the lake returns here."
       }
     },
     {
@@ -390,7 +390,7 @@
       },
       "properties": {
         "name": "kr3 diversion",
-        "desc": "kr3 diversion"
+        "desc": "water leaves here and returns at the kr3 powerhouse."
       }
     },
     {
@@ -404,7 +404,7 @@
       },
       "properties": {
         "name": "kr3 powerhouse",
-        "desc": "kr3 powerhouse"
+        "desc": "the diverted water from fairview returns here."
       }
     },
     {
@@ -460,7 +460,7 @@
       },
       "properties": {
         "name": "miracle hot springs",
-        "desc": "miracle hot springs"
+        "desc": "a natural 118 degrees. watch for diapers."
       }
     },
     {
@@ -530,7 +530,7 @@
       },
       "properties": {
         "name": "playspot",
-        "desc": "playspot"
+        "desc": "one of many OK playspots on this run, this one accessible from the road."
       }
     },
     {
@@ -544,7 +544,7 @@
       },
       "properties": {
         "name": "primo's",
-        "desc": "primo's"
+        "desc": "best sandwiches in kerntucky"
       }
     },
     {
@@ -558,7 +558,7 @@
       },
       "properties": {
         "name": "rancheria paddle start",
-        "desc": "rancheria paddle start"
+        "desc": "paddle upstream from the put-in to here; easy paddle, good warm-up rapid"
       }
     },
     {
@@ -572,7 +572,7 @@
       },
       "properties": {
         "name": "rope swing",
-        "desc": "rope swing"
+        "desc": "left bank. sketchy tree climb. not sure about minimum or maximum flows, but 1200 worked fine for a dive."
       }
     },
     {
@@ -600,7 +600,7 @@
       },
       "properties": {
         "name": "short forks trail",
-        "desc": "short forks trail"
+        "desc": "steeper but shorter hike than the full forks trail."
       }
     },
     {
@@ -614,7 +614,7 @@
       },
       "properties": {
         "name": "short forks turn-off",
-        "desc": "short forks turn-off"
+        "desc": "i _think_ this is where it is. anyway, look for a dirt road between a large rock and an oak tree. drive until the road abruptly ends (turning into a hiking trail)."
       }
     },
     {
@@ -642,7 +642,7 @@
       },
       "properties": {
         "name": "surf wave",
-        "desc": "surf wave"
+        "desc": "surf the last drop after the portage. funky eddy line river left."
       }
     },
     {
@@ -670,7 +670,7 @@
       },
       "properties": {
         "name": "the hut",
-        "desc": "the hut"
+        "desc": "dive bar. nice."
       }
     },
     {
@@ -684,7 +684,7 @@
       },
       "properties": {
         "name": "the teacups",
-        "desc": "the teacups"
+        "desc": "jump 'em."
       }
     },
     {
@@ -698,7 +698,7 @@
       },
       "properties": {
         "name": "the tombstone",
-        "desc": "the tombstone"
+        "desc": "tombstone-shaped boulder signifies the drop. at low flows it's an obstacle, at high flows it creates a large symmetrical pourover hole."
       }
     }
   ]
