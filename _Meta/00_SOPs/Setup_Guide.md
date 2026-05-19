@@ -193,23 +193,14 @@ KRB/
    python _Meta/Scripts/refresh_gpx_maps.py
    ```
 
-4. **Review generated files**:
+4. **Review generated file**:
    - `New_Section.json` (GeoJSON data)
-   - `New_Section (Map).md` (Leaflet visualization)
+   - `New_Section.md` (markdown with embedded map)
 
-5. **Add tags** to `New_Section (Map).md` frontmatter:
-   ```yaml
-   ---
-   tags:
-     - type/map
-     - river/kern/new_section
-     - feature/rapid
-     - difficulty/class_iii
-     - region/california
-     - status/needs_verification
-   related: "[[New_Section.json]]"
-   ---
-   ```
+5. **Add notes** to `New_Section.md` (above the auto-generated map section):
+   - Edit the top portion (above `<!-- BEGIN AUTO-GENERATED MAP -->`)
+   - Add tags, descriptions, difficulty info, etc.
+   - The embedded map block will auto-update on next GPX change
 
 6. **Test on mobile** before committing
 

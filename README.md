@@ -98,9 +98,9 @@ This automatically:
 ```
 KRB/
 ├── Kern/                           # Kern River waypoints
-│   ├── *.gpx                      # Source GPX files
-│   ├── *.json                     # Auto-generated GeoJSON data
-│   └── * (Map).md                 # Auto-generated Leaflet maps
+│   ├── Lower Kern Rapids.gpx      # Source GPX file
+│   ├── Lower Kern Rapids.json     # Auto-generated GeoJSON
+│   └── Lower Kern Rapids.md       # User notes + embedded map
 ├── San Joaquin/                    # San Joaquin River waypoints
 ├── Rouge River/                    # Rogue River waypoints
 ├── RiverMaps/                      # RiverMaps GPX parser (Garmin Instinct)
