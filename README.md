@@ -69,10 +69,16 @@ This repository is also structured as an **Obsidian vault** with interactive GPX
    - Install and enable: **Leaflet** and **Dataview**
 
 4. **View interactive maps**:
-   - Open `Kern/Lower Kern Rapids (Map).md`
-   - Maps render with all waypoints and support single-finger panning on mobile
+   - Open any river markdown file (e.g., `Kern/Lower Kern Rapids.md`)
+   - Each file contains both street and satellite map views
+   - Maps render with all waypoints and support zooming and panning
 
 For detailed setup instructions (including mobile configuration), see [`_Meta/00_SOPs/Setup_Guide.md`](_Meta/00_SOPs/Setup_Guide.md).
+
+### ⚠️ Android Mobile Touch Controls
+Touch gestures on Android can be unreliable due to conflicts between Obsidian's mobile gesture handlers and the Leaflet map webview. **Workaround:** Completely close and restart the Obsidian app before viewing maps. This clears the gesture cache and restores proper touch controls for that session.
+
+See [`_Meta/00_SOPs/Android_Touch_Controls_Known_Issues.md`](_Meta/00_SOPs/Android_Touch_Controls_Known_Issues.md) for detailed troubleshooting.
 
 ### Updating Maps from GPX Files
 
@@ -100,7 +106,7 @@ KRB/
 ├── Kern/                           # Kern River waypoints
 │   ├── Lower Kern Rapids.gpx      # Source GPX file
 │   ├── Lower Kern Rapids.json     # Auto-generated GeoJSON
-│   └── Lower Kern Rapids.md       # User notes + embedded map
+│   └── Lower Kern Rapids.md       # User notes + embedded street/satellite maps
 ├── San Joaquin/                    # San Joaquin River waypoints
 ├── Rouge River/                    # Rogue River waypoints
 ├── RiverMaps/                      # RiverMaps GPX parser (Garmin Instinct)
@@ -112,8 +118,9 @@ KRB/
 │   ├── Schemas/
 │   │   └── tag_schema.json        # Hierarchical tag definitions
 │   └── 00_SOPs/
-│       ├── Setup_Guide.md         # Plugin installation, mobile setup
-│       └── Tagging_Strategy.md    # Tag usage guide
+│       ├── Setup_Guide.md                      # Plugin installation, mobile setup
+│       ├── Android_Touch_Controls_Known_Issues.md  # Android gesture troubleshooting
+│       └── Tagging_Strategy.md                 # Tag usage guide
 ├── .obsidian/                      # Obsidian configuration (tracked in git)
 │   ├── plugins/                   # Leaflet and Dataview settings
 │   └── community-plugins.json     # Enabled plugins list
