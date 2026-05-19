@@ -1,0 +1,9 @@
+# Python dependencies for KRB GPX processing scripts
+#
+# Install with: pip install -r requirements.txt
+
+# GPX parsing and conversion
+gpxpy>=1.6.2
+
+# GeoJSON generation for Leaflet maps
+geojson>=3.2.0

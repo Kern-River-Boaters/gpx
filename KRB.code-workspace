@@ -108,10 +108,10 @@
         "console": "integratedTerminal"
       },
       {
-        "name": "Refresh Static Maps",
+        "name": "Refresh GPX Maps",
         "type": "debugpy",
         "request": "launch",
-        "program": "${workspaceFolder}/refreshStaticMarkdownMaps.py",
+        "program": "${workspaceFolder}/_Meta/Scripts/refresh_gpx_maps.py",
         "console": "integratedTerminal"
       }
     ],
@@ -127,11 +127,11 @@
     "version": "2.0.0",
     "tasks": [
       {
-        "label": "Refresh All Static Maps",
+        "label": "Refresh All GPX Maps",
         "type": "shell",
         "command": "python",
         "args": [
-          "refreshStaticMarkdownMaps.py"
+          "_Meta/Scripts/refresh_gpx_maps.py"
         ],
         "problemMatcher": [],
         "group": {
