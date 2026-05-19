@@ -1,8 +1,14 @@
 ---
-related: "[[Kern Access]]"
 tags:
-  - auto-generated
+  - feature/access
+  - region/california
+  - region/sierra_nevada
+  - river/kern
+  - season/year_round
+  - status/verified
+  - type/map
 ---
+
 > [!WARNING] DO NOT EDIT
 > Data Source: [[Kern Access.json]]
 

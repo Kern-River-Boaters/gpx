@@ -1,8 +1,13 @@
 ---
-related: "[[San_Joaquin_Horseshoe_Bend]]"
 tags:
-  - auto-generated
+  - region/california
+  - region/sierra_nevada
+  - river/san_joaquin
+  - season/year_round
+  - status/verified
+  - type/map
 ---
+
 > [!WARNING] DO NOT EDIT
 > Data Source: [[San_Joaquin_Horseshoe_Bend.json]]
 

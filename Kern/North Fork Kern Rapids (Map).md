@@ -1,8 +1,15 @@
 ---
-related: "[[North Fork Kern Rapids]]"
 tags:
-  - auto-generated
+  - difficulty/class_iv_v
+  - feature/rapid
+  - region/california
+  - region/sierra_nevada
+  - river/kern
+  - season/year_round
+  - status/verified
+  - type/map
 ---
+
 > [!WARNING] DO NOT EDIT
 > Data Source: [[North Fork Kern Rapids.json]]
 

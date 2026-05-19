@@ -1,8 +1,15 @@
 ---
-related: "[[Lower Kern Rapids]]"
 tags:
-  - auto-generated
+  - difficulty/class_ii_iii
+  - feature/rapid
+  - region/california
+  - region/sierra_nevada
+  - river/kern
+  - season/year_round
+  - status/verified
+  - type/map
 ---
+
 > [!WARNING] DO NOT EDIT
 > Data Source: [[Lower Kern Rapids.json]]
 

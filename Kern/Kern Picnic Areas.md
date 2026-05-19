@@ -1,6 +1,14 @@
 ---
-related: "[[Kern Picnic Areas (Map)]]"
+tags:
+  - feature/campground
+  - region/california
+  - region/sierra_nevada
+  - river/kern
+  - season/year_round
+  - status/verified
+  - type/river_guide
 ---
+
 # Kern Picnic Areas
 
 Notes...

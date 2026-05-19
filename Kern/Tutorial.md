@@ -1,3 +1,13 @@
+---
+tags:
+  - region/california
+  - region/sierra_nevada
+  - river/kern
+  - season/year_round
+  - status/verified
+  - type/tutorial
+---
+
 ```leaflet
 id: kern
 # --- DATA ---

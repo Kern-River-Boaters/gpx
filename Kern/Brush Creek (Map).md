@@ -1,8 +1,14 @@
 ---
-related: "[[Brush Creek]]"
 tags:
-  - auto-generated
+  - feature/poi
+  - region/california
+  - region/sierra_nevada
+  - river/kern
+  - season/year_round
+  - status/verified
+  - type/map
 ---
+
 > [!WARNING] DO NOT EDIT
 > Data Source: [[Brush Creek.json]]
 
