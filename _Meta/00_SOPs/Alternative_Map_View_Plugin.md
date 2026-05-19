@@ -100,6 +100,22 @@ The note will appear as a pin on the map. But this only shows ONE location per n
 
 ---
 
+## Map View GeoJSON Testing
+
+Tested Map View with GeoJSON code blocks (`Kern/Test_MapView.md`):
+
+**Result**: Map View shows a world map but **doesn't render the points inline**.
+
+**Conclusion**: The `handleGeoJsonCodeBlocks` setting doesn't mean inline rendering - it means Map View will recognize these blocks and display them in the **separate Map View pane** (opened via Command Palette → "Map View: Open map view").
+
+Map View is fundamentally different from Leaflet:
+- **Leaflet**: Embeds maps inline in notes (our need)
+- **Map View**: Shows maps in separate pane, aggregates location data from vault
+
+**Verdict**: Map View is NOT a viable alternative for inline embedded maps.
+
+---
+
 **Recommendation**: Continue with Leaflet + GeoJSON architecture. The "Show all markers" button issue is acceptable since:
 1. "Reset zoom" button works correctly
 2. Initial view is already centered properly

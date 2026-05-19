@@ -113,7 +113,7 @@
     "viewDisplayed": false,
     "linksDisplayed": false,
     "presetsDisplayed": false,
-    "editDisplayed": true
+    "editDisplayed": false
   },
   "mapControlsMinimized": false,
   "maxClusterRadiusPixels": 25,
@@ -136,6 +136,8 @@
   "letZoomBeyondMax": false,
   "queryForFollowActiveNote": "path:\"$PATH$\"",
   "supportRealTimeGeolocation": false,
+  "autoAddLocationIfEmptyProperty": true,
+  "autoAddLocationExclude": "template",
   "fixFrontMatterOnPaste": true,
   "geoHelperPreferApp": false,
   "geoHelperType": "url",
