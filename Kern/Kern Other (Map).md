@@ -15,13 +15,10 @@ tags:
 ```leaflet
 id: map_a4672552
 
-# --- CENTERING (Bounds-based for mobile compatibility) ---
-# Primary: fitBounds uses the bounding box
-bounds: [[35.414562012776734, -118.83647803984583], [36.10019702300429, -118.40982900165021]]
-# Fallback: explicit center if bounds fail
+# --- CENTERING (Explicit coordinates for reliability) ---
 lat: 35.757380
 long: -118.623154
-zoom: 13
+zoom: 11
 
 # --- VISUALS ---
 height: 600px
@@ -39,9 +36,9 @@ gestureHandling: false
 # Explicitly enable touch interactions
 scrollWheelZoom: true
 
-# --- FIX "SHOW ALL MARKERS" BUTTON ---
-# Auto-zoom to GeoJSON extent instead of (0,0)
-zoomFeatures: true
+# --- DISABLE BROKEN CONTROLS ---
+# "Show all markers" button zooms to (0,0) - disable it
+showAllMarkers: false
 
 geojson: [[Kern Other.json]]
 ```

@@ -15,13 +15,10 @@ tags:
 ```leaflet
 id: map_c96ef2b5
 
-# --- CENTERING (Bounds-based for mobile compatibility) ---
-# Primary: fitBounds uses the bounding box
-bounds: [[35.46908696345985, -118.74294899240137], [35.972817994877694, -118.41144897207617]]
-# Fallback: explicit center if bounds fail
+# --- CENTERING (Explicit coordinates for reliability) ---
 lat: 35.720952
 long: -118.577199
-zoom: 13
+zoom: 11
 
 # --- VISUALS ---
 height: 600px
@@ -39,9 +36,9 @@ gestureHandling: false
 # Explicitly enable touch interactions
 scrollWheelZoom: true
 
-# --- FIX "SHOW ALL MARKERS" BUTTON ---
-# Auto-zoom to GeoJSON extent instead of (0,0)
-zoomFeatures: true
+# --- DISABLE BROKEN CONTROLS ---
+# "Show all markers" button zooms to (0,0) - disable it
+showAllMarkers: false
 
 geojson: [[Kern Campgrounds.json]]
 ```

@@ -16,13 +16,10 @@ tags:
 ```leaflet
 id: map_b1dde91e
 
-# --- CENTERING (Bounds-based for mobile compatibility) ---
-# Primary: fitBounds uses the bounding box
-bounds: [[35.743743, -118.49805400000001], [36.117587, -118.411198]]
-# Fallback: explicit center if bounds fail
+# --- CENTERING (Explicit coordinates for reliability) ---
 lat: 35.930665
 long: -118.454626
-zoom: 13
+zoom: 12
 
 # --- VISUALS ---
 height: 600px
@@ -40,9 +37,9 @@ gestureHandling: false
 # Explicitly enable touch interactions
 scrollWheelZoom: true
 
-# --- FIX "SHOW ALL MARKERS" BUTTON ---
-# Auto-zoom to GeoJSON extent instead of (0,0)
-zoomFeatures: true
+# --- DISABLE BROKEN CONTROLS ---
+# "Show all markers" button zooms to (0,0) - disable it
+showAllMarkers: false
 
 geojson: [[North Fork Kern Rapids.json]]
 ```

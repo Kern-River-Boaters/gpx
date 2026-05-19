@@ -98,16 +98,28 @@ def generate_map_markdown(base_name, json_filename, bounds, center):
     Generate Obsidian-compatible Leaflet map markdown.
 
     MOBILE FIX STRATEGY:
-    - Use fitBounds via bounds parameter (primary)
-    - Provide lat/long/zoom as fallback
+    - Use explicit lat/long/zoom for reliable initial view
     - Disable gestureHandling (removes "use two fingers" overlay)
     - Enable lock: false for single-finger panning
-    - Enable zoomFeatures to auto-zoom GeoJSON on "Show all markers"
+    - Disable broken "Show all markers" button
     """
     map_id = hashlib.md5(base_name.encode()).hexdigest()[:8]
 
-    # Format bounds as JSON for Leaflet plugin
-    bounds_json = json.dumps(bounds)
+    # Calculate zoom level based on bounding box size
+    # Smaller area = more zoom
+    lat_range = bounds[1][0] - bounds[0][0]
+    lon_range = bounds[1][1] - bounds[0][1]
+    max_range = max(lat_range, lon_range)
+
+    # Heuristic: larger area needs less zoom
+    if max_range > 0.5:
+        zoom = 11
+    elif max_range > 0.2:
+        zoom = 12
+    elif max_range > 0.1:
+        zoom = 13
+    else:
+        zoom = 14
 
     return f"""---
 tags:
@@ -121,13 +133,10 @@ related: "[[{json_filename}]]"
 {TICKS}leaflet
 id: map_{map_id}
 
-# --- CENTERING (Bounds-based for mobile compatibility) ---
-# Primary: fitBounds uses the bounding box
-bounds: {bounds_json}
-# Fallback: explicit center if bounds fail
+# --- CENTERING (Explicit coordinates for reliability) ---
 lat: {center[0]:.6f}
 long: {center[1]:.6f}
-zoom: 13
+zoom: {zoom}
 
 # --- VISUALS ---
 height: 600px
@@ -145,9 +154,9 @@ gestureHandling: false
 # Explicitly enable touch interactions
 scrollWheelZoom: true
 
-# --- FIX "SHOW ALL MARKERS" BUTTON ---
-# Auto-zoom to GeoJSON extent instead of (0,0)
-zoomFeatures: true
+# --- DISABLE BROKEN CONTROLS ---
+# "Show all markers" button zooms to (0,0) - disable it
+showAllMarkers: false
 
 geojson: [[{json_filename}]]
 {TICKS}

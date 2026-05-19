@@ -15,13 +15,10 @@ tags:
 ```leaflet
 id: map_529532ed
 
-# --- CENTERING (Bounds-based for mobile compatibility) ---
-# Primary: fitBounds uses the bounding box
-bounds: [[35.52167200647295, -118.65744503051043], [35.87403802037239, -118.43714595936238]]
-# Fallback: explicit center if bounds fail
+# --- CENTERING (Explicit coordinates for reliability) ---
 lat: 35.697855
 long: -118.547295
-zoom: 13
+zoom: 12
 
 # --- VISUALS ---
 height: 600px
@@ -39,9 +36,9 @@ gestureHandling: false
 # Explicitly enable touch interactions
 scrollWheelZoom: true
 
-# --- FIX "SHOW ALL MARKERS" BUTTON ---
-# Auto-zoom to GeoJSON extent instead of (0,0)
-zoomFeatures: true
+# --- DISABLE BROKEN CONTROLS ---
+# "Show all markers" button zooms to (0,0) - disable it
+showAllMarkers: false
 
 geojson: [[Kern Picnic Areas.json]]
 ```

@@ -15,13 +15,10 @@ tags:
 ```leaflet
 id: map_09aa3f74
 
-# --- CENTERING (Bounds-based for mobile compatibility) ---
-# Primary: fitBounds uses the bounding box
-bounds: [[35.956166, -118.48791200000001], [35.981331, -118.45523999999999]]
-# Fallback: explicit center if bounds fail
+# --- CENTERING (Explicit coordinates for reliability) ---
 lat: 35.968749
 long: -118.471576
-zoom: 13
+zoom: 14
 
 # --- VISUALS ---
 height: 600px
@@ -39,9 +36,9 @@ gestureHandling: false
 # Explicitly enable touch interactions
 scrollWheelZoom: true
 
-# --- FIX "SHOW ALL MARKERS" BUTTON ---
-# Auto-zoom to GeoJSON extent instead of (0,0)
-zoomFeatures: true
+# --- DISABLE BROKEN CONTROLS ---
+# "Show all markers" button zooms to (0,0) - disable it
+showAllMarkers: false
 
 geojson: [[Brush Creek.json]]
 ```

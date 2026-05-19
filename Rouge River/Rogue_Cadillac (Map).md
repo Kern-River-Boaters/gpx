@@ -13,13 +13,10 @@ tags:
 ```leaflet
 id: map_8e9bd414
 
-# --- CENTERING (Bounds-based for mobile compatibility) ---
-# Primary: fitBounds uses the bounding box
-bounds: [[42.622800000000005, -124.0588], [42.7288, -123.5756]]
-# Fallback: explicit center if bounds fail
+# --- CENTERING (Explicit coordinates for reliability) ---
 lat: 42.675800
 long: -123.817200
-zoom: 13
+zoom: 12
 
 # --- VISUALS ---
 height: 600px
@@ -37,9 +34,9 @@ gestureHandling: false
 # Explicitly enable touch interactions
 scrollWheelZoom: true
 
-# --- FIX "SHOW ALL MARKERS" BUTTON ---
-# Auto-zoom to GeoJSON extent instead of (0,0)
-zoomFeatures: true
+# --- DISABLE BROKEN CONTROLS ---
+# "Show all markers" button zooms to (0,0) - disable it
+showAllMarkers: false
 
 geojson: [[Rogue_Cadillac.json]]
 ```

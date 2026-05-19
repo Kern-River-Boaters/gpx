@@ -14,13 +14,10 @@ tags:
 ```leaflet
 id: map_bfde0138
 
-# --- CENTERING (Bounds-based for mobile compatibility) ---
-# Primary: fitBounds uses the bounding box
-bounds: [[37.099737000000005, -119.52294900000001], [37.159211, -119.445]]
-# Fallback: explicit center if bounds fail
+# --- CENTERING (Explicit coordinates for reliability) ---
 lat: 37.129474
 long: -119.483975
-zoom: 13
+zoom: 14
 
 # --- VISUALS ---
 height: 600px
@@ -38,9 +35,9 @@ gestureHandling: false
 # Explicitly enable touch interactions
 scrollWheelZoom: true
 
-# --- FIX "SHOW ALL MARKERS" BUTTON ---
-# Auto-zoom to GeoJSON extent instead of (0,0)
-zoomFeatures: true
+# --- DISABLE BROKEN CONTROLS ---
+# "Show all markers" button zooms to (0,0) - disable it
+showAllMarkers: false
 
 geojson: [[San_Joaquin_Horseshoe_Bend.json]]
 ```
