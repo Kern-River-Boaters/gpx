@@ -12,3 +12,35 @@ tags:
 # Brush Creek
 
 Notes...
+
+<!-- BEGIN AUTO-GENERATED MAP -->
+> [!WARNING] AUTO-GENERATED CONTENT
+> This map is automatically generated from [[Brush Creek.json]]. Do not edit this section - changes will be overwritten.
+
+```leaflet
+id: map_09aa3f74
+
+# --- CENTERING ---
+# bounds: used by "reset zoom" button
+bounds: [[35.956166, -118.48791200000001], [35.981331, -118.45523999999999]]
+# lat/long/zoom: initial view on map load
+lat: 35.968749
+long: -118.471576
+zoom: 14
+
+# --- VISUALS ---
+height: 600px
+minZoom: 5
+maxZoom: 18
+osmLayer: true
+darkMode: false
+
+# --- MOBILE CONTROLS ---
+lock: false
+gestureHandling: false
+scrollWheelZoom: true
+showAllMarkers: false
+
+geojson: [[Brush Creek.json]]
+```
+<!-- END AUTO-GENERATED MAP -->

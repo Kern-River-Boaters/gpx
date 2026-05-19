@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
 Unified GPX-to-Markdown converter for KRB whitewater guidebook.
-Converts GPX waypoints to GeoJSON + Obsidian Leaflet maps.
+Converts GPX waypoints to GeoJSON + embedded Obsidian Leaflet maps.
 
 DESIGN GOALS:
-1. Robust mobile rendering (iOS/Android Obsidian)
-2. Single source of truth (GPX -> GeoJSON -> Leaflet)
-3. Clean separation: auto-generated map files vs. user notes
+1. Single file per GPX (no separate map files)
+2. Auto-generated map block with preserved user content
+3. Robust mobile rendering (iOS/Android Obsidian)
 4. Bounds-based centering to fix viewport issues
 
 DEPENDENCIES:
@@ -14,16 +14,20 @@ DEPENDENCIES:
 """
 
 import os
+import re
 import json
 import hashlib
 import gpxpy
 import geojson
 
 # --- CONFIGURATION ---
-MAP_SUFFIX = " (Map)"
 MD_EXT = ".md"
 JSON_EXT = ".json"
 TICKS = "`" * 3
+
+# Markers for auto-generated content block
+MAP_START_MARKER = "<!-- BEGIN AUTO-GENERATED MAP -->"
+MAP_END_MARKER = "<!-- END AUTO-GENERATED MAP -->"
 
 # Bounding box buffer (degrees) - prevents waypoints from being cut off at edges
 BBOX_BUFFER = 0.01  # ~1km padding
@@ -93,29 +97,19 @@ def parse_gpx_to_geojson(gpx_path):
         print(f"  ❌ Error parsing {os.path.basename(gpx_path)}: {e}")
         return None, None, None
 
-def generate_map_markdown(base_name, json_filename, bounds, center):
+def generate_map_block(base_name, json_filename, bounds, center):
     """
-    Generate Obsidian-compatible Leaflet map markdown.
-
-    MOBILE FIX STRATEGY:
-    - Use bounds parameter for "reset zoom" button functionality
-    - Use explicit lat/long/zoom for reliable initial view
-    - Disable gestureHandling (removes "use two fingers" overlay)
-    - Enable lock: false for single-finger panning
-    - Hide broken "Show all markers" button (zooms to 0,0)
+    Generate the auto-generated map block with markers.
+    This block will be inserted/updated in the markdown file.
     """
     map_id = hashlib.md5(base_name.encode()).hexdigest()[:8]
-
-    # Format bounds as JSON for Leaflet plugin
     bounds_json = json.dumps(bounds)
 
     # Calculate zoom level based on bounding box size
-    # Smaller area = more zoom
     lat_range = bounds[1][0] - bounds[0][0]
     lon_range = bounds[1][1] - bounds[0][1]
     max_range = max(lat_range, lon_range)
 
-    # Heuristic: larger area needs less zoom
     if max_range > 0.5:
         zoom = 11
     elif max_range > 0.2:
@@ -125,14 +119,9 @@ def generate_map_markdown(base_name, json_filename, bounds, center):
     else:
         zoom = 14
 
-    return f"""---
-tags:
-  - type/map
-related: "[[{json_filename}]]"
----
-
-> [!WARNING] DO NOT EDIT
-> Data Source: [[{json_filename}]]
+    return f"""{MAP_START_MARKER}
+> [!WARNING] AUTO-GENERATED CONTENT
+> This map is automatically generated from [[{json_filename}]]. Do not edit this section - changes will be overwritten.
 
 {TICKS}leaflet
 id: map_{map_id}
@@ -150,31 +139,63 @@ height: 600px
 minZoom: 5
 maxZoom: 18
 osmLayer: true
-# Prevent black map on mobile dark mode
 darkMode: false
 
 # --- MOBILE CONTROLS ---
-# Enable single-finger panning
 lock: false
-# Remove "use two fingers" overlay
 gestureHandling: false
-# Explicitly enable touch interactions
 scrollWheelZoom: true
-
-# --- HIDE BROKEN CONTROLS ---
-# "Show all markers" button is broken (zooms to 0,0 Ivory Coast)
 showAllMarkers: false
 
 geojson: [[{json_filename}]]
 {TICKS}
+{MAP_END_MARKER}"""
+
+def update_markdown_file(md_path, base_name, json_filename, bounds, center):
+    """
+    Update or create markdown file with embedded map block.
+    Preserves user content outside the auto-generated markers.
+    """
+    map_block = generate_map_block(base_name, json_filename, bounds, center)
+
+    if os.path.exists(md_path):
+        # Read existing file
+        with open(md_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+
+        # Check if it has the markers
+        if MAP_START_MARKER in content and MAP_END_MARKER in content:
+            # Replace existing map block
+            pattern = re.compile(
+                re.escape(MAP_START_MARKER) + r'.*?' + re.escape(MAP_END_MARKER),
+                re.DOTALL
+            )
+            new_content = pattern.sub(map_block, content)
+        else:
+            # Append map block at end
+            new_content = content.rstrip() + "\n\n" + map_block + "\n"
+    else:
+        # Create new file with basic structure
+        new_content = f"""---
+tags:
+  - type/map
+---
+
+# {base_name}
+
+{map_block}
 """
+
+    # Write updated content
+    with open(md_path, 'w', encoding='utf-8') as f:
+        f.write(new_content)
 
 def process_gpx_file(gpx_path):
     """
     Process a single GPX file:
     1. Parse to GeoJSON
     2. Write .json data file
-    3. Write " (Map).md" Leaflet visualization
+    3. Update .md file with embedded map (preserving user content)
 
     Returns True if processing succeeded.
     """
@@ -182,10 +203,10 @@ def process_gpx_file(gpx_path):
     base_name = os.path.splitext(os.path.basename(gpx_path))[0]
 
     json_filename = f"{base_name}{JSON_EXT}"
-    map_filename = f"{base_name}{MAP_SUFFIX}{MD_EXT}"
+    md_filename = f"{base_name}{MD_EXT}"
 
     json_path = os.path.join(dirpath, json_filename)
-    map_path = os.path.join(dirpath, map_filename)
+    md_path = os.path.join(dirpath, md_filename)
 
     # Parse GPX
     geo_data, bounds, center = parse_gpx_to_geojson(gpx_path)
@@ -197,12 +218,10 @@ def process_gpx_file(gpx_path):
     with open(json_path, 'w', encoding='utf-8') as f:
         geojson.dump(geo_data, f, indent=2)
 
-    # Write Leaflet map markdown
-    map_content = generate_map_markdown(base_name, json_filename, bounds, center)
-    with open(map_path, 'w', encoding='utf-8') as f:
-        f.write(map_content)
+    # Update markdown with embedded map
+    update_markdown_file(md_path, base_name, json_filename, bounds, center)
 
-    print(f"  ✅ {base_name} -> GeoJSON + Map")
+    print(f"  ✅ {base_name} -> GeoJSON + embedded map")
     return True
 
 def scan_and_process(root_dir):
@@ -256,9 +275,9 @@ def main():
 
     print()
     print("Next steps:")
-    print("1. Open vault in Obsidian mobile to test rendering")
-    print("2. Verify maps are centered correctly and allow single-finger pan")
-    print("3. If issues persist, check Obsidian Leaflet plugin version")
+    print("1. Review files - user content preserved, map blocks updated")
+    print("2. Delete old *' (Map).md' files if any exist")
+    print("3. Test in Obsidian mobile")
 
 if __name__ == "__main__":
     main()

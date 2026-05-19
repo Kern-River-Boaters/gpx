@@ -31,7 +31,7 @@ To import the pre-built, curated collections provided in this repo, follow these
 2. Import each file as a new collection using the **Garmin Explore** app or web portal. Note that you can import the waypoint files as either Tracks or Routes.
 3. **Manually Bulk-Assign Icons:** Because the standard GPX schema does not reliably map proprietary Garmin icons during an import, Garmin Explore will often default your waypoints to generic pins. To fix this, tap "Select All" within your newly imported collection inside the Garmin Explore app, and manually set the proper high-visibility icon (e.g., a tent for camps, a rapid symbol for rapids). Icons that render beautifully on the Instinct's dual-window display include:
 
-![Garmin Icons](garmin-icons.png)
+![Garmin Icons](_Meta/Attachments/garmin-icons.png)
 
 ---
 
