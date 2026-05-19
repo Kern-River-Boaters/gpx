@@ -128,7 +128,44 @@ From user reports on Obsidian forums:
 
 ---
 
-**Status**: 🧪 Testing in progress  
-**Test File**: `Kern/Lower Kern Rapids.md` (converted to inline markers)  
-**Comparison File**: `Kern/North Fork Kern Rapids.md` (still using GeoJSON)  
-**Date**: 2026-05-19
+## ❌ Test Results - FAILED
+
+**Date**: 2026-05-19  
+**Status**: Inline markers approach **not viable**
+
+### Issue: Leaflet Plugin Parsing Error
+
+Inline markers fail to render (grey box) when combined with YAML comments in the code block.
+
+**Root Cause**:
+```leaflet
+# --- CENTERING ---    ← These comments cause parsing errors
+marker:
+  - [lat, lon, "name"]
+```
+
+The Obsidian Leaflet plugin v6.0.5 doesn't support YAML-style comments (`#`) when using inline `marker:` arrays. Comments work fine with `geojson:` references, but break with inline markers.
+
+**Attempted Fix**: Removing all comments makes the inline markers work, but loses documentation value for debugging.
+
+**Workaround Tested**: None - would need to sacrifice code readability.
+
+### Conclusion
+
+**Sticking with GeoJSON approach** because:
+- ✅ Works reliably on desktop and mobile
+- ✅ Supports comments for maintainability
+- ✅ Better separation of data (JSON) and presentation (MD)
+- ✅ Easier to debug waypoint coordinates
+- ❌ "Show all markers" button broken (acceptable tradeoff)
+
+**Inline markers rejected** because:
+- ❌ Breaks rendering when comments present
+- ❌ Removing comments hurts maintainability
+- ❌ No clear advantage over GeoJSON
+- ❌ Historical Android performance concerns
+
+---
+
+**Final Decision**: Keep current GeoJSON architecture  
+**Test File**: Reverted to GeoJSON (`Kern/Lower Kern Rapids.md`)
