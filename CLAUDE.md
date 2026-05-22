@@ -1,5 +1,12 @@
 # System Instructions for Claude / AI Coding Assistants
 
+## Vault Identity
+- **Purpose**: Whitewater kayaking GPS tools for Garmin Instinct devices
+- **Repository**: Public GitHub (Kern-River-Boaters/gpx)
+- **Scope**: Open-source community resource for paddlers
+- **Architecture**: Part of maintainer's federated Obsidian system (public spoke)
+- **Standards**: Inherits tagging schema from personal Common vault (see `_Meta/Schemas/`)
+
 Welcome to the **River Boater GPX Collections for Garmin Instinct** development workspace. When assisting with maintenance, refactoring, or feature additions in this repository, you must adhere strictly to the constraints, architectural decisions, and hardware-specific requirements outlined below.
 
 ---

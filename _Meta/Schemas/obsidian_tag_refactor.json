@@ -4,7 +4,8 @@
     "critical_instruction": "This is a public whitewater river guidebook repository. Tag all content with hierarchical tags from this schema. Focus on rivers, rapids, difficulty, and navigation. DO NOT create tags related to personal vaults, work projects, or private systems.",
     "user_context": "The repository maintainer is a technical whitewater kayaker creating GPS navigation tools for Garmin devices. Content is PUBLIC and for the paddling community.",
     "fragmentation_prevention": "Do not create loose root tags. All tags must follow hierarchies: river/, type/, difficulty/, feature/, season/. Enforce consistency: use 'rapid' not 'rapids', 'campground' not 'camping'.",
-    "public_repository": "Everything here is openly published on GitHub. No personal information, no proprietary data, no private systems mentioned."
+    "public_repository": "Everything here is openly published on GitHub. No personal information, no proprietary data, no private systems mentioned.",
+    "schema_inheritance": "This vault is part of a federated Obsidian system. For generic tags not defined here (meta/, system/, priority/), fall back to ../Common/_Meta/Schemas/obsidian_tag_refactor_common.json. Domain-specific whitewater tags take precedence."
   },
   "_system_context": {
     "description": "Tag schema for KRB (Kern River Boater) - public whitewater guidebook with GPX navigation data",
