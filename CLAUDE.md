@@ -26,6 +26,17 @@ This tool solves that problem by formatting raw GPX data into glanceable, high-c
 * **Strict Separation of Data & Tools:** We **do not host or redistribute** proprietary or copyrighted data belonging to commercial publishers (e.g., RiverMaps). The script is purely a local utility for end-users to format files they have legally obtained themselves.
 * **Personal Use Configuration:** Because this tool is executed locally for personal device synchronization, there is no technical requirement to strip or scrub description metadata (`waypoint.description`) or original data during the parsing process. Users may fully preserve text fields for their own devices.
 
+#### Cross-Vault Processing (Private RiverMaps Data)
+* **Maintainer Workflow:** The maintainer stores commercial RiverMaps data in a separate **private vault** (Notes vault, Recreation/Kayaking/Private_RiverMaps/) that is NOT checked into this public repository.
+* **Script Usage with External Data:** Scripts in this repo can process GPX files from any location using absolute paths:
+  ```bash
+  # From KRB working directory
+  python _Meta/Scripts/parseRiverMaps.py \
+    --input "/c/Obsidian/Notes/Recreation/Kayaking/Private_RiverMaps/[file].gpx" \
+    --output "/c/Obsidian/Notes/Recreation/Kayaking/Private_RiverMaps/Garmin_Formatted/"
+  ```
+* **Vault Boundary Protection:** Private RiverMaps data must NEVER be committed to this public KRB repository. Scripts are tools only; data stays in appropriate vault.
+
 #### Naming Logic, Beta Extraction & Space-Stripping
 * **Prefix Markers:** The original RiverMaps GPX data uses 2-character category markers at the front of waypoint names (`R-`, `C-`, `P-`, `M-`). The script **must completely slice off** this two-character prefix (`waypoint.name[2:]`) to save screen space.
 * **Beta Extraction:** For Rapids (`R-`), parse the `waypoint.description` field using a strict regex pattern `r"(\(\w*)([0-9]+)(\w*\))"` to find the numerical classification rating. This becomes the `suffix` (appended with no spaces).

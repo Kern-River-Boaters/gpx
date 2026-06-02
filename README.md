@@ -47,6 +47,32 @@ To assist with your own preprocessing of those files, I’ve included the `parse
 ### ⚠️ Legal Disclaimer for `parseRiverMaps.py`
 > This repository does not host or distribute proprietary data from commercial publishers like RiverMaps. To use the `parseRiverMaps.py` tool on external RiverMaps files, you must acquire your own raw files directly from the link above and accept their Terms and Conditions, which prohibit copying or distributing their files. The script is provided strictly for your personal use to format coordinate data and generic waypoint names for physical device limitations; it is not meant to bypass copyright on creative descriptions, proprietary notes, or subjective hazard warnings.
 
+### Processing Private RiverMaps Data (Maintainer Workflow)
+
+The maintainer of this repository stores commercial RiverMaps data in a **separate private vault** to respect redistribution restrictions while still using these public scripts for processing:
+
+```bash
+# Scripts stay in public KRB repo, data stays in private Notes vault
+cd /c/Obsidian/KRB
+
+# Format for Garmin Instinct (15-char names, split at 99 waypoints)
+python _Meta/Scripts/parseRiverMaps.py \
+  --input "/c/Obsidian/Notes/Recreation/Kayaking/Private_RiverMaps/[file].gpx" \
+  --output "/c/Obsidian/Notes/Recreation/Kayaking/Private_RiverMaps/Garmin_Formatted/"
+
+# Generate Obsidian Leaflet maps with GeoJSON waypoints
+python _Meta/Scripts/refresh_gpx_maps.py \
+  --input "/c/Obsidian/Notes/Recreation/Kayaking/Private_RiverMaps/[file].gpx" \
+  --output "/c/Obsidian/Notes/Recreation/Kayaking/Private_RiverMaps/"
+```
+
+**Vault Boundaries:**
+- ✅ **KRB (this repo):** Public scripts, curated open-source river data (Kern, etc.)
+- ✅ **Notes vault (private):** Commercial RiverMaps data, personal trip planning
+- ❌ **Never mix:** Private commercial data must not be committed to this public repository
+
+Users can follow the same pattern by storing commercial data outside this repo and using absolute paths to process it with these scripts.
+
 ---
 
 ## Using This Vault in Obsidian
