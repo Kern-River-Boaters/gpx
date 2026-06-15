@@ -225,13 +225,9 @@ last_verified: 2026-05-15
 
 ## AI Assistant Instructions
 
-When AI tools help tag content:
+> **Superseded.** Full AI/LLM guidance for tagging, auditing, and content standards is now in `_Meta/VAULT_CONTEXT.md`. That file is the single source of truth for LLM context in this vault.
 
-1. **Read the schema** at `_Meta/Schemas/tag_schema.json`
-2. **Apply heuristics** to infer tags from filenames and content
-3. **Validate** tags exist in schema before adding
-4. **Use hierarchy** - never create flat tags
-5. **Public repository** - No personal information, no private system references
+For quick reference: load `_Meta/VAULT_CONTEXT.md` (Section 4 for tag hierarchy, Section 6 for inference heuristics, Section 7 for audit rules) before tagging any KRB content.
 
 ---
 
