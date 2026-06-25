@@ -49,3 +49,6 @@ __pycache__/
 # Handle occasional conflict files if they get generated
 *conflict*
 *.sync-conflict-*
+# --- MCP Plugin: bearer token must not be committed ---
+# Port assignments are documented in _Meta/00_SOPs/MCP Pro Server Setup.md
+.obsidian/plugins/obsidian-mcp-pro-plugin/data.json
