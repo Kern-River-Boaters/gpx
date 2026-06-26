@@ -258,3 +258,15 @@ When inferring tags from file names and content:
 - `.gpx` binary/XML files — not markdown
 - `_Meta/Tests/` files — plugin behavior test cases, non-navigation content
 - Missing `feature/` on access, parking, campground-only collections when covered by a more specific `feature/` tag
+
+---
+
+## Model Context Protocol (MCP) Integration
+
+This vault runs a dedicated Model Context Protocol (MCP) server locally inside Obsidian via the `obsidian-mcp-pro-plugin` plugin.
+
+* **Assigned Port:** `3336`
+* **Server Name:** `obsidian-krb`
+* **Settings File:** `.obsidian/plugins/obsidian-mcp-pro-plugin/data.json`
+* **Connection Protocol:** Read the local settings file to retrieve the auto-generated `bearerToken` and the configured port. Construct the authorization header (`Bearer <token>`) and connect to `http://127.0.0.1:3336/mcp`.
+* **Server Not Running Protocol:** If the connection to the MCP server fails, and accessing it is useful/necessary for your current task, you MUST explicitly prompt the user to open Obsidian and start the MCP Pro plugin server for this vault (Settings → MCP Pro → Start).
