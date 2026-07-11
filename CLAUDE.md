@@ -20,7 +20,6 @@
 | **KNotes** | Keysight work — CONFIDENTIAL | Keysight Bitbucket |
 | **Cookbook** | Culinary recipes | Public GitHub |
 | **Notes** | Personal life management | Private GitHub |
-| **KC** | Technical reference | Public GitHub |
 | **KRB** | Whitewater recreation — YOU ARE HERE | Public GitHub |
 
 ---
