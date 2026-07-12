@@ -261,21 +261,16 @@ When inferring tags from file names and content:
 
 ---
 
-## Model Context Protocol (MCP) Integration
+## Model Context Protocol (MCP) Integration & AI Routing Protocol
 
-This vault runs a dedicated Model Context Protocol (MCP) server locally inside Obsidian via the `obsidian-mcp-pro-plugin` plugin.
+This vault operates on a **Dual-Mode Port Topology** running locally on the Kern node. AI agents MUST follow this strict connection hierarchy to prevent failed operations when the workstation is in headless server mode.
 
-* **Assigned Port:** `3336`
-* **Server Name:** `obsidian-krb`
-* **Settings File:** `.obsidian/plugins/obsidian-mcp-pro-plugin/data.json`
-* **Connection Protocol:** Read the local settings file to retrieve the auto-generated `bearerToken` and the configured port. Construct the authorization header (`Bearer <token>`) and connect to `http://127.0.0.1:3336/mcp`.
-* **Session Concurrency & Cleanup (Critical):** The plugin's MCP server only supports **one active connection session at a time**. If a session is left open or crashes, subsequent connections will fail with `HTTP 500: Internal Server Error`.
-  - To prevent leaks, the AI client MUST send an HTTP `DELETE` request with the authorization bearer token and the `Mcp-Session-Id` in the headers to `http://127.0.0.1:3336/mcp` upon completion of the task or when handling a connection reset.
-  - Example cleanup request:
-    ```http
-    DELETE /mcp HTTP/1.1
-    Authorization: Bearer <bearerToken>
-    Mcp-Session-Id: <leaked-session-id>
-    ```
-* **Server Not Running Protocol:** If the connection to the MCP server fails, and accessing it is useful/necessary for your current task, you MUST explicitly prompt the user to open Obsidian and start the MCP Pro plugin server for this vault (Settings → MCP Pro → Start).
-* **Environment Limitations (Remote vs. Local):** The MCP Pro server runs on localhost (`127.0.0.1`) inside the user's running Obsidian application. It is only accessible to local AI clients running on the same machine. If this vault context is uploaded to a remote LLM (such as a remote server like GB10, or web UIs like Gemini/OpenAI), the remote AI will NOT have network access to the local loopback port. In such remote environments, the AI must rely on direct filesystem tools (if available) or the uploaded file context, and must not attempt to use or prompt the user for localhost MCP connections.
+**1. Primary Connection (GUI Mode) — Port `3337` (Primary)**
+*   **Target:** `http://127.0.0.1:3337/mcp`
+*   **Protocol:** Always attempt this port first. If successful, the Obsidian GUI is active. Use the rich plugin API to fulfill requests (including Dataview JS queries and Bases aggregations).
+*   **Cleanup:** Send an HTTP `DELETE` request with the `Mcp-Session-Id` header upon completion to prevent locked sessions.
+
+**2. Secondary Connection (Headless Fallback) — Port `3347` (Fallback)**
+*   **Target:** `http://127.0.0.1:3347/mcp`
+*   **Protocol:** If the Primary Port refuses the connection, the GUI is offline. **DO NOT** prompt the user to start Obsidian. Instantly fallback to the headless RAG port (`3347`).
+*   **Capabilities:** This connects to a custom `sqlite-vec` RAG database. You must use the provided `query_sql` tool to perform mathematical aggregations on flat YAML fields (e.g., `SELECT SUM(cost) FROM notes`), and the `query_vector` tool for semantic text searches.
