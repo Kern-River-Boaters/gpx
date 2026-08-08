@@ -1,0 +1,32 @@
+---
+description: The Talent Agent standard skill
+globs: *.md
+---
+
+# The Talent Agent
+
+---
+name: The Talent Agent Content & Innovation Drafting Skill
+description: Governs automated content drafting, LLM-as-a-Judge critique loops, venue persona contracts, and hardware-agnostic patent relevance mapping.
+---
+
+# ✍️ The Talent Agent Skill & Architectural SOP
+
+## 1. Core Principles
+- **100% Full-Text Preservation**: Never truncate source concept notes. Preserves full architectural specifications, patent claims, and RAG context.
+- **Frontmatter Sanitization**: Always strip source YAML frontmatter (`strip_frontmatter()`) before rendering post bodies to prevent double YAML blocks.
+- **Multi-Persona Venue Contracts**:
+  - **LinkedIn Persona**: High-impact narrative hook, 3-4 bulleted takeaways, hashtags, 350-500 words.
+  - **Substack Persona**: Deep narrative background, system architecture breakdown, code/schema snippets, 600-1200 words.
+  - **Patent Counsel Persona**: Hardware-agnostic functional abstractions, Claims 1/15/25 outlines, multi-embodiment architectures, prior art matrix.
+  - **Market Analyst Persona**: Commercial viability score, TAM ($42.5B), monetization vectors, competitive moat.
+
+## 2. LLM-as-a-Judge Critique & Jargon Translation Loop
+- All generated drafts MUST pass through `judge_and_refine_draft()`.
+- Strips raw human triage badges (`status: pending_review`).
+- Translates internal vault codenames (`host kern`, `Aegis`, `Obsidian Bases`, `git-crypt`) into industry-standard terms via `_Meta/Skills/The Talent Agent/style_guide.json`.
+
+## 3. ECC Learnings for Nightly Coding Workers
+- **Never Guess Contracts**: Read declarative skill files before implementing script logic.
+- **Mandatory 2-Pass Validation**: Always run a critique pass (`generate` -> `critique` -> `refine`).
+

@@ -1,0 +1,31 @@
+---
+name: "genealogical-biography-synthesizer"
+description: "genealogical-biography-synthesizer skill for OpenCode"
+---
+
+# genealogical-biography-synthesizer
+
+> Parent Skill Definition: [genealogical-biography-synthesizer](file:///home/jpino/Obsidian/Genealogy/_Meta/Skills/genealogical-biography-synthesizer/SKILL.md)
+
+---
+name: genealogical-biography-synthesizer
+description: Synthesizes rich, story-driven biographical narratives for genealogical profiles from extracted frontmatter facts, census data, parish registers, and regional historical context, strictly enforcing zero-cruft inference boundaries per GEN-ADR-002 and SYS-SCH-002.
+---
+
+# Genealogical Biography Synthesizer Skill
+
+## Overview
+This skill governs the generation of rich, story-driven biographical narratives for genealogical profiles across the vault. It strictly prohibits dry, cookie-cutter boilerplate and mandates engaging storytelling grounded in source evidence.
+
+## Core Rules
+1. **Colorful Storytelling**: Biographies must bring ancestors to life by detailing their historical context, dramatic events (e.g., Loyalist migration, Maritime out-migration to New England, military command, emigration, civic service), and familial roles.
+2. **Interactive Wiki-Links**: Narratives must weave in clickable `[[wiki-links]]` to spouses, children, siblings, and linked source documents (`Sources/...`) directly within the text.
+3. **Zero-Cruft Epistemic Policy (GEN-ADR-002)**:
+   - All factual claims must be tagged with explicit provenance: `data_origin` (e.g. `proven_gedcom`, `census_1881`, `panb_register`) and `ai_inference_status` (e.g. `verified_fact`, `inferred_relationship`).
+   - Side attribution and historical claims cannot be guessed or defaulted. They must be inferred strictly from source text evidence and verified chronologically/geographically.
+4. **Mandatory Further Reading & External Sources**: All significant historical figures must include a dedicated **`## 📚 Further Reading & External Sources`** section with authoritative research links (historical registers, archives, or published works).
+5. **Execution Command**:
+   ```bash
+   python3 _Meta/Scripts/synthesize_biographies.py --vault . --dry-run
+   ```
+
