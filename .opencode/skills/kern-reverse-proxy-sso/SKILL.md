@@ -34,6 +34,7 @@ The `kern` workstation operates multiple microservices protected by a single uni
 | `/pacs/` | `http://127.0.0.1:8042/` | Orthanc PACS | DICOM PACS server |
 | `/podcast/` | `http://127.0.0.1:8090/` | Private Podcast RSS | Audio feed server |
 | `/metrics/` | `http://127.0.0.1:9090/metrics/` | Prometheus Metrics | System metrics daemon |
+| `/cadvisor/` | `http://127.0.0.1:8081/` | cAdvisor Container Monitor | Container stats (`sub_filter` asset rewriting for root-only upstream) |
 
 ---
 
