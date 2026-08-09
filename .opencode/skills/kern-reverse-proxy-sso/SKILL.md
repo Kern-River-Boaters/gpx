@@ -41,7 +41,7 @@ The `kern` workstation operates multiple microservices protected by a single uni
 
 1. **Loopback Only:** All microservice ports (`:3001`, `:7681`, `:8300`, `:8042`, `:8095`, `:8096`, `:8080`, `:9090`, `:8090`) MUST bind to `127.0.0.1`.
 2. **No Host IP Binds:** Never bind services to `100.107.8.107` or `0.0.0.0`.
-3. **ForwardAuth SSO:** All nginx `location` blocks (except public oauth callbacks) MUST include:
+3. **ForwardAuth SSO Scope Isolation:** All subpath nginx `location` blocks (except public oauth callbacks and root Open WebUI) MUST include:
    ```nginx
    auth_request       /oauth2/auth;
    error_page 401     = @error401;
@@ -50,8 +50,9 @@ The `kern` workstation operates multiple microservices protected by a single uni
    proxy_set_header   X-User  $user;
    proxy_set_header   X-Email $email;
    ```
-4. **Cache Invalidation:** Error 401 handler MUST send `Clear-Site-Data: "cache", "storage"` headers to unregister Service Workers and clear stale browser OAuth tokens.
-5. **PWA Service Worker Isolation & URL Scoping:** Services running under subpaths (e.g. `/obsidian/`) MUST explicitly scope all internal navigation links, wikilinks, browse, view, and search URLs under `/obsidian/` (e.g. `/obsidian/browse/...`, `/obsidian/view/...`) and inject an inline SW unregistration script in `<head>` to prevent the root PWA Service Worker (Open WebUI) from intercepting subpath requests and rendering `404: Not Found`.
+4. **No Global 401 Interception:** NEVER define `error_page 401` at server scope or under `location /`. Open WebUI returns HTTP 401 when unauthenticated; intercepting 401 server-wide forces NGINX to capture Open WebUI's 401 status and redirect users to `oauth2-proxy` / Obsidian.
+5. **Strict `Clear-Site-Data` Header Scoping:** NEVER send `Clear-Site-Data: "cache", "storage"` on `location /` or API routes. Wiping browser storage on general responses clears LocalStorage/SessionStorage on every fetch request, evicting the client application's JWT session token and causing an infinite loading IO logo loop. Restrict `Clear-Site-Data` strictly to sign-out routes (`/oauth2/sign_out`) and `@error401` redirects.
+6. **PWA Service Worker Isolation & URL Scoping:** Services running under subpaths (e.g. `/obsidian/`) MUST explicitly scope all internal navigation links, wikilinks, browse, view, and search URLs under `/obsidian/` (e.g. `/obsidian/browse/...`, `/obsidian/view/...`) and inject an inline SW unregistration script in `<head>` to prevent the root PWA Service Worker (Open WebUI) from intercepting subpath requests and rendering `404: Not Found`.
 
 ---
 
