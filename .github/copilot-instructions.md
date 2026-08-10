@@ -9,6 +9,7 @@ This workspace follows the governance standards defined in the Master ADR Index:
 - **genealogical-biography-synthesizer** (Common): [genealogical-biography-synthesizer](file:///home/jpino/Obsidian/Common/_Meta/Skills/genealogical-biography-synthesizer/SKILL.md)
 - **script-execution-harness** (Common): [script-execution-harness](file:///home/jpino/Obsidian/Common/_Meta/Skills/script-execution-harness/SKILL.md)
 - **obsidian-frontmatter-standard** (Common): [obsidian-frontmatter-standard](file:///home/jpino/Obsidian/Common/_Meta/Skills/obsidian-frontmatter-standard/SKILL.md)
+- **voice-control-npu** (Common): [voice-control-npu](file:///home/jpino/Obsidian/Common/_Meta/Skills/voice-control-npu/SKILL.md)
 - **obsidian-publish-all** (Common): [obsidian-publish-all](file:///home/jpino/Obsidian/Common/_Meta/Skills/obsidian-bases/references/obsidian-help/.claude/skills/obsidian-publish-all/SKILL.md)
 - **obsidian-localize-new** (Common): [obsidian-localize-new](file:///home/jpino/Obsidian/Common/_Meta/Skills/obsidian-bases/references/obsidian-help/.claude/skills/obsidian-localize-new/SKILL.md)
 - **obsidian-ko-style** (Common): [obsidian-ko-style](file:///home/jpino/Obsidian/Common/_Meta/Skills/obsidian-bases/references/obsidian-help/.claude/skills/obsidian-ko-style/SKILL.md)
