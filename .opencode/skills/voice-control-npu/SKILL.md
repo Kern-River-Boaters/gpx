@@ -20,6 +20,7 @@ This skill provides instructions and validation rules for operating local speech
 ## Key Guidelines
 1. **Endpoint Routing:** Always route streaming dictation and ASR requests to `http://localhost:11435/v1` (or Tailscale mesh `http://100.107.8.107:11435/v1`).
 2. **Dictation Instructions:** Reference `.github/dictation.md` for project terminology (`pipecleaner`, `FastFlowLM`, `kern`) and Obsidian shortcut syntax (`[[WikiLink]]`, `📅 Date`).
-3. **Dual GUI Support:** Ensure microphone capture is active and HTTPS WebSocket headers are correctly proxied when operating via browser-based `code-server` (`https://kern.tailb08dba.ts.net/code/`).
-4. **Health Auditing:** Run `python3 _Meta/Scripts/test_voice_control_health.py` before deployments.
+3. **Dual GUI Support & VSIX Sideloading:** Ensure microphone capture is active. Sideload `ms-vscode.vscode-speech` via Marketplace VSIX API to bypass Open VSX registry limits.
+4. **Keybindings & Shortcuts:** Use `Ctrl+Alt+V` (`Voice: Start Dictation` / `Voice: Start Dictation in Terminal`) for hands-free prompt input.
+5. **Health Auditing:** Run `python3 _Meta/Scripts/test_voice_control_health.py` and `test_voice_control_playwright.py` before deployments.
 
