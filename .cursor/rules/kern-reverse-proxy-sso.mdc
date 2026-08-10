@@ -80,8 +80,14 @@ Whenever modifying configuration or deploying updates:
    * Launches Puppeteer headless Chromium to capture JS console errors, unhandled exceptions, and DOM splash screen state.
 
 4. **Open WebUI Database Alignment**:
-   ```bash
-   docker exec open-webui python3 -c "import sqlite3; conn = sqlite3.connect('/app/backend/data/webui.db'); conn.execute('UPDATE config SET value = \'\"https://kern.tailb08dba.ts.net\"\' WHERE key = \'webui.url\''); conn.commit()"
-   ```
-   * Ensures Open WebUI's persistent SQLite database matches `https://kern.tailb08dba.ts.net`.
+    ```bash
+    docker exec open-webui python3 -c "import sqlite3; conn = sqlite3.connect('/app/backend/data/webui.db'); conn.execute('UPDATE config SET value = \'\"https://kern.tailb08dba.ts.net\"\' WHERE key = \'webui.url\''); conn.commit()"
+    ```
+    * Ensures Open WebUI's persistent SQLite database matches `https://kern.tailb08dba.ts.net`.
+
+5. **Playwright E2E Browser Validation Suite**:
+    ```bash
+    python3 [[test_portal_playwright.py]]
+    ```
+    * Runs headless Chromium E2E tests across all portal routes, following redirects and asserting against actual DOM content and titles to guarantee zero SPA router collisions (preventing Open WebUI 404 / IO logo intercept errors).
 
