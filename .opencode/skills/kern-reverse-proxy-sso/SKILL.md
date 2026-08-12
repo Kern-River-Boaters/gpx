@@ -31,11 +31,19 @@ The `kern` workstation operates multiple microservices protected by a single uni
 | `/grafana/` | `http://127.0.0.1:3001/grafana/` | Grafana Dashboards | `GF_SERVER_SERVE_FROM_SUB_PATH=true` |
 | `/terminal/` | `http://127.0.0.1:7681/` | ttyd Web SSH Terminal | Terminal daemon (`-i 127.0.0.1`) |
 | `/dicom/` | `http://127.0.0.1:8300/` | OHIF DICOM Viewer | Medical imaging viewer |
-| `/pacs/` | `http://127.0.0.1:8042/` | Orthanc PACS | DICOM PACS server |
+| `/pacs/` | `http://127.0.0.1:8042/` | Orthanc PACS | DICOM PACS server (loopback only — was `100.107.8.107`, fixed Aug 12) |
 | `/podcast/` | `http://127.0.0.1:8090/` | Private Podcast RSS | Audio feed server |
 | `/metrics/` | `http://127.0.0.1:9090/metrics/` | Prometheus Metrics | System metrics daemon |
 | `/cadvisor/` | `http://127.0.0.1:8081/` | cAdvisor Container Monitor | Container stats (`sub_filter` asset rewriting for root-only upstream) |
 
+### Internal Model Serving Ports (loopback only — NOT proxied through nginx)
+
+| Port | Service | Models |
+|---|---|---|
+| `:11434` | Ollama (Docker, `--network host`) | GPU models: qwen2.5:32b, llama3.1:70b, mistral-nemo, nomic-embed-text |
+| `:11435` | FastFlowLM (systemd --user) | NPU XDNA2: 35 models (deepseek-r1, gemma4, medgemma, qwen3.6-moe…) |
+| `:11436` | llama-server (systemd) | Muse Glimmer 30B GGUF bridge (until Ollama v0.5+) |
+| `:3343–3348` | RAG MCP Servers (5 vaults) | Obsidian RAG/SQL: Notes, Common, Cookbook, KRB, Genealogy |
 ---
 
 ## 2. Mandatory Zero-Trust Binding Rules (SYS-SEC-001 / SYS-SEC-002)
