@@ -44,7 +44,7 @@ The `kern` workstation operates multiple microservices protected by a single uni
 ## 2. Mandatory Zero-Trust Binding Rules (SYS-SEC-001 / SYS-SEC-002)
 
 1. **Loopback Only:** All microservice ports (`:3001`, `:7681`, `:8300`, `:8042`, `:8095`, `:8096`, `:8080`, `:9090`, `:8090`) MUST bind to `127.0.0.1`.
-2. **No Host IP Binds:** Never bind services to `100.107.8.107` or `0.0.0.0`.
+2. **No Host IP Binds:** Never bind services to `100.107.8.107` or `0.0.0.0`. **CRITICAL**: Because NGINX and Docker configs are dynamically generated, you MUST NOT directly edit `/etc/nginx/sites-available/kern-https` to fix these without ALSO updating `setup_kern_https.sh` and `deploy_kern.py`.
 3. **ForwardAuth SSO Scope Isolation:** All subpath nginx `location` blocks (except public oauth callbacks and root Open WebUI) MUST include:
    ```nginx
    auth_request       /oauth2/auth;
