@@ -33,11 +33,11 @@ The `kern` workstation operates multiple microservices protected by a single uni
 
 ### Internal Model Serving Ports (loopback only — NOT proxied through nginx)
 
-| Port | Service | Models |
+| Port | Service | Models / Optimization Config |
 |---|---|---|
 | `:11434` | Ollama (Docker, `--network host`) | GPU models: qwen2.5:32b, llama3.1:70b, mistral-nemo, nomic-embed-text |
 | `:11435` | FastFlowLM (systemd --user) | NPU XDNA2: 35 models (deepseek-r1, gemma4, medgemma, qwen3.6-moe…) |
-| `:11436` | llama-server (systemd) | Muse Glimmer 30B GGUF bridge (until Ollama v0.5+) |
+| `:11436` | llama-server (systemd) | Muse Glimmer 30B GGUF bridge with DFlash speculative decoding (`dflash-kquant.gguf`), `--ctx-size 16384`, `--reasoning-format none` |
 | `:3343–3348` | RAG MCP Servers (5 vaults) | Obsidian RAG/SQL: Notes, Common, Cookbook, KRB, Genealogy |
 ---
 
@@ -97,4 +97,27 @@ Whenever modifying configuration or deploying updates:
     python3 [[test_portal_playwright.py]]
     ```
     * Runs headless Chromium E2E tests across all portal routes, following redirects and asserting against actual DOM content and titles to guarantee zero SPA router collisions (preventing Open WebUI 404 / IO logo intercept errors).
+
+---
+
+## 4. Local LLM Performance & Speculative Decoding Guidelines
+
+When serving large local reasoning models (such as Muse Glimmer 30B GGUF) on unified-memory workstations:
+
+1. **Vulkan Memory Bandwidth Decode Ceiling (~4.25 t/s):**
+   * The AMD Ryzen AI 9 HX 370 iGPU LPDDR5X memory bandwidth physically limits 30B GGUF matrix math decode throughput. Even with full GPU layer offloading (`--n-gpu-layers 99`), decode speed will natively cap at ~4 t/s.
+
+2. **DFlash Speculative Decoding Acceleration:**
+   * Speculative decoding (using the 1.63GB `dflash-kquant.gguf` drafter model) must be enabled via `llama-server` command-line parameters:
+     `--model-draft /home/jpino/.local/share/models/dflash-kquant.gguf --spec-type draft-dflash --spec-draft-n-max 15 --spec-draft-n-min 3`
+   * This leverages the workstation's faster prompt ingestion (prefill) speed (~75 t/s) to draft blocks of tokens, raising net decode throughput by **50% to 100%** (up to ~6–10 t/s).
+
+3. **Reasoning Stream Alignment for Open WebUI:**
+   * **The Problem:** Reasoning models output internal thinking traces into `delta.reasoning_content` in OpenAI compatible SSE streams. Open WebUI expects text in `delta.content`. While the model is thinking, the UI receives zero text and appears completely frozen.
+   * **The Standard:** Serve reasoning models with `--reasoning-format none`. This forces the server to output all tokens directly into `delta.content`, allowing token-by-token text to stream immediately to Open WebUI in **< 1.0 second**.
+
+4. **Prompt Ingestion Latency & Context Sizing:**
+   * **Prefill Speed:** Prefill speed on Vulkan is ~75 tokens per second. If Open WebUI passes a large context window (e.g. 6,000 tokens of chat history/RAG context), prompt ingestion alone takes **~80 seconds** before the first token of the response can generate.
+   * **The Standard:** Always configure a minimum of `--ctx-size 16384` to prevent prompt overflow errors, and encourage starting **New Chat** threads when local inference latency increases (which resets prompt ingestion time to < 2 seconds).
+
 
