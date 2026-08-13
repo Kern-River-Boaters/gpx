@@ -7,6 +7,7 @@ This workspace follows the governance standards defined in the Master ADR Index:
 - **obsidian-bases** (Common): [obsidian-bases](file:///home/jpino/Obsidian/Common/_Meta/Skills/obsidian-bases/SKILL.md)
 - **kern-reverse-proxy-sso** (Common): [kern-reverse-proxy-sso](file:///home/jpino/Obsidian/Common/_Meta/Skills/kern-reverse-proxy-sso/SKILL.md)
 - **self_healing_test_harness** (Common): [self_healing_test_harness](file:///home/jpino/Obsidian/Common/_Meta/Skills/self_healing_test_harness/SKILL.md)
+- **open-webui-iac** (Common): [open-webui-iac](file:///home/jpino/Obsidian/Common/_Meta/Skills/open-webui-iac/SKILL.md)
 - **genealogical-biography-synthesizer** (Common): [genealogical-biography-synthesizer](file:///home/jpino/Obsidian/Common/_Meta/Skills/genealogical-biography-synthesizer/SKILL.md)
 - **script-execution-harness** (Common): [script-execution-harness](file:///home/jpino/Obsidian/Common/_Meta/Skills/script-execution-harness/SKILL.md)
 - **obsidian-frontmatter-standard** (Common): [obsidian-frontmatter-standard](file:///home/jpino/Obsidian/Common/_Meta/Skills/obsidian-frontmatter-standard/SKILL.md)
