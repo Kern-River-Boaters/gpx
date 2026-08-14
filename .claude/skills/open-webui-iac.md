@@ -11,9 +11,20 @@ description: Operational skill for provisioning Open WebUI via SQLite, enforcing
 
 ## 1. Context and The "Invisible Payload" Problem
 Open WebUI is highly stateful. It stores configurations like custom tools, models, and fallback globals in a local SQLite database (`webui.db`) and aggressively caches this database in its FastAPI backend memory.
-If a custom agent persona (e.g., `kern-vault-assistant` / Hermes) is mistakenly registered as an Open WebUI "Model," its entire base context (often >6,000 tokens) becomes stored in the `model` table. 
+If a custom agent persona (e.g., `kern-vault-assistant` / Hermes) is mistakenly registered as an Open WebUI "Model," its base context (often >6,000 tokens) becomes stored in the `model` table. 
 
 Due to Open WebUI's inheritance mechanics, these massive prompts can be globally applied to other naive models (like `muse-glimmer`) leading to **invisible configuration drift and severe latency (45+ seconds per query)**.
+
+## OpenCode Planner & Context Architecture
+
+When pairing Open WebUI and OpenCode AI architecture:
+- `muse-glimmer` (30B) running on `llama-server` is configured natively with a **32k context window** to absorb massive OpenCode codebase RAG payloads.
+- **The Prefill Penalty:** While 32k context avoids crashes, injecting 23,000+ tokens of codebase context incurs a significant hardware math penalty. The Ryzen AI 9 iGPU evaluates prompt prefill at **~75 tokens per second**. A 23k token payload will take **~5 minutes** to process before generating the first reasoning trace.
+- **Workflow Optimization:**
+  1. For interactive, zero-latency triage: use NPU (`fastflowlm` on `:11435`).
+  2. For instant Chat/Reasoning: use Open WebUI (which avoids the 23k workspace dump).
+  3. For heavy codebase coding: use `qwen2.5-coder` on Ollama (`:11434`).
+  4. For background agentic planning: use `muse-glimmer` on `llama-server` (`:11436`), knowing the 5-minute prefill is an acceptable asynchronous delay.
 
 ## 2. Safe Provisioning Standards
 
