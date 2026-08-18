@@ -5,6 +5,7 @@ This workspace follows the governance standards defined in the Master ADR Index:
 
 ## Active Agent Skills
 - **obsidian-bases** (Common): [obsidian-bases](file:///home/jpino/Obsidian/Common/_Meta/Skills/obsidian-bases/SKILL.md)
+- **overlook-client-node** (Common): [overlook-client-node](file:///home/jpino/Obsidian/Common/_Meta/Skills/overlook-client-node/SKILL.md)
 - **kern-reverse-proxy-sso** (Common): [kern-reverse-proxy-sso](file:///home/jpino/Obsidian/Common/_Meta/Skills/kern-reverse-proxy-sso/SKILL.md)
 - **self_healing_test_harness** (Common): [self_healing_test_harness](file:///home/jpino/Obsidian/Common/_Meta/Skills/self_healing_test_harness/SKILL.md)
 - **open-webui-iac** (Common): [open-webui-iac](file:///home/jpino/Obsidian/Common/_Meta/Skills/open-webui-iac/SKILL.md)

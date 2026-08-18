@@ -30,8 +30,9 @@ When a user performs an NVRAM reset (`Command + Option + P + R`), the Mac delete
 ### 2. Ext4 Block Cache Desync (False I/O Errors)
 If a user uses GParted to move the left edge of an `ext4` partition, they are physically shifting the filesystem data. 
 - **Symptom**: Running `grub-install` throws `input/output error` when copying files, making it appear as though the SSD is failing.
-- **Cause**: The Linux kernel's block cache retains stale partition boundaries.
-- **Fix**: Do **not** assume hardware failure. Forcefully unmount the partition, run `fsck.ext4 -y -f` to stitch inodes, and carefully remount. The kernel will read the correct boundaries.
+- **Symptom**: Antigravity IDE and Electron apps freeze or show a white screen on boot.
+- **Root Cause**: The Apple OEM Samsung SSUBX PCIe AHCI SSD triggers Intel DMAR page table translation faults on Linux if Intel IOMMU is enabled. This causes `ata1.00 frozen` link errors and emergency ext4 `remount-ro` lockups. Furthermore, leaving `nomodeset` active disables the GPU drivers needed for Wayland/Electron.
+- **Fix (Already integrated in `fix_final.sh`)**: Ensure `intel_iommu=off` is safely appended to `GRUB_CMDLINE_LINUX_DEFAULT`, and explicitly remove `nomodeset` from the configuration to restore hardware acceleration.
 
 ### 3. Bypassing Live USB Firewalls (Localtunnel)
 Debian-based Live USBs (like GParted) employ strict TCP wrappers (`hosts.deny`) or missing SSH keys that reject incoming SSH connections (`Connection reset by peer`).
