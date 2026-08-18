@@ -33,10 +33,15 @@ When a user performs an NVRAM reset (`Command + Option + P + R`), the Mac delete
 If a user uses GParted to move the left edge of an `ext4` partition, they are physically shifting the filesystem data. 
 - **Symptom**: Running `grub-install` throws `input/output error` when copying files, making it appear as though the SSD is failing.
 - **Symptom**: Antigravity IDE and Electron apps freeze or show a white screen on boot.
-- **Root Cause**: The Apple OEM Samsung SSUBX PCIe AHCI SSD triggers Intel DMAR page table translation faults on Linux if Intel IOMMU is enabled. This causes `ata1.00 frozen` link errors and emergency ext4 `remount-ro` lockups. Furthermore, leaving `nomodeset` active disables the GPU drivers needed for Wayland/Electron.
-- **Fix (Already integrated in `fix_final.sh`)**: Ensure `intel_iommu=off` is safely appended to `GRUB_CMDLINE_LINUX_DEFAULT`, and explicitly remove `nomodeset` from the configuration to restore hardware acceleration.
+- **Root Cause**: The Apple OEM Samsung SSUBX PCIe AHCI SSD triggers Intel DMAR page table translation faults on Linux if Intel IOMMU is enabled. This causes `ata1.00 frozen` link errors and emergency ext4 `remount-ro` lockups. Furthermore, leaving `nomodeset` active from the Live USB recovery completely disables the `amdgpu` driver, which guarantees that Wayland compositors and Electron IDEs will lock up or crash when launched.
+- **Fix (Already integrated in `fix_final.sh`)**: Ensure `intel_iommu=off` is safely appended to `GRUB_CMDLINE_LINUX_DEFAULT`, and explicitly **remove `nomodeset`** from the configuration to restore hardware acceleration.
 
-### 3. Bypassing Live USB Firewalls (Localtunnel)
+### 3. Electron SUID Sandbox Extraction Bug (False GPU Lockups)
+When agents or users manually extract `.tar.gz` archives of Electron applications (like Antigravity IDE) as a normal user, the internal `chrome-sandbox` executable loses its `root` ownership and `4755` SUID permission.
+- **Symptom**: The app instantly aborts launch. To a user clicking an icon, it looks like nothing happened or the system hung.
+- **Fix**: The agent MUST NOT hallucinate a disk or GPU lockup in this scenario; it MUST run `sudo chown root:root chrome-sandbox && sudo chmod 4755 chrome-sandbox`.
+
+### 4. Bypassing Live USB Firewalls (Localtunnel)
 Debian-based Live USBs (like GParted) employ strict TCP wrappers (`hosts.deny`) or missing SSH keys that reject incoming SSH connections (`Connection reset by peer`).
 - **Fix**: Instead of fighting SSH, start a local HTTP server on the agent's host workstation and expose it using `localtunnel` (`npx -y localtunnel --port <PORT>`). Have the user run `wget -qO- https://<localtunnel-url>/script.sh | sudo bash` on the laptop to seamlessly stream and execute agentic recovery scripts.
 
