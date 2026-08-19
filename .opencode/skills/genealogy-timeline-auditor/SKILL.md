@@ -9,7 +9,7 @@ description: "genealogy-timeline-auditor skill for OpenCode"
 
 ---
 name: genealogy-timeline-auditor
-description: Audits genealogical profiles across the vault for timeline gaps, missing vital statistics, unlinked ancestors, broken WikiLinks, and chronological anomalies (e.g. parent born after child).
+description: "Audits genealogical profiles across the vault for timeline gaps, missing vital statistics, unlinked ancestors, broken WikiLinks, and chronological anomalies (e.g. parent born after child)."
 ---
 
 # Genealogy Timeline Auditor Skill

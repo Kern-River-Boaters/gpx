@@ -8,8 +8,8 @@ description: "The Talent Agent skill for OpenCode"
 > Parent Skill Definition: [The Talent Agent](file:///home/jpino/Obsidian/Notes/_Meta/Skills/The Talent Agent/SKILL.md)
 
 ---
-name: The Talent Agent Content & Innovation Drafting Skill
-description: Governs automated content drafting, LLM-as-a-Judge critique loops, venue persona contracts, and hardware-agnostic patent relevance mapping.
+name: "The Talent Agent Content & Innovation Drafting Skill"
+description: "Governs automated content drafting, LLM-as-a-Judge critique loops, venue persona contracts, and hardware-agnostic patent relevance mapping."
 ---
 
 # ✍️ The Talent Agent Skill & Architectural SOP

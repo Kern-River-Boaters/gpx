@@ -4,7 +4,7 @@
 
 ---
 name: genealogy-gramps-exporter
-description: Standardizes vault-to-GEDCOM export using obsidian-gramps-provenance-sync, guaranteeing 100% bidirectional family pointer symmetry, strict GEDCOM 5.5.1 header compliance, and private export placement per GEN-ADR-007 and SOP-GEN-003.
+description: "Standardizes vault-to-GEDCOM export using obsidian-gramps-provenance-sync, guaranteeing 100% bidirectional family pointer symmetry, strict GEDCOM 5.5.1 header compliance, and private export placement per GEN-ADR-007 and SOP-GEN-003."
 ---
 
 # Genealogy Gramps Exporter Skill

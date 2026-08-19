@@ -7,7 +7,7 @@ globs: *.md
 
 ---
 name: genealogy-source-ingestion
-description: Ingests raw genealogical source documents (PDFs, census images, birth/baptismal certificates) from Sources/_Inbox/, applies ADR-011 filename sanitization, links sources to verified profiles, embeds visual document previews, and updates frontmatter facts per SOP-GEN-002 and ADR-013.
+description: "Ingests raw genealogical source documents (PDFs, census images, birth/baptismal certificates) from Sources/_Inbox/, applies ADR-011 filename sanitization, links sources to verified profiles, embeds visual document previews, and updates frontmatter facts per SOP-GEN-002 and ADR-013."
 ---
 
 # Genealogy Source Ingestion Skill

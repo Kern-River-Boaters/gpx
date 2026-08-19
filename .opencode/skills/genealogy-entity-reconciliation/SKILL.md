@@ -9,7 +9,7 @@ description: "genealogy-entity-reconciliation skill for OpenCode"
 
 ---
 name: genealogy-entity-reconciliation
-description: Audits duplicate profiles, executes 3-tier triangulated matching, performs non-destructive entity merging, and repoints WikiLink array links (parents, spouse, children) across vault records per GEN-ADR-004 and GEN-ADR-005.
+description: "Audits duplicate profiles, executes 3-tier triangulated matching, performs non-destructive entity merging, and repoints WikiLink array links (parents, spouse, children) across vault records per GEN-ADR-004 and GEN-ADR-005."
 ---
 
 # Genealogy Entity Reconciliation Skill

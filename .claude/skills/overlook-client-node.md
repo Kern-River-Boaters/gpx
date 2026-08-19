@@ -4,7 +4,7 @@
 
 ---
 name: overlook-client-node
-description: Operational skill for provisioning, diagnosing, auditing, and managing the Overlook mobile workstation (Apple MacBook Pro Retina 15-inch Mid 2015 / MacBookPro11,5), Broadcom FaceTime HD PCIe camera (bcwc_pcie), mbpfan thermals, lid close safeguards, amdgpu SI driver assignment, external monitor support, and federated MCP routing to Kern. Use whenever modifying Overlook drivers, power profiles, GPU config, or client configs.
+description: "Operational skill for provisioning, diagnosing, auditing, and managing the Overlook mobile workstation (Apple MacBook Pro Retina 15-inch Mid 2015 / MacBookPro11,5), Broadcom FaceTime HD PCIe camera (bcwc_pcie), mbpfan thermals, lid close safeguards, amdgpu SI driver assignment, external monitor support, and federated MCP routing to Kern. Use whenever modifying Overlook drivers, power profiles, GPU config, or client configs."
 ---
 
 # Overlook Mobile Client Node Standard

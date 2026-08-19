@@ -4,7 +4,7 @@
 
 ---
 name: macbook-ubuntu-repair
-description: Operational skill for repairing Mid-2015 Retina MacBook Pro Ubuntu EFI bootloaders, mitigating dual-graphics handover crashes, resolving false ext4 I/O errors after partition resizing, and bypassing Live USB firewall blocks using localtunnel.
+description: "Operational skill for repairing Mid-2015 Retina MacBook Pro Ubuntu EFI bootloaders, mitigating dual-graphics handover crashes, resolving false ext4 I/O errors after partition resizing, and bypassing Live USB firewall blocks using localtunnel."
 ---
 
 # MacBook Pro Ubuntu Repair Skill

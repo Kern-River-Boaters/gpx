@@ -9,7 +9,7 @@ description: "open-webui-iac skill for OpenCode"
 
 ---
 name: open-webui-iac
-description: Operational skill for provisioning Open WebUI via SQLite, enforcing Infrastructure-as-Code (IaC), managing cache invalidation, and avoiding global persona prompt bloat.
+description: "Operational skill for provisioning Open WebUI via SQLite, enforcing Infrastructure-as-Code (IaC), managing cache invalidation, and avoiding global persona prompt bloat."
 ---
 
 # Open WebUI IaC Drift Management

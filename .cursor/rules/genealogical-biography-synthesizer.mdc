@@ -7,7 +7,7 @@ globs: *.md
 
 ---
 name: genealogical-biography-synthesizer
-description: Synthesizes rich, story-driven biographical narratives for genealogical profiles from extracted frontmatter facts, census data, parish registers, and regional historical context, strictly enforcing zero-cruft inference boundaries per GEN-ADR-002 and SYS-SCH-002.
+description: "Synthesizes rich, story-driven biographical narratives for genealogical profiles from extracted frontmatter facts, census data, parish registers, and regional historical context, strictly enforcing zero-cruft inference boundaries per GEN-ADR-002 and SYS-SCH-002."
 ---
 
 # Genealogical Biography Synthesizer Skill

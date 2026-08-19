@@ -4,7 +4,7 @@
 
 ---
 name: gedcom-gramps-export
-description: Standards and execution rules for exporting Obsidian genealogy vaults to strict GEDCOM 5.5.1 format with 100% bidirectional pointer symmetry for Gramps import.
+description: "Standards and execution rules for exporting Obsidian genealogy vaults to strict GEDCOM 5.5.1 format with 100% bidirectional pointer symmetry for Gramps import."
 ---
 
 # GEDCOM Export & Gramps Integration Standard

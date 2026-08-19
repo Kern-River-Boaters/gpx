@@ -7,7 +7,7 @@ globs: *.md
 
 ---
 name: kern-reverse-proxy-sso
-description: Operational skill for configuring, deploying, auditing, and debugging NGINX HTTPS Reverse Proxy, ForwardAuth SSO gateway (oauth2-proxy), zero-trust loopback isolation (127.0.0.1), and Open WebUI root SPA alignment on kern. Use whenever modifying NGINX, oauth2-proxy, Open WebUI, or service routing.
+description: "Operational skill for configuring, deploying, auditing, and debugging NGINX HTTPS Reverse Proxy, ForwardAuth SSO gateway (oauth2-proxy), zero-trust loopback isolation (127.0.0.1), and Open WebUI root SPA alignment on kern. Use whenever modifying NGINX, oauth2-proxy, Open WebUI, or service routing."
 ---
 
 # Kern Reverse-Proxy, SSO & Zero-Trust Isolation Standard

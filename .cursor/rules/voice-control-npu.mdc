@@ -7,7 +7,7 @@ globs: *.md
 
 ---
 name: voice-control-npu
-description: Local NPU-accelerated voice control and dictation skill for VS Code and code-server on the Kern workstation via FastFlowLM.
+description: "Local NPU-accelerated voice control and dictation skill for VS Code and code-server on the Kern workstation via FastFlowLM."
 ---
 
 # Voice Control & NPU Transcription Skill
