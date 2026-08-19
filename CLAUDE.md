@@ -66,7 +66,7 @@ KRB/
 - **Single-file architecture:** Each river section has one `.md` file — no separate `(Map).md` files.
 - **Auto-generated block:** Maps enclosed in `<!-- BEGIN AUTO-GENERATED MAP -->` / `<!-- END AUTO-GENERATED MAP -->`. Script regenerates only this block; user notes above/below are preserved.
 - **Dual maps:** Each file has both OpenStreetMap (street) and Esri World Imagery (satellite). No layer toggle — plugin doesn't support it.
-- **GeoJSON external files:** Waypoints in `.json` files, referenced via `geojson: [[filename.json]]`. Inline markers break with HTML comment markers.
+- **GeoJSON external files:** Waypoints in `.json` files, referenced via `gpx: [[filename.gpx]]`. Inline markers break with HTML comment markers.
 - **Bounding box:** `BBOX_BUFFER = 0.003` (~300m padding).
 - **Required touch parameters (Android):**
   ```yaml
