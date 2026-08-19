@@ -24,7 +24,8 @@ description: Operational skill for provisioning, diagnosing, auditing, and manag
 | Component | Hardware Identifier | Linux Driver / Daemon | Configuration File / Target | Key Verification Command |
 | :--- | :--- | :--- | :--- | :--- |
 | **FaceTime HD Webcam** | `14e4:1570` (PCIe) | `facetimehd` (DKMS 0.7.0.1) | `/etc/modules-load.d/facetimehd.conf` | `ls -la /dev/video0 && lsmod \| grep facetimehd` |
-| **Bluetooth Host Controller** | `05ac:8290` (USB) | `btusb` / `btbcm` | `/lib/firmware/brcm/BCM-05ac-8290.hcd`, `/etc/modprobe.d/bluetooth.conf` | `bluetoothctl show && hciconfig -a` |
+| **Primary Bluetooth Controller** | `2357:0604` (TP-Link UB500 / RTL8761BU) | `btusb` / `btrtl` (BT 5.4) | Primary default adapter (`hci1`) for dual BLE peripherals (K860 + SlimBlade Pro) | `bluetoothctl list && bluetoothctl info` |
+| **Internal Bluetooth (Fallback)** | `05ac:8290` (Apple Broadcom) | `btusb` / `btbcm` | `/lib/firmware/brcm/BCM-05ac-8290.hcd` (Powered OFF when UB500 active) | `bluetoothctl show AC:BC:32:8F:41:9C` |
 | **Firmware Payload** | Broadcom BCM15700A2 | Extracted from OSX | `/usr/lib/firmware/facetimehd/firmware.bin` | `stat /usr/lib/firmware/facetimehd/firmware.bin` |
 | **Thermals & Fans** | Dual Fan Assembly | `mbpfan` | `/etc/mbpfan.conf` (`55°C` / `78°C` / `92°C`) | `systemctl status mbpfan.service` |
 | **Trackpad** | Apple Multitouch | `libinput` | `/etc/X11/xorg.conf.d/40-touchpad.conf` | `gsettings get org.gnome.desktop.peripherals.touchpad natural-scroll` |
@@ -56,6 +57,8 @@ description: Operational skill for provisioning, diagnosing, auditing, and manag
 10. **Apple-GMUX Screen & Keyboard Backlight Nativism:** The internal screen backlight (`gmux_backlight`) and keyboard backlight (`smc::kbd_backlight`) are handled perfectly by the modern Linux kernel (`7.x`) and GNOME Wayland out of the box. Do **NOT** apply legacy kernel parameters (e.g., `acpi_backlight=vendor`) or udev input integration hacks. F1/F2 correctly control the screen, and F5/F6 control the keyboard LEDs.
 11. **Mandatory SMC Reset for Hardware Freezes:** When recovering from a GPU compositor freeze or Bluetooth controller hang, the NVRAM reset (`Cmd + Opt + P + R`) is generally ineffective. The **SMC Reset** (holding `Shift + Control + Option + Power` for 10 seconds while powered down) is definitively required to flush the Apple GMUX (Graphics Multiplexer) and USB/Bluetooth firmware states.
 12. **Electron SUID Sandbox Extraction Bug:** When agents or users manually extract `.tar.gz` archives of Electron applications (like Antigravity IDE), the `chrome-sandbox` executable loses its `root` ownership and `4755` SUID permission, causing the app to instantly abort launch. The agent MUST NOT hallucinate a disk or GPU lockup in this scenario; it MUST run `sudo chown root:root chrome-sandbox && sudo chmod 4755 chrome-sandbox`.
+13. **Battery Longevity & Power Telemetry Baseline (`battery_guard.py` / SYS-INF-010):** Overlook operates an iFixit high-capacity battery pack (105.02 Wh, ~108.5% health). The absolute minimal hardware power floor (with AMD dGPU Cape Verde active in `power/control = on`, USB peripherals pulled, and Wi-Fi disabled) is **`18.3313 W`** (~5.73 hours theoretical runtime). Standard development load (Wi-Fi + BT 5.4 LE) draws ~22–28 W (~3.75–4.75 hours). AccuBattery Guardian enforces an 80% charge ceiling (~84 Wh usable, ~4.5 hours light dev) to protect cell chemistry.
+
 
 ---
 
