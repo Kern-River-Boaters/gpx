@@ -13,6 +13,7 @@ This workspace follows the governance standards defined in the Master ADR Index:
 - **genealogy-timeline-auditor** (Genealogy): [genealogy-timeline-auditor](file:///home/jpino/Obsidian/Genealogy/_Meta/Skills/genealogy-timeline-auditor/SKILL.md)
 - **kern-reverse-proxy-sso** (Common): [kern-reverse-proxy-sso](file:///home/jpino/Obsidian/Common/_Meta/Skills/kern-reverse-proxy-sso/SKILL.md)
 - **macbook-ubuntu-repair** (Common): [macbook-ubuntu-repair](file:///home/jpino/Obsidian/Common/_Meta/Skills/macbook-ubuntu-repair/SKILL.md)
+- **mobile-termux-node** (Common): [mobile-termux-node](file:///home/jpino/Obsidian/Common/_Meta/Skills/mobile-termux-node/SKILL.md)
 - **obsidian-bases** (Common): [obsidian-bases](file:///home/jpino/Obsidian/Common/_Meta/Skills/obsidian-bases/SKILL.md)
 - **obsidian-frontmatter-standard** (Common): [obsidian-frontmatter-standard](file:///home/jpino/Obsidian/Common/_Meta/Skills/obsidian-frontmatter-standard/SKILL.md)
 - **open-webui-iac** (Common): [open-webui-iac](file:///home/jpino/Obsidian/Common/_Meta/Skills/open-webui-iac/SKILL.md)
