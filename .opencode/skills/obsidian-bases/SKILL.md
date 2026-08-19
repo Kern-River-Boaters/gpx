@@ -43,9 +43,23 @@ When creating or editing Obsidian Core Base files (`.base`), embedded base code 
      ```
    - Reference formula properties in views using `formula.clean_duplicates`.
 
-5. **Column Visibility & Ordering (`views:` -> `order:`)**:
-   - Column order and visibility are strictly encapsulated inside a `views:` block under `order:`.
-   - **Prohibited**: Root-level `order:` blocks or sort-order suffixes (`:asc` / `:desc`) inside `order:`.
+5. **View Layout Types (`views:` -> `type:`)**:
+   - `type: table`: Tabular data grid with custom `order:`, column `displayName:`, row formulas, and `summaries:` footers.
+   - `type: cards`: Responsive gallery grid displaying cover images (`image: "[[cover.jpg]]"`), tags, and metadata pills.
+   - `type: list`: Compact, formatted bullet/item feed.
+   - `type: map`: Interactive OpenFreeMap / Leaflet map displaying markers extracted from `coordinates: [lat, lng]` or `"lat, lng"` with customizable `icon:` (from Lucide) and `color:`.
+
+6. **Column Summaries & Aggregations (`views:` -> `summaries:`)**:
+   - Built-in aggregations replace legacy DataviewJS reduce loops:
+     ```yaml
+     summaries:
+       cost: Sum
+       labor: Sum
+       formula.total_basis: Sum
+       rating: Average
+       status: Count
+     ```
+   - Supported summary functions: `Sum`, `Average`, `Count`, `Min`, `Max`, `Range`, `Median`, `Stddev`, `Earliest`, `Latest`.
 
 ---
 

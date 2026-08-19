@@ -1,0 +1,22 @@
+filters:
+  and:
+    - 'file.hasTag("river/kern")'
+views:
+  - type: map
+    name: "Kern River Interactive Map"
+    coordinates: coordinates
+    icon: icon
+    color: color
+  - type: table
+    name: "Kern River Features Table"
+    order:
+      - file.name
+      - doc_type
+      - section
+      - coordinates
+  - type: cards
+    name: "Features Gallery"
+    order:
+      - file.name
+      - doc_type
+      - section
