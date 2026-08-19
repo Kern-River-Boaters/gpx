@@ -7,7 +7,7 @@ globs: *.md
 
 ---
 name: obsidian-frontmatter-standard
-description: Comprehensive governance and validation standard for YAML frontmatter and Obsidian Properties across federated vaults. Enforces official Obsidian Help specifications, strict quoting rules, and prohibits brittle string concatenations.
+description: "Comprehensive governance and validation standard for YAML frontmatter and Obsidian Properties across federated vaults. Enforces official Obsidian Help specifications, strict quoting rules, and prohibits brittle string concatenations."
 ---
 
 # Obsidian Frontmatter & Properties Standard Skill
