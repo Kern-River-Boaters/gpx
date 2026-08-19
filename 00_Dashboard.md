@@ -7,57 +7,37 @@ created: 2026-08-19
 status: active
 ---
 
-# 🗺️ Kern River Basin Master Corridor Dashboard
+# 🛶 Kern River Basin Master Guidebook & Corridor Index
 
-> [!info] 🌊 Interactive River Corridor Map & Rapids Catalog
-> This master dashboard dynamically displays all rapids, put-ins, take-outs, and campgrounds along the North Fork and Lower Kern River corridors using native **Obsidian Core Bases** with mobile gesture isolation.
+> [!info] 🌊 Official Whitewater Guidebooks & Maps
+> Welcome to the Kern River Basin whitewater and recreation directory. All river sections feature interactive Street and Satellite maps driven directly by authoritative GPS track and waypoint files (`.gpx`).
 
 ---
 
-## 🗺️ 1. Interactive River Corridor Map
+## 🧭 Master River Section Guidebooks
 
 ```base
 filters:
   and:
-    - 'file.hasTag("river/kern")'
-views:
-  - type: map
-    name: "Kern River Corridor Map"
-    coordinates: coordinates
-    icon: icon
-    color: color
-```
-
----
-
-## 🌊 2. Rapids Catalog
-
-```base
-filters:
-  and:
-    - 'file.hasTag("feature/rapid")'
+    - 'file.hasTag("type/river_guide")'
 views:
   - type: table
-    name: "Rapids Inventory"
+    name: "Kern River Guidebooks"
     order:
       - file.name
-      - section
-      - coordinates
+      - tags
 ```
 
 ---
 
-## ⛺ 3. Campgrounds & Access Points
+## 🗺️ Quick Links to Master Maps & Guidebooks
 
-```base
-filters:
-  or:
-    - 'file.hasTag("feature/campground")'
-    - 'file.hasTag("feature/access")'
-views:
-  - type: cards
-    name: "Campgrounds & Access Points"
-    order:
-      - file.name
-      - doc_type
-```
+| River Section / Resource | Difficulty | Key Features & Beta | Interactive Maps |
+| :--- | :---: | :--- | :---: |
+| **[[North Fork Kern Rapids]]** | Class IV–V | 69 Named Rapids (Upper Kern, Fairview, Johnsondale) | [Street & Satellite View](obsidian://open?vault=KRB&file=Kern%2FNorth%20Fork%20Kern%20Rapids) |
+| **[[Lower Kern Rapids]]** | Class III–IV | Miracle Hot Springs to Democrat, Royal Flush | [Street & Satellite View](obsidian://open?vault=KRB&file=Kern%2FLower%20Kern%20Rapids) |
+| **[[Brush Creek]]** | Class V | Steep Creeking, 10 Waterfall Drops & Scouting Beta | [Street & Satellite View](obsidian://open?vault=KRB&file=Kern%2FBrush%20Creek) |
+| **[[Kern Access]]** | — | Put-ins, Take-outs, Launch Ramps, Shuttles | [Street & Satellite View](obsidian://open?vault=KRB&file=Kern%2FKern%20Access) |
+| **[[Kern Campgrounds]]** | — | River corridor campsites, developed & dispersed | [Street & Satellite View](obsidian://open?vault=KRB&file=Kern%2FKern%20Campgrounds) |
+| **[[Kern Parking]]** | — | Trailhead, day use, and river takeout parking areas | [Street & Satellite View](obsidian://open?vault=KRB&file=Kern%2FKern%20Parking) |
+| **[[Kern Picnic Areas]]** | — | Day use picnic zones along the Kern River | [Street & Satellite View](obsidian://open?vault=KRB&file=Kern%2FKern%20Picnic%20Areas) |

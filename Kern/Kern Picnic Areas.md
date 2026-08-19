@@ -33,7 +33,7 @@ touchZoom: true
 doubleClickZoom: true
 showAllMarkers: false
 
-geojson: [[Kern Picnic Areas.json]]
+gpx: [[Kern Picnic Areas.gpx]]
 ```
 
 ## Satellite Map
@@ -58,6 +58,6 @@ touchZoom: true
 doubleClickZoom: true
 showAllMarkers: false
 
-geojson: [[Kern Picnic Areas.json]]
+gpx: [[Kern Picnic Areas.gpx]]
 ```
 <!-- END AUTO-GENERATED MAP -->

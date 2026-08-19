@@ -33,7 +33,7 @@ touchZoom: true
 doubleClickZoom: true
 showAllMarkers: false
 
-geojson: [[Kern Campgrounds.json]]
+gpx: [[Kern Campgrounds.gpx]]
 ```
 
 ## Satellite Map
@@ -58,6 +58,6 @@ touchZoom: true
 doubleClickZoom: true
 showAllMarkers: false
 
-geojson: [[Kern Campgrounds.json]]
+gpx: [[Kern Campgrounds.gpx]]
 ```
 <!-- END AUTO-GENERATED MAP -->

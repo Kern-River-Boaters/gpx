@@ -33,7 +33,7 @@ touchZoom: true
 doubleClickZoom: true
 showAllMarkers: false
 
-geojson: [[Brush Creek.json]]
+gpx: [[Brush Creek.gpx]]
 ```
 
 ## Satellite Map
@@ -58,6 +58,6 @@ touchZoom: true
 doubleClickZoom: true
 showAllMarkers: false
 
-geojson: [[Brush Creek.json]]
+gpx: [[Brush Creek.gpx]]
 ```
 <!-- END AUTO-GENERATED MAP -->
