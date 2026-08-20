@@ -111,38 +111,43 @@ The canonical, organized KeePass database hierarchy for **Jose Database.kdbx**:
 ```
 Jose Database.kdbx
 ├── 🔐 Core Identity & Essentials
-│   ├── Identity & Cloud/            (Google, Apple ID, Microsoft, Password Manager, AWS)
+│   ├── Identity & Cloud/            (Google, Apple ID, Microsoft, Password Manager, AWS, Obsidian, Bitwarden)
+│   ├── Social Media/                (Instagram, Mastodon, Bluesky, Twitter/X, Facebook, Discord, Signal, Nextdoor)
 │   ├── Finance/                     (Chase, First Tech, BofA, Citi, Discover, Taxes, 529s)
-│   ├── Healthcare/                  (UCLA Health [Jose, Lisa, Isabel], Cigna, Delta Dental)
-│   └── Government/                  (Social Security, IRS, CA MyFTB, DMV, Passports, USCIS)
+│   ├── Healthcare/                  (UCLA Health [Jose, Lisa, Isabel], Cigna, Delta Dental, Medi-Cal, CVS, CHLA)
+│   └── Government/                  (Social Security, IRS, CA MyFTB, DMV, Passports, USCIS, IHSS, EDD, TCRC)
 │
 ├── 💼 Professional & Work
 │   ├── Work - Keysight/             (Keysight enterprise, EDA tools, IEEE, engineering)
 │   └── Work - Lisa/                 (LILA portals, Lisa College Board, CommonApp Counselor)
 │
 ├── 🏡 Lifestyle, Home & Hobbies
-│   ├── Entertainment/               (Netflix, HBO Max, Disney+, Hulu, Spotify, YouTube, Theaters)
-│   ├── Libraries/                   (TO Library, LAPL, LA County Library, OverDrive, Libby)
-│   ├── Outdoors & Sports/           (Kern River Boaters, Kayaking, Strava, Garmin inReach, Camping)
-│   ├── Shopping/                    (Amazon, Costco, Target, Best Buy, Sweet Maria's Coffee)
-│   ├── Travel/                      (Airlines [Delta, Alaska], Hotels, Rental Cars, Amtrak)
-│   └── Utilities/                   (SoCalGas, SCE, Water, Trash, Verizon, Fastrak)
+│   ├── Genealogy/                   (Ancestry.com, Geneanet, WikiTree, FamilySearch, MyHeritage)
+│   ├── News & Periodicals/          (The Atlantic, NY Times, WSJ, The Economist, Substack, VC Star)
+│   ├── Entertainment/               (Netflix, HBO Max, Disney+, Hulu, Spotify, YouTube, Vudu, Theaters)
+│   ├── Libraries/                   (TO Library [Jose, Lisa, Isabel], LAPL, LA County Library, OverDrive, Libby)
+│   ├── Outdoors & Sports/           (Kern River Boaters, Kayaking, Strava, Garmin inReach, State Parks, CRPD, Ride On)
+│   ├── Shopping/                    (Amazon, Costco, Target, Best Buy, Sweet Maria's Coffee, Care.com)
+│   ├── Travel/                      (Airlines [Delta, Alaska, AA, Southwest], Hotels, Rental Cars, Amtrak)
+│   └── Utilities/                   (SoCalGas, SCE, Water, Trash, Verizon, Fastrak, Frontier)
 │
 ├── 🖥️ Local Hardware & Licenses
-│   ├── Smart Home & Network/        (Home router, Synology NAS, Wi-Fi networks, IoT devices)
+│   ├── Smart Home & Network/        (Home router, Synology NAS, Wi-Fi networks, IoT devices, TP-Link)
 │   └── Software Licenses/           (Active software licenses, serial numbers, product keys)
 │
 ├── 👨‍👩‍👧 Family Care
-│   ├── Family - Isabel/             (Isabel active school, medical, activities)
-│   └── Family - Madre/              (Madre Apple, Microsoft, Amex, Delta, Alaska, WiFi)
+│   └── Family - Madre/              (Madre Apple, Microsoft, Amex, Delta, Alaska, WiFi, MLGR proxy)
+│
+├── 📑 Entry Templates
+│   └── Templates/                   (KeePass / KeePassXC entry creation templates: Credit card, Wireless LAN, etc.)
 │
 └── 📦 Archive
-    ├── Adult Kids/                  (Ana [AMP], Elena [EMP], Eva [MEP], Alister [SP] SAT/FAFSA)
-    ├── Civic - CVUSD Campaign/      (Jose past school district & board campaign accounts)
+    ├── Adult Kids/                  (Ana [AMP], Elena [EMP], Eva [MEP], Alister [SP] SAT/FAFSA/Transcripts)
+    ├── Civic - CVUSD Campaign/      (Jose past school district & board campaign accounts, ActBlue)
+    ├── Civic - LULAC & Buen Vecino/ (Jose past LULAC & Buen Vecino community leadership)
     ├── Past Work - Lisa/            (CollegeAdvisor, Defunct La Reina - lpino@lareina.com)
     ├── Past Work - Jose/            (Jose Agilent pre-spinoff accounts - jpino@agilent.com)
-    ├── Legacy Software/             (Obsolete serial keys: Photoshop CS, Framemaker 6, etc.)
-    └── Defunct Services/            (Dead websites, old ISPs, obsolete hardware stubs)
+    └── Defunct Services/            (eBags, Circuit City, CompUSA, Borders, DVD X Copy, Adelphia, Old ISPs)
 ```
 
 ---
