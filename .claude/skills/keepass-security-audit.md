@@ -32,7 +32,7 @@ When classifying, scoring, or remediating credentials, agents MUST adhere to thi
 | **Isabel Pino** | `MIP`, `(MIP)`, `isabel` | Active Dependent Daughter | `Family - Isabel/` |
 | **Madre (Maria Luisa Rexach)** | `Madre`, `(Madre)`, `marialuisarexach`, `maria4hope@yahoo.com` | Family Elder (Managed by Jose) | `Family - Madre/` |
 | **Alister Pino (fka Susana)** | `SP`, `(SP)`, `susana`, `alister`, `8384249` | Independent Adult Kid (Trans son) | `Archive/Adult Kids/` |
-| **Ana Maria Pino** | `AMP`, `(AMP)`, `anamaria`, `ana pino`, `619422212` | Independent Adult Kid | `Archive/Adult Kids/` |
+| **Ana Maria Pino** | `AMP`, `(AMP)`, `anamaria`, `ana pino`, `APINO3`, `619422212` | Independent Adult Kid (Academy of Art) | `Archive/Adult Kids/` |
 | **Elena Maria Pino** | `EMP`, `(EMP)`, `elenapino`, `elena pino` | Independent Adult Kid | `Archive/Adult Kids/` |
 | **Eva Maria Pino** | `MEP`, `(MEP)`, `EMP`, `evampino`, `evapino`, `8137941` | Independent Adult Kid | `Archive/Adult Kids/` |
 | **Household / Shared** | — | Shared streaming, utilities, shopping, IoT | `Entertainment`, `Shopping`, `Utilities` |
@@ -71,10 +71,20 @@ Agents MUST apply these corporate transition rules during categorization:
 * **Includes**: Chase Business (Lisa), NCAA Okta, Zoom, Salesforce, and Google accounts associated with CollegeAdvisor.
 * **Target Group**: `Archive/Past_Work_Lisa_CollegeAdvisor/`
 
-### F. Civic Work: Conejo Valley USD & Campaign (Historical — Jose)
-* **Status**: Jose's past civic service with CVUSD and former school board campaign (`jose4cvusd@gmail.com`, `jose@jose4cvusd.com`).
-* **Includes**: NetFile campaign contributions, PayPal donations, Dreamhost campaign hosting, ActBlue, CVUSD portal stubs.
-* **Target Group**: `Archive/Civic - CVUSD Campaign/`
+### F. Civic Work: Conejo Valley USD & Community Engagement (Historical — Jose)
+* **CVUSD Campaign**: Jose's past school board campaign (`jose4cvusd@gmail.com`, `jose@jose4cvusd.com`, NetFile, ActBlue, NDTC) → **`Archive/Civic - CVUSD Campaign/`**
+* **LULAC & Buen Vecino**: Jose's past civic community leadership (`lulac.of.conejo.valley`, `BuenVecinoCV`, `buen.vecino.of.conejo.valley@gmail.com`) → **`Archive/Civic - LULAC & Buen Vecino/`**
+
+### G. Out-of-Business & Defunct Services (Historical Archive)
+* **Defunct Retailers**: Circuit City, CompUSA, Radio Shack, Borders Rewards, Linens-n-Things.
+* **Discontinued Software & Tools**: DVD X Copy (321 Studios), PDA Defense Professional (Palm OS), Menalto Gallery, Roxio vintage.
+* **Dead Web Portals & ISPs**: Adelphia Cable (`@adelphia.net`), NewsVine, Mercury Center, Free Real Time, WhisperNumber, CDDB, PackageTrackR, MySpace.
+* **Target Group**: **`Archive/Defunct Services/`**
+
+> [!IMPORTANT]
+> **Heuristic Precedence Rules**:
+> 1. **Delta Dental vs. Delta Air Lines**: `Delta Dental` MUST evaluate to `Healthcare/`, NOT `Travel/`. Travel keyword matching must only trigger on `delta air`, `delta.com`, or `delta flight`.
+> 2. **Alumni & Education**: Jose's Georgia Tech email and alumni lists (`gatech.edu`) MUST route to `Archive/Adult Kids` or `Archive/Education`, NOT `Work - Keysight`.
 
 ---
 
