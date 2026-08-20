@@ -22,8 +22,8 @@ When creating or editing Obsidian Core Base files (`.base`), embedded base code 
    - Bases automatically scan the entire vault by default. Never include SQL-style `from` or `source` clauses.
 
 2. **Expression-Based Filters (`filters:`)**:
-   - Filters evaluate as string expressions (e.g., `- "reconciliation_status == 'merged_pending_review'"`).
-   - **Prohibited**: Verbose dictionary objects like `field: ..., operator: equals, value: ...`.
+   - `filters:` MUST contain one of `and:`, `or:`, or `not:` mapping to a list of filter statements (e.g., `filters:\n  and:\n    - "reconciliation_status == 'merged_pending_review'"`).
+   - **Prohibited**: A raw list directly under `filters:` without an `and`/`or`/`not` key, or verbose dictionary objects like `field: ..., operator: equals, value: ...`.
 
 3. **Property Configuration Maps (`properties:`)**:
    - The `properties:` block is a dictionary/object mapping property keys to configuration maps (such as assigning display names: `displayName: "Display Title"`).
