@@ -154,9 +154,15 @@ Jose Database.kdbx
    * **Password Age Ordering**: Sort accounts by **Password Age (Newest First / Most Recently Modified)**. Active, recently modified accounts represent current operational exposure where missing 2FA or password reuse carries the highest immediate risk.
    * **Stale Accounts (>5 Years)**: Accounts untouched in 5+ years are flagged as candidates for closure, archiving, or verification.
 2. **Missing 2FA is Priority 1**: The primary danger is services supporting 2FA where no local TOTP is configured.
-3. **Duplicate Usernames are Informational (Low Priority)**: Standard email identifiers across sites are normal and must NOT trigger security alarms.
-4. **Zero Credential Exposure**: Passwords, OTP secrets, usernames, and notes are never passed to LLMs. Only sanitized `[UUID, Domain/Title]` pairs are transmitted.
-5. **Read-Only Database Access**: `.kdbx` is opened strictly with `read_only=True` via `pykeepass` during audits.
+3. **KeePass as 2FA Single Source of Truth**:
+   * For services that use **external 2FA** (Apple Device Push, SMS, YubiKey, or Bank App) where no TOTP seed exists, mark the entry directly in KeePass using any of these standard conventions:
+     - **Entry Tags** *(Recommended)*: Add `2fa:device`, `2fa:sms`, `2fa:yubikey`, `2fa:push`, `2fa:verified`, or `2fa:exempt`.
+     - **Custom Attribute**: Under *Advanced $\rightarrow$ Additional attributes*, add `2FA` with value (e.g. `Device Push (iMac/iPhone)`, `SMS`, `YubiKey`, `Verified`).
+     - **Entry Notes**: Add a line in Notes starting with `2FA:` (e.g. `2FA: Device Push`, `2FA: Verified`).
+   * The audit pipeline automatically recognizes these tags/attributes and records the account as 2FA covered.
+4. **Duplicate Usernames are Informational (Low Priority)**: Standard email identifiers across sites are normal and must NOT trigger security alarms.
+5. **Zero Credential Exposure**: Passwords, OTP seeds, usernames, and notes are never passed to LLMs. Only sanitized `[UUID, Domain/Title]` pairs are transmitted.
+6. **Read-Only Database Access**: `.kdbx` is opened strictly with `read_only=True` via `pykeepass` during audits.
 
 ---
 
