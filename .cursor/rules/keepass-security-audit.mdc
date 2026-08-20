@@ -30,15 +30,23 @@ When classifying, scoring, or remediating credentials, agents MUST adhere to thi
 
 | Member / Scope | Initials / Suffix Patterns | Identity & Lifecycle Role | Target KeePass Group |
 | :--- | :--- | :--- | :--- |
-| **Jose Luis Pino** | `JLP`, `(JLP)`, `joseluis`, `jose luis`, `jpino@` | Active Primary User | `01_Finance`, `03_Work_Keysight`, etc. |
-| **Lisa Maria Pino** | `LMP`, `(LMP)`, `lisapino`, `lisa pino`, `lpino@` | Active Primary User (Personal + Advising) | `01_Finance`, `04_Work_LILA_and_Advising` |
-| **Isabel Pino** | `MIP`, `(MIP)`, `isabel` | Active Dependent Daughter | `09_Family_Isabel/` |
-| **Madre (Maria Luisa Rexach)** | `Madre`, `(Madre)`, `marialuisarexach`, `maria4hope@yahoo.com` | Family Elder (Managed by Jose) | `10_Family_Madre/` |
-| **Alister Pino (fka Susana)** | `SP`, `(SP)`, `susana`, `alister`, `8384249` | Independent Adult Kid (Trans son) | `Archive/Adult_Kids/` |
-| **Ana Maria Pino** | `AMP`, `(AMP)`, `anamaria`, `ana pino`, `619422212` | Independent Adult Kid | `Archive/Adult_Kids/` |
-| **Elena Maria Pino** | `EMP`, `(EMP)`, `elenapino`, `elena pino` | Independent Adult Kid | `Archive/Adult_Kids/` |
-| **Eva Maria Pino** | `MEP`, `(MEP)`, `EMP`, `evampino`, `evapino`, `8137941` | Independent Adult Kid | `Archive/Adult_Kids/` |
-| **Household / Shared** | — | Shared streaming, utilities, shopping, IoT | `05_Identity_and_Cloud`, `06_Shopping`, `07_Utilities` |
+| **Jose Luis Pino** | `JLP`, `(JLP)`, `joseluis`, `jose luis`, `jpino@`, `pino@ieee.org` | Active Primary User (Personal & Professional) | `Identity & Cloud`, `Finance`, `Work - Keysight` |
+| **Lisa Maria Pino** | `LMP`, `(LMP)`, `lisapino`, `lisa pino`, `lpino@` | Active Primary User (Personal + Advising) | `Finance`, `Work - Lisa` |
+| **Isabel Pino** | `MIP`, `(MIP)`, `isabel` | Active Dependent Daughter | `Family - Isabel/` |
+| **Madre (Maria Luisa Rexach)** | `Madre`, `(Madre)`, `marialuisarexach`, `maria4hope@yahoo.com` | Family Elder (Managed by Jose) | `Family - Madre/` |
+| **Alister Pino (fka Susana)** | `SP`, `(SP)`, `susana`, `alister`, `8384249` | Independent Adult Kid (Trans son) | `Archive/Adult Kids/` |
+| **Ana Maria Pino** | `AMP`, `(AMP)`, `anamaria`, `ana pino`, `619422212` | Independent Adult Kid | `Archive/Adult Kids/` |
+| **Elena Maria Pino** | `EMP`, `(EMP)`, `elenapino`, `elena pino` | Independent Adult Kid | `Archive/Adult Kids/` |
+| **Eva Maria Pino** | `MEP`, `(MEP)`, `EMP`, `evampino`, `evapino`, `8137941` | Independent Adult Kid | `Archive/Adult Kids/` |
+| **Household / Shared** | — | Shared streaming, utilities, shopping, IoT | `Entertainment`, `Shopping`, `Utilities` |
+
+> [!NOTE]
+> **Email Alias Rule**: `pino@ieee.org` was historically used by Jose as a permanent personal email alias/redirector. Accounts registered under `pino@ieee.org` (e.g. Travel, Shopping, Camping, Utilities) are **PERSONAL**, not work, and must be classified by their actual domain.
+>
+> **SSH Keys & Developer Identity Routing**:
+> - **GitHub (Personal)** & `SSH Keys github` → **`Identity & Cloud/`**
+> - **Keysight Work Repos** & `Keysight PC Login ssh` / `SSH jpino Key` → **`Work - Keysight/`**
+> - **Local LAN / Mobile** (`SSH Android`, `Kern Ubuntu SSH`) → **`Smart Home & Network/`**
 
 ---
 
@@ -91,30 +99,43 @@ Agents MUST disambiguate College Board and university accounts using these exact
 
 ## 🗂️ 4. Target KeePass Group Restructuring Hierarchy
 
-The canonical, simplified KeePass database hierarchy for **Jose Database.kdbx**:
+The canonical, organized KeePass database hierarchy for **Jose Database.kdbx**:
 
 ```
 Jose Database.kdbx
-├── Finance/                     (Chase, First Tech, BofA, Citi, Discover, Taxes, 529s)
-├── Healthcare/                  (UCLA Health [Jose, Lisa, Isabel], Cigna, Delta Dental)
-├── Work - Keysight/             (Keysight enterprise, EDA tools, IEEE, engineering)
-├── Work - Lisa/                 (LILA portals, Lisa College Board, CommonApp Recommender)
-├── Identity & Cloud/            (Google, Apple ID, Microsoft, GitHub, Bitbucket, AWS)
-├── Entertainment/               (Netflix, HBO Max, Disney+, Hulu, Spotify, Peacock, Roku)
-├── Shopping/                    (Amazon, Costco, Target, Best Buy, Coffee Roasting)
-├── Travel/                      (Airlines [Delta, Alaska], Hotels, Rental Cars, Amtrak)
-├── Utilities/                   (SoCalGas, SCE, Water, Trash, Verizon, Fastrak, DMV)
-├── Smart Home & Network/        (Home router, Synology NAS, Wi-Fi networks, IoT devices)
-├── Software Licenses/           (Active software licenses, serial numbers, product keys)
-├── Family - Isabel/             (Isabel active school, medical, activities)
-├── Family - Madre/              (Madre Apple, Microsoft, Amex, Delta, Alaska, WiFi)
-└── Archive/                     (Historical, inactive, and adult kids entries)
-    ├── Adult Kids/              (Ana [AMP], Elena [EMP], Eva [MEP], Alister [SP] SAT/FAFSA)
-    ├── Civic - CVUSD Campaign/  (Jose past school district & board campaign accounts)
-    ├── Past Work - Lisa/        (CollegeAdvisor, Defunct La Reina - lpino@lareina.com)
-    ├── Past Work - Jose/        (Jose Agilent pre-spinoff accounts - jpino@agilent.com)
-    ├── Legacy Software/         (Obsolete serial keys: Photoshop CS, Framemaker 6, etc.)
-    └── Defunct Services/        (Dead websites, old ISPs, obsolete hardware stubs)
+├── 🔐 Core Identity & Essentials
+│   ├── Identity & Cloud/            (Google, Apple ID, Microsoft, Password Manager, AWS)
+│   ├── Finance/                     (Chase, First Tech, BofA, Citi, Discover, Taxes, 529s)
+│   ├── Healthcare/                  (UCLA Health [Jose, Lisa, Isabel], Cigna, Delta Dental)
+│   └── Government/                  (Social Security, IRS, CA MyFTB, DMV, Passports, USCIS)
+│
+├── 💼 Professional & Work
+│   ├── Work - Keysight/             (Keysight enterprise, EDA tools, IEEE, engineering)
+│   └── Work - Lisa/                 (LILA portals, Lisa College Board, CommonApp Counselor)
+│
+├── 🏡 Lifestyle, Home & Hobbies
+│   ├── Entertainment/               (Netflix, HBO Max, Disney+, Hulu, Spotify, YouTube, Theaters)
+│   ├── Libraries/                   (TO Library, LAPL, LA County Library, OverDrive, Libby)
+│   ├── Outdoors & Sports/           (Kern River Boaters, Kayaking, Strava, Garmin inReach, Camping)
+│   ├── Shopping/                    (Amazon, Costco, Target, Best Buy, Sweet Maria's Coffee)
+│   ├── Travel/                      (Airlines [Delta, Alaska], Hotels, Rental Cars, Amtrak)
+│   └── Utilities/                   (SoCalGas, SCE, Water, Trash, Verizon, Fastrak)
+│
+├── 🖥️ Local Hardware & Licenses
+│   ├── Smart Home & Network/        (Home router, Synology NAS, Wi-Fi networks, IoT devices)
+│   └── Software Licenses/           (Active software licenses, serial numbers, product keys)
+│
+├── 👨‍👩‍👧 Family Care
+│   ├── Family - Isabel/             (Isabel active school, medical, activities)
+│   └── Family - Madre/              (Madre Apple, Microsoft, Amex, Delta, Alaska, WiFi)
+│
+└── 📦 Archive
+    ├── Adult Kids/                  (Ana [AMP], Elena [EMP], Eva [MEP], Alister [SP] SAT/FAFSA)
+    ├── Civic - CVUSD Campaign/      (Jose past school district & board campaign accounts)
+    ├── Past Work - Lisa/            (CollegeAdvisor, Defunct La Reina - lpino@lareina.com)
+    ├── Past Work - Jose/            (Jose Agilent pre-spinoff accounts - jpino@agilent.com)
+    ├── Legacy Software/             (Obsolete serial keys: Photoshop CS, Framemaker 6, etc.)
+    └── Defunct Services/            (Dead websites, old ISPs, obsolete hardware stubs)
 ```
 
 ---
