@@ -13,6 +13,7 @@ This workspace follows the governance standards defined in the Master ADR Index:
 - **genealogy-timeline-auditor** (Genealogy): [genealogy-timeline-auditor](file:///home/jpino/Obsidian/Genealogy/_Meta/Skills/genealogy-timeline-auditor/SKILL.md)
 - **git-crypt-vault-safety** (Common): [git-crypt-vault-safety](file:///home/jpino/Obsidian/Common/_Meta/Skills/git-crypt-vault-safety/SKILL.md)
 - **hardware-routing-constraints** (Common): [hardware-routing-constraints](file:///home/jpino/Obsidian/Common/_Meta/Skills/hardware-routing-constraints/SKILL.md)
+- **keepass-security-audit** (Common): [keepass-security-audit](file:///home/jpino/Obsidian/Common/_Meta/Skills/keepass-security-audit/SKILL.md)
 - **kern-reverse-proxy-sso** (Common): [kern-reverse-proxy-sso](file:///home/jpino/Obsidian/Common/_Meta/Skills/kern-reverse-proxy-sso/SKILL.md)
 - **macbook-ubuntu-repair** (Common): [macbook-ubuntu-repair](file:///home/jpino/Obsidian/Common/_Meta/Skills/macbook-ubuntu-repair/SKILL.md)
 - **markdown-transport-sanitizer** (Common): [markdown-transport-sanitizer](file:///home/jpino/Obsidian/Common/_Meta/Skills/markdown-transport-sanitizer/SKILL.md)
