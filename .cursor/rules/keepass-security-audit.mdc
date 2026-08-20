@@ -107,87 +107,84 @@ Agents MUST disambiguate College Board and university accounts using these exact
 
 ---
 
-## 🗂️ 4. Target KeePass Group Restructuring Hierarchy
+## 🗂️ 4. Target KeePass Group Restructuring Hierarchy & Custom Emoji Icons
 
-The canonical, organized KeePass database hierarchy for **Jose Database.kdbx**:
+The canonical, organized KeePass database hierarchy for **Jose Database.kdbx** consists of **21 top-level groups** and **7 archive subgroups**, each with an embedded 48×48 RGBA custom icon rendered from `Noto Color Emoji`:
 
 ```
 Jose Database.kdbx
-├── 🔐 Core Identity & Essentials
-│   ├── Identity & Cloud/            (Google, Apple ID, Microsoft, Password Manager, AWS, Obsidian, Bitwarden)
-│   ├── Social Media/                (Instagram, Mastodon, Bluesky, Twitter/X, Facebook, Discord, Signal, Nextdoor)
-│   ├── Finance/                     (Chase, First Tech, BofA, Citi, Discover, Taxes, 529s)
-│   ├── Healthcare/                  (UCLA Health [Jose, Lisa, Isabel], Cigna, Delta Dental, Medi-Cal, CVS, CHLA)
-│   └── Government/                  (Social Security, IRS, CA MyFTB, DMV, Passports, USCIS, IHSS, EDD, TCRC)
-│
-├── 💼 Professional & Work
-│   ├── Work - Keysight/             (Keysight enterprise, EDA tools, IEEE, engineering)
-│   └── Work - Lisa/                 (LILA portals, Lisa College Board, CommonApp Counselor)
-│
-├── 🏡 Lifestyle, Home & Hobbies
-│   ├── Genealogy/                   (Ancestry.com, Geneanet, WikiTree, FamilySearch, MyHeritage)
-│   ├── News & Periodicals/          (The Atlantic, NY Times, WSJ, The Economist, Substack, VC Star)
-│   ├── Entertainment/               (Netflix, HBO Max, Disney+, Hulu, Spotify, YouTube, Vudu, Theaters)
-│   ├── Libraries/                   (TO Library [Jose, Lisa, Isabel], LAPL, LA County Library, OverDrive, Libby)
-│   ├── Outdoors & Sports/           (Kern River Boaters, Kayaking, Strava, Garmin inReach, State Parks, CRPD, Ride On)
-│   ├── Shopping/                    (Amazon, Costco, Target, Best Buy, Sweet Maria's Coffee, Care.com)
-│   ├── Travel/                      (Airlines [Delta, Alaska, AA, Southwest], Hotels, Rental Cars, Amtrak)
-│   └── Utilities/                   (SoCalGas, SCE, Water, Trash, Verizon, Fastrak, Frontier)
-│
-├── 🖥️ Local Hardware & Licenses
-│   ├── Smart Home & Network/        (Home router, Synology NAS, Wi-Fi networks, IoT devices, TP-Link)
-│   └── Software Licenses/           (Active software licenses, serial numbers, product keys)
-│
-├── 👨‍👩‍👧 Family Care
-│   └── Family - Madre/              (Madre Apple, Microsoft, Amex, Delta, Alaska, WiFi, MLGR proxy)
-│
-├── 📑 Entry Templates
-│   └── Templates/                   (KeePass / KeePassXC entry creation templates: Credit card, Wireless LAN, etc.)
-│
-└── 📦 Archive
-    ├── Adult Kids/                  (Ana [AMP], Elena [EMP], Eva [MEP], Alister [SP] SAT/FAFSA/Transcripts)
-    ├── Civic - CVUSD Campaign/      (Jose past school district & board campaign accounts, ActBlue)
-    ├── Civic - LULAC & Buen Vecino/ (Jose past LULAC & Buen Vecino community leadership)
-    ├── Past Work - Lisa/            (CollegeAdvisor, Defunct La Reina - lpino@lareina.com)
-    ├── Past Work - Jose/            (Jose Agilent pre-spinoff accounts - jpino@agilent.com)
-    └── Defunct Services/            (eBags, Circuit City, CompUSA, Borders, DVD X Copy, Adelphia, Old ISPs)
+├── ☁️ Identity & Cloud/            (Google, Apple ID, Microsoft, Password Manager, AWS, Obsidian, Bitwarden)
+├── 💬 Social Media/                (Instagram, Mastodon, Bluesky, Twitter/X, Facebook, Discord, Signal, Nextdoor)
+├── 🌳 Genealogy/                   (Ancestry.com, Geneanet, WikiTree, FamilySearch, MyHeritage)
+├── 💳 Finance/                     (Chase, First Tech, BofA, Citi, Discover, Taxes, 529s)
+├── 🏥 Healthcare/                  (UCLA Health [Jose, Lisa, Isabel], Cigna, Delta Dental, Medi-Cal, CVS, CHLA)
+├── 🏛️ Government/                  (Social Security, IRS, CA MyFTB, DMV, Passports, USCIS, IHSS, EDD, TCRC)
+├── 💼 Work - Keysight/             (Keysight enterprise, EDA tools, IEEE, engineering)
+├── 🎓 Work - Lisa/                 (LILA portals, Lisa College Board, CommonApp Counselor)
+├── 📰 News & Periodicals/          (The Atlantic, NY Times, WSJ, The Economist, Substack, VC Star)
+├── 🎬 Entertainment/               (Netflix, HBO Max, Disney+, Hulu, Spotify, YouTube, Vudu, Theaters)
+├── 📚 Libraries/                   (TO Library [Jose, Lisa, Isabel], LAPL, LA County Library, OverDrive, Libby)
+├── 🚵 Outdoors & Sports/           (Kern River Boaters, Kayaking, Strava, Garmin inReach, State Parks, CRPD, Ride On, AYSO)
+├── 🛒 Shopping/                    (Amazon, Costco, Target, Best Buy, Sweet Maria's Coffee, Care.com)
+├── ✈️ Travel/                      (Airlines [Delta, Alaska, AA, Southwest], Hotels, Rental Cars, Amtrak)
+├── ⚡ Utilities/                   (SoCalGas, SCE, Water, Trash, Verizon, Fastrak, Frontier, UPS, FedEx)
+├── 🖥️ Smart Home & Network/        (Home router, Synology NAS, Wi-Fi networks, IoT devices, TP-Link, ANOVA, Roast Pilot, Grundfos)
+├── 📜 Software Licenses/           (Active software licenses, serial numbers, product keys)
+├── 🔐 KeePass & Encryption Keys/   (GPG keys, recovery codes, database master keys, backup codes)
+├── 👵 Family - Madre/              (Madre Apple, Microsoft, Amex, Delta, Alaska, WiFi, MLGR proxy)
+├── 📑 Templates/                   (KeePass / KeePassXC entry creation templates: Credit card, Wireless LAN, etc.)
+└── 📦 Archive/
+    ├── 🧑‍🎓 Adult Kids/             (Ana [AMP], Elena [EMP], Eva [MEP], Alister [SP] SAT/FAFSA/Transcripts)
+    ├── 🗳️ Civic - CVUSD Campaign/ (Jose past school district & board campaign accounts, ActBlue)
+    ├── 🤝 Civic - LULAC & Buen Vecino/ (Jose past LULAC & Buen Vecino community leadership)
+    ├── 🗄️ Past Work - Lisa/       (CollegeAdvisor, Defunct La Reina - lpino@lareina.com)
+    ├── 🗄️ Past Work - Jose/       (Jose Agilent pre-spinoff accounts - jpino@agilent.com)
+    ├── 💾 Legacy Software/        (Discontinued OS tools, PalmOS, legacy utilities)
+    └── 🚫 Defunct Services/       (eBags, Circuit City, CompUSA, Borders, DVD X Copy, Adelphia, Old ISPs)
 ```
+
+### 🎨 Custom Emoji Icon Engine Standard
+1. **Header Embedding**: 48×48 RGBA PNGs generated from `Noto Color Emoji` are embedded in `<Meta><CustomIcons><Icon>`.
+2. **KeePassXC Priority**: To ensure custom icons display in the KeePassXC tree sidebar, every `<Group>` element MUST have `<IconID>0</IconID>` paired directly with `<CustomIconUUID>b64_uuid</CustomIconUUID>`.
+3. **Stale Reference Safeguard**: When updating custom icons, all existing `<CustomIcons>` nodes in `<Meta>` and `<CustomIconUUID>` tags on groups must be cleanly purged and re-linked to prevent fallback to the default key icon.
 
 ---
 
-## 🛡️ 5. Security Triage Principles & Safeguards
+## 🛡️ 5. Security Triage & Remediation Strategy
 
-1. **Missing 2FA is Priority 1**: The primary danger is services supporting 2FA where no local TOTP is configured. Triage focuses on **Finance**, **Healthcare**, **Work**, and **Identity & Cloud**.
-2. **Duplicate Usernames are Informational (Low Priority)**: Standard email identifiers (`joseluispino@gmail.com`, `jpino@keysight.com`) across sites are normal and must NOT trigger security alarms.
-3. **Stale Passwords are Informational (NIST SP 800-63B)**: Arbitrary 365-day rotation is not required for strong, unique passwords.
+1. **High-Risk Account Prioritization**:
+   * Critical risk categories: **`Finance`**, **`Identity & Cloud`**, **`Government`**, **`Healthcare`**, **`Work - Keysight`**, and **`Smart Home & Network`**.
+   * **Password Age Ordering**: Sort accounts by **Password Age (Newest First / Most Recently Modified)**. Active, recently modified accounts represent current operational exposure where missing 2FA or password reuse carries the highest immediate risk.
+   * **Stale Accounts (>5 Years)**: Accounts untouched in 5+ years are flagged as candidates for closure, archiving, or verification.
+2. **Missing 2FA is Priority 1**: The primary danger is services supporting 2FA where no local TOTP is configured.
+3. **Duplicate Usernames are Informational (Low Priority)**: Standard email identifiers across sites are normal and must NOT trigger security alarms.
 4. **Zero Credential Exposure**: Passwords, OTP secrets, usernames, and notes are never passed to LLMs. Only sanitized `[UUID, Domain/Title]` pairs are transmitted.
-5. **Read-Only Database Access**: `.kdbx` is opened strictly with `read_only=True` via `pykeepass`.
-6. **Vault Cleanliness Guardrail**: Scripts MUST NOT create temporary batch files in permanent note folders. Output belongs in `Common/_Meta/Cache/`, `Common/_Meta/Telemetry/`, or a single curated dashboard at `Notes/Estate/Technology/KeePass Security Posture.md`.
+5. **Read-Only Database Access**: `.kdbx` is opened strictly with `read_only=True` via `pykeepass` during audits.
 
 ---
 
 ## 🛠️ Operational CLI Commands
 
-### 1. Antigravity In-Session Mode (Zero External Token Cost)
+### 1. Interactive Vault Reorganization
 ```bash
-# Step 1: Export sanitized masked payload on host
-python3 Common/_Meta/Scripts/keepass_audit_pipeline.py \
-  --kdbx "$HOME/GoogleDrive/Household/Keepass/Jose Database.kdbx" \
-  --export-masked
+# Reorganize primary vault with clean custom emoji icons
+python3 Common/_Meta/Scripts/keepass_reorganize_vault.py
 
-# Step 2: In Antigravity chat, say "Cluster masked payload"
+# Generate icon test sandbox database for GUI verification
+python3 Common/_Meta/Scripts/create_icon_preview_vault.py
 ```
 
-### 2. Standalone Local GPU Execution (Ollama — 100% Offline)
+### 2. High-Risk Account Audit & Prioritization
 ```bash
+# Export and audit high-risk accounts sorted by newest password age
 python3 Common/_Meta/Scripts/keepass_audit_pipeline.py \
   --kdbx "$HOME/GoogleDrive/Household/Keepass/Jose Database.kdbx" \
-  --provider ollama
+  --priority-age
 ```
 
 ### 3. Supervised Browser Remediation (Phase 4)
 ```bash
-# Launch browser assist for top 25 priority missing-2FA accounts (skips adult kids automatically)
+# Launch browser assist for high-risk missing-2FA accounts (skips adult kids automatically)
 python3 Common/_Meta/Scripts/keepass_remediation_assist.py \
   --kdbx "$HOME/GoogleDrive/Household/Keepass/Jose Database.kdbx" \
   --limit 25
