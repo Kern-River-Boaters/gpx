@@ -7,80 +7,153 @@ globs: *.md
 
 ---
 name: keepass-security-audit
-description: "Operational skill for executing, dry-running, auditing, and remediating KeePass (.kdbx) password databases and 2FA coverage across federated Obsidian vaults under SYS-AGN-006 and ADR-036 Level 4 Maturity."
+description: "Comprehensive operational skill and heuristic rulebook for executing, auditing, categorizing, and remediating KeePass (.kdbx) password databases and 2FA coverage across federated Obsidian vaults under SYS-AGN-006 and ADR-036 Level 4 Maturity."
 doc_type: skill
 tags:
   - type/skill
   - topic/security
   - topic/keepass
   - topic/2fa
+  - topic/governance
 governing_adr: "[[SYS-AGN-006]]"
 ---
 
-# KeePass & 2FA Security Audit Pipeline Skill
+# KeePass & 2FA Security Audit & Family Taxonomy Skill
 
-This skill guides AI interactive environments (**Google Antigravity**, **Claude Code**, **GitHub Copilot**, **Cursor**, **OpenCode**) through inspecting, executing, and supervising the **KeePass & 2FA Security Audit Pipeline** and **Supervised Remediation Assist** across federated vaults.
-
----
-
-## 📜 Architectural Overview & Governance
-
-The pipeline is cataloged in **[[SCRIPTS-INDEX.md]]** and governed by **[[SYS-AGN-006]]** and **[[ADR-036]]** (Level 4 Autonomous Maturity):
-1. **Phase 1 (Deterministic Extraction)**: Uses `pykeepass` to extract credentials, computes password ages (`now - entry.mtime`), tallies username reuse frequency, matches domains against the `2fa.directory` v3 API, and masks sensitive secrets before touching AI models.
-2. **Phase 2 (Semantic Clustering)**: Uses **Gemini 3.7 Flash** (via `google-genai` and `~/.config/open-webui/gemini_api_key`) or local **Ollama** GPU inference to categorize sanitized domains into 11 standard industry buckets with Pydantic structured output.
-3. **Phase 3 (Obsidian Re-hydration)**: Generates markdown checklist sections (`Audit_Part_XX.md`), an **Obsidian Core Base (`00_KeePass_Security_Audit.base`)** view, and appends run telemetry to `Common/_Meta/Telemetry/KeePass_Audit_Ledger.jsonl`.
-4. **Phase 4 (Supervised Playwright Assist)**: Launches visible browser sessions, navigates to target services, pre-fills credentials, and pauses for human verification and 2FA configuration.
+This skill provides standardized heuristics, family identity resolution rules, corporate lifecycle transitions, and execution directives for AI interactive environments (**Google Antigravity**, **Claude Code**, **GitHub Copilot**, **Cursor**, **OpenCode**) to audit, categorize, and remediate the **Jose Database.kdbx** password database across federated vaults.
 
 ---
 
-## 🛠️ CLI Execution Commands
+## 👥 1. Family Identity & Suffix Taxonomy Rules
 
-### 1. Master Security Audit Pipeline
+When classifying, scoring, or remediating credentials, agents MUST adhere to this exact family taxonomy:
 
-* **Standard Execution (Gemini 3.7 Flash)**:
-  ```bash
-  python3 Common/_Meta/Scripts/keepass_audit_pipeline.py --kdbx /path/to/database.kdbx
-  ```
-
-* **Dry-Run Mode (Extraction & Categorization Preview)**:
-  ```bash
-  python3 Common/_Meta/Scripts/keepass_audit_pipeline.py --kdbx /path/to/database.kdbx --dry-run
-  ```
-
-* **Air-Gapped / Offline Local GPU Execution (Ollama)**:
-  ```bash
-  python3 Common/_Meta/Scripts/keepass_audit_pipeline.py --kdbx /path/to/database.kdbx --provider ollama --model qwen2.5-coder:32b
-  ```
-
-* **Custom Output Directory & Refresh 2FA Cache**:
-  ```bash
-  python3 Common/_Meta/Scripts/keepass_audit_pipeline.py --kdbx /path/to/database.kdbx --output-dir Notes/Estate/Technology/KeePass_Audit --refresh-cache
-  ```
+| Member / Scope | Initials / Suffix Patterns | Identity & Lifecycle Role | Target KeePass Group |
+| :--- | :--- | :--- | :--- |
+| **Jose Luis Pino** | `JLP`, `(JLP)`, `joseluis`, `jose luis`, `jpino@` | Active Primary User | `01_Finance`, `03_Work_Keysight`, etc. |
+| **Lisa Maria Pino** | `LMP`, `(LMP)`, `lisapino`, `lisa pino`, `lpino@` | Active Primary User (Personal + Advising) | `01_Finance`, `04_Work_LILA_and_Advising` |
+| **Isabel Pino** | `MIP`, `(MIP)`, `isabel` | Active Dependent Daughter | `09_Family_Isabel/` |
+| **Madre (Maria Luisa Rexach)** | `Madre`, `(Madre)`, `marialuisarexach`, `maria4hope@yahoo.com` | Family Elder (Managed by Jose) | `10_Family_Madre/` |
+| **Alister Pino (fka Susana)** | `SP`, `(SP)`, `susana`, `alister`, `8384249` | Independent Adult Kid (Trans son) | `Archive/Adult_Kids/` |
+| **Ana Maria Pino** | `AMP`, `(AMP)`, `anamaria`, `ana pino`, `619422212` | Independent Adult Kid | `Archive/Adult_Kids/` |
+| **Elena Maria Pino** | `EMP`, `(EMP)`, `elenapino`, `elena pino` | Independent Adult Kid | `Archive/Adult_Kids/` |
+| **Eva Maria Pino** | `MEP`, `(MEP)`, `EMP`, `evampino`, `evapino`, `8137941` | Independent Adult Kid | `Archive/Adult_Kids/` |
+| **Household / Shared** | — | Shared streaming, utilities, shopping, IoT | `05_Identity_and_Cloud`, `06_Shopping`, `07_Utilities` |
 
 ---
 
-### 2. Supervised Playwright Remediation Assist
+## 🏛️ 2. Employer Lifecycle & Corporate Spinoff / Defunct Rules
 
-* **Launch Remediation for Top 50 Duplicate / Missing 2FA Accounts**:
-  ```bash
-  python3 Common/_Meta/Scripts/keepass_remediation_assist.py --kdbx /path/to/database.kdbx --limit 50
-  ```
+Agents MUST apply these corporate transition rules during categorization:
 
-* **Dry-Run Remediation Sequence**:
-  ```bash
-  python3 Common/_Meta/Scripts/keepass_remediation_assist.py --kdbx /path/to/database.kdbx --dry-run
-  ```
+### A. Keysight Technologies (Active Primary Employer — Jose)
+* **Status**: Current active employer (`jpino@keysight.com`, `keysight.com`).
+* **Includes**: Keysight internal portals, EDA/engineering software, IEEE, Cadence, Synopsys, test & measurement platforms.
+* **Target Group**: `03_Work_Keysight/`
 
-* **Resume Previous Remediation Session**:
-  ```bash
-  python3 Common/_Meta/Scripts/keepass_remediation_assist.py --kdbx /path/to/database.kdbx --resume
-  ```
+### B. Agilent Technologies (Historical Predecessor — Jose)
+* **Status**: Jose's former employer before the Keysight corporate spinoff (`jpino@agilent.com`, `agilent.com`).
+* **Includes**: Historical Agilent health/life insurance, benefits, and legacy corporate accounts.
+* **Target Group**: `Archive/Past_Work_Jose_Agilent/`
+
+### C. LILA / Lycée International de Los Angeles (Active Primary Employer — Lisa)
+* **Status**: Current active school employer for Lisa (`Lisa.Pino@LilaSchool.com`, `lilaschool.com`, `lila.org`).
+* **Includes**: LILA school portals, Blackbaud, PowerSchool, Canvas, educator tools, and active counselor memberships.
+* **Target Group**: `04_Work_LILA_and_Advising/`
+
+### D. CollegeAdvisor (Former Employer — Lisa)
+* **Status**: Lisa's former employer (`lpino@collegeadvisor.com`, `joincollegeadvisor.com`).
+* **Includes**: Chase Business (Lisa), NCAA Okta, Zoom, Salesforce, and Google accounts associated with CollegeAdvisor.
+* **Target Group**: `Archive/Past_Work_Lisa_CollegeAdvisor/`
+
+### F. Civic Work: Conejo Valley USD & Campaign (Historical — Jose)
+* **Status**: Jose's past civic service with CVUSD and former school board campaign (`jose4cvusd@gmail.com`, `jose@jose4cvusd.com`).
+* **Includes**: NetFile campaign contributions, PayPal donations, Dreamhost campaign hosting, ActBlue, CVUSD portal stubs.
+* **Target Group**: `Archive/Civic - CVUSD Campaign/`
 
 ---
 
-## 🛡️ Operational Safeguards & Level 4 Constraints
+## 🎓 3. College Board & Admissions Triage Rules
 
-1. **Zero Credential Exposure**: Passwords, OTP secrets, usernames, and notes are never passed to LLMs. Only sanitized `[UUID, Domain/Title]` pairs are passed to classification engines.
-2. **Read-Only Database Access**: `.kdbx` files are opened in strict read-only mode.
-3. **Core Base Standard (No Dataview)**: All views use official Obsidian Core Base syntax with string expression filters and summary aggregations.
+Agents MUST disambiguate College Board and university accounts using these exact criteria:
+
+1. **Active Educator / Advising Accounts**:
+   * `Lisa.Pino@LilaSchool.com` (College Board) → Active LILA Counselor (`Work - Lisa/`)
+   * `lisamichellepino@gmail.com` (Common App Practice) → Active Advising (`Work - Lisa/`)
+   * `joseluispino@gmail.com` (Common App Recommender) → Active Recommender (`Work - Lisa/`)
+2. **Adult Kids High School SAT / IDOC / FAFSA Accounts (Archive)**:
+   * Ana (`anamariapino`, `619422212`) → `Archive/Adult Kids/`
+   * Elena (`elenapino`) → `Archive/Adult Kids/`
+   * Eva (`evapino`, `evampino@gmail.com`, `8137941`) → `Archive/Adult Kids/`
+   * Alister (`alisterpino`, `8384249`, `FAFSA Alister`) → `Archive/Adult Kids/`
+
+---
+
+## 🗂️ 4. Target KeePass Group Restructuring Hierarchy
+
+The canonical, simplified KeePass database hierarchy for **Jose Database.kdbx**:
+
+```
+Jose Database.kdbx
+├── Finance/                     (Chase, First Tech, BofA, Citi, Discover, Taxes, 529s)
+├── Healthcare/                  (UCLA Health [Jose, Lisa, Isabel], Cigna, Delta Dental)
+├── Work - Keysight/             (Keysight enterprise, EDA tools, IEEE, engineering)
+├── Work - Lisa/                 (LILA portals, Lisa College Board, CommonApp Recommender)
+├── Identity & Cloud/            (Google, Apple ID, Microsoft, GitHub, Bitbucket, AWS)
+├── Entertainment/               (Netflix, HBO Max, Disney+, Hulu, Spotify, Peacock, Roku)
+├── Shopping/                    (Amazon, Costco, Target, Best Buy, Coffee Roasting)
+├── Travel/                      (Airlines [Delta, Alaska], Hotels, Rental Cars, Amtrak)
+├── Utilities/                   (SoCalGas, SCE, Water, Trash, Verizon, Fastrak, DMV)
+├── Smart Home & Network/        (Home router, Synology NAS, Wi-Fi networks, IoT devices)
+├── Software Licenses/           (Active software licenses, serial numbers, product keys)
+├── Family - Isabel/             (Isabel active school, medical, activities)
+├── Family - Madre/              (Madre Apple, Microsoft, Amex, Delta, Alaska, WiFi)
+└── Archive/                     (Historical, inactive, and adult kids entries)
+    ├── Adult Kids/              (Ana [AMP], Elena [EMP], Eva [MEP], Alister [SP] SAT/FAFSA)
+    ├── Civic - CVUSD Campaign/  (Jose past school district & board campaign accounts)
+    ├── Past Work - Lisa/        (CollegeAdvisor, Defunct La Reina - lpino@lareina.com)
+    ├── Past Work - Jose/        (Jose Agilent pre-spinoff accounts - jpino@agilent.com)
+    ├── Legacy Software/         (Obsolete serial keys: Photoshop CS, Framemaker 6, etc.)
+    └── Defunct Services/        (Dead websites, old ISPs, obsolete hardware stubs)
+```
+
+---
+
+## 🛡️ 5. Security Triage Principles & Safeguards
+
+1. **Missing 2FA is Priority 1**: The primary danger is services supporting 2FA where no local TOTP is configured. Triage focuses on **Finance**, **Healthcare**, **Work**, and **Identity & Cloud**.
+2. **Duplicate Usernames are Informational (Low Priority)**: Standard email identifiers (`joseluispino@gmail.com`, `jpino@keysight.com`) across sites are normal and must NOT trigger security alarms.
+3. **Stale Passwords are Informational (NIST SP 800-63B)**: Arbitrary 365-day rotation is not required for strong, unique passwords.
+4. **Zero Credential Exposure**: Passwords, OTP secrets, usernames, and notes are never passed to LLMs. Only sanitized `[UUID, Domain/Title]` pairs are transmitted.
+5. **Read-Only Database Access**: `.kdbx` is opened strictly with `read_only=True` via `pykeepass`.
+6. **Vault Cleanliness Guardrail**: Scripts MUST NOT create temporary batch files in permanent note folders. Output belongs in `Common/_Meta/Cache/`, `Common/_Meta/Telemetry/`, or a single curated dashboard at `Notes/Estate/Technology/KeePass Security Posture.md`.
+
+---
+
+## 🛠️ Operational CLI Commands
+
+### 1. Antigravity In-Session Mode (Zero External Token Cost)
+```bash
+# Step 1: Export sanitized masked payload on host
+python3 Common/_Meta/Scripts/keepass_audit_pipeline.py \
+  --kdbx "$HOME/GoogleDrive/Household/Keepass/Jose Database.kdbx" \
+  --export-masked
+
+# Step 2: In Antigravity chat, say "Cluster masked payload"
+```
+
+### 2. Standalone Local GPU Execution (Ollama — 100% Offline)
+```bash
+python3 Common/_Meta/Scripts/keepass_audit_pipeline.py \
+  --kdbx "$HOME/GoogleDrive/Household/Keepass/Jose Database.kdbx" \
+  --provider ollama
+```
+
+### 3. Supervised Browser Remediation (Phase 4)
+```bash
+# Launch browser assist for top 25 priority missing-2FA accounts (skips adult kids automatically)
+python3 Common/_Meta/Scripts/keepass_remediation_assist.py \
+  --kdbx "$HOME/GoogleDrive/Household/Keepass/Jose Database.kdbx" \
+  --limit 25
+```
 
