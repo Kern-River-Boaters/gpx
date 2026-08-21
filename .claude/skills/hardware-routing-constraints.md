@@ -10,22 +10,27 @@ trigger: "Evaluated before every model API call when dynamic routing is enabled.
 ---
 
 # Hardware Routing Constraints
-
-You are operating on the `kern` workstation node, which features a highly asymmetric dual-runtime topology. You have the authority to dynamically route tasks, but you MUST strictly adhere to the following hardware constraints to prevent system crashes and power spikes.
+ 
+You are operating on the `kern` workstation node, which features a tri-tier runtime topology: **Google Cloud Vertex AI (`[Cloud]`)**, **Local Radeon 890M iGPU (`[GPU]`)**, and **Local Ryzen AI XDNA 2 NPU (`[NPU]`)**. You must strictly adhere to the following hardware constraints.
 
 ## The Rule of Delegation
-Before executing any tool, subagent, or prompt, you must evaluate the computational complexity of the task and select the appropriate backend port.
+Before executing any tool, subagent, or prompt, evaluate computational complexity and select the appropriate backend.
 
-### 1. The NPU Tier (Efficiency)
-*   **Target:** FastFlowLM on the XDNA 2 NPU (Port 11435).
-*   **Criteria:** The task involves simple text formatting, basic data extraction, reading RSS feeds, or lightweight chat.
-*   **Constraint:** You must route these tasks to the FastFlowLM NPU port. This ensures the node maintains its < 2W ultra-low power profile for background triage.
+### 1. The Cloud Frontier Tier (`[Cloud]`)
+* **Target:** Google Cloud Vertex AI via Service Account (`gemini-2.5-flash`, `gemini-2.5-pro`).
+* **Criteria:** Large codebase planning, massive document synthesis (1M+ context window), cross-vault lineage resolution, or when local GPU is busy.
+* **Billing:** Powered by the dedicated $300 Google Cloud credit on `project-bdf647f6-7b79-4a34-bfb`.
 
-### 2. The GPU Tier (Heavy-Duty)
-*   **Target:** Ollama on the Radeon 890M iGPU (Port 11434).
-*   **Criteria:** The task involves deep logic reasoning, complex system architecture drafting, writing code in Python or Rust, or extensive multi-vault RAG extraction.
-*   **Constraint:** You must route these tasks to the Ollama GPU port. This allows the task to utilize the 96GB unified memory pool and up to 50W of power.
+### 2. The GPU Tier (`[GPU]` — Heavy-Duty & SOTA Local)
+* **Target:** `llama-server` (`muse-glimmer` on Port 11436) and Ollama (`qwen2.5-coder:32b`, `llama3.1:70b` on Port 11434).
+* **Criteria:** Private offline reasoning, complex file modifications, code building, and local 65k context orchestration.
+* **Constraint:** Utilizes 96GB unified memory pool (~25W - 50W). Run sequentially to prevent memory bandwidth saturation.
+
+### 3. The NPU Tier (`[NPU]` — Efficiency)
+* **Target:** FastFlowLM on the XDNA 2 NPU (Port 11435).
+* **Criteria:** Background triage, rapid parsing, Whisper V3 audio transcription, and lightweight chat.
+* **Constraint:** Ultra-low power profile (< 2W). Maximum context limit: 16,384 tokens.
 
 ## Learning Loop Feedback
-If a task routed to the NPU Tier fails, times out, or produces malformed JSON, you must log the failure. You will automatically route the retry to the GPU Tier and record this edge case in your post-task review to refine your future routing decisions.
+If a task routed to the NPU Tier times out or fails context constraints (> 16k), automatically elevate to the GPU or Cloud Frontier Tier and record the telemetry in post-task reviews.
 

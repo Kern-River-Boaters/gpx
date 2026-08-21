@@ -5,6 +5,7 @@ This workspace follows the governance standards defined in the Master ADR Index:
 
 ## Active Agent Skills
 - **The Talent Agent** (Notes): [The Talent Agent](file:///home/jpino/Obsidian/Notes/_Meta/Skills/The Talent Agent/SKILL.md)
+- **chezmoi-secret-ops** (Common): [chezmoi-secret-ops](file:///home/jpino/Obsidian/Common/_Meta/Skills/chezmoi-secret-ops/SKILL.md)
 - **gedcom-export-standard** (Genealogy): [gedcom-export-standard](file:///home/jpino/Obsidian/Genealogy/obsidian-gramps-provenance-sync/skills/gedcom-export-standard/SKILL.md)
 - **genealogical-biography-synthesizer** (Genealogy): [genealogical-biography-synthesizer](file:///home/jpino/Obsidian/Genealogy/_Meta/Skills/genealogical-biography-synthesizer/SKILL.md)
 - **genealogy-entity-reconciliation** (Genealogy): [genealogy-entity-reconciliation](file:///home/jpino/Obsidian/Genealogy/_Meta/Skills/genealogy-entity-reconciliation/SKILL.md)
