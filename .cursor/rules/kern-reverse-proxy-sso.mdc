@@ -33,6 +33,7 @@ The `kern` workstation operates multiple microservices protected by a single uni
 | `/podcast/` | `http://127.0.0.1:8090/` | Private Podcast RSS | Audio feed server |
 | `/metrics/` | `http://127.0.0.1:9090/metrics/` | Prometheus Metrics | System metrics daemon |
 | `/cadvisor/` | `http://127.0.0.1:8081/` | cAdvisor Container Monitor | Container stats (`sub_filter` asset rewriting for root-only upstream) |
+| `/bootstrap.sh` | Static `/var/www/html/bootstrap.sh` | Node Bootstrap Harness | Direct shell script serving (Tailscale network layer isolated, no OAuth cookie required) |
 
 ### Internal Model Serving Ports (loopback only — NOT proxied through nginx)
 
