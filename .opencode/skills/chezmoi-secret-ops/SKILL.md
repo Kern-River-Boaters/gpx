@@ -29,8 +29,16 @@ This skill governs the declarative management of host secrets, configuration tem
  ├── dot_gitconfig.tmpl
  ├── dot_ssh/
  │    └── config.tmpl
+ ├── dot_local/bin/
+ │    ├── executable_sync_keepass_gdrive.py.tmpl [Universal Rclone Sync Engine]
+ │    └── executable_sync_gdrive.sh.tmpl        [Dynamic Runner]
+ ├── Library/LaunchAgents/
+ │    └── com.pino.rclone-sync.plist.tmpl       [macOS only (launchd)]
  ├── .chezmoiignore.tmpl
  └── dot_config/
+      ├── systemd/user/
+      │    ├── rclone-sync.service.tmpl         [Linux only (systemd)]
+      │    └── rclone-sync.timer.tmpl           [Linux only (15-min timer)]
       ├── open-webui/
       │    └── encrypted_private_webui.env.age       [Kern only]
       ├── sso/
@@ -43,10 +51,12 @@ This skill governs the declarative management of host secrets, configuration tem
 ```
 
 ### Node Matrix & Secret Scoping (`.chezmoiignore`)
-| Node | Hostname / OS | Dotfiles Applied | Secrets Hydrated |
+| Node | Hostname / OS | Dotfiles Applied | Secrets & Services Hydrated |
 |---|---|---|---|
-| **Kern** | `kern` (Ubuntu Linux x86_64) | `.bashrc`, `.gitconfig`, `~/.ssh/config` | Open WebUI, SSO, Notifications, Vertex AI |
-| **Overlook** | `overlook` (macOS / Ubuntu) | `.bashrc`, `.zshrc`, `.gitconfig`, `~/.ssh/config` | Vertex AI (`credentials.json`) |
+| **Kern** | `kern` (Ubuntu Linux x86_64) | `.bashrc`, `.gitconfig`, `~/.ssh/config` | Open WebUI, SSO, Notifications, Vertex AI, systemd Rclone sync timer |
+| **Moab** | `moab` (Windows 11 Pro 24H2) | `.bashrc`, `.gitconfig`, `~/.ssh/config` | Inbound OpenSSH (`sshd`), dual authorized_keys mirror, safe.directory wildcard |
+| **Overlook** | `overlook` (macOS / Ubuntu) | `.bashrc`, `.zshrc`, `.gitconfig`, `~/.ssh/config` | Vertex AI (`credentials.json`), systemd / LaunchAgent Rclone sync |
+| **Pino Family iMac** | `pino-family-imac` (macOS Darwin) | `.zshrc`, `.gitconfig`, `~/.ssh/config` | Multi-identity SSH mesh (Lisa + Jose), LaunchAgent Rclone sync |
 | **Pixel 8 Pro** | `localhost` (Termux / Debian VM) | `.bashrc`, `.gitconfig`, `~/.ssh/config` | **Zero server secrets** (Blocked by `.chezmoiignore`) |
 | **Pixel Tablet**| `localhost` (Termux / Debian VM) | `.bashrc`, `.gitconfig`, `~/.ssh/config` | **Zero server secrets** (Blocked by `.chezmoiignore`) |
 
@@ -54,19 +64,24 @@ This skill governs the declarative management of host secrets, configuration tem
 
 ## 2. Canonical Secret & Key Placements
 
-1. **SSH Private Key**:
-   * Master GitHub ed25519 key: `~/.ssh/id_ed25519` (`chmod 0600`).
-   * Master public key: `~/.ssh/id_ed25519.pub` (`chmod 0644`).
+1. **SSH Private & Mesh Keys**:
+   * Master GitHub ed25519 key (Jose): `~/.ssh/id_ed25519` (`0600`) / `~/.ssh/id_ed25519.pub` (`0644`).
+   * Master GitHub ed25519 key (Lisa): Attached to `SSH Keys github (Lisa)` in KeePass and hydrated on `pino-family-imac`.
+   * Reciprocal `~/.ssh/authorized_keys` (`0600`): Contains public keys for both Jose and Lisa across all workstations.
    * Legacy RSA keys: Archived to `~/.ssh/archive/` (`0700` dir, `0600` files).
 2. **Git-Crypt Master Unlock Key**:
    * **Canonical Location**: `~/.config/git-crypt/notes-vault-production.key` (`chmod 0600`).
    * *Never store plaintext key stubs in `~` or `~/Downloads/`.*
 3. **Chezmoi Master Decryption Key**:
    * `~/.config/chezmoi/key.txt` (`chmod 0600`).
-4. **KeePass Keystore Backup (`Jose Database.kdbx`)**:
-   * Master age key (`chezmoi_age_key.txt`) and GCP Vertex key (`vertex_service_account.json`) attached to **`Kern Ubuntu Gmail`**.
+4. **Rclone Master Configuration & Sync Daemons**:
+   * `~/.config/rclone/rclone.conf` (`chmod 0600`).
+   * Rclone config automatically archived to `Kern Ubuntu Gmail` entry in KeePass when unlocked via `setup_chezmoi_secrets.py -k`.
+   * Bidirectional synchronization with UTC timestamp checking and automatic cloud/local backup creation (`Jose Database.kdbx.bak_YYYYMMDD_HHMMSS`).
+5. **KeePass Keystore Backup (`Jose Database.kdbx`)**:
+   * Master age key (`chezmoi_age_key.txt`), GCP Vertex key (`vertex_service_account.json`), and Rclone config (`rclone.conf`) attached to **`Kern Ubuntu Gmail`**.
    * Master Git-Crypt key (`notes-vault-production.key`) attached to **`Personal Obsidian Git Crypt`** (or `Notes Vault Git-Crypt (PRODUCTION)`).
-   * Master GitHub SSH keys (`id_ed25519`, `id_ed25519.pub`) attached to **`SSH Keys github`**.
+   * Master GitHub SSH keys attached to **`SSH Keys github`** (Jose) and **`SSH Keys github (Lisa)`** (Lisa).
 
 ---
 
