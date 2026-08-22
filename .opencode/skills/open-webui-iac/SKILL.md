@@ -47,3 +47,15 @@ docker restart open-webui
 ```
 Failure to restart the container will leave the frontend and backend unsynced, causing persistent ghost latency issues.
 
+## 4. UI Default Models Type Safety (SvelteKit Split Bug)
+In Open WebUI v0.11.0, the SvelteKit frontend evaluates `(ft=i())!=null&&ft.default_models ? it.default_models.split(",") : []`. 
+If `ui.default_models` is stored as `'[]'` (a JSON array) in `webui.db`, the FastAPI backend returns `default_models: []` (a list). Because `[]` is truthy in JavaScript, the frontend attempts to call `[].split(",")`, which throws `TypeError: default_models.split is not a function` during component mount, completely crashing SvelteKit initialization and freezing the UI on an infinite loading spinner.
+
+**Rule:** `ui.default_models` in `webui.db` MUST always be set to `null` (or a comma-separated string like `"gemini-2.5-flash"`), never a JSON array `'[]'`. `provision_owui.py` enforces this automatically via `sanitize_ui_config()`.
+
+## 5. Multi-User OAuth Provisioning & Auto-Redirect Standard
+- **Default User Role (`DEFAULT_USER_ROLE=user`):** Enforced across `docker-compose.webui.yml`, `setup_kern_https.sh`, and `deploy_kern.py` so whitelisted Google OAuth users receive active `user` roles immediately upon first login rather than hanging in `pending`.
+- **Auto-Redirect Isolation (`OAUTH_AUTO_REDIRECT=False`):** Enforced to prevent client-side redirect loops and race conditions on mobile/desktop browsers with pre-existing session tokens.
+- **SvelteKit `/chat/` Route Patch:** `provision_owui.py` patches `/app/build/_app/immutable/entry/app.WPjxzi0v.js` on startup to ensure subpath `/chat/` requests reroute cleanly to root `/` without 404s.
+
+
