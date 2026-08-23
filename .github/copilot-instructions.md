@@ -5,11 +5,13 @@ This workspace follows the governance standards defined in the Master ADR Index:
 
 ## Active Agent Skills
 - **The Talent Agent** (Notes): [The Talent Agent](file:///home/jpino/Obsidian/Notes/_Meta/Skills/The Talent Agent/SKILL.md)
+- **canadian-citizenship-proof-engine** (Genealogy): [canadian-citizenship-proof-engine](file:///home/jpino/Obsidian/Genealogy/_Meta/Skills/canadian-citizenship-proof-engine/SKILL.md)
 - **chezmoi-secret-ops** (Common): [chezmoi-secret-ops](file:///home/jpino/Obsidian/Common/_Meta/Skills/chezmoi-secret-ops/SKILL.md)
 - **gedcom-export-standard** (Genealogy): [gedcom-export-standard](file:///home/jpino/Obsidian/Genealogy/obsidian-gramps-provenance-sync/skills/gedcom-export-standard/SKILL.md)
 - **genealogical-biography-synthesizer** (Genealogy): [genealogical-biography-synthesizer](file:///home/jpino/Obsidian/Genealogy/_Meta/Skills/genealogical-biography-synthesizer/SKILL.md)
 - **genealogy-entity-reconciliation** (Genealogy): [genealogy-entity-reconciliation](file:///home/jpino/Obsidian/Genealogy/_Meta/Skills/genealogy-entity-reconciliation/SKILL.md)
 - **genealogy-gramps-exporter** (Genealogy): [genealogy-gramps-exporter](file:///home/jpino/Obsidian/Genealogy/_Meta/Skills/genealogy-gramps-exporter/SKILL.md)
+- **genealogy-newspaper-clipping-harvester** (Genealogy): [genealogy-newspaper-clipping-harvester](file:///home/jpino/Obsidian/Genealogy/_Meta/Skills/genealogy-newspaper-clipping-harvester/SKILL.md)
 - **genealogy-source-ingestion** (Genealogy): [genealogy-source-ingestion](file:///home/jpino/Obsidian/Genealogy/_Meta/Skills/genealogy-source-ingestion/SKILL.md)
 - **genealogy-timeline-auditor** (Genealogy): [genealogy-timeline-auditor](file:///home/jpino/Obsidian/Genealogy/_Meta/Skills/genealogy-timeline-auditor/SKILL.md)
 - **git-crypt-vault-safety** (Common): [git-crypt-vault-safety](file:///home/jpino/Obsidian/Common/_Meta/Skills/git-crypt-vault-safety/SKILL.md)
