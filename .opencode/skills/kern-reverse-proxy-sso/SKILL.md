@@ -29,6 +29,7 @@ The `kern` workstation operates multiple microservices protected by a single uni
 | `/ingestion/` | `http://127.0.0.1:8096/` | Kern Ingestion Studio | Audio note & document triage engine |
 | `/code/` | `http://127.0.0.1:8080/` | code-server IDE | Web IDE (`auth: none` — protected by SSO) |
 | `/grafana/` | `http://127.0.0.1:3001/grafana/` | Grafana Dashboards | `GF_SERVER_SERVE_FROM_SUB_PATH=true` |
+| `/git/` | `http://127.0.0.1:3002/` | Gitea Local Mesh Git Platform | Local Git remote, automated GitHub mirror, ForwardAuth SSO |
 | `/terminal/` | `http://127.0.0.1:7681/` | ttyd Web SSH Terminal | Terminal daemon (`-i 127.0.0.1`) |
 | `/dicom/` | `http://127.0.0.1:8300/` | OHIF DICOM Viewer | Medical imaging viewer |
 | `/pacs/` | `http://127.0.0.1:8042/` | Orthanc PACS | DICOM PACS server (loopback only — was `100.107.8.107`, fixed Aug 12) |
