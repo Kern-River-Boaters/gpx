@@ -1,10 +1,10 @@
 # culinary-recipe-architect
 
-> Parent Skill Definition: [culinary-recipe-architect](file:///home/jpino/Obsidian/Common/_Meta/Skills/culinary-recipe-architect/SKILL.md)
+> Parent Skill Definition: [culinary-recipe-architect](file:///home/jpino/Obsidian/Cookbook/_Meta/Skills/culinary-recipe-architect/SKILL.md)
 
 ---
 name: culinary-recipe-architect
-description: "Governs multimodal recipe ingestion, cookbook index creation, 'Kenji Food Lab' culinary physics synthesis, dynamic ratio scaling, and production log lifecycle across the Cookbook vault."
+description: "Governs multimodal recipe ingestion, cookbook index creation, 'Kenji Food Lab' culinary physics synthesis, dynamic ratio scaling, single-column batch re-scaling, and production log lifecycle across the Cookbook vault."
 ---
 
 # Culinary Recipe Architect & Cookbook Ingestion Skill
@@ -16,7 +16,15 @@ This skill governs the ingestion, synthesis, validation, and lifecycle managemen
 
 ## Core Invariants & Governance Rules
 
-### 1. Frontmatter Compliance (`obsidian-frontmatter-standard`)
+### 1. Naming Standard & Suffix Conventions
+* Recipes must use standard parenthetical suffixes for dietary modifications or major variants:
+  * `(LG)` — Low-Glycemic optimization (e.g., `No-Knead Sourdough Bread (LG).md`, `Coffee Ice Cream (LG).md`)
+  * `(GF)` — Gluten-Free optimization for celiac safety (e.g., `Caputo Pizza Dough (GF).md`, `Sourdough Pizza Crust (GF).md`)
+  * `(LG, GF)` — Dual optimization (e.g., `Korean Beef Jerky (Yukpo) (LG, GF).md`)
+  * `(SVQ)` — Sous-Vide-Que hybrid methods (e.g., `SVQ Pork Loin.md`)
+* Do not use long descriptive title prefixes like `"Low-Glycemic Korean Beef Jerky"`. Use clean title + suffix.
+
+### 2. Frontmatter Compliance (`obsidian-frontmatter-standard`)
 * Every recipe must start on line 1 with isolated `---` delimiters and contain valid YAML.
 * Standard properties:
   * `doc_type: recipe` (or `technique`, `log`, `resource`)
@@ -25,36 +33,60 @@ This skill governs the ingestion, synthesis, validation, and lifecycle managemen
   * `method`: `[smoking, low_slow, grilling, high_heat, dehydrating, curing, baking, sous_vide, braising, stir_fry, agentic]`
   * `cuisine`: Capitalized string (e.g. `Korean`, `American`, `Spanish`, `Chinese`, `Italian`)
   * `region`: Capitalized string (e.g. `Texan`, `Californian`, `Cantonese`, `Andalusian`)
-  * `diet`: `[low_glycemic, low_carb, keto_friendly, gluten_free, dairy_free]` (**Critical:** Must capture whenever low-glycemic, keto, or gluten-free adaptations are present)
+  * `diet`: `[low_glycemic, gluten_free]` (**Critical:** Keep lean; do NOT track medical conditions like hypertension or over-tag).
   * `main_ingredient`: Normalized string (e.g. `beef`, `pork`, `chicken`, `seafood`, `pizza`, `pasta`)
   * `hardware`: `[weber_searwood, weber_summit, camp_chef, deli_meat_slicer, cambro_container, stainless_meat_hooks, pizza_steel, anova_precision_cooker, bosch_induction, wok, dutch_oven]`
   * `source`: If from a book, use quoted wikilink: `"[[Cookbook Title]]"`. If web, use site/creator name.
   * `pages`: Integer or string (e.g. `163` or `240-241`) for physical cookbook page references.
   * `url`: Quoted HTTPS URL for online/YouTube sources.
+  * `aliases`: List of short names and search terms.
 
-### 2. Multimodal Cookbook Ingestion & Automatic Indexing
-* When a recipe is imported from a physical book scan, photo, or PDF citing `source: "[[Book Title]]"`:
-  * If `Cookbook/Cookbooks/<Book Title>.md` does not exist, the agent **MUST automatically create the cookbook index note** with book metadata, author, and an embedded Obsidian Base / Dataview query block.
-
-### 3. Flexible Scaling Engine (No Default Weight Assumption)
-* **Weight-Based Scaling**: Applied only when recipes are intrinsically mass-based (charcuterie, meat cures, large BBQ roasts, baker's percentages). Renders the two-column **Ratio Scaling Table** (`Per 1 lb Base Ratio` vs. `Target Cook Batch`).
-* **Volume / Serving Scaling**: For standard home recipes (cups, tbsp, counts, servings), render clean volumetric ingredients with a Servings Multiplier table.
-
-### 4. Selective Production Log Lifecycle
-* Production logs are **NOT created by default**. They are generated only when explicitly requested (`--log`) or when the user provides cook execution notes.
-* Naming convention: `Cookbook/Daily Notes/YYYY-MM-DD <Description> Log.md`.
+### 3. Production Log Frontmatter & Core Base Invariant
+* Production logs must be stored in: `Cookbook/Daily Notes/YYYY-MM-DD <Description> Log.md`.
 * Alias: `[YYYY-MM-DD <Short Name> Log]`.
-* Frontmatter: `doc_type: log`, `related_recipes: ["[[Recipe Name]]"]`, `start_date: YYYY-MM-DD`, `event_date: "YYYY-MM-DD"`.
+* **Required Properties for Base Query Binding**:
+  * `tags: [type/log, status/active]` (Ensures compatibility with vault-wide `file.hasTag("type/log", "type/plan")` filters)
+  * `doc_type: log`
+  * `status: active`
+  * `start_date: YYYY-MM-DD`
+  * `related_recipes: ["[[Exact Canonical Recipe Name]]"]` (Bidirectional wikilink matching `this.file`)
 
-### 5. Dual-Link Instant Access Engine
-All agent outputs and Slack notifications must provide:
-* **Native Obsidian URI**: `obsidian://open?vault=Cookbook&file=<Encoded_Path>`
-* **Kern Web Publisher URL**: `https://kern.tailb08dba.ts.net/obsidian/view/Cookbook/<Encoded_Path>.md`
+### 4. Obsidian Core Base Block Standard in Recipes
+```base
+filters:
+  and:
+    - 'file.hasTag("type/log", "type/plan")'
+    - 'file.hasLink(this.file)'
+properties:
+  start_date:
+    displayName: "Date"
+  status:
+    displayName: "Status"
+  rating:
+    displayName: "Rating"
+views:
+  - type: table
+    name: "Summary Table"
+    order:
+      - file.name
+      - start_date
+      - status
+      - rating
+```
 
----
+### 5. Multimodal Ingestion & Zero-Bloat Image Pipeline
+* Auto-convert all incoming user photos, scans, and attachments (JPEG/PNG/HEIC) to **WebP (quality 85, max 1600px)**.
+* Save in `Cookbook/_Meta/Attachments/media/<slug>_<timestamp>.webp` and embed with `![[<filename>|600]]`.
+* Auto-harvest YouTube video max-res thumbnails on import and embed at the top of the recipe note.
 
-## Execution Script Harness
-* CLI Harness: `_Meta/Scripts/recipe_import_agent.py`
-* Slack Concierge Bot: `_Meta/Scripts/recipe_slack_concierge.py`
-* Test Suite: `_Meta/Scripts/test_recipe_import_agent.py`
+### 6. Single-Column Re-Scaling Protocol
+* When requested to scale an existing recipe to a new batch weight:
+  * Parse `Per 1 lb Base Ratio` column.
+  * Update **only** the `Current Cook (<Weight>)` column and the `Batch Size` line in `## Specs`.
+  * Leave all story, food lab science, execution protocols, and notes completely intact.
+
+### 7. Dual-Link Instant Access Engine & URL Percent-Encoding
+* **Native Obsidian URI**: `obsidian://open?vault=Cookbook&file=<Fully_Percent_Encoded_Path>`
+  * **Critical:** Must encode parentheses `(` as `%28` and `)` as `%29` so Markdown link syntax `[Link](URL)` does not truncate at the first closing parenthesis.
+* **Kern Web Publisher**: `https://kern.tailb08dba.ts.net/obsidian/view/Cookbook/<Path>.md`
 
