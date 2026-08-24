@@ -9,13 +9,13 @@ description: "culinary-recipe-architect skill for OpenCode"
 
 ---
 name: culinary-recipe-architect
-description: "Governs multimodal recipe ingestion, cookbook index creation, 'Kenji Food Lab' culinary physics synthesis, dynamic ratio scaling, single-column batch re-scaling, and production log lifecycle across the Cookbook vault."
+description: "Governs multimodal recipe ingestion (NYT Cooking, YouTube, cookbook scans), physical cookbook indexing, 'Kenji Food Lab' culinary physics synthesis, dynamic ratio scaling, clean printable PDF generation, and production log lifecycle across the Cookbook vault."
 ---
 
-# Culinary Recipe Architect & Cookbook Ingestion Skill
+# Culinary Recipe Architect & Ingestion Skill
 
 ## Overview
-This skill governs the ingestion, synthesis, validation, and lifecycle management of culinary recipes, physical cookbook indices, and production logs in the **Cookbook** vault under **ADR-040** and **Level 4 Autonomous Agent Governance (ADR-036)**.
+This skill governs the ingestion, synthesis, validation, printable PDF generation, and lifecycle management of culinary recipes, physical cookbook indices, and production logs in the **Cookbook** vault under **CBK-ADR-001** and **Level 4 Autonomous Agent Governance (ADR-036)**.
 
 ---
 
@@ -32,65 +32,64 @@ This skill governs the ingestion, synthesis, validation, and lifecycle managemen
 ### 2. Frontmatter Compliance (`obsidian-frontmatter-standard`)
 * Every recipe must start on line 1 with isolated `---` delimiters and contain valid YAML.
 * Standard properties:
-  * `doc_type: recipe` (or `technique`, `log`, `resource`)
+  * `doc_type: recipe` (or `technique`, `log`, `cookbook`)
   * `status: active` | `draft`
   * `course`: `[main, snack, appetizer, side, dessert, breakfast, various]`
-  * `method`: `[smoking, low_slow, grilling, high_heat, dehydrating, curing, baking, sous_vide, braising, stir_fry, agentic]`
+  * `method`: `[smoking, low_slow, grilling, high_heat, dehydrating, curing, baking, sous_vide, braising, stir_fry, various]`
   * `cuisine`: Capitalized string (e.g. `Korean`, `American`, `Spanish`, `Chinese`, `Italian`)
   * `region`: Capitalized string (e.g. `Texan`, `Californian`, `Cantonese`, `Andalusian`)
   * `diet`: `[low_glycemic, gluten_free]` (**Critical:** Keep lean; do NOT track medical conditions like hypertension or over-tag).
   * `main_ingredient`: Normalized string (e.g. `beef`, `pork`, `chicken`, `seafood`, `pizza`, `pasta`)
   * `hardware`: `[weber_searwood, weber_summit, camp_chef, deli_meat_slicer, cambro_container, stainless_meat_hooks, pizza_steel, anova_precision_cooker, bosch_induction, wok, dutch_oven]`
-  * `source`: If from a book, use quoted wikilink: `"[[Cookbook Title]]"`. If web, use site/creator name.
+  * `source`: If from NYT, `source: NYT Cooking`. If from a physical book, quoted wikilink: `"[[Cookbook Title]]"`. If web, site/creator name.
+  * `author`: Author or chef name (e.g. `J. Kenji López-Alt`, `Melissa Clark`).
   * `pages`: Integer or string (e.g. `163` or `240-241`) for physical cookbook page references.
-  * `url`: Quoted HTTPS URL for online/YouTube sources.
+  * `url`: Quoted HTTPS URL for online, YouTube, or NYT Cooking sources.
   * `aliases`: List of short names and search terms.
 
-### 3. Production Log Frontmatter & Core Base Invariant
-* Production logs must be stored in: `Cookbook/Daily Notes/YYYY-MM-DD <Description> Log.md`.
-* Alias: `[YYYY-MM-DD <Short Name> Log]`.
-* **Required Properties for Base Query Binding**:
-  * `tags: [type/log, status/active]` (Ensures compatibility with vault-wide `file.hasTag("type/log", "type/plan")` filters)
-  * `doc_type: log`
-  * `status: active`
-  * `start_date: YYYY-MM-DD`
-  * `related_recipes: ["[[Exact Canonical Recipe Name]]"]` (Bidirectional wikilink matching `this.file`)
+### 3. Multi-Modal Ingestion & NYT Cooking Protocol
+* **NYT Cooking**:
+  * Ingests via authenticated session cookies (`rss_cookies.json`).
+  * Extracts JSON-LD schema (ingredients, step-by-step instructions, author, yield, high-res photo).
+  * Automatically sets `source: NYT Cooking`, `url: '<URL>'`, and optimizes cover image to WebP.
+* **YouTube Ingestion**:
+  * Extracts transcript captions and harvests max-res cover thumbnail.
+* **Physical Cookbook Scans**:
+  * Automatically creates `Cookbook/Cookbooks/<Book Title>.md` if missing, embedding an Obsidian Base / Dataview query block.
+* **Zero-Bloat Media Pipeline**:
+  * Auto-converts all incoming user photos, scans, and attachments (JPEG/PNG/HEIC) to **WebP (quality 85, max 1600px)** in `Cookbook/_Meta/Attachments/media/<slug>_<timestamp>.webp`.
 
-### 4. Obsidian Core Base Block Standard in Recipes
-```base
-filters:
-  and:
-    - 'file.hasTag("type/log", "type/plan")'
-    - 'file.hasLink(this.file)'
-properties:
-  start_date:
-    displayName: "Date"
-  status:
-    displayName: "Status"
-  rating:
-    displayName: "Rating"
-views:
-  - type: table
-    name: "Summary Table"
-    order:
-      - file.name
-      - start_date
-      - status
-      - rating
-```
+### 4. Ingredients Formatting Duality (Tables vs. Bulleted Lists)
+* **Ratio Scaling Tables** (`| Ingredient | Per 1 lb Base Ratio | Current Cook (<Weight>) | Purpose / Function |`):
+  * **Strictly reserved for mass-based recipes** (charcuterie, jerky, bacon cures, large primal BBQ cuts, bread percentages).
+* **Hierarchical Bulleted Lists** (`- 2 cups flour`, `- 1 tbsp olive oil`):
+  * **Mandatory standard for all standard, volumetric, and everyday recipes**.
 
-### 5. Multimodal Ingestion & Zero-Bloat Image Pipeline
-* Auto-convert all incoming user photos, scans, and attachments (JPEG/PNG/HEIC) to **WebP (quality 85, max 1600px)**.
-* Save in `Cookbook/_Meta/Attachments/media/<slug>_<timestamp>.webp` and embed with `![[<filename>|600]]`.
-* Auto-harvest YouTube video max-res thumbnails on import and embed at the top of the recipe note.
-
-### 6. Single-Column Re-Scaling Protocol
-* When requested to scale an existing recipe to a new batch weight:
+### 5. Single-Column Dynamic Re-Scaling Protocol
+* When requested to scale an existing mass-based recipe to a new batch weight:
   * Parse `Per 1 lb Base Ratio` column.
   * Update **only** the `Current Cook (<Weight>)` column and the `Batch Size` line in `## Specs`.
   * Leave all story, food lab science, execution protocols, and notes completely intact.
 
-### 7. Dual-Link Instant Access Engine & URL Percent-Encoding
+### 6. Clean Printable PDF Export Engine (`--pdf-export`)
+* Generates an elegant, print-ready PDF via Playwright Chromium in `Cookbook/_Meta/Attachments/exports/<Title>.pdf`.
+* **Sanitization Layer**:
+  * Removes ephemeral `Current Cook (...)` columns from tables, preserving the clean base ratio and culinary purpose for guests.
+  * Strips internal Obsidian Base query blocks and frontmatter YAML.
+* **Attribution Layer**:
+  * Prominently formats **Source**, **Author**, and active clickable **URL**.
+
+### 7. Production Log Frontmatter & Core Base Invariant
+* Production logs are stored in: `Cookbook/Daily Notes/YYYY-MM-DD <Description> Log.md`.
+* Alias: `[YYYY-MM-DD <Short Name> Log]`.
+* **Required Properties for Base Query Binding**:
+  * `tags: [type/log, status/active]`
+  * `doc_type: log`
+  * `status: active`
+  * `start_date: YYYY-MM-DD`
+  * `related_recipes: ["[[Exact Canonical Recipe Name]]"]`
+
+### 8. Dual-Link Instant Access Engine & URL Percent-Encoding
 * **Native Obsidian URI**: `obsidian://open?vault=Cookbook&file=<Fully_Percent_Encoded_Path>`
   * **Critical:** Must encode parentheses `(` as `%28` and `)` as `%29` so Markdown link syntax `[Link](URL)` does not truncate at the first closing parenthesis.
 * **Kern Web Publisher**: `https://kern.tailb08dba.ts.net/obsidian/view/Cookbook/<Path>.md`
