@@ -52,11 +52,16 @@ Both runtimes MUST target the **exact same physical storage**:
 
 ### A. Debian VM (Port 22)
 ```bash
-# Connect to Tablet Debian VM
-ssh -i ~/.ssh/id_ed25519 droid@100.113.126.115 "<command>"
+# Connect to Phone Debian VM (Pixel 8 Pro)
+ssh droid@100.68.175.80 "<command>"
+# Or using host alias:
+ssh droid "<command>"
 
-# Run sync inside VM
-ssh -i ~/.ssh/id_ed25519 droid@100.113.126.115 "cd ~/Obsidian/Common && git pull"
+# Connect to Tablet Debian VM
+ssh droid@100.113.126.115 "<command>"
+
+# Run sync inside Phone VM
+ssh droid "cd ~/Obsidian/Common && git pull"
 ```
 
 ### B. Termux (Port 8022)
