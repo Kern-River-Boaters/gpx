@@ -33,7 +33,7 @@ touchZoom: true
 doubleClickZoom: true
 showAllMarkers: false
 
-geojson: [[Kern Parking.json]]
+gpx: [[Kern Parking.gpx]]
 ```
 
 ## Satellite Map
@@ -58,6 +58,6 @@ touchZoom: true
 doubleClickZoom: true
 showAllMarkers: false
 
-geojson: [[Kern Parking.json]]
+gpx: [[Kern Parking.gpx]]
 ```
 <!-- END AUTO-GENERATED MAP -->

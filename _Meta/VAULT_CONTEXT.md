@@ -1,11 +1,13 @@
 ---
 tags:
-  - type/meta
-  - meta/vault_context
+- type/meta
+- meta/vault_context
 version: 1.0
 updated: 2026-06-13
-extends: "Common/_Meta/VAULT_CONTEXT_BASE.md"
-purpose: "KRB vault AI context — Kern River Boaters whitewater community resource"
+extends: Common/_Meta/VAULT_CONTEXT_BASE.md
+purpose: KRB vault AI context — Kern River Boaters whitewater community resource
+patient: '[[Jose Luis Pino]]'
+last_audited: '2026-07-19T13:50:26'
 ---
 
 # KRB Vault — AI Context

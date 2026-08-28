@@ -1,0 +1,44 @@
+---
+name: "canadian-citizenship-proof-engine"
+description: "canadian-citizenship-proof-engine skill for OpenCode"
+---
+
+# canadian-citizenship-proof-engine
+
+> Parent Skill Definition: [canadian-citizenship-proof-engine](file:///home/jpino/Obsidian/Genealogy/_Meta/Skills/canadian-citizenship-proof-engine/SKILL.md)
+
+---
+name: canadian-citizenship-proof-engine
+description: "Governs proof verification, dual-anchor lineage triangulation, archival order generation, and IRCC dossier compilation under Bill C-3 / Senate Bill S-245 and ADR-013 across federated genealogy vaults."
+---
+
+# Canadian Citizenship Proof Engine Skill (Bill C-3 / S-245)
+
+## Overview
+This operational skill governs the verification, archival ordering, and dossier compilation for Canadian Citizenship by descent applications submitted under **Bill C-3** / **Senate Bill S-245** (*An Act to amend the Citizenship Act*).
+
+## Core Principles & Legal Standards
+
+### 1. The Dual-Anchor Doctrine (Paternal/Maternal Parity)
+- When 19th-century borderland records contain conflicting birthplace data for an ancestor (e.g. Maine vs. New Brunswick):
+  - **Maternal Parity**: Under Bill C-3, maternal transmission has 100% legal parity with paternal transmission. A verified Canadian-born mother (e.g., Eliza Leslie in Lepreau, NB) serves as a primary British Subject anchor.
+  - **Direct Soil Birth (*Jus Soli*)**: Direct birth on Canadian soil (e.g., John Warren Whalen on Deer Island, NB in 1860) confers British Subject status at birth by soil.
+  - **Triangulation**: The presence of lawful marriage (1840), colony entry marked "Birth" (1851 Census), and unbroken cohabitation (1861 Census) establishes lawful lineage under the administrative balance of probabilities standard.
+
+### 2. Pre-1888 Archival Search Protocol
+- Civil registration of births in New Brunswick did not begin until **January 1, 1888**.
+- For births before 1888, agents and human auditors must use:
+  1. **Pre-Confederation Canadian Census Returns (1851 / 1861)** from Library & Archives Canada (LAC Microfilms `C-994` and `C-1000`).
+  2. **Charlotte County Church Parish Registers** (All Saints Anglican, St. Andrews Catholic Mission, Baptist Church fonds) from the Provincial Archives of New Brunswick (PANB).
+  3. **Town Record Cards Under Municipal Seal** (e.g., City of Eastport vital records).
+
+### 3. ASP.NET Session State Handling for Online Archives
+- Provincial Archives of New Brunswick (PANB) uses ASP.NET session `ViewState`. Deep links to dynamic query results expire.
+- Always provide explicit field-by-field search instructions (`human_auditor_verification_guide.md`) alongside permanent FamilySearch ARK and LAC permanent search parameters.
+
+### 4. Required Deliverables & Visual Dossiers
+- Profile frontmatter must include `citizenship_project_lineage`, `citizenship_generation`, and `citizenship_proof_status`.
+- Embedded high-contrast optical scans (`![[...|600]]`) of primary census and vital certificates.
+- Canvas visualization (`00_Projects_and_Dashboards/Canadian_Citizenship_Chain_A_Whalen_Lineage.canvas`).
+- Pre-formatted archival email order letters (`Canadian_Citizenship_Archival_Request_Packet.md`).
+

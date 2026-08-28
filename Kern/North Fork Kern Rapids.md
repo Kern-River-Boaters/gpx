@@ -34,7 +34,7 @@ touchZoom: true
 doubleClickZoom: true
 showAllMarkers: false
 
-geojson: [[North Fork Kern Rapids.json]]
+gpx: [[North Fork Kern Rapids.gpx]]
 ```
 
 ## Satellite Map
@@ -59,6 +59,6 @@ touchZoom: true
 doubleClickZoom: true
 showAllMarkers: false
 
-geojson: [[North Fork Kern Rapids.json]]
+gpx: [[North Fork Kern Rapids.gpx]]
 ```
 <!-- END AUTO-GENERATED MAP -->

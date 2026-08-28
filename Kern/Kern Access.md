@@ -33,7 +33,7 @@ touchZoom: true
 doubleClickZoom: true
 showAllMarkers: false
 
-geojson: [[Kern Access.json]]
+gpx: [[Kern Access.gpx]]
 ```
 
 ## Satellite Map
@@ -58,6 +58,6 @@ touchZoom: true
 doubleClickZoom: true
 showAllMarkers: false
 
-geojson: [[Kern Access.json]]
+gpx: [[Kern Access.gpx]]
 ```
 <!-- END AUTO-GENERATED MAP -->

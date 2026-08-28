@@ -31,7 +31,7 @@ touchZoom: true
 doubleClickZoom: true
 showAllMarkers: false
 
-geojson: [[Rogue_Cadillac.json]]
+gpx: [[Rogue_Cadillac.gpx]]
 ```
 
 ## Satellite Map
@@ -56,6 +56,6 @@ touchZoom: true
 doubleClickZoom: true
 showAllMarkers: false
 
-geojson: [[Rogue_Cadillac.json]]
+gpx: [[Rogue_Cadillac.gpx]]
 ```
 <!-- END AUTO-GENERATED MAP -->

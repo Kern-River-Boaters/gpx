@@ -1,0 +1,10 @@
+{
+  "types": {
+    "date": "date",
+    "event_date": "date",
+    "created": "date",
+    "updated": "date",
+    "cost": "number",
+    "labor": "number"
+  }
+}

@@ -1,0 +1,85 @@
+# slack-concierge-ops
+
+> Parent Skill Definition: [slack-concierge-ops](file:///home/jpino/Obsidian/Common/_Meta/Skills/slack-concierge-ops/SKILL.md)
+
+---
+name: slack-concierge-ops
+description: "Governs multi-channel Slack Concierge operations, unified use model, channel routing boundaries, RBAC authorization policies, Slack Block Kit layouts, reaction telemetry (⏳ -> ✅ / ❌), and host service lifecycle management across the Pino Home Hub workspace under SYS-NOTIF-001."
+---
+
+# Slack Concierge Operations & Channel Governance Skill
+
+## Overview
+This skill establishes the operational standards, behavioral governance, security invariants, and layout guidelines for autonomous Slack Concierge daemons and channel bridges operating in the **Pino Home Hub** (`pinohomehub.slack.com`) under **SYS-NOTIF-001** and **Level 4 Autonomous Agent Governance (ADR-036)**.
+
+---
+
+## 1. Unified Use Model & Behavioral Invariants
+
+To ensure uniform experience across all family members and AI agents, all Slack concierge services MUST adhere to the following base behaviors:
+
+```mermaid
+flowchart TD
+    A["Incoming Message from Channel"] --> B["Add ⏳ (hourglass_flowing_sand) Reaction"]
+    B --> C{"Check Global Commands\n(help, whoami, ping)?"}
+    C -->|Yes| D["Execute Global Command"]
+    C -->|No| E{"Check Channel Scope\n(#system-alerts, #culinary-lab, etc.)"}
+    E --> F{"Mutating / Privileged Action?"}
+    F -->|Yes| G{"Caller is Admin\n(Jose: U0BRR0AF06R)?"}
+    G -->|No| H["Return ⚠️ Permission Denied with Caller ID"]
+    G -->|Yes| I["Execute Action via ServiceManager / Safe Engine"]
+    F -->|No| J["Execute Informational Query (status, pdf, scale, search)"]
+    D --> K["Remove ⏳ and Add ✅ (white_check_mark)"]
+    H --> L["Remove ⏳ and Add ❌ (x)"]
+    I --> K
+    J --> K
+```
+
+### 1.1 Reaction Telemetry Standard
+Every incoming user message processed by a concierge daemon MUST follow the three-state emoji progression:
+1. **In-Flight / Acknowledged:** Add `⏳` (`:hourglass_flowing_sand:`) immediately upon receiving the message.
+2. **Success:** Upon completing execution and posting the reply, remove `⏳` and add `✅` (`:white_check_mark:`).
+3. **Failure / Error:** Upon encountering an exception or permission failure, remove `⏳` and add `❌` (`:x:`).
+
+### 1.2 Thread Containment Standard
+- Informational cards, status reports, and execution results MUST reply in the **message thread** (`thread_ts`) whenever replying to an interactive user request, keeping channel top-level chat uncluttered.
+- Autonomous proactive system alerts (e.g. hardware faults, morning podcast uploads) post to the top-level channel.
+
+---
+
+## 2. Channel Directory & Scoped Command Matrix
+
+| Channel Name | Channel ID | Purpose & Target Audience | Allowed Commands & Capabilities |
+|---|---|---|---|
+| **`#system-alerts`** | `C0BRWSAK9B3` | SRE Infrastructure, Host Telemetry, Docker & Services | `status`, `health`, `logs <svc>`, `gdm <on\|off\|status>`, `start <svc>`, `stop <svc>`, `restart <svc>`, `help` |
+| **`#culinary-lab`** | `C0BS75R1PHP` | Cookbook Vault, Multi-modal recipe ingestion, PDF export | `<URL>` (NYT/YouTube/Web), `pdf <recipe>`, `scale <recipe> to <wt>`, `grocery <recipe>`, `search <ingr>`, `help` |
+| **`#ideas-and-backlog`** | `C0BRDLY6T9V` | Mobile feature requests, bug reports, system backlog | `idea: <text>`, `bug: <text>`, `todo: <text>`, `help` |
+| **`#morning-briefings`** | `C0BRST2Q7F0` | Daily podcasts, weather, audio briefs | `podcast status`, `podcast rss`, `help` |
+| **`#family-health`** | `C0BSP8X050Q` | Medical reports, PACS DICOM ingestions | Automated medical import alerts, DICOM links |
+| **`#household-notes`** | `C0BRSRS9Z6J` | Quick home notes, trip reminders | Note logging, general reminders |
+
+---
+
+## 3. Role-Based Access Control (RBAC) & Security Invariants
+
+### 3.1 Role Definitions
+1. **Admin (`U0BRR0AF06R` — Jose):**
+   - Full authorization for mutating host operations (`start`, `stop`, `restart`, `gdm on/off`, `reboot`).
+   - Configurable via `SLACK_ADMIN_USERS` in `~/.config/kern-notifications/notifications.env`.
+2. **Family / Standard Users (Lisa / All Members):**
+   - Open authorization for informational queries (`status`, `health`, `logs`, `help`, `whoami`, `ping`, recipe imports, PDF exports, pantry searches).
+   - Attempting a privileged command returns:
+     > `⚠️ Permission Denied: User <@USER_ID> is not in the admin whitelist for host lifecycle commands.`
+
+### 3.2 Safe Service Whitelist
+Commands NEVER execute arbitrary shell scripts or unvetted commands. All targets MUST be resolved via `service_manager.py` against strict whitelists:
+- **System Units:** `gdm3`, `nginx`, `docker`, `host-command-server`, `sshd`, `cups`.
+- **User Units:** `fastflowlm`, `muse-glimmer`, `opencode-server`, `code-server`, `kern-publisher`, `ingestion-web-studio`, `kern-podcast`, `mcp-*-rag`.
+- **Docker Containers:** `open-webui`, `ollama`, `gitea`, `sso-gateway`, `grafana`, `cadvisor`, `prometheus`, `node-exporter`, `loki`, `promtail`, `orthanc`, `ohif-viewer`.
+
+---
+
+## 4. Cursor State Persistence & Daemon Governance
+- All polling daemons MUST maintain persistent cursor files in `~/.config/kern-notifications/` (e.g. `slack_router_cursor.json`).
+- Daemons run as persistent Systemd user services (`kern-slack-router.service`) with `Restart=always` and `RestartSec=5`.
+

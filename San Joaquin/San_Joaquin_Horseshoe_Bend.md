@@ -32,7 +32,7 @@ touchZoom: true
 doubleClickZoom: true
 showAllMarkers: false
 
-geojson: [[San_Joaquin_Horseshoe_Bend.json]]
+gpx: [[San_Joaquin_Horseshoe_Bend.gpx]]
 ```
 
 ## Satellite Map
@@ -57,6 +57,6 @@ touchZoom: true
 doubleClickZoom: true
 showAllMarkers: false
 
-geojson: [[San_Joaquin_Horseshoe_Bend.json]]
+gpx: [[San_Joaquin_Horseshoe_Bend.gpx]]
 ```
 <!-- END AUTO-GENERATED MAP -->

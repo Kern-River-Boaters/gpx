@@ -1,4 +1,7 @@
-# Tagging Strategy - KRB Whitewater Guidebook
+---
+patient: '[[Jose Luis Pino]]'
+last_audited: '2026-07-19T13:50:26'
+---# Tagging Strategy - KRB Whitewater Guidebook
 
 ## Purpose
 This document defines the tagging standards for the KRB repository. All markdown files (river guides, maps, tutorials) should use hierarchical tags for easy filtering and navigation.
@@ -264,23 +267,54 @@ For quick reference: load `_Meta/VAULT_CONTEXT.md` (Section 4 for tag hierarchy,
 ## Dataview Query Examples
 
 **All Kern River content**:
-```dataview
-LIST
-FROM #river/kern
-SORT file.name ASC
+```base
+filters:
+  and:
+    - 'file.hasTag("river/kern")'
+properties:
+  LIST:
+    displayName: "List"
+views:
+  - type: table
+    name: "Summary Table"
+    order:
+      - file.name
+      - LIST
 ```
 
 **Class IV rapids on any river**:
-```dataview
-TABLE river_section, difficulty_range
-FROM #difficulty/class_iv
-SORT file.name ASC
+```base
+filters:
+  and:
+    - 'file.hasTag("difficulty/class_iv")'
+properties:
+  river_section:
+    displayName: "River Section"
+  difficulty_range:
+    displayName: "Difficulty Range"
+views:
+  - type: table
+    name: "Summary Table"
+    order:
+      - file.name
+      - river_section
+      - difficulty_range
 ```
 
 **Verified campground data**:
-```dataview
-LIST
-FROM #feature/campground AND #status/verified
+```base
+filters:
+  and:
+    - 'file.hasTag("feature/campground", "status/verified")'
+properties:
+  LIST:
+    displayName: "List"
+views:
+  - type: table
+    name: "Summary Table"
+    order:
+      - file.name
+      - LIST
 ```
 
 ---
