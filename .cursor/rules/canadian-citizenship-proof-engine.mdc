@@ -12,31 +12,34 @@ description: "Governs proof verification, dual-anchor lineage triangulation, arc
 
 # Canadian Citizenship Proof Engine Skill (Bill C-3 / S-245)
 
-## Overview
-This operational skill governs the verification, archival ordering, and dossier compilation for Canadian Citizenship by descent applications submitted under **Bill C-3** / **Senate Bill S-245** (*An Act to amend the Citizenship Act*).
+## 🛡️ Anti-Hallucination & Provenance Integrity Mandate (CRITICAL)
 
-## Core Principles & Legal Standards
+### 1. Absolute Prohibition on Fabricated Citations & Synthetic Facsimiles
+- **NEVER Fabricate Archival Hold Citations**: Agents must NEVER invent specific reel numbers, register numbers, folio/page numbers, or Latin register transcription text (e.g. *Actus Baptismi*) unless the exact scan or certified transcript has been physically inspected or retrieved from a verified digital database.
+- **NEVER Disguise Hypotheses as Verified Documents**: Generated image cards must NEVER pretend to be authentic camera scans or proven holdings. 
+- **Full Transparency**: If an agent hypothesizes where a record is located based on surrounding vital clues, it must be explicitly tagged as `doc_type: research_hypothesis` and titled `🔍 Archival Search Hypothesis: [Description]`.
 
-### 1. The Dual-Anchor Doctrine (Paternal/Maternal Parity)
-- When 19th-century borderland records contain conflicting birthplace data for an ancestor (e.g. Maine vs. New Brunswick):
-  - **Maternal Parity**: Under Bill C-3, maternal transmission has 100% legal parity with paternal transmission. A verified Canadian-born mother (e.g., Eliza Leslie in Lepreau, NB) serves as a primary British Subject anchor.
-  - **Direct Soil Birth (*Jus Soli*)**: Direct birth on Canadian soil (e.g., John Warren Whalen on Deer Island, NB in 1860) confers British Subject status at birth by soil.
-  - **Triangulation**: The presence of lawful marriage (1840), colony entry marked "Birth" (1851 Census), and unbroken cohabitation (1861 Census) establishes lawful lineage under the administrative balance of probabilities standard.
+### 2. The Three-Tier Evidence Classification
+1. 🟢 **Tier 1: Verified Empirical Evidence**:
+   - Documents and indices directly searched, fetched, and verified (e.g., US Federal Censuses from NARA, State Department of Health birth/death certificates).
+2. 🟡 **Tier 2: Archival Search Hypotheses**:
+   - Explicitly formulated research targets ("Based on the 1898 Maine birth certificate stating father was born in New Brunswick in Aug 1860, we hypothesize a baptism exists in PANB Charlotte County Catholic/Anglican registers").
+3. 🔴 **Tier 3: Unverified / Negative Leads**:
+   - Repositories or collections searched where no matching record was found.
 
-### 2. Pre-1888 Archival Search Protocol
-- Civil registration of births in New Brunswick did not begin until **January 1, 1888**.
-- For births before 1888, agents and human auditors must use:
-  1. **Pre-Confederation Canadian Census Returns (1851 / 1861)** from Library & Archives Canada (LAC Microfilms `C-994` and `C-1000`).
-  2. **Charlotte County Church Parish Registers** (All Saints Anglican, St. Andrews Catholic Mission, Baptist Church fonds) from the Provincial Archives of New Brunswick (PANB).
-  3. **Town Record Cards Under Municipal Seal** (e.g., City of Eastport vital records).
+### 3. Archival Order Generation Standard
+- Archival request letters to institutions (PANB, LAC, NSA, BAnQ) must formulate **investigative requests for search**, stating the known biographical facts and requesting archival staff or researchers to search candidate registers, rather than asserting pre-invented folio numbers.
 
-### 3. ASP.NET Session State Handling for Online Archives
-- Provincial Archives of New Brunswick (PANB) uses ASP.NET session `ViewState`. Deep links to dynamic query results expire.
-- Always provide explicit field-by-field search instructions (`human_auditor_verification_guide.md`) alongside permanent FamilySearch ARK and LAC permanent search parameters.
+---
 
-### 4. Required Deliverables & Visual Dossiers
-- Profile frontmatter must include `citizenship_project_lineage`, `citizenship_generation`, and `citizenship_proof_status`.
-- Embedded high-contrast optical scans (`![[...|600]]`) of primary census and vital certificates.
-- Canvas visualization (`00_Projects_and_Dashboards/Canadian_Citizenship_Chain_A_Whalen_Lineage.canvas`).
-- Pre-formatted archival email order letters (`Canadian_Citizenship_Archival_Request_Packet.md`).
+## 🏛️ Core Statutory Principles (Bill C-3 / S-245)
+
+### 1. Repeal of First-Generation Limit (FGL)
+- Bill C-3 repeals the First-Generation Limit for all individuals born abroad prior to December 15, 2025 who are direct lineal descendants of a Canadian-born parent or ancestor.
+
+### 2. Substantial Connection Exemption
+- All individuals born abroad prior to December 15, 2025 are **100% exempt** from the 1,095-day physical presence requirement in Canada.
+
+### 3. Maternal Parity Doctrine
+- Descent through maternal lines (mothers, grandmothers, great-grandmothers) holds 100% legal parity with paternal lines under Section 3 of the amended Citizenship Act.
 
