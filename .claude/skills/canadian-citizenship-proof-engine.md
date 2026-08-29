@@ -43,3 +43,25 @@ description: Governs proof verification, dual-anchor lineage triangulation, arch
 ### 3. Maternal Parity Doctrine
 - Descent through maternal lines (mothers, grandmothers, great-grandmothers) holds 100% legal parity with paternal lines under Section 3 of the amended Citizenship Act.
 
+## 📁 Deliverable Topology & Clean 3+1 Standard Model (ADR-009)
+
+When generating or updating client deliverable repositories (`00_Projects_and_Dashboards/`), the agent MUST enforce the **3+1 Clean Suite Standard**:
+
+```
+00_Projects_and_Dashboards/
+├── 00_Master_Dashboard.md                       # Single interactive landing portal (Overview, KPIs, Quick Links)
+├── 1_Canadian_Citizenship_Executive_Evidence_Summary.md  # Formal statutory brief for IRCC / Lawyers (Bill C-3 / S-245)
+├── 2_Canadian_Citizenship_Archival_Request_Packet.md     # Actionable pre-filled email orders for provincial/national archives
+├── 3_Archival_Research_Strategy.md             # (Optional) Specialized parish guide and repository search plan
+├── Family_Citizenship_Descent_Tree.canvas      # Visual interactive generational canvas ($G-1 \rightarrow G4$)
+└── _Internal_Audits/                           # Quarantined agent logs, scrapers, telemetry, and variance audits
+    ├── Intelligent_Extraction_Telemetry.md
+    ├── Live_Web_Discovery_Trace.md
+    └── Statutory_Rule_Evaluation_Audit.md
+```
+
+### Critical Rules:
+1. **Zero Scraper Noise in Client View**: Internal crawler logs, visual variance scores ($\sigma$), and API traces must be saved exclusively inside `00_Projects_and_Dashboards/_Internal_Audits/`.
+2. **Standardized Deliverable Prefixes**: Executive Briefs and Archival Order Packets must use numeric prefixes (`1_`, `2_`, `3_`) so clients and counsel have unambiguous sequence priority.
+3. **Visual Canvas Generation**: Every citizenship portfolio MUST include `Family_Citizenship_Descent_Tree.canvas` linking applicant cards directly to verified evidence scans.
+
