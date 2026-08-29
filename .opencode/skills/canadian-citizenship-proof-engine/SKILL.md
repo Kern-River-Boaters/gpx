@@ -68,3 +68,9 @@ When generating or updating client deliverable repositories (`00_Projects_and_Da
 2. **Standardized Deliverable Prefixes**: Executive Briefs and Archival Order Packets must use numeric prefixes (`1_`, `2_`, `3_`) so clients and counsel have unambiguous sequence priority.
 3. **Visual Canvas Generation**: Every citizenship portfolio MUST include `Family_Citizenship_Descent_Tree.canvas` linking applicant cards directly to verified evidence scans.
 
+## 🎨 Mermaid Diagram Governance Standard
+When generating Mermaid diagrams for archival search hypotheses, lineage evidence matrices, or descent trees:
+1. **Explicit Subgraph ID and Quoted Title**: Always use `subgraph ID ["Quoted Human Title"]` (e.g. `subgraph PANB_TARGET ["Archival Order Target (PANB)"]`). Never use unquoted spaces or parentheses in subgraph declarations.
+2. **Safe Arrow Syntax**: Use `-->` or `-.->|"Label"|` with quoted link labels.
+3. **HTML Label Sanitization**: Ensure nodes use HTML-safe escape characters when embedding line breaks (`<br/>`) or formatting.
+
