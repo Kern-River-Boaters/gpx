@@ -4,7 +4,7 @@
 
 ---
 name: canadian-citizenship-proof-engine
-description: "Governs proof verification, dual-anchor lineage triangulation, archival order generation, and IRCC dossier compilation under Bill C-3 / Senate Bill S-245 and ADR-013 across federated genealogy vaults."
+description: Governs proof verification, dual-anchor lineage triangulation, archival order generation, and IRCC dossier compilation under Bill C-3 / Senate Bill S-245, ADR-013, ADR-021, and SOP-GEN-008 across federated genealogy vaults.
 ---
 
 # Canadian Citizenship Proof Engine Skill (Bill C-3 / S-245)
@@ -16,16 +16,19 @@ description: "Governs proof verification, dual-anchor lineage triangulation, arc
 - **NEVER Disguise Hypotheses as Verified Documents**: Generated image cards must NEVER pretend to be authentic camera scans or proven holdings. 
 - **Full Transparency**: If an agent hypothesizes where a record is located based on surrounding vital clues, it must be explicitly tagged as `doc_type: research_hypothesis` and titled `🔍 Archival Search Hypothesis: [Description]`.
 
-### 2. The Three-Tier Evidence Classification
+### 2. Dual-Asset Archival Ingestion & DIEM-v2 Standard (ADR-021 / SOP-GEN-008)
+- Every archival microfilm (PANB, LAC, NSA) must be processed via the **Archival Vision Engine (`archival-vision-engine`)**:
+  - **Regional Pedestal Shift Normalization:** Automatically scales stitched multi-exposure tiles ($\text{Luminance} \approx 218$) to recover underlying colonial ink.
+  - **2x Super-Resolution Enhanced Copy:** Staged alongside the master scan (`-Enhanced.jpg` + `-Master.jpg`).
+  - **DIEM-v2 Evidentiary Scorecard:** Requires $\text{Score} \ge 85.0/100$, positive field gain ($\Delta\text{Fields} \ge 0$), and mathematical checksum verification to validate 100% enumeration completeness.
+
+### 3. The Three-Tier Evidence Classification
 1. 🟢 **Tier 1: Verified Empirical Evidence**:
-   - Documents and indices directly searched, fetched, and verified (e.g., US Federal Censuses from NARA, State Department of Health birth/death certificates).
+   - Documents and indices directly searched, fetched, and verified (e.g., US Federal Censuses from NARA, State Department of Health birth/death certificates, LAC/PANB microfilm facsimiles).
 2. 🟡 **Tier 2: Archival Search Hypotheses**:
    - Explicitly formulated research targets ("Based on the 1898 Maine birth certificate stating father was born in New Brunswick in Aug 1860, we hypothesize a baptism exists in PANB Charlotte County Catholic/Anglican registers").
 3. 🔴 **Tier 3: Unverified / Negative Leads**:
    - Repositories or collections searched where no matching record was found.
-
-### 3. Archival Order Generation Standard
-- Archival request letters to institutions (PANB, LAC, NSA, BAnQ) must formulate **investigative requests for search**, stating the known biographical facts and requesting archival staff or researchers to search candidate registers, rather than asserting pre-invented folio numbers.
 
 ---
 

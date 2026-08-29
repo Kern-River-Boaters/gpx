@@ -4,13 +4,13 @@
 
 ---
 name: genealogy-source-ingestion
-description: Ingests raw genealogical source documents (PDFs, census images, birth/baptismal certificates, military registers) from Sources/_Inbox/ and online repositories, applies ADR-011 filename sanitization, performs visual statistical variance verification, links sources to verified profiles, embeds visual document previews, and updates frontmatter facts per SOP-GEN-002 and ADR-013.
+description: Ingests raw genealogical source documents (PDFs, census images, birth/baptismal certificates, military registers) from Sources/_Inbox/ and online repositories, applies ADR-011 filename sanitization, performs visual statistical variance verification, integrates archival-vision-engine restoration, links sources to verified profiles, and updates frontmatter facts per SOP-GEN-002, ADR-013, ADR-021, and SOP-GEN-008.
 ---
 
 # 📜 Genealogy Source Ingestion & Evidence Ingestion Standard
 
 ## 📌 Executive Summary
-High-integrity genealogy vaults require deterministic evidence ingestion, strict file naming standards, visual quality validation, and companion metadata notes for every primary document.
+High-integrity genealogy vaults require deterministic evidence ingestion, strict file naming standards, visual quality validation, DIEM-v2 paleographic scoring, and companion metadata notes for every primary document.
 
 ---
 
@@ -19,28 +19,27 @@ High-integrity genealogy vaults require deterministic evidence ingestion, strict
 ### 1. ADR-011 Filename Standard
 All ingested documents must adhere to deterministic, date-anchored filenames:
 * **Vital Statistics:** `Sources/Vital_Statistics/{YYYY}-{EventType}-{PersonName}-{Location}.png`
+* **Microfilm Master & Enhanced Scans:** `Sources/Microfilms/{YYYY}-{DocType}-{Location}-{Subject}-Master.jpg` and `-Enhanced.jpg`
 * **Censuses:** `Sources/Census/{YYYY}-Census-{Location}-{FamilyName}.png`
 * **Military / Legal:** `Sources/Military/{YYYY}-{RecordType}-{PersonName}.png`
 * **Newspaper Clippings:** `Sources/Newspaper_Clippings/{YYYY-MM-DD}-Clipping-{URN}-{Publication}.png`
 
-### 2. Autonomous Visual Quality & Pixel Variance Engine
-Every ingested document MUST be verified programmatically before linking to person profiles:
-* **File Size Floor:** Greater than $80\text{ KB}$ (rejects 403 error screens, blank skeletons, and truncated thumbnails).
-* **Statistical Pixel Variance:** Standard deviation $\sigma \ge 18.0$ (guarantees high-contrast readable text and distinguishes authentic scans from solid white/gray error canvases).
-* **Resolution Floor:** Minimum $1600 \times 1000\text{ px}$.
+### 2. Autonomous Visual Quality & DIEM-v2 Restoration Engine (ADR-021 & SOP-GEN-008)
+Every ingested primary microfilm must be processed and verified through `archival-vision-engine`:
+* **Regional Pedestal Shift Normalization:** Recovers text trapped inside semi-transparent stitched selection overlays.
+* **Grayscale Illumination Flattening:** Divides background luminance via $75\times 75$ structuring element without 1-bit text clipping.
+* **2x Super-Resolution Upscaling:** Lanczos-4 upscaling to $\ge 4000\text{px}$ width with gentle unsharp crisping.
+* **DIEM-v2 Scorecard:** Enforces $\text{Score} \ge 85.0/100$, $\Delta\text{Confidence} \ge +10.0\%$, and background noise reduction $\ge 30\%$.
 
 ### 3. Structured Companion Markdown Standard
-Every image file (`.png`, `.jpg`, `.svg`) MUST have a corresponding companion Markdown note (`.md`) containing:
-1. Complete YAML frontmatter (`doc_type`, `id`, `name`, `target_person`, `archive_ref`, `pixel_variance`).
-2. Visual preview embed (`![[Sources/...|850]]`).
-3. Certified Markdown transcription table.
-4. Evidentiary weight analysis for citizenship or lineage proof.
+Every primary image file MUST have a corresponding companion Markdown note (`.md`) containing:
+1. Complete YAML frontmatter (`doc_type`, `id`, `name`, `target_person`, `archive_ref`, `diem_v2_score`).
+2. Visual preview embeds for both Enhanced and Master facsimiles.
+3. Certified Markdown statutory transcription table.
+4. Mathematical column checksum balance.
+5. Evidentiary weight analysis for citizenship or lineage proof.
 
 ### 4. Strict Anti-SERP & Verified Facsimile Mandate (ADR-013 / SOP-GEN-002)
 * **Zero-SERP Policy**: NEVER capture, ingest, or embed search engine result pages (SERPs), search query lists, unauthenticated login screens ("Sign In"), or anti-bot block pages (`Error 15`, `Access Denied`).
 * **Facsimile Requirement**: Only authentic primary document scans, certified civil certificates, high-resolution microfilm facsimiles, census enumeration sheets, and parish register images may be ingested into `Sources/` and linked to `People/` profiles.
-* **Pre-Flight Authentication**: All online harvesters must verify session authentication via `genealogy_cookie_heartbeat.py` before querying repositories.
-* **Zero-Garbage Standard**:
-  * Never leave orphaned stubs, duplicate misspellings, or unverified OCR scrapings in the vault.
-  * When replacing a draft capture with a verified master scan, delete the superseded stub and atomically repoint all profile WikiLinks.
 
