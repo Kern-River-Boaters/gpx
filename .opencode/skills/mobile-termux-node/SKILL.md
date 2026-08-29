@@ -48,7 +48,7 @@ This skill governs remote management, synchronization, and troubleshooting for A
 ### Canonical Vault Storage Invariant (Zero Disk Waste)
 Both runtimes MUST target the **exact same physical storage**:
 * **Physical Location**: `/sdcard/Documents/Obsidian/{Common,Notes,Cookbook,KRB,Genealogy}`
-* **Debian VM Symlink**: `/home/droid/Obsidian` $\longrightarrow$ `/mnt/shared/Documents/Obsidian`
+* **Debian VM Symlink**: `/home/droid/Obsidian` $\longr→ `/mnt/shared/Documents/Obsidian`
 * **Termux Path**: `/sdcard/Documents/Obsidian` (or `~/storage/shared/Documents/Obsidian`)
 
 ---
@@ -145,7 +145,7 @@ The Android 17 QPR1 Beta Linux Terminal environment runs a customized Debian VM 
 If the Android 17 Linux Terminal becomes unresponsive or stuck in an infinite spinner / I/O error:
 
 1. **Wipe Broken Container State**:
-   - Open Android **Settings** $\rightarrow$ **Apps** $\rightarrow$ **Linux Terminal** $\rightarrow$ **Storage & cache** $\rightarrow$ **Clear storage**.
+   - Open Android **Settings** → **Apps** → **Linux Terminal** → **Storage & cache** → **Clear storage**.
 2. **Re-Initialize Container**:
    - Launch the **Linux Terminal** app from your home screen (provisions clean Debian base in ~20s).
 3. **Execute 1-Line Bootstrap**:
