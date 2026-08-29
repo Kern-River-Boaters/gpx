@@ -5,6 +5,7 @@ This workspace follows the governance standards defined in the Master ADR Index:
 
 ## Active Agent Skills
 - **The Talent Agent** (Notes): [The Talent Agent](file:///home/jpino/Obsidian/Notes/_Meta/Skills/The Talent Agent/SKILL.md)
+- **archival-vision-engine** (Genealogy): [archival-vision-engine](file:///home/jpino/Obsidian/Genealogy/_Meta/Skills/archival-vision-engine/SKILL.md)
 - **canadian-citizenship-proof-engine** (Genealogy): [canadian-citizenship-proof-engine](file:///home/jpino/Obsidian/Genealogy/_Meta/Skills/canadian-citizenship-proof-engine/SKILL.md)
 - **chezmoi-secret-ops** (Common): [chezmoi-secret-ops](file:///home/jpino/Obsidian/Common/_Meta/Skills/chezmoi-secret-ops/SKILL.md)
 - **culinary-recipe-architect** (Cookbook): [culinary-recipe-architect](file:///home/jpino/Obsidian/Cookbook/_Meta/Skills/culinary-recipe-architect/SKILL.md)
