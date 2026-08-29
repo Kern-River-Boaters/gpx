@@ -29,12 +29,14 @@ All ingested documents must adhere to deterministic, date-anchored filenames:
 * **Military / Legal:** `Sources/Military/{YYYY}-{RecordType}-{PersonName}.png`
 * **Newspaper Clippings:** `Sources/Newspaper_Clippings/{YYYY-MM-DD}-Clipping-{URN}-{Publication}.png`
 
-### 2. Autonomous Visual Quality & DIEM-v2 Restoration Engine (ADR-021 & SOP-GEN-008)
+### 2. Autonomous Visual Quality & Golden Master Restoration Engine (ADR-021 & SOP-GEN-008)
 Every ingested primary microfilm must be processed and verified through `archival-vision-engine`:
-* **Regional Pedestal Shift Normalization:** Recovers text trapped inside semi-transparent stitched selection overlays.
-* **Grayscale Illumination Flattening:** Divides background luminance via $75\times 75$ structuring element without 1-bit text clipping.
-* **2x Super-Resolution Upscaling:** Lanczos-4 upscaling to $\ge 4000\text{px}$ width with gentle unsharp crisping.
-* **DIEM-v2 Scorecard:** Enforces $\text{Score} \ge 85.0/100$, $\Delta\text{Confidence} \ge +10.0\%$, and background noise reduction $\ge 30\%$.
+* **Reel Statefulness & Fast-Fail Sentinel:** Bypasses spacer frames in $<5\text{ms}$ and inherits baseline hyperparameters across sequential frames.
+* **Edge-Preserving Bilateral Background Normalization:** Eliminates illumination gradients, binding shadows, and tape splices without halo ringing using downsampled bilateral filtering ($d=15, \sigma=75$) and continuous division.
+* **Global Gamma Shift ($\gamma=0.85$):** Restores mid-tone contrast for faint cursive script and vertical table delimiters without highlight blowout.
+* **Natural Delimiter & Intersection Matrix:** Detects genuine grid boundaries ($\text{Intersections} = \text{h\_lines} \land \text{v\_lines}$) with organic charcoal overlay `#6E6964`.
+* **2x Super-Resolution Upscaling:** Lanczos-4 upscaling to $\ge 4000\text{px}$ width.
+* **DIEM-v2 Scorecard Gate:** Enforces $\text{Score} \ge 85.0/100$, $\text{Continuity} \ge 80\%$, $\text{Noise} \le 4\%$, $\text{FPD} \le 15\%$, and $\text{Median Comp Area} \le 350\text{px}$.
 
 ### 3. Structured Companion Markdown Standard
 Every primary image file MUST have a corresponding companion Markdown note (`.md`) containing:

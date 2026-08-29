@@ -19,9 +19,11 @@ description: Governs proof verification, dual-anchor lineage triangulation, arch
 - **NEVER Disguise Hypotheses as Verified Documents**: Generated image cards must NEVER pretend to be authentic camera scans or proven holdings. 
 - **Full Transparency**: If an agent hypothesizes where a record is located based on surrounding vital clues, it must be explicitly tagged as `doc_type: research_hypothesis` and titled `🔍 Archival Search Hypothesis: [Description]`.
 
-### 2. Dual-Asset Archival Ingestion & DIEM-v2 Standard (ADR-021 / SOP-GEN-008)
-- Every archival microfilm (PANB, LAC, NSA) must be processed via the **Archival Vision Engine (`archival-vision-engine`)**:
-  - **Regional Pedestal Shift Normalization:** Automatically scales stitched multi-exposure tiles ($\text{Luminance} \approx 218$) to recover underlying colonial ink.
+### 2. Dual-Asset Archival Ingestion & Golden Master Standard (ADR-021 / SOP-GEN-008)
+- Every archival microfilm from Library and Archives Canada (LAC) or Provincial Archives of New Brunswick (PANB) must be processed via the **Archival Vision Engine (`archival-vision-engine`)**:
+  - **Blank Page Fast-Fail & Reel Warm-Start:** Bypasses spacer frames in $<5\text{ms}$ and caches baseline hyperparameters across reel frames.
+  - **Edge-Preserving Bilateral Background Normalization:** Uses downsampled bilateral filtering ($d=15, \sigma=75$) and continuous division to flatten illumination gradients without halo ringing.
+  - **Global Gamma Contrast Shift ($\gamma=0.85$):** Restores mid-tone contrast for faint iron gall ink strokes and column delimiters without highlight blowout.
   - **2x Super-Resolution Enhanced Copy:** Staged alongside the master scan (`-Enhanced.jpg` + `-Master.jpg`).
   - **DIEM-v2 Evidentiary Scorecard:** Requires $\text{Score} \ge 85.0/100$, positive field gain ($\Delta\text{Fields} \ge 0$), and mathematical checksum verification to validate 100% enumeration completeness.
 
@@ -56,7 +58,7 @@ When generating or updating client deliverable repositories (`00_Projects_and_Da
 ├── 1_Canadian_Citizenship_Executive_Evidence_Summary.md  # Formal statutory brief for IRCC / Legal Counsel (Bill C-3 / S-245)
 ├── 2_Canadian_Citizenship_Archival_Request_Packet.md     # Actionable pre-filled email orders for archives (PANB, LAC)
 ├── 3_Archival_Research_Strategy.md                       # (Optional) Specialized parish guide and repository search plan
-└── Family_Citizenship_Descent_Tree.canvas                # Visual interactive generational canvas ($G-1 \rightarrow G4$)
+└── Family_Citizenship_Descent_Tree.canvas                # Visual interactive generational canvas (G-1 -> G4)
 ```
 
 ### Critical Rules:

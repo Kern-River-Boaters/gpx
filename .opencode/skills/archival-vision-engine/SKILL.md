@@ -9,7 +9,7 @@ description: "archival-vision-engine skill for OpenCode"
 
 ---
 name: archival-vision-engine
-description: Governs macro-illumination normalization, faint cursive data rescue, 4-gate reasoning vision judge validation, Spencerian top-hat cursive loop clearance, and table lattice slicing across historical microfilms under ADR-020 and ADR-021.
+description: Governs edge-preserving bilateral background normalization, global gamma contrast restoration, reel statefulness, blank-frame fast-failing, 4-gate deterministic DIEM verification, Spencerian top-hat cursive loop clearance, and table lattice slicing across historical microfilms under ADR-020, ADR-021, and SOP-GEN-008.
 ---
 
 # Archival Vision Engine (`archival-vision`)
@@ -18,55 +18,66 @@ Governs deterministic image restoration, paleographical transcription, table lat
 
 ---
 
-## 🏛️ 4-Gate Comparative Reasoning Architecture
+## 🏛️ Golden Master 4-Gate Reasoning Architecture
 
 ```mermaid
 graph TD
     classDef raw fill:#37474f,stroke:#263238,color:#fff;
+    classDef check fill:#f57c00,stroke:#e65100,color:#fff;
     classDef gate fill:#1565c0,stroke:#0d47a1,color:#fff;
-    classDef judge fill:#f57c00,stroke:#e65100,color:#fff;
     classDef pass fill:#2e7d32,stroke:#1b5e20,color:#fff;
+    classDef out fill:#4a148c,stroke:#311b92,color:#fff;
 
-    RAW["<b>Raw Archival Scan (Grayscale / BGR)</b>"]:::raw --> G0["<b>Gate 0: Macro-Illumination Normalization</b><br/>Massive Gaussian background blur (301x301)<br/>flat_img = img / bg_map (Equalizes shadows & rescues faint ink)"]:::gate
+    RAW["<b>Raw Archival Scan (LAC / PANB Microfilm)</b>"]:::raw --> FF{"<b>Step 0: Fast-Fail Check</b><br/>check_blank_frame (<5ms)"}:::check
     
-    G0 --> J0{"Vision Judge: Gate 0<br/><i>Shadows lifted? Faint cursive & tally marks rescued?</i>"}:::judge
-    J0 -->|PASS| G1["<b>Gate 1: Hermes 1D Delimiter Check</b><br/>1D Projection Histograms (raw_x vs new_x)<br/>Natural Directional Line Morphology"]:::gate:::pass
+    FF -->|Blank Target| SKIP["<b>Fast-Exit: SKIPPED_BLANK_PAGE</b>"]:::check
+    FF -->|Valid Ledger| G0["<b>Gate 0: Edge-Preserving Background Normalization</b><br/>• 25% Downsample<br/>• Heavy Bilateral Filter (d=15, &sigma;=75)<br/>• Continuous Division: raw / bg_map * 255<br/>• Global Gamma Shift (&gamma;=0.85)"]:::gate
 
-    G1 --> J1{"Vision Judge: Gate 1<br/><i>Delimiter baseline met? Text unaffected?</i>"}:::judge
-    J1 -->|PASS| G2["<b>Gate 2: Upscaling & Artifacts</b><br/>2x Super-Resolution + Unsharp Edge Enhancement"]:::gate:::pass
+    G0 --> J0{"<b>Gate 0 Checkpoint</b><br/><i>Substrate Variance &le; 150.0?<br/>Embossed halos eradicated?</i>"}:::check
+    J0 -->|PASS| G1["<b>Gate 1: Natural Delimiter & Lattice Intersections</b><br/>• 35x1 / 1x35 Line Extraction + Bridging<br/>• Intersections = h_lines &and; v_lines &ge; min_cells<br/>• X-Projection Peaks &ge; baseline_columns"]:::gate:::pass
 
-    G2 --> J2{"Vision Judge: Gate 2<br/><i>Checkerboards? Synthetic distortion?</i>"}:::judge
-    J2 -->|PASS| G3["<b>Gate 3: Anti-Smear & Ink Integrity</b><br/>CLAHE Contrast Deepening (clip=2.0) + CC Dust Filter (Area < 12)<br/>Zero Stroke Bloating (ellipse_close=0) + Alpha Overlay"]:::gate:::pass
+    G1 --> J1{"<b>Gate 1 Checkpoint</b><br/><i>Lattice density met? Columns preserved?</i>"}:::check
+    J1 -->|PASS| G2["<b>Gate 2: Super-Resolution Upscaling</b><br/>• 2x Lanczos-4 Super-Resolution<br/>• Smooth anti-aliased interpolation"]:::gate:::pass
 
-    G3 --> J3{"Vision Judge: Gate 3<br/><i>Natural fine stroke? Loops clear? Tails sharp?</i>"}:::judge
-    J3 -->|PASS| SLICE["<b>Downstream Protection: Lattice Slicer</b><br/>Extract clean tabular cells and data rows"]:::pass
+    G2 --> J2{"<b>Gate 2 Checkpoint</b><br/><i>Variance ratio &isin; [0.5, 3.5]?</i>"}:::check
+    J2 -->|PASS| G3["<b>Gate 3: Anti-Smear & Ink Health (DIEM-v2)</b><br/>• Top-Hat Loop Clearance (9x9, strength=0.6)<br/>• FPD &le; 15% (No black blobs)<br/>• Median Comp Area &le; 350px (No stroke fusing)<br/>• Continuity &gt; 80% | Noise &lt; 4%"]:::gate:::pass
+
+    G3 --> J3{"<b>Gate 3 Checkpoint</b><br/><i>DIEM Score = 100%?</i>"}:::check
+    J3 -->|PASS| OUT["<b>2x Certified Golden Master Facsimile</b><br/>(4902 x 4096 px)"]:::out
+    OUT --> MEM["<b>Persistent Skill Memory</b><br/>~/.hermes/skills/historical_census_1861.json"]:::out
+    OUT --> SLICE["<b>Downstream Table Slicing & HTR</b><br/>Lattice Slicer &rarr; Transcribe &rarr; Math Checksum"]:::pass
 ```
 
 ---
 
 ## 🔬 Core Architectural Principles
 
-### 1. Gate 0: Macro-Illumination Normalization & Faint Data Rescue
-* **Root Problem:** Underexposure shadows, optical vignetting, and fog fields trap faint historical cursive script and grid lines. Erasing or masking these dark zones destroys authentic data.
-* **Mathematical Illumination Flattening:**
-  1. **Background Illumination Field:** Massive Gaussian blur ($301\times 301$) models the macro-lighting gradient across the sheet.
-  2. **Field Division:** `flat_img = cv2.divide(img, bg_map, scale=255)` lifts underexposed shadows into uniform planar brightness.
-  3. **Data Rescue:** Automatically recovers faint cursive occupations (e.g. *"Fisherman"*), ditto marks, tally marks, and structural table delimiters previously hidden in shadows.
+### 1. Reel Statefulness & Warm-Start Baseline Caching
+* **Reel Drift Protection**: Lighting and contrast drift slowly across sequential microfilm frames. When processing a reel (e.g. LAC C-1001), `ReelContext` inherits winning parameters from the preceding frame, triggering the full optimization search loop only when DIEM scores drop below baseline thresholds.
+* **Blank Frame Fast-Fail**: Target cards, spacer frames, and black leader segments are identified in $<5\text{ms}$ via `check_blank_frame`, bypassing heavy filters immediately.
 
-### 2. Gate 1: Hermes 1D Projection Peak Delimiter Check
-* **Mathematical Constraint:** Extracts 1D projection peaks from raw scan (`raw_x_peaks`, `raw_y_peaks`) and ensures processed grid mask does not lose any table columns (`len(new_x_peaks) >= len(raw_x_peaks) - 1`).
-* **Natural Line Isolation ($35\times 1$, $1\times 35$):** Isolates genuine column dividers across the sheet and renders an organic charcoal `#6E6964` (`[100, 105, 110]` BGR) RGBA overlay.
+### 2. Gate 0: Edge-Preserving Bilateral Background Normalization & Global Gamma Shift
+* **Root Problem**: Massive Gaussian blurring across hard tape splices or binding shadows creates a sloped gradient, causing severe edge-ringing (embossed halos) and highlight blowout during division.
+* **Edge-Preserving Formulation**:
+  1. **Downsample**: Scale working copy to $25\%$ for sub-$15\text{ms}$ processing.
+  2. **Bilateral Estimation Map**: Apply `cv2.bilateralFilter(small_gray, d=15, sigmaColor=75.0, sigmaSpace=75.0)` to smooth substrate texture while strictly preserving the sharp geometric step-edges of tape splices and shadow borders.
+  3. **Linear Upsampling**: Interpolate back to full resolution using `INTER_LINEAR` (preventing cubic overshoot and ringing).
+  4. **Constrained Division**: $\text{flat\_raw} = \frac{\text{raw\_gray}}{\text{bg\_map}} \times 255$.
+  5. **Global Gamma Shift ($\gamma=0.85$)**: Corrects highlight blowout and deepens faint cursive entries, ditto marks, and column dividers across the whole canvas.
 
-### 3. Gate 3: Anti-Smear & Exact Footprint Text Overlay
-* **CLAHE Contrast Deepening (`clipLimit=2.0, tileGridSize=(8, 8)`):** Deepens ink naturally without expanding stroke boundaries.
-* **Zero Stroke Expansion (`ellipse_close_size=0`):** Prohibits heavy morphological closing or dilation, preserving delicate Spencerian loops, open loops, and sharp tapering tails.
-* **Connected Components Noise Filter (`min_area=12`):** Deletes isolated dust speckles without global blur.
-* **Anti-Aliased Alpha Overlay:** Composited with fountain pen tone `[20, 20, 20]` at $80\%$ opacity.
+### 3. Gate 1: Delimiter Lattice & Intersection Density Gate
+* **Deterministic Line Intersection Formula**:
+  $$\text{Intersections} = \text{h\_lines} \land \text{v\_lines}$$
+* **Mathematical Constraints**:
+  1. $\text{Intersection Centroids} \ge \text{min\_expected\_intersections}$
+  2. $\text{len}(X\text{-peaks}) \ge \text{baseline\_columns}$
+* **Organic Charcoal Overlay**: Rendered with `#6E6964` (`[100, 105, 110]` BGR) at $65\%$ opacity with $3\times 3$ Gaussian blur to match historical optical focus.
 
-### 4. Layer Stacking Order
-1. Base Substrate (`cleaned_master`: bilateral denoised illumination-flattened parchment)
-2. Natural Grid (Structural delimiters drawn in organic charcoal `#6E6964`)
-3. Polished Ink (The CLAHE-enhanced cursive text and rescued faint data)
+### 4. Gate 3: Ink Health, Top-Hat Loop Clearance & Anti-Bloat Standard
+* **Spencerian Top-Hat Clearing**: Morphological white top-hat filter (`kernel_size=(9, 9)`, `strength=0.6`) clears bleed-through ink trapped inside tight cursive loops ('e', 'o', 'a', 'g') without severing thin pen strokes.
+* **Foreground Pixel Density (FPD $\le 15.0\%$)**: Rejects over-binarized blobs and blotches.
+* **Component Area Bloat ($\text{Median Area} \le 350\text{px}$)**: Prevents cursive pen strokes from fusing into solid blocks.
+* **Hard Circuit Breaker**: Auto-tunes `sauvola_k`, `min_component_area`, and `text_opacity` autonomously upon DIEM violation.
 
 ---
 
@@ -78,12 +89,12 @@ from archival_vision.lattice import slice_document_cells
 from archival_vision.transcribe import resolve_ledger_transcriptions
 from archival_vision.checksum import validate_ledger_math
 
-# 1. Execute Multi-Gate Goal Loop with Vision Judge
+# 1. Execute Multi-Gate Goal Loop with Edge-Preserving Normalization
 result = run_multi_gate_goal_loop(
     input_path="Sources/Microfilms/1861-Census-WestIsles-CharlotteNB-PatrickWhalinFamily-LAC-C1001-Master.jpg",
     output_path="Sources/Microfilms/1861-Census-WestIsles-CharlotteNB-PatrickWhalinFamily-LAC-C1001-Enhanced.jpg",
     skill_profile_path="~/.hermes/skills/historical_census_1861.json",
-    use_llm_judge=True
+    use_llm_judge=False
 )
 
 # 2. Slice table cells with Ghost Cell protection
@@ -102,22 +113,45 @@ math_res = validate_ledger_math(trans_res.structured_records)
 
 ---
 
-## 🔬 Multi-Gate Verification JSON Schema
+## 🔬 Multi-Gate Verification DIEM Scorecard Baseline
 
 ```json
 {
-  "artifact_neutralization": {
-    "variance_detected": true,
-    "mask_applied": true,
-    "border_seam_visible": false,
-    "occluded_region_is_pure_white": true
+  "dataset": "1861-Census-WestIsles-CharlotteNB-PatrickWhalinFamily-LAC-C1001-Master",
+  "diem_scorecard": {
+    "human_readability": 99.83,
+    "machine_readability": 100.0,
+    "mean_luminance": 236.35,
+    "contrast_std": 54.81,
+    "laplacian_variance": 3753.79,
+    "stroke_continuity_index": 88.35,
+    "background_noise_ratio": 1.32,
+    "faint_ink_density": 2.51,
+    "substrate_variance": 123.51,
+    "foreground_pixel_density": 8.0,
+    "median_component_area": 93.0
   },
-  "segmentation_impact": {
-    "false_columns_detected": false,
-    "ghost_cells_dropped": true
-  },
-  "verdict": "PASS",
-  "next_action": "initiate_htr_transcription"
+  "winning_parameters": {
+    "downsample_scale": 0.25,
+    "bg_bilateral_d": 15,
+    "bg_bilateral_sigma_color": 75.0,
+    "bg_bilateral_sigma_space": 75.0,
+    "morph_close_ksize": [5, 5],
+    "global_gamma": 0.85,
+    "h_kernel_len": 25,
+    "v_kernel_len": 135,
+    "h_bridge_len": 400,
+    "upscale_factor": 2,
+    "tophat_kernel_size": [9, 9],
+    "text_opacity": 0.75,
+    "clahe_clip_limit": 2.0,
+    "sauvola_k": 0.12,
+    "min_component_area": 12,
+    "bilateral_sigma": 25.0,
+    "header_gamma": 0.75,
+    "grid_color_bgr": [100, 105, 110],
+    "grid_opacity": 0.65
+  }
 }
 ```
 
