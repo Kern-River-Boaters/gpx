@@ -9,7 +9,7 @@ description: "archival-vision-engine skill for OpenCode"
 
 ---
 name: archival-vision-engine
-description: Governs decoupled document restoration, synthetic occlusion neutralization, 4-gate reasoning vision judge validation, Spencerian top-hat cursive loop clearance, and ghost-cell dropping table lattice slicing across historical microfilms under ADR-020 and ADR-021.
+description: Governs macro-illumination normalization, faint cursive data rescue, 4-gate reasoning vision judge validation, Spencerian top-hat cursive loop clearance, and table lattice slicing across historical microfilms under ADR-020 and ADR-021.
 ---
 
 # Archival Vision Engine (`archival-vision`)
@@ -27,10 +27,10 @@ graph TD
     classDef judge fill:#f57c00,stroke:#e65100,color:#fff;
     classDef pass fill:#2e7d32,stroke:#1b5e20,color:#fff;
 
-    RAW["<b>Raw Archival Scan (Grayscale / BGR)</b>"]:::raw --> G0["<b>Gate 0: Aggressive Substrate Patching</b><br/>Variance Map (<6) + inRange(165,220) + Dilation (dilate_px=18)<br/>Hard-erased with pure white [255, 255, 255] to swallow drop shadows"]:::gate
+    RAW["<b>Raw Archival Scan (Grayscale / BGR)</b>"]:::raw --> G0["<b>Gate 0: Macro-Illumination Normalization</b><br/>Massive Gaussian background blur (301x301)<br/>flat_img = img / bg_map (Equalizes shadows & rescues faint ink)"]:::gate
     
-    G0 --> J0{"Vision Judge: Gate 0<br/><i>Tape block erased? Seam invisible?</i>"}:::judge
-    J0 -->|PASS| G1["<b>Gate 1: Hermes 1D Delimiter Check</b><br/>1D Projection Histograms (raw_x vs new_x)<br/>Directional Line Morphology + Bridging (1x400)"]:::gate:::pass
+    G0 --> J0{"Vision Judge: Gate 0<br/><i>Shadows lifted? Faint cursive & tally marks rescued?</i>"}:::judge
+    J0 -->|PASS| G1["<b>Gate 1: Hermes 1D Delimiter Check</b><br/>1D Projection Histograms (raw_x vs new_x)<br/>Natural Directional Line Morphology"]:::gate:::pass
 
     G1 --> J1{"Vision Judge: Gate 1<br/><i>Delimiter baseline met? Text unaffected?</i>"}:::judge
     J1 -->|PASS| G2["<b>Gate 2: Upscaling & Artifacts</b><br/>2x Super-Resolution + Unsharp Edge Enhancement"]:::gate:::pass
@@ -39,35 +39,34 @@ graph TD
     J2 -->|PASS| G3["<b>Gate 3: Anti-Smear & Ink Integrity</b><br/>CLAHE Contrast Deepening (clip=2.0) + CC Dust Filter (Area < 12)<br/>Zero Stroke Bloating (ellipse_close=0) + Alpha Overlay"]:::gate:::pass
 
     G3 --> J3{"Vision Judge: Gate 3<br/><i>Natural fine stroke? Loops clear? Tails sharp?</i>"}:::judge
-    J3 -->|PASS| SLICE["<b>Downstream Protection: Lattice Slicer</b><br/>Drop zero-variance pure white ghost cells"]:::pass
+    J3 -->|PASS| SLICE["<b>Downstream Protection: Lattice Slicer</b><br/>Extract clean tabular cells and data rows"]:::pass
 ```
 
 ---
 
 ## 🔬 Core Architectural Principles
 
-### 1. Gate 0: Aggressive Synthetic Microfilm Occlusion Neutralization
-* **Root Problem:** Synthetic grey scanning blocks/tape trap JPEG compression noise that layout segmenters misinterpret as columns and OCR models hallucinate into ghost text.
-* **Mathematical Isolation & Infill:**
-  1. **Variance Map:** $21 \times 21$ Gaussian blur + `cv2.absdiff` targets zero-texture flatness ($\text{Variance} < 6$).
-  2. **Intensity Intersection:** `cv2.inRange(gray, 165, 220)` avoids touching clean paper.
-  3. **Aggressive Seam-Swallowing Dilation (`dilate_px = 18`):** Dilation kernel completely swallows the dark boundary seam / physical drop shadow.
-  4. **Hard Infill:** Overwrites the entire dilated region on the base substrate with **absolute pure white `[255, 255, 255]`** before compositing.
+### 1. Gate 0: Macro-Illumination Normalization & Faint Data Rescue
+* **Root Problem:** Underexposure shadows, optical vignetting, and fog fields trap faint historical cursive script and grid lines. Erasing or masking these dark zones destroys authentic data.
+* **Mathematical Illumination Flattening:**
+  1. **Background Illumination Field:** Massive Gaussian blur ($301\times 301$) models the macro-lighting gradient across the sheet.
+  2. **Field Division:** `flat_img = cv2.divide(img, bg_map, scale=255)` lifts underexposed shadows into uniform planar brightness.
+  3. **Data Rescue:** Automatically recovers faint cursive occupations (e.g. *"Fisherman"*), ditto marks, tally marks, and structural table delimiters previously hidden in shadows.
 
 ### 2. Gate 1: Hermes 1D Projection Peak Delimiter Check
 * **Mathematical Constraint:** Extracts 1D projection peaks from raw scan (`raw_x_peaks`, `raw_y_peaks`) and ensures processed grid mask does not lose any table columns (`len(new_x_peaks) >= len(raw_x_peaks) - 1`).
-* **Directional Line Bridging ($1\times 400$, $300\times 1$):** Reconstructs fragmented column dividers across degraded ledger pages and renders an organic charcoal `#6E6964` (`[100, 105, 110]` BGR) RGBA overlay.
+* **Natural Line Isolation ($35\times 1$, $1\times 35$):** Isolates genuine column dividers across the sheet and renders an organic charcoal `#6E6964` (`[100, 105, 110]` BGR) RGBA overlay.
 
 ### 3. Gate 3: Anti-Smear & Exact Footprint Text Overlay
 * **CLAHE Contrast Deepening (`clipLimit=2.0, tileGridSize=(8, 8)`):** Deepens ink naturally without expanding stroke boundaries.
-* **Zero Stroke Expansion (`ellipse_close_size=0`):** Prohibits heavy morphological closing or dilation, preserving delicate Spencerian loops and sharp tapering tails.
-* **Connected Components Noise Filter (`min_area=12`):** Deletes isolated dust speckles.
-* **Anti-Aliased Alpha Overlay:** Composited with fountain pen tone `[25, 25, 25]` at $75\%$ opacity.
+* **Zero Stroke Expansion (`ellipse_close_size=0`):** Prohibits heavy morphological closing or dilation, preserving delicate Spencerian loops, open loops, and sharp tapering tails.
+* **Connected Components Noise Filter (`min_area=12`):** Deletes isolated dust speckles without global blur.
+* **Anti-Aliased Alpha Overlay:** Composited with fountain pen tone `[20, 20, 20]` at $80\%$ opacity.
 
 ### 4. Layer Stacking Order
-1. Base Substrate (`cleaned_master` with tape hard-erased to pure white `[255, 255, 255]`)
-2. Healed Grid (Interpolated structural lines drawn organically across the white void)
-3. Polished Ink (The CLAHE-enhanced cursive text)
+1. Base Substrate (`cleaned_master`: bilateral denoised illumination-flattened parchment)
+2. Natural Grid (Structural delimiters drawn in organic charcoal `#6E6964`)
+3. Polished Ink (The CLAHE-enhanced cursive text and rescued faint data)
 
 ---
 
