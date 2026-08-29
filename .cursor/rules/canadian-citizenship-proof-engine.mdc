@@ -14,10 +14,10 @@ description: Governs proof verification, dual-anchor lineage triangulation, arch
 
 ## 🛡️ Anti-Hallucination & Provenance Integrity Mandate (CRITICAL)
 
-### 1. Absolute Prohibition on Fabricated Citations & Synthetic Facsimiles
+### 1. Absolute Prohibition on Synthetic Facsimiles & Fabricated Citations
+- **NEVER Generate Synthetic Image Cards or Proof Documents**: AI agents must NEVER render artificial image cards, simulated certificates, mock census pages, or stamp fake seals ("CANADIAN PROOF VERIFIED", "OFFICIAL", etc.) into `Sources/`. Generating artificial proof documents is strictly forbidden.
 - **NEVER Fabricate Archival Hold Citations**: Agents must NEVER invent specific reel numbers, register numbers, folio/page numbers, or Latin register transcription text (e.g. *Actus Baptismi*) unless the exact scan or certified transcript has been physically inspected or retrieved from a verified digital database.
-- **NEVER Disguise Hypotheses as Verified Documents**: Generated image cards must NEVER pretend to be authentic camera scans or proven holdings. 
-- **Full Transparency**: If an agent hypothesizes where a record is located based on surrounding vital clues, it must be explicitly tagged as `doc_type: research_hypothesis` and titled `🔍 Archival Search Hypothesis: [Description]`.
+- **Full Transparency**: If an agent hypothesizes where a record is located based on surrounding vital clues, it must be explicitly tagged as `doc_type: research_hypothesis` and titled `🔍 Archival Search Hypothesis: [Description]` without creating any fake document files.
 
 ### 2. Dual-Asset Archival Ingestion & Golden Master Standard (ADR-021 / SOP-GEN-008)
 - Every archival microfilm from Library and Archives Canada (LAC) or Provincial Archives of New Brunswick (PANB) must be processed via the **Archival Vision Engine (`archival-vision-engine`)**:

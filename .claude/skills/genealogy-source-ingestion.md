@@ -41,7 +41,9 @@ Every primary image file MUST have a corresponding companion Markdown note (`.md
 4. Mathematical column checksum balance.
 5. Evidentiary weight analysis for citizenship or lineage proof.
 
-### 4. Strict Anti-SERP & Verified Facsimile Mandate (ADR-013 / SOP-GEN-002)
+### 4. Strict Anti-SERP, Anti-Fabrication & Verified Facsimile Mandate (ADR-013 / SOP-GEN-002)
+* **Absolute Ban on Synthetic / Mock Documents**: NEVER generate artificial, synthetic, mock, or simulated historical records, census returns, certificates, newspaper clippings, microfilms, or stamps/seals using PIL, ImageDraw, SVG canvas, or AI text-to-image tools. Manufacturing artificial proof documents is strictly prohibited.
 * **Zero-SERP Policy**: NEVER capture, ingest, or embed search engine result pages (SERPs), search query lists, unauthenticated login screens ("Sign In"), or anti-bot block pages (`Error 15`, `Access Denied`).
-* **Facsimile Requirement**: Only authentic primary document scans, certified civil certificates, high-resolution microfilm facsimiles, census enumeration sheets, and parish register images may be ingested into `Sources/` and linked to `People/` profiles.
+* **Facsimile Requirement**: Only authentic primary document scans, certified civil certificates, genuine high-resolution microfilm facsimiles, census enumeration sheets, and parish register images obtained from real archival holdings or user uploads may be ingested into `Sources/` and linked to `People/` profiles.
+
 
