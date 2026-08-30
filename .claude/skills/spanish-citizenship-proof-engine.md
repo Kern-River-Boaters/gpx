@@ -31,4 +31,3 @@ description: Governs proof verification, primary archival acquisition (PARES, Ar
 - **SOP-GEN-002:** Empathetic relational modeling and bridge synthesis.
 - **SOP-GEN-003 / SOP-GEN-004:** Anti-orphan discovery quarantine and dual-asset XML 1.0 retention.
 
-
