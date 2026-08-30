@@ -53,8 +53,13 @@ description: Governs Peruvian ancestral research, RENIEC national civil registry
    * **Holdings:** Centennial digitized Arequipa regional newspapers:
      * ***El Deber*** (1890–1962) — Key Catholic conservative daily covering Arequipa legal, ecclesiastical, and social family milestones.
      * ***La Bolsa*** (19th/20th century) & ***El Republicano***.
+3. **📰 Archivo Digital de la Prensa Peruana / Fuentes Históricas del Perú:**
+   * **Portal:** [fuenteshistoricasdelperu.com](https://fuenteshistoricasdelperu.com/)
+   * **Holdings:** Curated collection of historical regional gazettes, institutional memorandums, and university matriculation theses.
+4. **📚 Guías Políticas, Eclesiásticas y Militares del Perú & Almanaques de Lima:**
+   * Historical national directories and judicial yearbooks listing practicing lawyers (*Abogados de la Matrícula*), judges, and public magistrates across Peru.
 
-### E. Electoral & Juridical Lineage Registries
+### E. Electoral, Notarial & Juridical Lineage Registries
 1. **🗳️ Jurado Nacional de Elecciones (JNE) — Infogob:**
    * **Portal:** [Infogob JNE](https://infogob.jne.gob.pe/)
    * **Scope:** Historical electoral rolls, citizen data verification, birthplaces, and public service records.
@@ -62,6 +67,9 @@ description: Governs Peruvian ancestral research, RENIEC national civil registry
    * *Corte Suprema de Justicia del Perú* (Advocate Dr. José Andrés Pino).
    * *Colegio de Abogados de Lima (CAL)* & *Colegio de Abogados de Arequipa (CAA)* (Matriculation and legal practice records).
    * *Corte Interamericana de Derechos Humanos (CIDH)* (Special Agent Dr. Adrián Simons Pino).
+3. **⛪ Archivo Arzobispal de Lima (AAL) & Diocesan Archives:**
+   * **Portal:** [archivoarzobispal.org.pe](https://archivoarzobispal.org.pe/)
+   * **Holdings:** Matrimonial dispensations (*Dispensas y Expedientes Matrimoniales*), testaments (*Testamentos y Capellanías*), and parish registries tracing 3–4 generations.
 
 ### F. Transatlantic Colonial Lineage & US Diaspora
 1. **🇪🇸 PARES (Portal de Archivos Españoles):**
@@ -72,6 +80,8 @@ description: Governs Peruvian ancestral research, RENIEC national civil registry
 ## 2. Standards & Verification Framework
 - **ADR-014 / SOP-GEN-001:** Generational span transmission node standard.
 - **ADR-015 / SOP-GEN-005:** 4-Quadrant Deep Archival Harvester Standard.
+- **SOP-GEN-009:** Overlook Field Harvesting & RENIEC Retrieval Standard.
 - **GEN-SOP-008:** Dual-Asset authentic scan ingestion standard (Pristine original + enhanced display).
+
 
 
