@@ -9,68 +9,82 @@ description: "canadian-citizenship-proof-engine skill for OpenCode"
 
 ---
 name: canadian-citizenship-proof-engine
-description: Governs proof verification, dual-anchor lineage triangulation, archival order generation, and IRCC dossier compilation under Bill C-3 / Senate Bill S-245, ADR-013, ADR-021, and SOP-GEN-008 across federated genealogy vaults.
+description: Governs proof verification, dual-anchor lineage triangulation, 7-pillar preponderance matrix, archival church order generation, and IRCC dossier compilation under Bill C-3 / Senate Bill S-245, ADR-013, ADR-021, and SOP-GEN-008 across federated genealogy vaults.
 ---
 
 # Canadian Citizenship Proof Engine Skill (Bill C-3 / S-245)
 
-## 🛡️ Anti-Hallucination & Provenance Integrity Mandate (CRITICAL)
+## 🏛️ Commercial Multi-Tenant Proof-as-a-Service Architecture
 
-### 1. Absolute Prohibition on Synthetic Facsimiles & Fabricated Citations
-- **NEVER Generate Synthetic Image Cards or Proof Documents**: AI agents must NEVER render artificial image cards, simulated certificates, mock census pages, or stamp fake seals ("CANADIAN PROOF VERIFIED", "OFFICIAL", etc.) into `Sources/`. Generating artificial proof documents is strictly forbidden.
-- **NEVER Fabricate Archival Hold Citations**: Agents must NEVER invent specific reel numbers, register numbers, folio/page numbers, or Latin register transcription text (e.g. *Actus Baptismi*) unless the exact scan or certified transcript has been physically inspected or retrieved from a verified digital database.
-- **Full Transparency**: If an agent hypothesizes where a record is located based on surrounding vital clues, it must be explicitly tagged as `doc_type: research_hypothesis` and titled `🔍 Archival Search Hypothesis: [Description]` without creating any fake document files.
-
-### 2. Dual-Asset Archival Ingestion & Golden Master Standard (ADR-021 / SOP-GEN-008)
-- Every archival microfilm from Library and Archives Canada (LAC) or Provincial Archives of New Brunswick (PANB) must be processed via the **Archival Vision Engine (`archival-vision-engine`)**:
-  - **Blank Page Fast-Fail & Reel Warm-Start:** Bypasses spacer frames in $<5\text{ms}$ and caches baseline hyperparameters across reel frames.
-  - **Edge-Preserving Bilateral Background Normalization:** Uses downsampled bilateral filtering ($d=15, \sigma=75$) and continuous division to flatten illumination gradients without halo ringing.
-  - **Global Gamma Contrast Shift ($\gamma=0.85$):** Restores mid-tone contrast for faint iron gall ink strokes and column delimiters without highlight blowout.
-  - **2x Super-Resolution Enhanced Copy:** Staged alongside the master scan (`-Enhanced.jpg` + `-Master.jpg`).
-  - **DIEM-v2 Evidentiary Scorecard:** Requires $\text{Score} \ge 85.0/100$, positive field gain ($\Delta\text{Fields} \ge 0$), and mathematical checksum verification to validate 100% enumeration completeness.
-
-### 3. The Three-Tier Evidence Classification
-1. 🟢 **Tier 1: Verified Empirical Evidence**:
-   - Documents and indices directly searched, fetched, and verified (e.g., US Federal Censuses from NARA, State Department of Health birth/death certificates, LAC/PANB microfilm facsimiles).
-2. 🟡 **Tier 2: Archival Search Hypotheses**:
-   - Explicitly formulated research targets ("Based on the 1898 Maine birth certificate stating father was born in New Brunswick in Aug 1860, we hypothesize a baptism exists in PANB Charlotte County Catholic/Anglican registers").
-3. 🔴 **Tier 3: Unverified / Negative Leads**:
-   - Repositories or collections searched where no matching record was found.
+This specialized high-value skill transforms primary evidence into an unassailable legal filing dossier for Immigration, Refugees and Citizenship Canada (IRCC) under **Bill C-3 / Senate Bill S-245** (*An Act to amend the Citizenship Act*). It operates across any client vault portfolio:
+* **Internal Flagship Portfolio**: Whalen Lineage (`Canada-Citizenship` / New Brunswick roots).
+* **Client Portfolios**: Portright Lineage (`Kamas` / Quebec roots), Roy Lineage (`Nary` / Quebec roots), and new commercial onboarding.
 
 ---
 
-## 🏛️ Core Statutory Principles (Bill C-3 / S-245)
+## 🔬 Two-Tier Skill & Extraction Framework
 
-### 1. Repeal of First-Generation Limit (FGL)
-- Bill C-3 repeals the First-Generation Limit for all individuals born abroad prior to December 15, 2025 who are direct lineal descendants of a Canadian-born parent or ancestor.
+```mermaid
+graph TD
+    classDef general fill:#1565c0,stroke:#0d47a1,color:#fff;
+    classDef specialized fill:#2e7d32,stroke:#1b5e20,color:#fff;
+    classDef core fill:#37474f,stroke:#263238,color:#fff;
 
-### 2. Substantial Connection Exemption
-- All individuals born abroad prior to December 15, 2025 are **100% exempt** from the 1,095-day physical presence requirement in Canada.
+    DOCS["<b>Primary Evidentiary Documents & Microfilms</b><br/><i>(Censuses, Parish Books, Vital Registers, Military Drafts)</i>"]:::core
 
-### 3. Maternal Parity Doctrine
-- Descent through maternal lines (mothers, grandmothers, great-grandmothers) holds 100% legal parity with paternal lines under Section 3 of the amended Citizenship Act.
+    subgraph TIER1 ["TIER 1: General Vital & Contextual Extraction (genealogy-source-ingestion)"]
+        GEN_SKILL["<b>Universal Fact Harvester</b><br/>• <b>Occupations:</b> Master Boatbuilder, Commercial Fisherman, Day Laborer<br/>• <b>Religious Affiliation:</b> Church of England (Anglican), Roman Catholic, Methodist<br/>• <b>Residence History:</b> Steuben ME, Deer Island NB, Calais ME, Eastport ME<br/>• <b>Nativity & Migration:</b> Immigration Year (1880), Parental Nativity (Canada Eng)<br/>• <b>Census Chronology:</b> 1851, 1861, 1871, 1880, 1900, 1910, 1920, 1930, 1940"]:::general
+    end
 
-## 📁 Deliverable Topology & Clean 3+1 Standard Model (ADR-009)
+    subgraph TIER2 ["TIER 2: Specialized High-Value Citizenship Proof Engine (canadian-citizenship-proof-engine)"]
+        CIT_SKILL["<b>Sovereign Legal Dossier Engine</b><br/>• <b>Ecclesiastical Target Mapping:</b> Religion + Parish &rarr; Provincial Church Microfilm<br/>• <b>7-Pillar Preponderance Matrix:</b> Vitals, Parish, Censuses, Siblings, Aliens, Press, Land<br/>• <b>Collateral Sibling Triangulation:</b> Sibling records proving common Canadian parentage<br/>• <b>Administrative Legal Briefs:</b> Balance of Probabilities statutory analysis for IRCC"]:::specialized
+    end
 
-When generating or updating client deliverable repositories (`00_Projects_and_Dashboards/`), the agent MUST enforce the **3+1 Clean Suite Standard**:
-
-```
-00_Projects_and_Dashboards/
-├── 00_Master_Dashboard.md                                # Single interactive landing portal (Overview, KPIs, Quick Links)
-├── 1_Canadian_Citizenship_Executive_Evidence_Summary.md  # Formal statutory brief for IRCC / Legal Counsel (Bill C-3 / S-245)
-├── 2_Canadian_Citizenship_Archival_Request_Packet.md     # Actionable pre-filled email orders for archives (PANB, LAC)
-├── 3_Archival_Research_Strategy.md                       # (Optional) Specialized parish guide and repository search plan
-└── Family_Citizenship_Descent_Tree.canvas                # Visual interactive generational canvas (G-1 -> G4)
+    DOCS --> TIER1
+    TIER1 --> TIER2
 ```
 
-### Critical Rules:
-1. **Zero Scraper / Diagnostic Residue**: Internal crawler logs, visual variance scores ($\sigma$), and raw API traces are transient and MUST NOT be saved into `00_Projects_and_Dashboards/`.
-2. **Standardized Deliverable Prefixes**: Executive Briefs and Archival Order Packets must use numeric prefixes (`1_`, `2_`, `3_`) so clients and counsel have unambiguous sequence priority.
-3. **Visual Canvas Generation**: Every citizenship portfolio MUST include `Family_Citizenship_Descent_Tree.canvas` linking applicant cards directly to verified evidence scans.
+---
 
-## 🎨 Mermaid Diagram Governance Standard
-When generating Mermaid diagrams for archival search hypotheses, lineage evidence matrices, or descent trees:
-1. **Explicit Subgraph ID and Quoted Title**: Always use `subgraph ID ["Quoted Human Title"]` (e.g. `subgraph PANB_TARGET ["Archival Order Target (PANB)"]`). Never use unquoted spaces or parentheses in subgraph declarations.
-2. **Safe Arrow Syntax**: Use `-->` or `-.->|"Label"|` with quoted link labels.
-3. **HTML Label Sanitization**: Ensure nodes use HTML-safe escape characters when embedding line breaks (`<br/>`) or formatting.
+## ⛪ Ecclesiastical Parish Repository Mapping Rule: *Religion & Birthplace as Master Keys*
+
+Prior to mandatory provincial civil registration (1888 in New Brunswick, 1897 in Nova Scotia, 1926 in PEI, 1994 in Quebec), **Canadian provincial governments did not issue civil birth certificates**. Vital records were maintained exclusively by **local parish churches**.
+
+To target archival search orders deterministically without searching hundreds of irrelevant microfilm reels, the engine cross-references extracted `religion` and historical parish:
+
+| Province / Jurisdiction | Extracted Religion / Denomination | Archival Repository | Target Holding Class / Search Reel |
+| :--- | :--- | :--- | :--- |
+| **New Brunswick (Charlotte Co.)** | **Church of England (Anglican)** | Provincial Archives of New Brunswick (PANB) | **Reel F-1589** (Parish of St. George & West Isles Baptisms 1860) |
+| **New Brunswick (Charlotte Co.)** | **Roman Catholic** | PANB & Diocese of Saint John | St. Malachy’s / St. Stephen Catholic Church Registers |
+| **Quebec (Canada East)** | **Wesleyan Methodist / Protestant** | BAnQ / LAC / Drouin Collection | Civil Non-Catholic Registers of Canada East |
+| **Quebec** | **Roman Catholic** | BAnQ / Drouin Institute / LAC | **LAC Reel C-10086** & Parish Registers |
+| **Nova Scotia (Hants Co.)** | **Anglican / Baptist** | Nova Scotia Archives (PANS) | Falmouth & Newport Township Books (Reel 13867) |
+| **Ontario** | **Methodist / Presbyterian / Anglican** | Archives of Ontario (AO) | Vital Records Series MS948 & United Church Archives |
+
+---
+
+## 📊 The 7-Pillar Exhaustive Preponderance of the Evidence Matrix
+
+Under IRCC Guidelines (**CP 3 & CP 14**), proof by descent is governed by the civil standard:
+$$\text{Standard of Proof} = \mathbf{Balance\ of\ Probabilities}\ (\ge 51\%\ \text{Preponderance of Evidence})$$
+
+The engine compiles an unassailable dossier across 7 distinct evidentiary pillars:
+1. **Pillar 1: Primary State & Provincial Vitals**: Certified long-form state birth certificates ($G0, G1, G2$).
+2. **Pillar 2: Archival Parish Microfilms**: Contemporaneous baptismal entries from PANB, BAnQ, or PANS.
+3. **Pillar 3: Multi-Decennial Census Triangulation**: Pre- and post-Confederation federal returns (1851, 1861, 1871, 1880, 1900 Sheets 6A/6B, 1910, 1920, 1930, 1940, 1950) verifying consistent declaration of Canadian nativity across decades.
+4. **Pillar 4: Collateral Sibling Triangulation**: Sibling birth, marriage, and death records (e.g. William H. Whalen 1903, Thomas E. Whalen 1914) certifying identical parents born in New Brunswick.
+5. **Pillar 5: Naturalization & Alien Status Proof**: NARA naturalization petitions and federal census alien declarations proving unbroken Canadian/British subject status.
+6. **Pillar 6: Historical Press & Gazettes**: *The Eastport Sentinel*, *The St. Croix Courier*, *The Kalamazoo Gazette*, *The Washington Post* verifying lived family history, occupations, and community milestones.
+7. **Pillar 7: Land, Probate & Trade Licenses**: County deed registries, fishery bounty records, and almshouse reports.
+
+---
+
+## 🚀 Standardized 5-Asset Client Deliverable Suite
+
+Every client vault automatically receives the turnkey 5-asset deliverable suite:
+1. `00_Projects_and_Dashboards/00_Master_Dashboard.md`: Portfolio status, applicant transmission summary, and quick links.
+2. `00_Projects_and_Dashboards/1_Canadian_Citizenship_Executive_Evidence_Summary.md`: 7-Pillar Preponderance Brief, Bill C-3 statutory analysis, and transparent LLM-as-Judge scorecard.
+3. `00_Projects_and_Dashboards/2_Canadian_Citizenship_Archival_Request_Packet.md`: Turnkey archival search order letters with exact reference codes for PANB, LAC, or BAnQ.
+4. `00_Projects_and_Dashboards/3_Archival_Research_Strategy.md`: Repository guide mapping extracted denominations to target reels.
+5. `00_Projects_and_Dashboards/Family_Citizenship_Descent_Tree.canvas`: Interactive generational visual descent canvas.
 
