@@ -12,79 +12,49 @@ name: canadian-citizenship-proof-engine
 description: Governs proof verification, dual-anchor lineage triangulation, 7-pillar preponderance matrix, archival church order generation, and IRCC dossier compilation under Bill C-3 / Senate Bill S-245, ADR-013, ADR-021, and SOP-GEN-008 across federated genealogy vaults.
 ---
 
-# Canadian Citizenship Proof Engine Skill (Bill C-3 / S-245)
+# 🏛️ Canadian Citizenship Proof Engine (Bill C-3 / Senate Bill S-245)
 
-## 🏛️ Commercial Multi-Tenant Proof-as-a-Service Architecture
+## SECTION 1: CORE REASONING MODULES & EVOLUTIONARY LEARNING LOOP
 
-This specialized high-value skill transforms primary evidence into an unassailable legal filing dossier for Immigration, Refugees and Citizenship Canada (IRCC) under **Bill C-3 / Senate Bill S-245** (*An Act to amend the Citizenship Act*). It operates across any client vault portfolio:
-* **Internal Flagship Portfolio**: Whalen Lineage (`Canada-Citizenship` / New Brunswick roots).
-* **Client Portfolios**: Portright Lineage (`Kamas` / Quebec roots), Roy Lineage (`Nary` / Quebec roots), and new commercial onboarding.
+### Module 1: The Canadian Naturalization & Citizenship Mechanics
+* **The Pre-1977 Voluntary Renunciation Rule:** Prior to February 15, 1977 (and January 1, 1947 for British Subjects), voluntary naturalization in a foreign nation (e.g., USA) caused the automatic loss of British Subject / Canadian status. If Anchor Ancestor (Gen 0) finalized US citizenship before Child (Gen 1) was born, the chain is broken.
+* **The "First Papers" (PA) Safe Harbor:** Filing a Declaration of Intention (`PA`) did not confer US citizenship. If the child was born while the parent held `PA` or `AL` status, the parent was legally still a Canadian/British Subject at the time of birth.
+* **Dual-Citizen by Birth Exemption:** A child born on US soil to a Canadian parent acquired US citizenship by birth (*jus soli*) and Canadian status by descent (*jus sanguinis*). Involuntary acquisition by birth never severed Canadian status.
+* **Bill C-71 & Substantial Connection Protocol:** Applies retroactive remedy to the First Generation Limit (FGL) following the *Björkquist* ruling. Foreign-born descendants qualify if the Canadian-born parent met the 1,095-day cumulative physical presence requirement prior to birth. Descendants born prior to December 15, 2025 are **100% exempt** from the physical presence requirement.
+
+### Module 2: Name Titles & Honorific Signal Ingestion
+Do not discard honorifics during normalization. When parsing Ancestry, FamilySearch, or civil indexes where titles are merged into names, route them to forensic legal checks:
+* `Capt.` / `Master`: Cross-check US Maritime Commission and Coast Guard licensing. Commanded US-flagged vessels required US citizenship.
+* `Esq.` / `Hon.` / `Judge`: Legal practice and judicial posts required bar admission and sworn citizenship oaths.
+* `Rev.` / `Deacon` / `Father`: Triggers ecclesiastical record routing; identifies exact parish/diocesan archives.
+* `Col.` / `Maj.` / `Capt.` (Militia): Post-1865 state militia officer commissions required naturalization or declaration.
+
+### Module 3: Occupational Tripwires (Inferred Naturalization)
+Flag any appearance of the following occupations to pinpoint the naturalization window:
+* **Homesteader / Land Patentee:** Homestead Act of 1862 required citizenship or a filed Declaration of Intention (`PA`).
+* **Law Enforcement / Civil Service:** Sheriffs, police officers, marshals, customs agents, and postmasters required sworn citizenship.
+* **Saloon Keeper / Tavern Licensee:** Late 19th/early 20th-century municipal statutes required citizenship to hold a liquor license.
+* **Elected Official:** Alderman, selectman, representative, or town clerk required full citizenship.
+
+### Module 4: Geopolitical Nomenclature & Phonetic Drift
+* `Canada East` / `Lower Canada` / `Canada Fr` $\rightarrow$ **Quebec** (Prioritize Drouin Collection, Catholic parish microfilm).
+* `Canada West` / `Upper Canada` / `Canada Eng` $\rightarrow$ **Ontario** (Prioritize Protestant/Wesleyan registers, Land Crown Books).
+* `British North America (BNA)` $
+ightarrow$ **Pre-Confederation (1867) designation**.
+* `Newfoundland` $
+ightarrow$ **Separate British Colony prior to March 31, 1949**.
 
 ---
 
-## 🔬 Two-Tier Skill & Extraction Framework
+## SECTION 2: THE 7-PILLAR PREPONDERANCE OF EVIDENCE MATRIX (LEGAL SPECIFICATION)
 
-```mermaid
-graph TD
-    classDef general fill:#1565c0,stroke:#0d47a1,color:#fff;
-    classDef specialized fill:#2e7d32,stroke:#1b5e20,color:#fff;
-    classDef core fill:#37474f,stroke:#263238,color:#fff;
-
-    DOCS["<b>Primary Evidentiary Documents & Microfilms</b><br/><i>(Censuses, Parish Books, Vital Registers, Military Drafts)</i>"]:::core
-
-    subgraph TIER1 ["TIER 1: General Vital & Contextual Extraction (genealogy-source-ingestion)"]
-        GEN_SKILL["<b>Universal Fact Harvester</b><br/>• <b>Occupations:</b> Master Boatbuilder, Commercial Fisherman, Day Laborer<br/>• <b>Religious Affiliation:</b> Church of England (Anglican), Roman Catholic, Methodist<br/>• <b>Residence History:</b> Steuben ME, Deer Island NB, Calais ME, Eastport ME<br/>• <b>Nativity & Migration:</b> Immigration Year (1880), Parental Nativity (Canada Eng)<br/>• <b>Census Chronology:</b> 1851, 1861, 1871, 1880, 1900, 1910, 1920, 1930, 1940"]:::general
-    end
-
-    subgraph TIER2 ["TIER 2: Specialized High-Value Citizenship Proof Engine (canadian-citizenship-proof-engine)"]
-        CIT_SKILL["<b>Sovereign Legal Dossier Engine</b><br/>• <b>Ecclesiastical Target Mapping:</b> Religion + Parish &rarr; Provincial Church Microfilm<br/>• <b>7-Pillar Preponderance Matrix:</b> Vitals, Parish, Censuses, Siblings, Aliens, Press, Land<br/>• <b>Collateral Sibling Triangulation:</b> Sibling records proving common Canadian parentage<br/>• <b>Administrative Legal Briefs:</b> Balance of Probabilities statutory analysis for IRCC"]:::specialized
-    end
-
-    DOCS --> TIER1
-    TIER1 --> TIER2
-```
-
----
-
-## ⛪ Ecclesiastical Parish Repository Mapping Rule: *Religion & Birthplace as Master Keys*
-
-Prior to mandatory provincial civil registration (1888 in New Brunswick, 1897 in Nova Scotia, 1926 in PEI, 1994 in Quebec), **Canadian provincial governments did not issue civil birth certificates**. Vital records were maintained exclusively by **local parish churches**.
-
-To target archival search orders deterministically without searching hundreds of irrelevant microfilm reels, the engine cross-references extracted `religion` and historical parish:
-
-| Province / Jurisdiction | Extracted Religion / Denomination | Archival Repository | Target Holding Class / Search Reel |
+| Evidentiary Pillar | Record Class & Holding Identifier | Extracted Facts, Honorifics & Occupational Tells | Statutory Evidentiary Weight under IRCC (CP 3 / CP 14) |
 | :--- | :--- | :--- | :--- |
-| **New Brunswick (Charlotte Co.)** | **Church of England (Anglican)** | Provincial Archives of New Brunswick (PANB) | **Reel F-1589** (Parish of St. George & West Isles Baptisms 1860) |
-| **New Brunswick (Charlotte Co.)** | **Roman Catholic** | PANB & Diocese of Saint John | St. Malachy’s / St. Stephen Catholic Church Registers |
-| **Quebec (Canada East)** | **Wesleyan Methodist / Protestant** | BAnQ / LAC / Drouin Collection | Civil Non-Catholic Registers of Canada East |
-| **Quebec** | **Roman Catholic** | BAnQ / Drouin Institute / LAC | **LAC Reel C-10086** & Parish Registers |
-| **Nova Scotia (Hants Co.)** | **Anglican / Baptist** | Nova Scotia Archives (PANS) | Falmouth & Newport Township Books (Reel 13867) |
-| **Ontario** | **Methodist / Presbyterian / Anglican** | Archives of Ontario (AO) | Vital Records Series MS948 & United Church Archives |
-
----
-
-## 📊 The 7-Pillar Exhaustive Preponderance of the Evidence Matrix
-
-Under IRCC Guidelines (**CP 3 & CP 14**), proof by descent is governed by the civil standard:
-$$\text{Standard of Proof} = \mathbf{Balance\ of\ Probabilities}\ (\ge 51\%\ \text{Preponderance of Evidence})$$
-
-The engine compiles an unassailable dossier across 7 distinct evidentiary pillars:
-1. **Pillar 1: Primary State & Provincial Vitals**: Certified long-form state birth certificates ($G0, G1, G2$).
-2. **Pillar 2: Archival Parish Microfilms**: Contemporaneous baptismal entries from PANB, BAnQ, or PANS.
-3. **Pillar 3: Multi-Decennial Census Triangulation**: Pre- and post-Confederation federal returns (1851, 1861, 1871, 1880, 1900 Sheets 6A/6B, 1910, 1920, 1930, 1940, 1950) verifying consistent declaration of Canadian nativity across decades.
-4. **Pillar 4: Collateral Sibling Triangulation**: Sibling birth, marriage, and death records (e.g. William H. Whalen 1903, Thomas E. Whalen 1914) certifying identical parents born in New Brunswick.
-5. **Pillar 5: Naturalization & Alien Status Proof**: NARA naturalization petitions and federal census alien declarations proving unbroken Canadian/British subject status.
-6. **Pillar 6: Historical Press & Gazettes**: *The Eastport Sentinel*, *The St. Croix Courier*, *The Kalamazoo Gazette*, *The Washington Post* verifying lived family history, occupations, and community milestones.
-7. **Pillar 7: Land, Probate & Trade Licenses**: County deed registries, fishery bounty records, and almshouse reports.
-
----
-
-## 🚀 Standardized 5-Asset Client Deliverable Suite
-
-Every client vault automatically receives the turnkey 5-asset deliverable suite:
-1. `00_Projects_and_Dashboards/00_Master_Dashboard.md`: Portfolio status, applicant transmission summary, and quick links.
-2. `00_Projects_and_Dashboards/1_Canadian_Citizenship_Executive_Evidence_Summary.md`: 7-Pillar Preponderance Brief, Bill C-3 statutory analysis, and transparent LLM-as-Judge scorecard.
-3. `00_Projects_and_Dashboards/2_Canadian_Citizenship_Archival_Request_Packet.md`: Turnkey archival search order letters with exact reference codes for PANB, LAC, or BAnQ.
-4. `00_Projects_and_Dashboards/3_Archival_Research_Strategy.md`: Repository guide mapping extracted denominations to target reels.
-5. `00_Projects_and_Dashboards/Family_Citizenship_Descent_Tree.canvas`: Interactive generational visual descent canvas.
+| **Pillar 1: Primary State Vitals** | Direct Birth & Marriage Certificates | Establishes chain of bloodline descent; identifies parentage and recorded nativity. | 🟢 **Primary Government Proof (Conclusive)** |
+| **Pillar 2: Archival Parish Microfilms** | PANB / BAnQ / PANS Microfilm Registries | Baptismal sponsors, clergy attestations, dates of birth/baptism. Resolves pre-civil registration gaps. | 🔵 **Ecclesiastical Legal Facsimile (99.9% Conclusive)** |
+| **Pillar 3: Multi-Decennial Census Triangulation** | LAC & US Census Records across Decades | Longitudinal consistency in birthplace (`Canada Eng` / `NB`), age, immigration year, and inter-generational stability. | 🟢 **Public Enumeration Preponderance** |
+| **Pillar 4: Collateral Sibling Triangulation** | Sibling Death & Vital Certificates | Corroborates common parentage, Canadian soil origin, and maternal maiden names. | 🟢 **Corroborative Kinship Evidence** |
+| **Pillar 5: Naturalization & Alien Verification** | Census `AL`/`PA`/`NA` fields, Declarations, Homestead Records | Proves non-renunciation or delayed naturalization past the birth date of the next generation. | 🟢 **Preservation of British Subject / Canadian Status** |
+| **Pillar 6: Historical Press & Occupational Milestones** | Gazette Clippings, Directory Strings, Maritime/Guild Records | Verifies trades, honors, civic posts, and trade licenses requiring or exempting citizenship. | 🟢 **Corroborative Lived Experience** |
+| **Pillar 7: Land, Probate & Title Holdings** | Deed Books, Crown Grants, Probate Inventories | Confirms ancestral presence on sovereign soil and inheritance of generational assets. | 🟢 **Sovereign Soil Asset Corroboration** |
 

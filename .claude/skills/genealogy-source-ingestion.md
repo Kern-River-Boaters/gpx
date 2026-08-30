@@ -7,45 +7,40 @@ name: genealogy-source-ingestion
 description: Ingests raw genealogical source documents (PDFs, census images, birth/baptismal certificates, military registers) from Sources/_Inbox/ and online repositories, applies ADR-011 filename sanitization, performs visual statistical variance verification, integrates archival-vision-engine restoration, extracts general vital facts (occupations, religion, places lived, immigration), and enforces universal bidirectional atomic linking per SOP-GEN-002, ADR-013, ADR-020, ADR-021, and SOP-GEN-008.
 ---
 
-# Genealogical Source Ingestion & Fact Extraction Engine
+# 🏛️ Genealogical Source Ingestion & Epistemic Provenance Standard
 
-Governs the ingestion, ADR-020/ADR-021 Tri-Asset restoration, deep vital fact harvesting, and atomic reciprocal linking of all primary historical evidence across federated genealogy vaults.
+Governed under **ADR-002 (Zero-Cruft)**, **ADR-020/021 (Tri-Asset Archival Vision)**, and **ADR-036 (Level 4 Provenance)**.
 
 ---
 
-## 🏛️ Ingestion Pipeline Flow
+## 🔬 1. The 4-Tier Epistemic Provenance Taxonomy
 
-```mermaid
-graph TD
-    classDef raw fill:#37474f,stroke:#263238,color:#fff;
-    classDef restore fill:#1565c0,stroke:#0d47a1,color:#fff;
-    classDef extract fill:#e65100,stroke:#bf360c,color:#fff;
-    classDef link fill:#2e7d32,stroke:#1b5e20,color:#fff;
+| Epistemic Tier | Confidence Weight | Source Definition & Traceability Anchor |
+| :--- | :---: | :--- |
+| **Tier 1: Primary Archival Facsimile** | **1.00** | Direct, contemporaneous official record scan present in `Sources/` with verified physical bytes and visual embed. |
+| **Tier 2: Human / Legacy GEDCOM Entry** | **0.80** | Pre-existing vault frontmatter/markdown entered by human researcher, pending primary record binding. |
+| **Tier 3: Hermes Inferred Fact** | **0.60 – 0.90** | Machine-extracted biographical fact derived from OCR/HTR with explicit document coordinates. |
+| **Tier 4: Quarantined Discrepancy** | **< 0.50** | Unresolved evidentiary conflict between sources; routed to staging for human review. |
 
-    RAW["<b>Raw Archival Scan / PDF</b><br/><i>(Sources/_Inbox/)</i>"]:::raw --> RESTORE["<b>Tri-Asset Bifurcated Restoration</b><br/>• -Master.jpg (Pristine)<br/>• -Display.jpg (NL-Means + CLAHE)<br/>• -Inference.png (Bilateral + Sauvola)"]:::restore
-    
-    RESTORE --> EXTRACT["<b>Tier 1 General Vital Fact Extraction</b><br/>• Occupations & Trades<br/>• Religious Denomination<br/>• Residence History (locations_lived)<br/>• Immigration Year & Alien Status<br/>• Parental Foreign Nativity"]:::extract
-    
-    EXTRACT --> LINK["<b>Universal Bidirectional Atomic Linking</b><br/>• Ingested card embeds -Display.jpg<br/>• People/ frontmatter sources: updated<br/>• People/ body ## 📄 Source Documents updated<br/>• People/ body ## 📜 Historical Records updated"]:::link
+---
+
+## 📋 2. Universal Fact & Signal Extraction Taxonomy
+
+Every ingested primary document extracts:
+* **Honorific Signals**: Isolate `titles_and_honorifics` (`Capt.`, `Rev.`, `Esq.`, `Hon.`, `Deacon`, `Col.`, `Judge`, `Dr.`).
+* **Occupational Tripwires**: Check professions requiring citizenship (Homesteaders under 1862 Act, Sheriffs, Tavern Licensees, Elected Officials).
+* **Socioeconomic Wealth Tracking**: Extract Real Estate Value, Personal Estate Value (1850-1870 Censuses), and 1930 Radio Ownership (`R`).
+* **Inter-Censal Gap Bridging**: Extract City Directory annual residence and `"widow of [Name]"` entries.
+* **Geopolitical Normalization**: Map archaic jurisdictions (`Canada East` $\rightarrow$ Quebec, `Canada West` $\rightarrow$ Ontario).
+
+---
+
+## 🛡️ 3. Non-Destructive Conflict Resolution (Zero Silent Overwrites)
+* When primary evidence conflicts with legacy human-entered properties, inject an epistemic discrepancy audit table:
+```markdown
+## 🔍 Epistemic Discrepancy & Verification Audit
+| Field | Human-Curated Value | Primary Source Value | Ground-Truth Document | Resolution & Confidence |
+| :--- | :--- | :--- | :--- | :--- |
 ```
-
----
-
-## 📋 Standard Extracted Frontmatter Properties on `People/` Profiles
-
-Every ingested document back-annotates the following frontmatter properties into all enumerated person profiles:
-* `occupations`: List of recorded trades (e.g. `["Master Boatbuilder", "Commercial Fisherman"]`).
-* `religion`: Exact church denomination (e.g. `"Church of England (Anglican)"`, `"Roman Catholic"`).
-* `locations_lived`: Chronological list of confirmed residences.
-* `immigration_year`: Integer arrival year (e.g. `1880`).
-* `father_birth_place` & `mother_birth_place`: Foreign or domestic nativity.
-* `sources`: Complete list of WikiLinks to all companion markdown cards in `Sources/`.
-
----
-
-## 🛡️ Quality Gates & Invariants
-1. **Absolute Anti-Fabrication Rule**: Zero synthetic or mock documents. Genuine primary facsimiles only.
-2. **Visual Facsimile Embed Mandatory**: Every companion markdown card in `Sources/` must embed the `-Display.jpg` or `.pdf` file (`![[...] ]`).
-3. **Multi-Page Completeness**: Documents spanning multiple pages must ingest and embed all pages (`-Page1-Display.jpg`, `-Page2-Display.jpg`).
-4. **Reciprocal Atomic Linking**: Every person listed in `verified_entities:` must link to the source, and the source must link back to the person.
+* Telemetry emitted to `_Meta/Telemetry/Genealogy_Provenance_Ledger.jsonl`.
 
