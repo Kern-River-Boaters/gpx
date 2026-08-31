@@ -7,12 +7,12 @@ globs: *.md
 
 ---
 name: archival-vision-engine
-description: Governs edge-preserving bilateral background normalization, global gamma contrast restoration, reel statefulness, blank-frame fast-failing, 4-gate deterministic DIEM verification, Spencerian top-hat cursive loop clearance, and table lattice slicing across historical microfilms under ADR-020, ADR-021, and SOP-GEN-008.
+description: Governs edge-preserving bilateral background normalization, global gamma contrast restoration, reel statefulness, blank-frame fast-failing, 4-gate deterministic DIEM verification, Spencerian top-hat cursive loop clearance, and table lattice slicing across historical microfilms under ADR-GEN-019, ADR-GEN-020, and SOP-GEN-008.
 ---
 
 # Archival Vision Engine (`archival-vision`)
 
-Governs deterministic image restoration, paleographical transcription, table lattice slicing, and closed-loop visual quality gates for degraded 19th-century census schedules, parish registers, and civil microfilms under **ADR-020**, **ADR-021**, and **SOP-GEN-008**.
+Governs deterministic image restoration, paleographical transcription, table lattice slicing, and closed-loop visual quality gates for degraded 19th-century census schedules, parish registers, and civil microfilms under **ADR-GEN-019**, **ADR-GEN-020**, and **SOP-GEN-008**.
 
 ---
 

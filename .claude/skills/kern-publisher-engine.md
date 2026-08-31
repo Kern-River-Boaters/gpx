@@ -13,12 +13,12 @@ description: Governs the architecture, operational runbook, pre-flight test gate
 Kern Obsidian Web (`kern_publisher.py` on Port 8095) serves as the primary high-speed browser-based workstation and reader engine across all five federated vaults (`Notes`, `Common`, `Cookbook`, `KRB`, and `Genealogy` encompassing over 40,000 files).
 
 ### Key References:
-- **ADR-006**: Kern Vault Web Publisher & Zero-Footprint Reader Engine.
+- **ADR-GEN-006**: Kern Vault Web Publisher & Zero-Footprint Reader Engine.
 - **ADR-029**: Kern Federated UI Design System, Glassmorphic Styling Standard, and Universal Theme Engine.
 - **ADR-045**: High-Performance Publisher Architecture, In-Memory Vault Indexing, and Zero-Latency Client SPA Routing.
-- **Genealogy ADR-017**: Bidirectional Lineage Pointer Symmetry, Dual-Hemisphere Radial Lineage Visualizers, and Publisher Pre-Flight Test Harness.
-- **Publisher Script**: [[`Common/_Meta/Scripts/kern_publisher.py`]]
-- **Unit Test Suite**: [[`Common/_Meta/Tests/test_kern_publisher.py`]]
+- **Genealogy ADR-GEN-016**: Bidirectional Lineage Pointer Symmetry, Dual-Hemisphere Radial Lineage Visualizers, and Publisher Pre-Flight Test Harness.
+- **Publisher Script**: [[kern_publisher.py`]]
+- **Unit Test Suite**: [[test_kern_publisher.py`]]
 
 ---
 

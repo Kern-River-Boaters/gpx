@@ -4,12 +4,12 @@
 
 ---
 name: genealogy-source-ingestion
-description: "Ingests raw genealogical source documents (PDFs, census images, birth/baptismal certificates, military registers) from Sources/_Inbox/ and online repositories, applies ADR-011 filename sanitization, organizes holdings into the 7-folder archival taxonomy (Vital_Statistics, Census, Military, Land_and_Probate, Immigration_and_Passports, Microfilms, Published_Histories), enforces the Basename WikiLink Invariant with zero folder prefixes, enforces strict portfolio isolation, formats canonical companion source Markdown notes with doc_type: source, and strictly enforces table WikiLink pipe escaping per ADR-023 and SOP-GEN-010."
+description: "Ingests raw genealogical source documents (PDFs, census images, birth/baptismal certificates, military registers) from Sources/_Inbox/ and online repositories, applies ADR-011 filename sanitization, organizes holdings into the 7-folder archival taxonomy (Vital_Statistics, Census, Military, Land_and_Probate, Immigration_and_Passports, Microfilms, Published_Histories), enforces the Basename WikiLink Invariant with zero folder prefixes, enforces strict portfolio isolation, formats canonical companion source Markdown notes with doc_type: source, and strictly enforces table WikiLink pipe escaping per ADR-GEN-023 and SOP-GEN-010."
 ---
 
 # 🏛️ Genealogical Source Ingestion & Epistemic Provenance Standard
 
-Governed under **ADR-002 (Zero-Cruft)**, **ADR-020/021 (Tri-Asset Archival Vision)**, **ADR-023 (Standardized Source Frontmatter & Table Pipe Escaping)**, and **SOP-GEN-010**.
+Governed under **ADR-GEN-002 (Zero-Cruft)**, **ADR-GEN-019/021 (Tri-Asset Archival Vision)**, **ADR-GEN-023 (Standardized Source Frontmatter & Table Pipe Escaping)**, and **SOP-GEN-010**.
 
 ---
 
@@ -84,7 +84,7 @@ audit_status: passed
 
 ## 🛡️ 4. Mandatory Rules & Invariants
 
-1. **Basename WikiLinks Only**: ALWAYS use clean file basenames (`[[Whalen, Patrick 1811-09-01|Patrick Whalen]]` and `[[Asset.pdf]]`). NEVER use path prefixes (`[[People/...]]` or `[[Sources/...]]`).
+1. **Basename WikiLinks Only**: ALWAYS use clean file basenames (`[[Whalen, Patrick 1811-09-01|Patrick Whalen]]` and `[[Asset.pdf]]`). NEVER use path prefixes (`[[...]]` or `[[...]]`).
 2. **Escaped Table Pipes**: Inside Markdown tables, all alias pipes MUST be escaped as `[[Target\|Alias]]`.
 3. **Strict Portfolio Scoping & Friend Data Separation**:
    - `Genealogy` vault is strictly reserved for family members (Pino / Whalen / Leslie / Dudley / Dunklee / Rexach / Serra).

@@ -9,7 +9,7 @@ description: "genealogical-narrative-curator skill for OpenCode"
 
 ---
 name: genealogical-narrative-curator
-description: Autonomous curator, author, and maintainer of multi-generational family sagas, lived transatlantic memories, and empathetic contemporary chronicles across the Narratives/ directory under ADR-014, ADR-015, and SOP-GEN-002.
+description: Autonomous curator, author, and maintainer of multi-generational family sagas, lived transatlantic memories, and empathetic contemporary chronicles across the Narratives/ directory under ADR-GEN-012, ADR-GEN-013, and SOP-GEN-002.
 ---
 
 # Genealogical Narrative Curator
@@ -25,7 +25,7 @@ The **Genealogical Narrative Curator** is an expert learning agent and operation
 ```mermaid
 graph TD
     A["🔍 1. Ingest Archival Facts & Living Oral History (SOP-GEN-005)"] --> B["📜 2. Draft Multi-Generational Chronology"]
-    B --> C["⚖️ 3. Apply Generational Span Bounds (ADR-014)"]
+    B --> C["⚖️ 3. Apply Generational Span Bounds (ADR-GEN-012)"]
     C --> D["🌿 4. Calibrate Tone & Humble Intergenerational Voice (SOP-GEN-002)"]
     D --> E["🔗 5. Weave Bidirectional WikiLinks into People/"]
     E --> F["🧪 6. Run Automated Narrative Linter & Master Unit Tests"]

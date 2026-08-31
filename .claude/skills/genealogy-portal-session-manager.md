@@ -16,7 +16,7 @@ Automated genealogical data extraction across major archival portals (**FamilySe
 
 ## 🛡️ Core Architectural Principles
 
-### 1. Pre-Flight Cookie Heartbeat Sentinel (ADR-018 & SOP-GEN-007)
+### 1. Pre-Flight Cookie Heartbeat Sentinel (ADR-GEN-017 & SOP-GEN-007)
 Every extraction agent or pipeline MUST perform an automated pre-flight session check before initiating batch operations:
 * **Script:** `_Meta/Scripts/genealogy_cookie_heartbeat.py`
 * **Import Pattern:** `from genealogy_cookie_heartbeat import ensure_authenticated_session`

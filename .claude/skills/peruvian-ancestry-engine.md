@@ -73,8 +73,8 @@ description: Governs Peruvian ancestral research, RENIEC national civil registry
    * National Archives & Records Administration (NARA RG 85 / RG 59) case files for Peruvian family diaspora in Maryland (Oscar Torres, Glen Echo MD).
 
 ## 2. Standards & Verification Framework
-- **ADR-014 / SOP-GEN-001:** Generational span transmission node standard.
-- **ADR-015 / SOP-GEN-005:** 4-Quadrant Deep Archival Harvester Standard.
+- **ADR-GEN-012 / SOP-GEN-001:** Generational span transmission node standard.
+- **ADR-GEN-013 / SOP-GEN-005:** 4-Quadrant Deep Archival Harvester Standard.
 - **SOP-GEN-009:** Overlook Field Harvesting & RENIEC Retrieval Standard.
 - **GEN-SOP-008:** Dual-Asset authentic scan ingestion standard (Pristine original + enhanced display).
 

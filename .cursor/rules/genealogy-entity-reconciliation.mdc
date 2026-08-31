@@ -7,13 +7,13 @@ globs: *.md
 
 ---
 name: genealogy-entity-reconciliation
-description: "Audits duplicate profiles, executes 3-tier triangulated matching, performs non-destructive entity merging, and repoints WikiLink array links (parents, spouse, children) across vault records per GEN-ADR-004 and GEN-ADR-005."
+description: "Audits duplicate profiles, executes 3-tier triangulated matching, performs non-destructive entity merging, and repoints WikiLink array links (parents, spouse, children) across vault records per ADR-GEN-004 and ADR-GEN-005."
 ---
 
 # Genealogy Entity Reconciliation Skill
 
 ## Purpose
-Detect duplicate individual profile nodes across `People/Verified/` and `People/Extended_Family/`, evaluate 3-tier triangulated matching, execute non-destructive entity reconciliation, and repoint WikiLinks system-wide per **GEN-ADR-004** and **GEN-ADR-005**.
+Detect duplicate individual profile nodes across `People/Verified/` and `People/Extended_Family/`, evaluate 3-tier triangulated matching, execute non-destructive entity reconciliation, and repoint WikiLinks system-wide per **ADR-GEN-004** and **ADR-GEN-005**.
 
 ## Reconciliation Protocol
 1. **Triangulated Matching**:
@@ -26,7 +26,7 @@ Detect duplicate individual profile nodes across `People/Verified/` and `People/
    - Secondary file is moved to `People/Archived/` or marked with `status: merged`.
 3. **WikiLink Repointing & Reciprocal Symmetry**:
    - Repoint all `parents:`, `spouse:`, and `children:` array references across the entire vault to point to the primary node.
-   - Enforce 100% bidirectional symmetry per **ADR-017** (every parent contains child in `children:`, every child contains parent in `parents:`, spouses match reciprocally, and siblings sharing parents are symmetrically linked).
+   - Enforce 100% bidirectional symmetry per **ADR-GEN-016** (every parent contains child in `children:`, every child contains parent in `parents:`, spouses match reciprocally, and siblings sharing parents are symmetrically linked).
 4. **Execution Commands**:
    ```bash
    # Detect and merge duplicates

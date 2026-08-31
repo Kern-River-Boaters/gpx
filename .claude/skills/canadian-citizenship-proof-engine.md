@@ -4,7 +4,7 @@
 
 ---
 name: canadian-citizenship-proof-engine
-description: Governs proof verification, dual-anchor lineage triangulation, 7-pillar preponderance matrix, archival church order generation, and IRCC dossier compilation under Bill C-3 / Senate Bill S-245, ADR-013, ADR-021, and SOP-GEN-008 across federated genealogy vaults.
+description: Governs proof verification, dual-anchor lineage triangulation, 7-pillar preponderance matrix, archival church order generation, and IRCC dossier compilation under Bill C-3 / Senate Bill S-245, ADR-GEN-011, ADR-GEN-020, and SOP-GEN-008 across federated genealogy vaults.
 ---
 
 # 🏛️ Canadian Citizenship Proof Engine (Bill C-3 / Senate Bill S-245)

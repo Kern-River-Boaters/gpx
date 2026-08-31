@@ -7,13 +7,13 @@ globs: *.md
 
 ---
 name: genealogy-gramps-exporter
-description: "Standardizes vault-to-GEDCOM export using obsidian-gramps-provenance-sync, guaranteeing 100% bidirectional family pointer symmetry, native SOUR/REPO/QUAY/EXID/OBJE serialization, dual GEDCOM 7.0 and 5.5.1 header compliance, and private export placement per ADR-007, ADR-023, and SOP-GEN-010."
+description: "Standardizes vault-to-GEDCOM export using obsidian-gramps-provenance-sync, guaranteeing 100% bidirectional family pointer symmetry, native SOUR/REPO/QUAY/EXID/OBJE serialization, dual GEDCOM 7.0 and 5.5.1 header compliance, and private export placement per ADR-GEN-007, ADR-GEN-023, and SOP-GEN-010."
 ---
 
 # Genealogy Gramps Exporter Skill
 
 ## Purpose
-Export Markdown profiles and source records from the vault into strict GEDCOM 5.5.1 and next-generation GEDCOM 7.0 formats (`.ged`) using the `obsidian-gramps-provenance-sync` engine, ensuring 100% bidirectional pointer symmetry (`FAMS`/`FAMC` <-> `HUSB`/`WIFE`/`CHIL`), native source/repository records (`0 @S...@ SOUR`, `0 @R...@ REPO`, `QUAY 0-3`, `PAGE`, `OBJE`), GEDCOM 7.0 schemas (`HEAD.SCHMA`, `EXID`, `NO NATU`), and routing outputs strictly to the private `Sources/Exports/` vault directory per **ADR-007**, **ADR-023**, and **SOP-GEN-010**.
+Export Markdown profiles and source records from the vault into strict GEDCOM 5.5.1 and next-generation GEDCOM 7.0 formats (`.ged`) using the `obsidian-gramps-provenance-sync` engine, ensuring 100% bidirectional pointer symmetry (`FAMS`/`FAMC` <-> `HUSB`/`WIFE`/`CHIL`), native source/repository records (`0 @S...@ SOUR`, `0 @R...@ REPO`, `QUAY 0-3`, `PAGE`, `OBJE`), GEDCOM 7.0 schemas (`HEAD.SCHMA`, `EXID`, `NO NATU`), and routing outputs strictly to the private `Sources/Exports/` vault directory per **ADR-GEN-007**, **ADR-GEN-023**, and **SOP-GEN-010**.
 
 ## Rules & Safety Controls
 1. **Private Export Target**: All production exports MUST land in `Sources/Exports/Vault_Export_5.5.1.ged` and `Sources/Exports/Vault_Export_7.0.ged`.

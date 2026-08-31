@@ -13,12 +13,12 @@ description: Governs the universal Bases-native dynamic family tree graph engine
 This skill governs the generation, maintenance, and verification of dynamic family tree graphs and dual-hemisphere radial fan charts across the Genealogy vault and Kern Publisher Web.
 
 ### Key References:
-- **ADR-016**: Bases-Native Dynamic N-Generation Genealogy Graph Architecture.
-- **ADR-017**: Bidirectional Lineage Pointer Symmetry, Dual-Hemisphere Radial Lineage Visualizers, and Publisher Pre-Flight Test Harness.
-- **ADR-019**: Generalized Lineage Path Tracing, In-Place Navigation, and Universal Accessibility Standard for Open-Source Family Tree Visualizers.
+- **ADR-GEN-014**: Bases-Native Dynamic N-Generation Genealogy Graph Architecture.
+- **ADR-GEN-016**: Bidirectional Lineage Pointer Symmetry, Dual-Hemisphere Radial Lineage Visualizers, and Publisher Pre-Flight Test Harness.
+- **ADR-GEN-018**: Generalized Lineage Path Tracing, In-Place Navigation, and Universal Accessibility Standard for Open-Source Family Tree Visualizers.
 - **ADR-045**: High-Performance Publisher Architecture, In-Memory Vault Indexing, and Zero-Latency Client SPA Routing.
 - **SOP-GEN-006**: Dynamic Family Tree Graph Governance and Record Provisioning.
-- **Engine Implementation**: [[`_Meta/Scripts/genealogy_graph_engine.js`]] (Universal Base Engine) & [[`Common/_Meta/Scripts/kern_publisher.py`]] (FastAPI Publisher).
+- **Engine Implementation**: [[genealogy_graph_engine.js`]] (Universal Base Engine) & [[kern_publisher.py`]] (FastAPI Publisher).
 
 ---
 

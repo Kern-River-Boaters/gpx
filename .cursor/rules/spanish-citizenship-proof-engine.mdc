@@ -7,7 +7,7 @@ globs: *.md
 
 ---
 name: spanish-citizenship-proof-engine
-description: Governs proof verification, primary archival acquisition (PARES, Archivo General Militar de Segovia, Archivo Histórico del Aire, Registro Civil, Hemeroteca ABC/BNE, Archidiócesis de Madrid), and dossier compilation under the Spanish Ley de Memoria Democrática (Ley 20/2022), ADR-014, and ADR-015 across the Genealogy vault.
+description: Governs proof verification, primary archival acquisition (PARES, Archivo General Militar de Segovia, Archivo Histórico del Aire, Registro Civil, Hemeroteca ABC/BNE, Archidiócesis de Madrid), and dossier compilation under the Spanish Ley de Memoria Democrática (Ley 20/2022), ADR-GEN-012, and ADR-GEN-013 across the Genealogy vault.
 ---
 
 # Spanish Citizenship & Historical Military Proof Engine
@@ -29,8 +29,8 @@ description: Governs proof verification, primary archival acquisition (PARES, Ar
 
 ## 2. Standards Enforced
 - **Absolute Ban on Synthetic Documents**: NEVER generate synthetic, mock, or simulated military service records, birth certificates, or newspaper clippings using PIL, canvas, or AI generators. All sources in `Sources/` must be authentic primary documents.
-- **ADR-014 / SOP-GEN-001:** Generational span transmission node standard.
-- **ADR-015 / SOP-GEN-005:** 4-Quadrant Deep Archival Harvester and Hemeroteca OCR Standard.
+- **ADR-GEN-012 / SOP-GEN-001:** Generational span transmission node standard.
+- **ADR-GEN-013 / SOP-GEN-005:** 4-Quadrant Deep Archival Harvester and Hemeroteca OCR Standard.
 - **SOP-GEN-002:** Empathetic relational modeling and bridge synthesis.
 - **SOP-GEN-003 / SOP-GEN-004:** Anti-orphan discovery quarantine and dual-asset XML 1.0 retention.
 

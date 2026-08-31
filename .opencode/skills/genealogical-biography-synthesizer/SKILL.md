@@ -9,7 +9,7 @@ description: "genealogical-biography-synthesizer skill for OpenCode"
 
 ---
 name: genealogical-biography-synthesizer
-description: Generates rich, evidence-grounded biographical narratives, multi-generational epic chronicles, and empathetic contemporary family syntheses with interactive wikilinks under SYS-SCH-002 and ADR-014.
+description: Generates rich, evidence-grounded biographical narratives, multi-generational epic chronicles, and empathetic contemporary family syntheses with interactive wikilinks under SYS-SCH-002 and ADR-GEN-012.
 ---
 
 # Genealogical Biography & Narrative Synthesizer
@@ -18,11 +18,11 @@ description: Generates rich, evidence-grounded biographical narratives, multi-ge
 Governs the generation of:
 1. **Discrete Person Profiles (`People/`):** Strict frontmatter schema, vital timelines, primary sources, and biographical sections.
 2. **Multi-Generational Sagas (`Narratives/`):** Sweeping historical chronicles connecting centuries of ancestral arcs (e.g. *Vargas Machuca to Rexach*, *Arequipa Jurists & Medical Pioneers*).
-3. **Sensitive Contemporary Narratives:** Empathetic, dignified chronicles of modern blended families, honoring independent adult chapters and universal family bridges under **ADR-014** and **SOP-GEN-002**.
+3. **Sensitive Contemporary Narratives:** Empathetic, dignified chronicles of modern blended families, honoring independent adult chapters and universal family bridges under **ADR-GEN-012** and **SOP-GEN-002**.
 
 ## 2. Standards Enforced
-- **ADR-001 / ADR-002:** Strict epistemic boundaries and zero cruft.
-- **ADR-014 / SOP-GEN-001:** Generational span transmission standard (no >60 year parent-child compression).
+- **ADR-GEN-001 / ADR-GEN-002:** Strict epistemic boundaries and zero cruft.
+- **ADR-GEN-012 / SOP-GEN-001:** Generational span transmission standard (no >60 year parent-child compression).
 - **SOP-GEN-002:** Empathetic blended family modeling (no false "stepmother" / "stepbrother" labels for adult remarriages; celebration of family bridges).
 - **SOP-GEN-003:** Anti-orphan staging and quarantine.
 
