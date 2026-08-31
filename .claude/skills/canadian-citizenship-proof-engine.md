@@ -69,6 +69,23 @@ Every client vault must provide the canonical 7-asset deliverable suite in `00_P
 3. `2_Canadian_Citizenship_Archival_Request_Packet.md` — Pre-formatted Certified Archival Orders (PANB/LAC) with attached digital reference scans and permalinks.
 4. `3_Archival_Research_Strategy.md` — Exhausted Digital Search Log, Parish Finding Aids, and One-Click Pre-Parameterized Search URLs.
 5. `4_IRCC_Application_Filing_Guide.md` — Form CIT 0001 Walkthrough, Photo Specifications (50x70mm), Fee Payments ($75 CAD), and **Printable Formal Submission Cover Letter Template**.
-6. `Forensic_Naturalization_Audit_<Anchor>.md` — Deep Forensic Alien Status (`Al` vs `Na`) and Dual-Citizenship Safe Harbor Brief.
-7. `Family_Citizenship_Descent_Tree.canvas` — Clean Interactive Generational Lineage Graph.
+---
+
+## SECTION 4: 3-TIER ARCHIVAL IMAGES, TRIPARTITE DATES & MANDATORY AUDITING
+
+### 1. 3-Tier Image Asset Lineage
+* **`-Master.jpg` (Tier 1)**: Pristine, unaltered archival scan / DeepZoom tile stitch with cryptographic SHA-256 verification.
+* **`-Display.jpg` (Tier 2)**: Contrast-normalized, paper tone preserved for Markdown UI embeds (`![[Sources/...-Display.jpg|750]]`).
+* **`-Inference.jpg` (Tier 3)**: Maximally binarized, background-pedestal-stripped raster for machine vision / OCR extraction.
+
+### 2. Tripartite Date Precedence
+1. **`event_date`**: Exact vital occurrence date. Strictly governs profile vital statistics.
+2. **`registration_date`**: Date recorded with municipal/church registrar.
+3. **`issue_date`**: Certificate issuance/print stamp. Strictly prohibited from overriding `event_date`.
+
+### 3. Functional Unescaped WikiLinks Standard
+All citations in the 7-Pillar Preponderance Matrix and deliverable tables must use standard unescaped Obsidian WikiLinks (`[[Target|Alias]]` without backslash) resolving to physical vault records.
+
+### 4. Mandatory Post-Processing Discrepancy Audit
+Every profile must execute `audit_and_reconcile_vital_discrepancies.py`, receiving `audit_tag: verified_empirical`, `audit_status: passed`, and explicit discrepancy reconciliation notes in `## ⚖️ Evidentiary Audit & Discrepancy Resolution`.
 

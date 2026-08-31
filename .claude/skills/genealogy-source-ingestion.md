@@ -44,3 +44,11 @@ Every ingested primary document extracts:
 ```
 * Telemetry emitted to `_Meta/Telemetry/Genealogy_Provenance_Ledger.jsonl`.
 
+---
+
+## 🏛️ 4. 3-Tier Archival Images, Tripartite Dates & Audit Tags
+* **3-Tier Image Lineage**: Every scan maintains `-Master.jpg` (pristine bitstream), `-Display.jpg` (Markdown embed), and `-Inference.jpg` (Sauvola-binarized machine vision input).
+* **Tripartite Date Hierarchy**: `event_date` > `registration_date` > `issue_date`. Certificate issuance dates never override event dates.
+* **4-Tier Hierarchical Geocoding**: Requires `city_town`, `county_parish`, `state_province`, `country_sovereignty`.
+* **Mandatory Post-Processing Audit Tags**: Every ingested profile is stamped with `audit_tag: verified_empirical`, `audit_date: YYYY-MM-DD`, `audit_status: passed`, and discrepancy resolutions.
+

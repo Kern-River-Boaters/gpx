@@ -157,7 +157,7 @@ Jose Database.kdbx
 3. **KeePass as 2FA Single Source of Truth**:
    * For services that use **external 2FA** (Apple Device Push, SMS, YubiKey, or Bank App) where no TOTP seed exists, mark the entry directly in KeePass using any of these standard conventions:
      - **Entry Tags** *(Recommended)*: Add `2fa:device`, `2fa:sms`, `2fa:yubikey`, `2fa:push`, `2fa:verified`, or `2fa:exempt`.
-     - **Custom Attribute**: Under *Advanced → Additional attributes*, add `2FA` with value (e.g. `Device Push (iMac/iPhone)`, `SMS`, `YubiKey`, `Verified`).
+     - **Custom Attribute**: Under *Advanced $\rightarrow$ Additional attributes*, add `2FA` with value (e.g. `Device Push (iMac/iPhone)`, `SMS`, `YubiKey`, `Verified`).
      - **Entry Notes**: Add a line in Notes starting with `2FA:` (e.g. `2FA: Device Push`, `2FA: Verified`).
    * The audit pipeline automatically recognizes these tags/attributes and records the account as 2FA covered.
 4. **Duplicate Usernames are Informational (Low Priority)**: Standard email identifiers across sites are normal and must NOT trigger security alarms.

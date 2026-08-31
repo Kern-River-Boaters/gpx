@@ -43,7 +43,7 @@ This skill governs remote management, synchronization, and troubleshooting for A
 ### Canonical Vault Storage Invariant (Zero Disk Waste)
 Both runtimes MUST target the **exact same physical storage**:
 * **Physical Location**: `/sdcard/Documents/Obsidian/{Common,Notes,Cookbook,KRB,Genealogy}`
-* **Debian VM Symlink**: `/home/droid/Obsidian` $\longr→ `/mnt/shared/Documents/Obsidian`
+* **Debian VM Symlink**: `/home/droid/Obsidian` $\longrightarrow$ `/mnt/shared/Documents/Obsidian`
 * **Termux Path**: `/sdcard/Documents/Obsidian` (or `~/storage/shared/Documents/Obsidian`)
 
 ---
@@ -125,14 +125,6 @@ The Android 17 QPR1 Beta Linux Terminal environment runs a customized Debian VM 
   bash _Meta/Scripts/bootstrap_node.sh -k
   ```
 
-### Rule 6: Shell Alias Unification & Automated Dotfile Propagation
-* **Invariant**: Interactive `.bashrc` profiles across all mobile and host nodes must map `alias sync_vaults` strictly to `$SCRIPT_DIR/sync_vaults.sh` rather than legacy background daemons.
-* **Standard**: `sync_vaults.sh` automatically updates and applies Chezmoi dotfiles (`chezmoi update --force`) upon successful vault synchronization, keeping shell aliases and SSH keys perpetually synchronized.
-
-### Rule 7: Strict Positional Argument Isolation in sync_vaults
-* **Invariant**: Passing explicit vault names (`sync_vaults Common` or `sync_vaults --status Notes`) must strictly isolate execution to the specified vault(s) without processing unmentioned repositories.
-* **Standard**: Unspecified invocations (`sync_vaults`) dynamically discover and target all checked-out repositories in `$OBSIDIAN_ROOT`.
-
 ---
 
 ## 7. Disaster Recovery & Node Re-Provisioning Runbook
@@ -140,7 +132,7 @@ The Android 17 QPR1 Beta Linux Terminal environment runs a customized Debian VM 
 If the Android 17 Linux Terminal becomes unresponsive or stuck in an infinite spinner / I/O error:
 
 1. **Wipe Broken Container State**:
-   - Open Android **Settings** → **Apps** → **Linux Terminal** → **Storage & cache** → **Clear storage**.
+   - Open Android **Settings** $\rightarrow$ **Apps** $\rightarrow$ **Linux Terminal** $\rightarrow$ **Storage & cache** $\rightarrow$ **Clear storage**.
 2. **Re-Initialize Container**:
    - Launch the **Linux Terminal** app from your home screen (provisions clean Debian base in ~20s).
 3. **Execute 1-Line Bootstrap**:
@@ -149,8 +141,8 @@ If the Android 17 Linux Terminal becomes unresponsive or stuck in an infinite sp
    ```
 4. **Automated Verification**:
    - Verify SSH daemon is running on port 22: `sudo systemctl status ssh`
-   - Verify 2-line prompt displays `[tablet-vm: ~/Obsidian/Common] > `
-   - Run single vault or multi-vault sync: `sync_vaults Common` or `sync_vaults -j`
+   - Verify 2-line prompt displays `[phone-vm: ~/Obsidian/Common] > `
+   - Run parallel multi-vault sync: `sync_vaults -j`
 
 ---
 
@@ -158,5 +150,4 @@ If the Android 17 Linux Terminal becomes unresponsive or stuck in an infinite sp
 - **ADR-042:** [[ADR-042 - Android 17 QPR1 Beta AVF Crosvm Hypervisor Fragility, virtio-fs Marshaling Safeguards, and Headless Mobile Node Provisioning]]
 - **ADR-041:** [[ADR-041 - Gitea Local Mesh Git Platform, ForwardAuth SSO, Decrypted Visual Diffs, and Dual-Mode Asynchronous Cloud Mirroring]]
 - **SOP:** [[Android 17 VM Guide]]
-- **SOP:** [[Gitea Local Git Mesh and Multi-Platform Sync SOP]]
 
