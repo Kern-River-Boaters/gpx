@@ -9,7 +9,7 @@ description: "genealogy-source-ingestion skill for OpenCode"
 
 ---
 name: genealogy-source-ingestion
-description: Ingests raw genealogical source documents (PDFs, census images, birth/baptismal certificates, military registers) from Sources/_Inbox/ and online repositories, applies ADR-011 filename sanitization, performs visual statistical variance verification, integrates archival-vision-engine restoration, extracts general vital facts (occupations, religion, places lived, immigration), enforces universal bidirectional atomic linking, formats canonical companion source Markdown notes with doc_type: source, and strictly enforces table WikiLink pipe escaping per ADR-023 and SOP-GEN-010.
+description: "Ingests raw genealogical source documents (PDFs, census images, birth/baptismal certificates, military registers) from Sources/_Inbox/ and online repositories, applies ADR-011 filename sanitization, performs visual statistical variance verification, integrates archival-vision-engine restoration, extracts general vital facts (occupations, religion, places lived, immigration), enforces universal bidirectional atomic linking, formats canonical companion source Markdown notes with doc_type: source, and strictly enforces table WikiLink pipe escaping per ADR-023 and SOP-GEN-010."
 ---
 
 # 🏛️ Genealogical Source Ingestion & Epistemic Provenance Standard
