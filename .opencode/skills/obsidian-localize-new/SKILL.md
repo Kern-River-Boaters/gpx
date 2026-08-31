@@ -137,7 +137,7 @@ Fix any broken wikilinks before publishing. The lint script cross-references off
 
 Two broken-link patterns recur in nearly every locale — look for these specifically after check-links:
 - `[[Plugins/X]]` — if the Plugins folder was renamed (e.g. to "Πρόσθετα", "Plugins"), any hardcoded EN path in content won't match. Do a grep for `[[Plugins/` and update to the locale path.
-- `[[Editing and formatting/Tags\|...]]` in the Properties page — this EN path is hardcoded in the source. Update to `[[<locale-folder>/Tags-translation\|...]]`.
+- `[[Editing and formatting/Tags|...]]` in the Properties page — this EN path is hardcoded in the source. Update to `[[<locale-folder>/Tags-translation|...]]`.
 
 ### Step 5 — Add publish UI strings and language switcher
 
