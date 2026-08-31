@@ -1,0 +1,144 @@
+# archival-vision-engine
+
+> Parent Skill Definition: [archival-vision-engine](file:///home/jpino/Obsidian/Genealogy/_Meta/Skills/archival-vision-engine/SKILL.md)
+
+---
+name: archival-vision-engine
+description: Governs edge-preserving bilateral background normalization, global gamma contrast restoration, reel statefulness, blank-frame fast-failing, 4-gate deterministic DIEM verification, Spencerian top-hat cursive loop clearance, and table lattice slicing across historical microfilms under ADR-020, ADR-021, and SOP-GEN-008.
+---
+
+# Archival Vision Engine (`archival-vision`)
+
+Governs deterministic image restoration, paleographical transcription, table lattice slicing, and closed-loop visual quality gates for degraded 19th-century census schedules, parish registers, and civil microfilms under **ADR-020**, **ADR-021**, and **SOP-GEN-008**.
+
+---
+
+## 🏛️ Tri-Asset Bifurcated Reasoning Architecture
+
+```mermaid
+graph TD
+    classDef raw fill:#37474f,stroke:#263238,color:#fff;
+    classDef check fill:#f57c00,stroke:#e65100,color:#fff;
+    classDef display fill:#1565c0,stroke:#0d47a1,color:#fff;
+    classDef infer fill:#e65100,stroke:#bf360c,color:#fff;
+    classDef out fill:#4a148c,stroke:#311b92,color:#fff;
+    classDef htr fill:#2e7d32,stroke:#1b5e20,color:#fff;
+
+    RAW["<b>Raw Archival Scan (LAC / PANB Microfilm)</b>"]:::raw --> FF{"<b>Step 0: Fast-Fail Check</b><br/>check_blank_frame (<5ms)"}:::check
+    
+    FF -->|Blank Target| SKIP["<b>Fast-Exit: SKIPPED_BLANK_PAGE</b>"]:::check
+    
+    FF -->|Valid Ledger| TRACK_A["<b>Track A: Machine Inference Matrix</b><br/>• Edge-Preserving Bilateral Division<br/>• Global Gamma Shift (&gamma;=0.85)<br/>• Directional Grid Skeleton<br/>• Sauvola Ink Binarization"]:::infer
+    
+    FF -->|Valid Ledger| TRACK_B["<b>Track B: Human Display Master</b><br/>• Fast NL-Means Denoising (h=10)<br/>• Gentle CLAHE (clipLimit=1.2)<br/>• Zero Thresholding / Binarization"]:::display
+
+    TRACK_A --> G01{"<b>Gates 0 & 1 (Machine Track)</b><br/>• Substrate Variance &le; 150.0<br/>• Lattice Intersections &ge; 20<br/>• X-Peaks &ge; baseline_cols"}:::check
+    TRACK_B --> G2{"<b>Gate 2 (Human Display Track)</b><br/>• Hard Gate: SSIM > 0.85 (Actual: 0.9269)<br/>• CNR &ge; 8.0 (Actual: 9.23)<br/>• Zero Plastic Artifacts"}:::check
+
+    G01 -->|PASS| INF_OUT["<b>*-Inference.png</b><br/>(Machine Coordinate Lattice)"]:::infer
+    G2 -->|PASS| DISP_OUT["<b>*-Display.jpg</b><br/>(Human Aesthetic Facsimile)"]:::display
+
+    INF_OUT --> LAT["<b>Lattice Slicer (lattice.py)</b><br/>1D Projections on Inference Matrix &rarr; [x1, x2], [y1, y2]"]:::out
+    DISP_OUT --> LAT
+    
+    LAT --> CHIPS["<b>2px Inset Cell Chips</b><br/><i>(Cropped from Display Master)</i>"]:::htr
+    CHIPS --> HTR["<b>Row-by-Row Contextual HTR</b><br/>qwen2.5-coder:32b &rarr; transcribe.py"]:::htr
+```
+
+---
+
+## 🔬 Core Architectural Principles
+
+### 1. Reel Statefulness & Warm-Start Baseline Caching
+* **Reel Drift Protection**: Lighting and contrast drift slowly across sequential microfilm frames. When processing a reel (e.g. LAC C-1001), `ReelContext` inherits winning parameters from the preceding frame, triggering the full optimization search loop only when DIEM scores drop below baseline thresholds.
+* **Blank Frame Fast-Fail**: Target cards, spacer frames, and black leader segments are identified in $<5\text{ms}$ via `check_blank_frame`, bypassing heavy filters immediately.
+
+### 2. Track A (Machine Inference Matrix): Edge-Preserving Normalization & Gamma Shift
+* **Edge-Preserving Formulation**:
+  1. **Downsample**: Scale working copy to $25\%$ for sub-$15\text{ms}$ processing.
+  2. **Bilateral Estimation Map**: Apply `cv2.bilateralFilter(small_gray, d=15, sigmaColor=75.0, sigmaSpace=75.0)` to smooth substrate texture while strictly preserving the sharp geometric step-edges of tape splices and shadow borders.
+  3. **Linear Upsampling**: Interpolate back to full resolution using `INTER_LINEAR` (preventing cubic overshoot and ringing).
+  4. **Constrained Division**: $\text{flat\_raw} = \frac{\text{raw\_gray}}{\text{bg\_map}} \times 255$.
+  5. **Global Gamma Shift ($\gamma=0.85$)**: Corrects highlight blowout and deepens faint cursive entries, ditto marks, and column dividers across the whole canvas.
+
+### 3. Track B (Human Display Master): Aesthetic Non-Destructive Enhancement
+* **Fast NL-Means Denoising ($h=10$)**: Eliminates micro-scratches, emulsion dust, and JPEG compression noise without blurring delicate pen strokes.
+* **Gentle CLAHE ($\text{clipLimit}=1.2, \text{tileGridSize}=(8, 8)$)**: Gently deepens iron gall ink contrast while preserving 100% of authentic parchment texture.
+* **Strict SSIM Anchoring**: Hard assertion that $\text{SSIM} \ge 0.85$ and $\text{CNR} \ge 8.0$, preventing over-smoothing or synthetic digital artifacts.
+
+### 4. Downstream Table Lattice Layout Slicer (`lattice.py`)
+* Derives line projections and coordinate bounding boxes strictly from the **Inference Matrix**.
+* Crops 2px-inset cell chips from the **Display Master**, preserving continuous ink gradients and Spencerian ductus for local HTR models.
+
+---
+
+## 💻 CLI & Python Usage
+
+```python
+from archival_vision.goal_loop import run_multi_gate_goal_loop
+from archival_vision.lattice import slice_document_cells
+from archival_vision.transcribe import resolve_ledger_transcriptions
+from archival_vision.checksum import validate_ledger_math
+
+# 1. Execute Multi-Gate Goal Loop with Tri-Asset Bifurcation
+result = run_multi_gate_goal_loop(
+    input_path="Sources/Microfilms/1861-Census-WestIsles-CharlotteNB-PatrickWhalinFamily-LAC-C1001-Master.jpg",
+    output_path="Sources/Microfilms/1861-Census-WestIsles-CharlotteNB-PatrickWhalinFamily-LAC-C1001-Display.jpg",
+    skill_profile_path="~/.hermes/skills/historical_census_1861.json",
+    use_llm_judge=False
+)
+
+# 2. Slice table cells using Dual-Track Handoff
+seg_res = slice_document_cells(
+    inference_matrix_path=result["inference_matrix_path"],
+    display_master_path=result["display_master_path"],
+    output_chips_dir="/tmp/archival_chips",
+    drop_ghost_cells=True
+)
+
+# 3. Transcribe cells and resolve ditto marks
+trans_res = resolve_ledger_transcriptions(seg_res.cells)
+
+# 4. Validate arithmetic totals
+math_res = validate_ledger_math(trans_res.structured_records)
+```
+
+---
+
+## 🔬 Multi-Gate Verification DIEM Scorecard Baseline
+
+```json
+{
+  "dataset": "1861-Census-WestIsles-CharlotteNB-PatrickWhalinFamily-LAC-C1001-Master",
+  "diem_scorecard": {
+    "human_readability": 97.97,
+    "machine_readability": 100.0,
+    "ssim_score": 0.9269,
+    "contrast_to_noise_ratio": 9.23,
+    "mean_luminance": 225.4,
+    "contrast_std": 68.2,
+    "laplacian_variance": 3753.79,
+    "stroke_continuity_index": 91.8,
+    "background_noise_ratio": 1.43,
+    "faint_ink_density": 2.51,
+    "substrate_variance": 108.1,
+    "foreground_pixel_density": 1.2,
+    "median_component_area": 45.0
+  },
+  "winning_parameters": {
+    "downsample_scale": 0.25,
+    "bg_bilateral_d": 15,
+    "bg_bilateral_sigma_color": 75.0,
+    "bg_bilateral_sigma_space": 75.0,
+    "global_gamma": 0.85,
+    "display_nlm_h": 10,
+    "display_clahe_clip": 1.2,
+    "h_kernel_len": 35,
+    "v_kernel_len": 35,
+    "upscale_factor": 2,
+    "sauvola_k": 0.12,
+    "text_opacity": 0.75
+  }
+}
+```
+

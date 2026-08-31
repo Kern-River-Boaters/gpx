@@ -43,7 +43,7 @@ This skill governs remote management, synchronization, and troubleshooting for A
 ### Canonical Vault Storage Invariant (Zero Disk Waste)
 Both runtimes MUST target the **exact same physical storage**:
 * **Physical Location**: `/sdcard/Documents/Obsidian/{Common,Notes,Cookbook,KRB,Genealogy}`
-* **Debian VM Symlink**: `/home/droid/Obsidian` $\longrightarrow$ `/mnt/shared/Documents/Obsidian`
+* **Debian VM Symlink**: `/home/droid/Obsidian` $\longr→ `/mnt/shared/Documents/Obsidian`
 * **Termux Path**: `/sdcard/Documents/Obsidian` (or `~/storage/shared/Documents/Obsidian`)
 
 ---
@@ -81,4 +81,82 @@ ssh -p 8022 -i ~/.ssh/id_ed25519 100.120.222.84 "<command>"
 2. **Maps & Leaflet**: `gestureHandling: true` to prevent touch-trapping on mobile touchscreens.
 3. **Core Base Tables**: `formula.log_date` mapping to prevent accidental Daily Note note creation on mobile taps.
 
+---
+
+## 6. Android 17 QPR1 Beta Debian VM Invariants & Stability Safeguards
+
+The Android 17 QPR1 Beta Linux Terminal environment runs a customized Debian VM inside Google's `crosvm/Termina` hypervisor with `/mnt/shared` mounted via `virtio-fs`. To prevent catastrophic container crashes and infinite spinning loops, follow these three mandatory rules:
+
+### Rule 1: Strict Package Initialization & Pinning (`apt-mark hold`)
+* **Invariant**: On fresh container creation, run a single initial upgrade pass, then immediately freeze `libc6`, `libc-bin`, and PAM packages to lock in the ABI and protect `ttyd`/`vsock` from breaking.
+* **Standard**:
+  ```bash
+  sudo apt-get update -y 2>/dev/null || true
+  sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -y 2>/dev/null || true
+  sudo apt-mark hold libc6 libc-bin libpam-modules libpam-runtime login passwd 2>/dev/null || true
+  sudo apt-get install -y --no-install-recommends git git-crypt python3 curl age openssh-client openssh-server
+  ```
+
+### Rule 2: Automated SSH Host Key Verification
+* **Invariant**: Headless and bootstrap scripts must non-interactively trust GitHub host keys to prevent git clone prompts from blocking.
+* **Standard**:
+  ```bash
+  touch ~/.ssh/known_hosts && chmod 600 ~/.ssh/known_hosts
+  ssh-keyscan -t ed25519,rsa github.com >> "$HOME/.ssh/known_hosts" 2>/dev/null || true
+  ```
+
+### Rule 3: Python Bytecode Bypass (`-B` / `PYTHONDONTWRITEBYTECODE=1`)
+* **Invariant**: Executing Python scripts from the shared `virtio-fs` mount (`/mnt/shared/`) will mangle `.pyc` bytecode across environments, causing `ValueError: bad marshal data (unknown type code)`.
+* **Standard**: Always invoke Python with `-B` or ensure `export PYTHONDONTWRITEBYTECODE=1` is set in `.bashrc`:
+  ```bash
+  python3 -B script.py
+  ```
+
+### Rule 4: 957MB Memory Budget & Remote Agent Delegation
+* **Invariant**: Android's `VirtualizationService` allocates a hard-capped 957MB of physical RAM (~449MB free). Allocating $\ge 2\text{GB}$ swap balloons host memory quotas and triggers Android OS hypervisor kills (`Unrecoverable error`). Heavy local tools (like `agy`) crash the `ttyd` terminal socket.
+* **Standard**: The mobile VM operates as a lean headless git/sync relay. Heavy developer agent tasks must be delegated to Kern:
+  ```bash
+  ssh kern agy
+  ```
+
+### Rule 5: Zero-Touch Key Discovery vs Forced KeePass Mode (`-k` / `--keepass`)
+* **Invariant**: By default, bootstrap scripts auto-discover keys from `/mnt/shared/Download/` to enable zero-touch automation. If fresh master key extraction is required, use `-k` or `--keepass`:
+  ```bash
+  bash _Meta/Scripts/bootstrap_node.sh -k
+  ```
+
+### Rule 6: Shell Alias Unification & Automated Dotfile Propagation
+* **Invariant**: Interactive `.bashrc` profiles across all mobile and host nodes must map `alias sync_vaults` strictly to `$SCRIPT_DIR/sync_vaults.sh` rather than legacy background daemons.
+* **Standard**: `sync_vaults.sh` automatically updates and applies Chezmoi dotfiles (`chezmoi update --force`) upon successful vault synchronization, keeping shell aliases and SSH keys perpetually synchronized.
+
+### Rule 7: Strict Positional Argument Isolation in sync_vaults
+* **Invariant**: Passing explicit vault names (`sync_vaults Common` or `sync_vaults --status Notes`) must strictly isolate execution to the specified vault(s) without processing unmentioned repositories.
+* **Standard**: Unspecified invocations (`sync_vaults`) dynamically discover and target all checked-out repositories in `$OBSIDIAN_ROOT`.
+
+---
+
+## 7. Disaster Recovery & Node Re-Provisioning Runbook
+
+If the Android 17 Linux Terminal becomes unresponsive or stuck in an infinite spinner / I/O error:
+
+1. **Wipe Broken Container State**:
+   - Open Android **Settings** → **Apps** → **Linux Terminal** → **Storage & cache** → **Clear storage**.
+2. **Re-Initialize Container**:
+   - Launch the **Linux Terminal** app from your home screen (provisions clean Debian base in ~20s).
+3. **Execute 1-Line Bootstrap**:
+   ```bash
+   bash /mnt/shared/Documents/Obsidian/Common/_Meta/Scripts/bootstrap_a17-qpr1-beta.sh
+   ```
+4. **Automated Verification**:
+   - Verify SSH daemon is running on port 22: `sudo systemctl status ssh`
+   - Verify 2-line prompt displays `[tablet-vm: ~/Obsidian/Common] > `
+   - Run single vault or multi-vault sync: `sync_vaults Common` or `sync_vaults -j`
+
+---
+
+## References & Governance
+- **ADR-042:** [[ADR-042 - Android 17 QPR1 Beta AVF Crosvm Hypervisor Fragility, virtio-fs Marshaling Safeguards, and Headless Mobile Node Provisioning]]
+- **ADR-041:** [[ADR-041 - Gitea Local Mesh Git Platform, ForwardAuth SSO, Decrypted Visual Diffs, and Dual-Mode Asynchronous Cloud Mirroring]]
+- **SOP:** [[Android 17 VM Guide]]
+- **SOP:** [[Gitea Local Git Mesh and Multi-Platform Sync SOP]]
 

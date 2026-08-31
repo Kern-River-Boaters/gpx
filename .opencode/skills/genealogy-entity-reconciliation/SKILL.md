@@ -26,10 +26,15 @@ Detect duplicate individual profile nodes across `People/Verified/` and `People/
    - Primary profile (`People/Verified/` if available) is retained.
    - Secondary profile content is merged into primary notes under `## 📜 Archived Records & Provenance`.
    - Secondary file is moved to `People/Archived/` or marked with `status: merged`.
-3. **WikiLink Repointing**:
+3. **WikiLink Repointing & Reciprocal Symmetry**:
    - Repoint all `parents:`, `spouse:`, and `children:` array references across the entire vault to point to the primary node.
+   - Enforce 100% bidirectional symmetry per **ADR-017** (every parent contains child in `children:`, every child contains parent in `parents:`, spouses match reciprocally, and siblings sharing parents are symmetrically linked).
 4. **Execution Commands**:
    ```bash
+   # Detect and merge duplicates
    python3 _Meta/Scripts/detect_safe_duplicates.py --vault . --report 00_Projects_and_Dashboards/Duplicate_Audit_Report.md
+
+   # Reconcile 100% bidirectional pointer symmetry vault-wide
+   python3 _Meta/Scripts/reconcile_bidirectional_lineage_pointers.py
    ```
 

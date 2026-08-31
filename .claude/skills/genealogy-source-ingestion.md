@@ -4,27 +4,91 @@
 
 ---
 name: genealogy-source-ingestion
-description: "Ingests raw genealogical source documents (PDFs, census images, birth/baptismal certificates) from Sources/_Inbox/, applies ADR-011 filename sanitization, links sources to verified profiles, embeds visual document previews, and updates frontmatter facts per SOP-GEN-002 and ADR-013."
+description: "Ingests raw genealogical source documents (PDFs, census images, birth/baptismal certificates, military registers) from Sources/_Inbox/ and online repositories, applies ADR-011 filename sanitization, organizes holdings into the 7-folder archival taxonomy (Vital_Statistics, Census, Military, Land_and_Probate, Immigration_and_Passports, Microfilms, Published_Histories), enforces the Basename WikiLink Invariant with zero folder prefixes, enforces strict portfolio isolation, formats canonical companion source Markdown notes with doc_type: source, and strictly enforces table WikiLink pipe escaping per ADR-023 and SOP-GEN-010."
 ---
 
-# Genealogy Source Ingestion Skill
+# 🏛️ Genealogical Source Ingestion & Epistemic Provenance Standard
 
-## Purpose
-Automate processing of new source documents added to `Sources/_Inbox/`, enforcing strict **ADR-011 filename sanitization**, organizing files into permanent person directories under `Sources/`, linking files in `People/` profile notes, embedding visual image previews (`![[...|600]]`), and updating vital frontmatter facts and citizenship trackers per **SOP-GEN-002** and **ADR-013**.
+Governed under **ADR-002 (Zero-Cruft)**, **ADR-020/021 (Tri-Asset Archival Vision)**, **ADR-023 (Standardized Source Frontmatter & Table Pipe Escaping)**, and **SOP-GEN-010**.
 
-## Ingestion Workflow
-1. **Inbox Scanning**: Scan `Sources/_Inbox/` for incoming `.pdf`, `.jpg`, `.png`, `.jpeg`, `.webp` files.
-2. **Filename Normalization (ADR-011)**:
-   - Format: `[YYYY]-[EventType]-[LastnameFirstname]-[Location].[ext]`
-   - Strip all non-ASCII characters, emojis, quotes, parentheses, and shell characters.
-   - Replace spaces with hyphens.
-3. **Permanent Organization**:
-   - Relocate sanitized files from `Sources/_Inbox/` to dedicated person directories (e.g. `Sources/<Gen>-<PersonName>/` or `Sources/Vital_Statistics/`).
-4. **Visual Embedding & Metadata Update (ADR-013)**:
-   - Append clean unquoted WikiLinks to YAML frontmatter `sources:`.
-   - Embed high-resolution document previews (`![[Sources/...|600]]`) under `### 🖼️ Primary Archival Document Previews (Embedded)`.
-   - Maintain the complete clickable library under `### 📚 Complete Archival Evidence & Document Library on File`.
-   - Provide direct 1-click live online database links and exact archival microfilm ordering locators.
-5. **Citizenship Tracker Alignment**:
-   - Update `00_Projects_and_Dashboards/Citizenship_Chains/` and `00_Projects_and_Dashboards/Project - Canadian Citizenship Document Acquisition.md`.
+---
+
+## 🔬 1. The 4-Tier Epistemic Provenance Taxonomy
+
+| Epistemic Tier | Confidence Weight | Source Definition & Traceability Anchor |
+| :--- | :---: | :--- |
+| **Tier 1: Primary Archival Facsimile** | **1.00** | Direct, contemporaneous official record scan present in `Sources/` with verified physical bytes and visual embed. |
+| **Tier 2: Human / Legacy GEDCOM Entry** | **0.80** | Pre-existing vault frontmatter/markdown entered by human researcher, pending primary record binding. |
+| **Tier 3: Hermes Inferred Fact** | **0.60 – 0.90** | Machine-extracted biographical fact derived from OCR/HTR with explicit document coordinates. |
+| **Tier 4: Quarantined Discrepancy** | **< 0.50** | Unresolved evidentiary conflict between sources; routed to staging for human review. |
+
+---
+
+## 📂 2. Seven-Category Archival Source Taxonomy
+
+All source holdings are organized into 7 standard repository categories:
+1. `Sources/Vital_Statistics/`: Birth, Marriage, Death, Baptismal, and Funeral certificates.
+2. `Sources/Census/`: US and Canadian decennial census sheets and enumerations.
+3. `Sources/Military/`: Service rolls, draft cards, pensions, and discharge records.
+4. `Sources/Land_and_Probate/`: Deeds, wills, probate inventories, and land settlements.
+5. `Sources/Immigration_and_Passports/`: Visas, passports, passenger manifests, and border crossings.
+6. `Sources/Microfilms/`: Authentic dual-asset archival film stitches (PANB, LAC, NARA).
+7. `Sources/Published_Histories/`: City directories, town reports, gazettes, and historical books.
+
+---
+
+## 🔗 3. Basename WikiLink Invariant & Canonical Note Frontmatter (`doc_type: source`)
+
+Every archival asset holding in `Sources/` is defined by a canonical `.md` companion note using **clean basenames** (zero directory prefixes):
+
+```yaml
+---
+doc_type: source
+id: SRC-CENS-1900-1900_CENSUS_CALAIS
+title: 1900 US Federal Census - Calais ME
+description: Primary genealogical holding for 1900 US Federal Census documenting John Warren Whalen family in Calais, Maine.
+tags:
+  - topic/genealogy
+  - topic/census
+  - provenance/primary_facsimile
+created: '2026-08-30'
+updated: '2026-08-31'
+status: verified
+version: '1.0'
+source_type: census
+people:
+  - '[[Whalen, John Warren 1860-08-12|John Warren Whalen]]'
+  - '[[Whalen, Hollis Vernon 1898-12-14|Hollis Vernon Whalen]]'
+event_date: '1900-06-01'
+year: 1900
+location: Calais, Washington County, Maine, USA
+repository: National Archives and Records Administration (NARA)
+portfolio:
+  - canadian_citizenship_chain_a
+quay: 3
+epistemic_tier: 'Tier 1: Primary Archival Facsimile'
+verification_status: verified_empirical
+media_file: '[[1900-Census-CalaisME-JohnWWhalenFamily-Page1-Display.jpg]]'
+master_asset: '[[1900-Census-CalaisME-JohnWWhalenFamily-Page1-Master.jpg]]'
+display_asset: '[[1900-Census-CalaisME-JohnWWhalenFamily-Page1-Display.jpg]]'
+inference_asset: '[[1900-Census-CalaisME-JohnWWhalenFamily-Page1-Inference.png]]'
+pdf_asset: '[[1900-Census-CalaisME-JohnWWhalenFamily.pdf]]'
+sha256: 33223ae53240f98e7a7c95269007e8d56402f9d98fd642a63aca03e95018938a
+audit_tag: verified_empirical
+audit_date: '2026-08-31'
+audit_status: passed
+---
+```
+
+---
+
+## 🛡️ 4. Mandatory Rules & Invariants
+
+1. **Basename WikiLinks Only**: ALWAYS use clean file basenames (`[[Whalen, Patrick 1811-09-01|Patrick Whalen]]` and `[[Asset.pdf]]`). NEVER use path prefixes (`[[People/...]]` or `[[Sources/...]]`).
+2. **Escaped Table Pipes**: Inside Markdown tables, all alias pipes MUST be escaped as `[[Target\|Alias]]`.
+3. **Strict Portfolio Scoping & Friend Data Separation**:
+   - `Genealogy` vault is strictly reserved for family members (Pino / Whalen / Leslie / Dudley / Dunklee / Rexach / Serra).
+   - Commercial/friend client data (`Kamas`, `Nary`) is 100% excluded from `Genealogy` and maintained in standalone client vaults.
+4. **Zero Synthetic Artifacts**: Synthetic images, mock microfilms, and simulated stamp badges are strictly forbidden.
+5. **Atomic Verification Gate**: Run `python3 _Meta/Tests/run_all_tests.py` and `python3 Common/_Meta/Tests/test_kern_publisher.py` to assert 0 broken links and 100% compliance.
 

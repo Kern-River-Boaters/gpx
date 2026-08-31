@@ -1,0 +1,68 @@
+---
+name: "genealogy-portal-session-manager"
+description: "genealogy-portal-session-manager skill for OpenCode"
+---
+
+# genealogy-portal-session-manager
+
+> Parent Skill Definition: [genealogy-portal-session-manager](file:///home/jpino/Obsidian/Genealogy/_Meta/Skills/genealogy-portal-session-manager/SKILL.md)
+
+---
+name: genealogy-portal-session-manager
+description: Governs interactive and autonomous authentication, session token persistence, multi-domain SSO cookie synchronization, pre-flight heartbeat sentinels, and Akamai/anti-bot stealth evasions across genealogical research portals (FamilySearch, Ancestry, WikiTree, Canadiana).
+---
+
+# 🔐 Genealogy Portal Session Manager & Anti-Bot Stealth Governance
+
+## 📌 Executive Overview
+Automated genealogical data extraction across major archival portals (**FamilySearch**, **Ancestry.com**, **WikiTree**, **Canadiana Online**) requires robust authentication state persistence and sophisticated anti-bot evasion techniques to avoid silent SPA skeleton blocks (HTTP 403 / blank renders) from **Akamai Bot Manager Premier** and Cloudflare.
+
+---
+
+## 🛡️ Core Architectural Principles
+
+### 1. Pre-Flight Cookie Heartbeat Sentinel (ADR-018 & SOP-GEN-007)
+Every extraction agent or pipeline MUST perform an automated pre-flight session check before initiating batch operations:
+* **Script:** `_Meta/Scripts/genealogy_cookie_heartbeat.py`
+* **Import Pattern:** `from genealogy_cookie_heartbeat import ensure_authenticated_session`
+* **Guarantees:** Verifies live HTTP 200 OK responses on authenticated REST endpoints:
+  - **FamilySearch:** `https://www.familysearch.org/platform/users/current` (`Accept: application/x-gedcomx-v1+json`, `Authorization: Bearer <fssessionid>`).
+  - **Ancestry.com:** `https://www.ancestry.com/account/profile`.
+  - **WikiTree / Canadiana:** Active public/institutional roots.
+
+### 2. Human-in-the-Loop Multi-Portal Parallel Reauthentication
+When an expired cookie is detected:
+* If interactive (`DISPLAY=:0` present): Automatically launches a single-shot Chrome window with parallel tabs for only the unauthenticated portals.
+* Captures and updates `~/.config/genealogy/session_cookies.json` continuously and finalizes on window close.
+
+### 3. Anti-Bot & Akamai Stealth Fingerprint Evasions
+To prevent Akamai and client-side SPAs from suppressing record rendering or triggering **Error 15 Access Denied**:
+1. **API-First Architecture (Mandatory)**:
+   - When searching or extracting from FamilySearch, ALWAYS query official GEDCOMX REST APIs (`/platform/records/personas`, `/platform/users/current`) passing `Authorization: Bearer <fssessionid>`.
+   - Never scrape search result pages or take automated viewport screenshots of record lists.
+2. **Automation Flag Elimination (for Microfilm Browsers)**:
+   - Mask `navigator.webdriver = undefined`.
+   - Pass `--disable-blink-features=AutomationControlled`.
+   - Mock `window.chrome.runtime` and realistic `navigator.plugins`.
+3. **In-Flight WAF Interception**:
+   - Check `page.url` for redirects to `/login`, `ident.familysearch.org`, or `auth.`.
+   - Check `document.body.innerText` for `"Error 15"`, `"Access Denied"`, or `"Sign In"`.
+   - If detected, abort immediately and log the incident to `_Meta/Telemetry/hermes_anomaly_log.json`.
+4. **Public Domain Multi-Archive Failovers**:
+   - For decennial censuses and colonial records, route to public uncompressed repositories (**NARA** / **Library & Archives Canada** / **Canadiana**).
+
+---
+
+## 🛠️ CLI Quick Reference
+
+```bash
+# Audit all live portal sessions
+python3 _Meta/Scripts/genealogy_cookie_heartbeat.py
+
+# Launch multi-portal parallel tab login wizard
+python3 _Meta/Scripts/setup_genealogy_credentials.py
+
+# Run Hermes Level 4 Learning & Calibration Loop
+python3 _Meta/Scripts/agent_learning_loop.py
+```
+

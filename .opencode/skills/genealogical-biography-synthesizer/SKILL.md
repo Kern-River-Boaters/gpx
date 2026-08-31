@@ -9,23 +9,20 @@ description: "genealogical-biography-synthesizer skill for OpenCode"
 
 ---
 name: genealogical-biography-synthesizer
-description: "Synthesizes rich, story-driven biographical narratives for genealogical profiles from extracted frontmatter facts, census data, parish registers, and regional historical context, strictly enforcing zero-cruft inference boundaries per GEN-ADR-002 and SYS-SCH-002."
+description: Generates rich, evidence-grounded biographical narratives, multi-generational epic chronicles, and empathetic contemporary family syntheses with interactive wikilinks under SYS-SCH-002 and ADR-014.
 ---
 
-# Genealogical Biography Synthesizer Skill
+# Genealogical Biography & Narrative Synthesizer
 
-## Overview
-This skill governs the generation of rich, story-driven biographical narratives for genealogical profiles across the vault. It strictly prohibits dry, cookie-cutter boilerplate and mandates engaging storytelling grounded in source evidence.
+## 1. Overview
+Governs the generation of:
+1. **Discrete Person Profiles (`People/`):** Strict frontmatter schema, vital timelines, primary sources, and biographical sections.
+2. **Multi-Generational Sagas (`Narratives/`):** Sweeping historical chronicles connecting centuries of ancestral arcs (e.g. *Vargas Machuca to Rexach*, *Arequipa Jurists & Medical Pioneers*).
+3. **Sensitive Contemporary Narratives:** Empathetic, dignified chronicles of modern blended families, honoring independent adult chapters and universal family bridges under **ADR-014** and **SOP-GEN-002**.
 
-## Core Rules
-1. **Colorful Storytelling**: Biographies must bring ancestors to life by detailing their historical context, dramatic events (e.g., Loyalist migration, Maritime out-migration to New England, military command, emigration, civic service), and familial roles.
-2. **Interactive Wiki-Links**: Narratives must weave in clickable `[[wiki-links]]` to spouses, children, siblings, and linked source documents (`Sources/...`) directly within the text.
-3. **Zero-Cruft Epistemic Policy (GEN-ADR-002)**:
-   - All factual claims must be tagged with explicit provenance: `data_origin` (e.g. `proven_gedcom`, `census_1881`, `panb_register`) and `ai_inference_status` (e.g. `verified_fact`, `inferred_relationship`).
-   - Side attribution and historical claims cannot be guessed or defaulted. They must be inferred strictly from source text evidence and verified chronologically/geographically.
-4. **Mandatory Further Reading & External Sources**: All significant historical figures must include a dedicated **`## 📚 Further Reading & External Sources`** section with authoritative research links (historical registers, archives, or published works).
-5. **Execution Command**:
-   ```bash
-   python3 _Meta/Scripts/synthesize_biographies.py --vault . --dry-run
-   ```
+## 2. Standards Enforced
+- **ADR-001 / ADR-002:** Strict epistemic boundaries and zero cruft.
+- **ADR-014 / SOP-GEN-001:** Generational span transmission standard (no >60 year parent-child compression).
+- **SOP-GEN-002:** Empathetic blended family modeling (no false "stepmother" / "stepbrother" labels for adult remarriages; celebration of family bridges).
+- **SOP-GEN-003:** Anti-orphan staging and quarantine.
 

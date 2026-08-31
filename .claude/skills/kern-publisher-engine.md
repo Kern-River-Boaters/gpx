@@ -1,0 +1,85 @@
+# kern-publisher-engine
+
+> Parent Skill Definition: [kern-publisher-engine](file:///home/jpino/Obsidian/Genealogy/_Meta/Skills/kern-publisher-engine/SKILL.md)
+
+---
+name: kern-publisher-engine
+description: Governs the architecture, operational runbook, pre-flight test gate, sub-20ms performance SLAs, in-memory vault indexing, early-exit guard clauses, and client-side SPA Turbo routing for Kern Obsidian Web (Port 8095).
+---
+
+# 🚀 Kern Publisher & Interactive Reader Engine
+
+## 1. Overview & Core Architecture
+Kern Obsidian Web (`kern_publisher.py` on Port 8095) serves as the primary high-speed browser-based workstation and reader engine across all five federated vaults (`Notes`, `Common`, `Cookbook`, `KRB`, and `Genealogy` encompassing over 40,000 files).
+
+### Key References:
+- **ADR-006**: Kern Vault Web Publisher & Zero-Footprint Reader Engine.
+- **ADR-029**: Kern Federated UI Design System, Glassmorphic Styling Standard, and Universal Theme Engine.
+- **ADR-045**: High-Performance Publisher Architecture, In-Memory Vault Indexing, and Zero-Latency Client SPA Routing.
+- **Genealogy ADR-017**: Bidirectional Lineage Pointer Symmetry, Dual-Hemisphere Radial Lineage Visualizers, and Publisher Pre-Flight Test Harness.
+- **Publisher Script**: [[`Common/_Meta/Scripts/kern_publisher.py`]]
+- **Unit Test Suite**: [[`Common/_Meta/Tests/test_kern_publisher.py`]]
+
+---
+
+## 2. High-Performance Latency Standard & Indexing Rules
+
+All note rendering and WikiLink resolution in Kern Publisher MUST adhere to strict sub-20ms SLAs:
+
+### A. In-Memory Vault File Indexing
+- `find_vault_file()` MUST resolve targets via `_VAULT_FILE_INDEX` ($O(1)$ memory map with 180s TTL) rather than recursive filesystem `rglob()` traversals.
+- Target lookups map `filename.lower()`, `relative_path.lower()`, and `stem.lower()` to exact paths in $< 1\,\mu	ext{s}$.
+
+### B. LRU WikiLink Target Resolution
+- `resolve_wikilink_target_url()` MUST remain decorated with `@lru_cache(maxsize=8192)` to guarantee instantaneous repeat pointer resolution.
+
+### C. Early-Exit Preprocessor Guards
+- Every markdown preprocessor (`preprocess_base_blocks`, `preprocess_family_tree_blocks`, `preprocess_leaflet_blocks`, `preprocess_mermaid`) MUST check for code block existence via substring matching prior to running regex or disk queries:
+  ```python
+  if "```base" not in text:
+      return text
+  ```
+- `load_vault_notes(vault)` MUST remain cached with a 300s TTL (`_VAULT_NOTES_CACHE`).
+
+---
+
+## 3. Client-Side Turbo SPA Navigation & Hover Prefetching
+
+The browser reader experience utilizes a zero-latency client navigation engine:
+1. **Hover / Touchstart Prefetching**: Internal WikiLinks and SVG fan chart nodes automatically trigger background `fetch()` requests into `_kernPageCache`.
+2. **PJAX / Turbo Content Swapping**: `navigateKern(url)` smoothly swaps the `#viewArea` DOM container, updates document title, and synchronizes `window.history.pushState` with an instant glowing top progress bar (`#kernNavProgressBar`).
+3. **Dynamic Re-initialization**: Automatically triggers `mermaid.run()`, canvas transforms, and interactive SVG handlers upon note transitions without requiring full page reloads.
+
+---
+
+## 4. Pre-Flight Quality Gate Enforcement
+
+Before deploying modifications to `kern_publisher.py` or restarting the service, agents MUST execute the 11-unit test suite:
+
+```bash
+python3 [[test_kern_publisher.py]]
+```
+
+### SLA Requirements:
+- **Test Suite Runtime**: $\le 2.0$ seconds (benchmarked at 1.23s).
+- **Pass Rate**: 11 / 11 tests passing (0 failures, 0 errors).
+
+---
+
+## 5. Operational Runbook & Service Lifecycle
+
+### A. Service Status Inspection
+```bash
+systemctl --user status kern-publisher.service --no-pager
+```
+
+### B. Service Restart
+```bash
+systemctl --user restart kern-publisher.service
+```
+
+### C. Health & Latency Verification
+```bash
+curl -I http://127.0.0.1:8095/view/Common/Welcome%20to%20Kern.md
+```
+
