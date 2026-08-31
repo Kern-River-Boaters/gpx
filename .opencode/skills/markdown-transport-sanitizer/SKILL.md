@@ -129,3 +129,18 @@ views:
 
 ## ⚡ Final Output Mandate
 Process the text provided by the user below using both protocols. Output **ONLY** the safely wrapped, completely sanitized Markdown document block inside a single outer container. Do not include introductory notes, conversational filler, or meta-commentary. Your response stream must begin directly with the outer opening code fence.
+## Obsidian WikiLink & Markdown Table Escaping Standard
+
+### 1. The Table Pipe Delimiter Conflict
+In GitHub Flavored Markdown (GFM) and CommonMark, the pipe character `|` is the cell boundary delimiter. Placing an unescaped piped WikiLink `[[Target|Alias]]` inside a table cell splits the cell into multiple columns, destroying table layout and corrupting links.
+
+### 2. Deterministic Transport Rules
+* **Inside Markdown Tables:** Piped WikiLinks MUST have escaped pipes: `[[Target\|Alias]]`.
+* **In Markdown Prose:** Piped WikiLinks MUST use standard pipes: `[[Target|Alias]]`.
+* **Embeds in Tables:** `![[Target\|Size]]` or `![[Target]]`.
+* **Zero ASCII Control Contamination:** All scripts must avoid unescaped regex replacements that evaluate `\1` and `\2` as ASCII `\x01` and `\x02`.
+
+### 3. Canonical Module & Quality Gate
+* **Centralized Engine:** `[[wikilink_transport.py`]]
+* **Unit Test Suite:** `[[test_wikilink_transport.py`]] (Assert 100% pass on commit).
+

@@ -36,6 +36,7 @@ This workspace follows the governance standards defined in the Master ADR Index:
 - **peruvian-ancestry-engine** (Genealogy): [peruvian-ancestry-engine](file:///home/jpino/Obsidian/Genealogy/_Meta/Skills/peruvian-ancestry-engine/SKILL.md)
 - **script-execution-harness** (Common): [script-execution-harness](file:///home/jpino/Obsidian/Common/_Meta/Skills/script-execution-harness/SKILL.md)
 - **self_healing_test_harness** (Common): [self_healing_test_harness](file:///home/jpino/Obsidian/Common/_Meta/Skills/self_healing_test_harness/SKILL.md)
+- **slack-concierge-ops** (Common): [slack-concierge-ops](file:///home/jpino/Obsidian/Common/_Meta/Skills/slack-concierge-ops/SKILL.md)
 - **spanish-citizenship-proof-engine** (Genealogy): [spanish-citizenship-proof-engine](file:///home/jpino/Obsidian/Genealogy/_Meta/Skills/spanish-citizenship-proof-engine/SKILL.md)
 - **voice-control-npu** (Common): [voice-control-npu](file:///home/jpino/Obsidian/Common/_Meta/Skills/voice-control-npu/SKILL.md)
 

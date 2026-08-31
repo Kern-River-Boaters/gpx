@@ -35,3 +35,21 @@ This skill governs all YAML frontmatter creation, manipulation, and validation a
    - Run `_Meta/Scripts/test_frontmatter_standards.py` to audit all 15,000+ notes across the federation.
    - Every note must parse cleanly with `yaml.safe_load`.
 
+---
+
+## 🛡️ 7. Strict Prohibition on Naive String Concatenation & Ingestion Safeguards (ADR-021)
+
+### The Anti-Pattern
+Agents and automated scripts must **NEVER** use naive string replacement or string concatenation (e.g. `ptxt.replace("sources:\n", f"sources:\n  - \"{link}\"\n")`) to mutate frontmatter. 
+
+### Why This Fails
+Vault notes may have mixed indentation conventions (0-space vs. 2-space lists). Injecting an indented list item at the head of a 0-space block breaks YAML 1.2 block mapping parsing, producing fatal YAML syntax exceptions (`expected <block end>, but found '-'`) that cascade across the graph engine and publish pipelines.
+
+### Mandatory Safe Ingestion Protocol
+All automated scripts mutating YAML frontmatter MUST use `safe_frontmatter_injector.py`:
+1. Parse the existing YAML block into a Python dictionary with `yaml.safe_load()`.
+2. Manipulate the native data structure (appending to list, deduplicating).
+3. Serialize back cleanly with `yaml.dump(sort_keys=False, allow_unicode=True)`.
+4. Run a pre-write parse test `yaml.safe_load(new_yaml)` before saving to disk.
+5. All CI/test gates must execute `test_frontmatter_schema.py` across all vault markdown files.
+
