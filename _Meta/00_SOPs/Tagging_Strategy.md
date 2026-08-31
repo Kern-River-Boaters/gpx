@@ -1,4 +1,7 @@
-# Tagging Strategy - KRB Whitewater Guidebook
+---
+patient: '[[Jose Luis Pino]]'
+last_audited: '2026-07-19T13:50:26'
+---# Tagging Strategy - KRB Whitewater Guidebook
 
 ## Purpose
 This document defines the tagging standards for the KRB repository. All markdown files (river guides, maps, tutorials) should use hierarchical tags for easy filtering and navigation.

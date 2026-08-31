@@ -1,4 +1,7 @@
-# KRB Vault Setup Guide
+---
+patient: '[[Jose Luis Pino]]'
+last_audited: '2026-07-19T13:50:26'
+---# KRB Vault Setup Guide
 
 ## Purpose
 Instructions for setting up the KRB (Kern River Boater) vault for first-time users on desktop and mobile.
