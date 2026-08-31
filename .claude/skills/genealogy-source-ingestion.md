@@ -4,7 +4,7 @@
 
 ---
 name: genealogy-source-ingestion
-description: "Ingests raw genealogical source documents (PDFs, census images, birth/baptismal certificates, military registers) from Sources/_Inbox/ and online repositories, applies ADR-011 filename sanitization, performs visual statistical variance verification, integrates archival-vision-engine restoration, extracts general vital facts (occupations, religion, places lived, immigration), enforces universal bidirectional atomic linking, formats canonical companion source Markdown notes with doc_type: source, and strictly enforces table WikiLink pipe escaping per ADR-023 and SOP-GEN-010."
+description: "Ingests raw genealogical source documents (PDFs, census images, birth/baptismal certificates, military registers) from Sources/_Inbox/ and online repositories, applies ADR-011 filename sanitization, organizes holdings into the 7-folder archival taxonomy (Vital_Statistics, Census, Military, Land_and_Probate, Immigration_and_Passports, Microfilms, Published_Histories), enforces the Basename WikiLink Invariant with zero folder prefixes, enforces strict portfolio isolation, formats canonical companion source Markdown notes with doc_type: source, and strictly enforces table WikiLink pipe escaping per ADR-023 and SOP-GEN-010."
 ---
 
 # 🏛️ Genealogical Source Ingestion & Epistemic Provenance Standard
@@ -24,9 +24,22 @@ Governed under **ADR-002 (Zero-Cruft)**, **ADR-020/021 (Tri-Asset Archival Visio
 
 ---
 
-## 📄 2. Canonical Companion Note Frontmatter (`doc_type: source`)
+## 📂 2. Seven-Category Archival Source Taxonomy
 
-Every archival asset holding in `Sources/` is defined by a canonical `.md` note with 84 typed properties registered in `.obsidian/types.json`:
+All source holdings are organized into 7 standard repository categories:
+1. `Sources/Vital_Statistics/`: Birth, Marriage, Death, Baptismal, and Funeral certificates.
+2. `Sources/Census/`: US and Canadian decennial census sheets and enumerations.
+3. `Sources/Military/`: Service rolls, draft cards, pensions, and discharge records.
+4. `Sources/Land_and_Probate/`: Deeds, wills, probate inventories, and land settlements.
+5. `Sources/Immigration_and_Passports/`: Visas, passports, passenger manifests, and border crossings.
+6. `Sources/Microfilms/`: Authentic dual-asset archival film stitches (PANB, LAC, NARA).
+7. `Sources/Published_Histories/`: City directories, town reports, gazettes, and historical books.
+
+---
+
+## 🔗 3. Basename WikiLink Invariant & Canonical Note Frontmatter (`doc_type: source`)
+
+Every archival asset holding in `Sources/` is defined by a canonical `.md` companion note using **clean basenames** (zero directory prefixes):
 
 ```yaml
 ---
@@ -39,13 +52,13 @@ tags:
   - topic/census
   - provenance/primary_facsimile
 created: '2026-08-30'
-updated: '2026-08-30'
+updated: '2026-08-31'
 status: verified
 version: '1.0'
 source_type: census
 people:
-  - '[[People/W/Whalen/Whalen, John Warren 1860-08-12|John Warren Whalen]]'
-  - '[[People/W/Whalen/Whalen, Hollis Vernon 1898-12-14|Hollis Vernon Whalen]]'
+  - '[[Whalen, John Warren 1860-08-12|John Warren Whalen]]'
+  - '[[Whalen, Hollis Vernon 1898-12-14|Hollis Vernon Whalen]]'
 event_date: '1900-06-01'
 year: 1900
 location: Calais, Washington County, Maine, USA
@@ -55,57 +68,27 @@ portfolio:
 quay: 3
 epistemic_tier: 'Tier 1: Primary Archival Facsimile'
 verification_status: verified_empirical
-media_file: '[[Sources/Census/1900-Census-CalaisME-JohnWWhalenFamily-Page1-Display.jpg]]'
-master_asset: '[[Sources/Census/1900-Census-CalaisME-JohnWWhalenFamily-Page1-Master.jpg]]'
-display_asset: '[[Sources/Census/1900-Census-CalaisME-JohnWWhalenFamily-Page1-Display.jpg]]'
-inference_asset: '[[Sources/Census/1900-Census-CalaisME-JohnWWhalenFamily-Page1-Inference.png]]'
-pdf_asset: '[[Sources/Census/1900-Census-CalaisME-JohnWWhalenFamily.pdf]]'
+media_file: '[[1900-Census-CalaisME-JohnWWhalenFamily-Page1-Display.jpg]]'
+master_asset: '[[1900-Census-CalaisME-JohnWWhalenFamily-Page1-Master.jpg]]'
+display_asset: '[[1900-Census-CalaisME-JohnWWhalenFamily-Page1-Display.jpg]]'
+inference_asset: '[[1900-Census-CalaisME-JohnWWhalenFamily-Page1-Inference.png]]'
+pdf_asset: '[[1900-Census-CalaisME-JohnWWhalenFamily.pdf]]'
 sha256: 33223ae53240f98e7a7c95269007e8d56402f9d98fd642a63aca03e95018938a
 audit_tag: verified_empirical
-audit_date: '2026-08-30'
+audit_date: '2026-08-31'
 audit_status: passed
 ---
 ```
 
 ---
 
-## 🧹 3. Strict Markdown Table WikiLink Pipe Escaping Standard
+## 🛡️ 4. Mandatory Rules & Invariants
 
-* **Root Cause Invariant**: In Markdown table syntax, `|` is the cell delimiter. Embedding `[[Target|Alias]]` into a table cell splits the cell and creates phantom columns.
-* **Mandatory Table Syntax**: Inside any Markdown table row, ALL WikiLink alias pipes MUST be escaped as `[[Target\|Alias]]`.
-* **Frontmatter Invariant**: In YAML frontmatter, pipes MUST NEVER be backslash-escaped (`'[[Target|Alias]]'`).
-* **Automated Sentinel**: `_Meta/Scripts/sanitize_markdown_tables.py` audits and enforces 0 unescaped table pipes vault-wide.
-
----
-
-## 🌳 4. Obsidian Bases Dynamic Evidence Dashboards
-
-Every person profile (`People/`) queries corroborating evidence dynamically using Bases-native syntax:
-```markdown
-## 📄 Source Documents & Archival Evidence
-
-```base
-filters:
-  and:
-    - doc_type == "source"
-    - file.hasLink("Whalen, Hollis Vernon 1898-12-14.md")
-views:
-  - type: table
-    name: Corroborating Evidence
-    order:
-      - year
-      - source_type
-      - file.name
-      - repository
-```
-```
-
----
-
-## 🏛️ 5. 3-Tier Archival Images, Tripartite Dates & Audit Tags
-
-* **3-Tier Image Lineage**: Every scan maintains `-Master.jpg` (pristine bitstream), `-Display.jpg` (Markdown embed), and `-Inference.jpg` (Sauvola-binarized machine vision input).
-* **Tripartite Date Hierarchy**: `event_date` > `registration_date` > `issue_date`. Certificate issuance dates never override event dates.
-* **4-Tier Hierarchical Geocoding**: Requires `city_town`, `county_parish`, `state_province`, `country_sovereignty`.
-* **Zero Synthetic Evidence Prohibition**: Agents are strictly forbidden from generating artificial canvas/PIL mock certificates. All evidence must be genuine empirical archival scans.
+1. **Basename WikiLinks Only**: ALWAYS use clean file basenames (`[[Whalen, Patrick 1811-09-01|Patrick Whalen]]` and `[[Asset.pdf]]`). NEVER use path prefixes (`[[People/...]]` or `[[Sources/...]]`).
+2. **Escaped Table Pipes**: Inside Markdown tables, all alias pipes MUST be escaped as `[[Target\|Alias]]`.
+3. **Strict Portfolio Scoping & Friend Data Separation**:
+   - `Genealogy` vault is strictly reserved for family members (Pino / Whalen / Leslie / Dudley / Dunklee / Rexach / Serra).
+   - Commercial/friend client data (`Kamas`, `Nary`) is 100% excluded from `Genealogy` and maintained in standalone client vaults.
+4. **Zero Synthetic Artifacts**: Synthetic images, mock microfilms, and simulated stamp badges are strictly forbidden.
+5. **Atomic Verification Gate**: Run `python3 _Meta/Tests/run_all_tests.py` and `python3 Common/_Meta/Tests/test_kern_publisher.py` to assert 0 broken links and 100% compliance.
 

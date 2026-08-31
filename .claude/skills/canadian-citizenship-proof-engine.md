@@ -34,8 +34,7 @@ Flag any appearance of the following occupations to pinpoint the naturalization 
 
 ### Module 4: Geopolitical Nomenclature & Phonetic Drift
 * `Canada East` / `Lower Canada` / `Canada Fr` $\rightarrow$ **Quebec** (Prioritize Drouin Collection, Catholic parish microfilm).
-* `Canada West` / `Upper Canada` / `Canada Eng` $
-ightarrow$ **Ontario** (Prioritize Protestant/Wesleyan registers, Land Crown Books).
+* `Canada West` / `Upper Canada` / `Canada Eng` $\rightarrow$ **Ontario** (Prioritize Protestant/Wesleyan registers, Land Crown Books).
 * `British North America (BNA)` $\rightarrow$ **Pre-Confederation (1867) designation**.
 * `Newfoundland` $\rightarrow$ **Separate British Colony prior to March 31, 1949**.
 
@@ -58,34 +57,28 @@ ightarrow$ **Ontario** (Prioritize Protestant/Wesleyan registers, Land Crown Boo
 ## SECTION 3: CLIENT VAULT ISOLATION & COMMERCIAL DELIVERABLE STANDARDS
 
 ### 1. Strict Client-Vault Isolation Standard
-Client repositories (**`Canadian-Citizenship`**, **`Kamas`**, **`Nary`**) are commercial client-facing deliverables prepared for paying clients, immigration attorneys, and IRCC adjudicators. 
-* **Zero Technical Jargon / Governance Cruft:** AI agents and scripts are **strictly prohibited** from including Architecture Decision Records (ADRs), Standard Operating Procedures (SOPs), developer skill codes, or internal telemetry within client repositories.
-* **Single Source of Truth for Business Plans:** The master commercial business plan resides exclusively in `Notes/Projects/Citizenship/Business Plan - Canadian Citizenship & Archival Consulting.md`. Client vaults must never contain business plans, profit models, or internal pricing documentation.
+* **Canadian-Citizenship Vault**: Dedicated scoped projection for Lisa Michelle Phillips (Chain A Whalen lineage).
+* **Friend Client Vaults (`Kamas`, `Nary`)**: Standalone commercial/friend client repositories completely isolated from the master `Genealogy` vault. Zero Kamas or Nary client data may exist in `Genealogy`.
+* **Zero Technical Jargon / Governance Cruft:** AI agents and scripts are **strictly prohibited** from including Architecture Decision Records (ADRs), Standard Operating Procedures (SOPs), developer skill codes, or internal telemetry within client deliverable repositories.
+* **Basename WikiLinks Only**: All links in client vaults resolve via clean basenames (`[[Whalen, Patrick 1811-09-01|Patrick Whalen]]` and `[[Asset.pdf]]`) with 0 folder prefixes.
 
-### 2. Standardized 7-Asset Client Deliverable Suite
-Every client vault must provide the canonical 7-asset deliverable suite in `00_Projects_and_Dashboards/`:
-1. `00_Master_Dashboard.md` — Client Welcome Hub, 4-Phase Roadmap, 98% Proof Confidence Gauge, and Archival Order Fulfillment Matrix.
-2. `1_Canadian_Citizenship_Executive_Evidence_Summary.md` — Executive Statutory Legal Framework (Bill C-3, *Bjorkquist*, 1946 Act, *Jus Soli*, *Jus Sanguinis*) and 7-Pillar Preponderance Matrix.
-3. `2_Canadian_Citizenship_Archival_Request_Packet.md` — Pre-formatted Certified Archival Orders (PANB/LAC) with attached digital reference scans and permalinks.
-4. `3_Archival_Research_Strategy.md` — Exhausted Digital Search Log, Parish Finding Aids, and One-Click Pre-Parameterized Search URLs.
-5. `4_IRCC_Application_Filing_Guide.md` — Form CIT 0001 Walkthrough, Photo Specifications (50x70mm), Fee Payments ($75 CAD), and **Printable Formal Submission Cover Letter Template**.
 ---
 
-## SECTION 4: 3-TIER ARCHIVAL IMAGES, TRIPARTITE DATES & MANDATORY AUDITING
+## SECTION 4: AUTOMATED EVIDENCE DASHBOARDS & QUALITY GATES
 
-### 1. 3-Tier Image Asset Lineage
-* **`-Master.jpg` (Tier 1)**: Pristine, unaltered archival scan / DeepZoom tile stitch with cryptographic SHA-256 verification.
-* **`-Display.jpg` (Tier 2)**: Contrast-normalized, paper tone preserved for Markdown UI embeds (`![[Sources/...-Display.jpg\|750]]`).
-* **`-Inference.jpg` (Tier 3)**: Maximally binarized, background-pedestal-stripped raster for machine vision / OCR extraction.
+* **Dynamic In-Page Evidence Queries**: All deliverable profiles query sources dynamically via `.base` code blocks:
+  ```markdown
+  ## 📄 Source Documents & Archival Evidence
 
-### 2. Tripartite Date Precedence
-1. **`event_date`**: Exact vital occurrence date. Strictly governs profile vital statistics.
-2. **`registration_date`**: Date recorded with municipal/church registrar.
-3. **`issue_date`**: Certificate issuance/print stamp. Strictly prohibited from overriding `event_date`.
-
-### 3. Functional Unescaped WikiLinks Standard
-All citations in the 7-Pillar Preponderance Matrix and deliverable tables must use standard unescaped Obsidian WikiLinks (`[[Target\|Alias]]` without backslash) resolving to physical vault records.
-
-### 4. Mandatory Post-Processing Discrepancy Audit
-Every profile must execute `audit_and_reconcile_vital_discrepancies.py`, receiving `audit_tag: verified_empirical`, `audit_status: passed`, and explicit discrepancy reconciliation notes in `## ⚖️ Evidentiary Audit & Discrepancy Resolution`.
+  ```base
+  filters:
+    and:
+      - doc_type == "source"
+      - file.hasLink("Whalen, Patrick 1811-09-01.md")
+  views:
+    - type: table
+      name: Corroborating Evidence
+  ```
+  ```
+* **Pre-Flight Test Gate**: Prior to client dossier delivery, run `python3 _Meta/Tests/run_all_tests.py` and `python3 Common/_Meta/Tests/test_kern_publisher.py` to assert 0 tripwires, 0 broken links, and 100% DAG integrity.
 
