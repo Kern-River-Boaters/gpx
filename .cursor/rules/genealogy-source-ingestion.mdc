@@ -7,12 +7,12 @@ globs: *.md
 
 ---
 name: genealogy-source-ingestion
-description: Ingests raw genealogical source documents (PDFs, census images, birth/baptismal certificates, military registers) from Sources/_Inbox/ and online repositories, applies ADR-011 filename sanitization, performs visual statistical variance verification, integrates archival-vision-engine restoration, extracts general vital facts (occupations, religion, places lived, immigration), and enforces universal bidirectional atomic linking per SOP-GEN-002, ADR-013, ADR-020, ADR-021, and SOP-GEN-008.
+description: Ingests raw genealogical source documents (PDFs, census images, birth/baptismal certificates, military registers) from Sources/_Inbox/ and online repositories, applies ADR-011 filename sanitization, performs visual statistical variance verification, integrates archival-vision-engine restoration, extracts general vital facts (occupations, religion, places lived, immigration), enforces universal bidirectional atomic linking, formats canonical companion source Markdown notes with doc_type: source, and strictly enforces table WikiLink pipe escaping per ADR-023 and SOP-GEN-010.
 ---
 
 # 🏛️ Genealogical Source Ingestion & Epistemic Provenance Standard
 
-Governed under **ADR-002 (Zero-Cruft)**, **ADR-020/021 (Tri-Asset Archival Vision)**, and **ADR-036 (Level 4 Provenance)**.
+Governed under **ADR-002 (Zero-Cruft)**, **ADR-020/021 (Tri-Asset Archival Vision)**, **ADR-023 (Standardized Source Frontmatter & Table Pipe Escaping)**, and **SOP-GEN-010**.
 
 ---
 
@@ -27,31 +27,88 @@ Governed under **ADR-002 (Zero-Cruft)**, **ADR-020/021 (Tri-Asset Archival Visio
 
 ---
 
-## 📋 2. Universal Fact & Signal Extraction Taxonomy
+## 📄 2. Canonical Companion Note Frontmatter (`doc_type: source`)
 
-Every ingested primary document extracts:
-* **Honorific Signals**: Isolate `titles_and_honorifics` (`Capt.`, `Rev.`, `Esq.`, `Hon.`, `Deacon`, `Col.`, `Judge`, `Dr.`).
-* **Occupational Tripwires**: Check professions requiring citizenship (Homesteaders under 1862 Act, Sheriffs, Tavern Licensees, Elected Officials).
-* **Socioeconomic Wealth Tracking**: Extract Real Estate Value, Personal Estate Value (1850-1870 Censuses), and 1930 Radio Ownership (`R`).
-* **Inter-Censal Gap Bridging**: Extract City Directory annual residence and `"widow of [Name]"` entries.
-* **Geopolitical Normalization**: Map archaic jurisdictions (`Canada East` $\rightarrow$ Quebec, `Canada West` $\rightarrow$ Ontario).
+Every archival asset holding in `Sources/` is defined by a canonical `.md` note with 84 typed properties registered in `.obsidian/types.json`:
 
+```yaml
 ---
-
-## 🛡️ 3. Non-Destructive Conflict Resolution (Zero Silent Overwrites)
-* When primary evidence conflicts with legacy human-entered properties, inject an epistemic discrepancy audit table:
-```markdown
-## 🔍 Epistemic Discrepancy & Verification Audit
-| Field | Human-Curated Value | Primary Source Value | Ground-Truth Document | Resolution & Confidence |
-| :--- | :--- | :--- | :--- | :--- |
+doc_type: source
+id: SRC-CENS-1900-1900_CENSUS_CALAIS
+title: 1900 US Federal Census - Calais ME
+description: Primary genealogical holding for 1900 US Federal Census documenting John Warren Whalen family in Calais, Maine.
+tags:
+  - topic/genealogy
+  - topic/census
+  - provenance/primary_facsimile
+created: '2026-08-30'
+updated: '2026-08-30'
+status: verified
+version: '1.0'
+source_type: census
+people:
+  - '[[People/W/Whalen/Whalen, John Warren 1860-08-12|John Warren Whalen]]'
+  - '[[People/W/Whalen/Whalen, Hollis Vernon 1898-12-14|Hollis Vernon Whalen]]'
+event_date: '1900-06-01'
+year: 1900
+location: Calais, Washington County, Maine, USA
+repository: National Archives and Records Administration (NARA)
+portfolio:
+  - canadian_citizenship_chain_a
+quay: 3
+epistemic_tier: 'Tier 1: Primary Archival Facsimile'
+verification_status: verified_empirical
+media_file: '[[Sources/Census/1900-Census-CalaisME-JohnWWhalenFamily-Page1-Display.jpg]]'
+master_asset: '[[Sources/Census/1900-Census-CalaisME-JohnWWhalenFamily-Page1-Master.jpg]]'
+display_asset: '[[Sources/Census/1900-Census-CalaisME-JohnWWhalenFamily-Page1-Display.jpg]]'
+inference_asset: '[[Sources/Census/1900-Census-CalaisME-JohnWWhalenFamily-Page1-Inference.png]]'
+pdf_asset: '[[Sources/Census/1900-Census-CalaisME-JohnWWhalenFamily.pdf]]'
+sha256: 33223ae53240f98e7a7c95269007e8d56402f9d98fd642a63aca03e95018938a
+audit_tag: verified_empirical
+audit_date: '2026-08-30'
+audit_status: passed
+---
 ```
-* Telemetry emitted to `_Meta/Telemetry/Genealogy_Provenance_Ledger.jsonl`.
 
 ---
 
-## 🏛️ 4. 3-Tier Archival Images, Tripartite Dates & Audit Tags
+## 🧹 3. Strict Markdown Table WikiLink Pipe Escaping Standard
+
+* **Root Cause Invariant**: In Markdown table syntax, `|` is the cell delimiter. Embedding `[[Target|Alias]]` into a table cell splits the cell and creates phantom columns.
+* **Mandatory Table Syntax**: Inside any Markdown table row, ALL WikiLink alias pipes MUST be escaped as `[[Target\|Alias]]`.
+* **Frontmatter Invariant**: In YAML frontmatter, pipes MUST NEVER be backslash-escaped (`'[[Target|Alias]]'`).
+* **Automated Sentinel**: `_Meta/Scripts/sanitize_markdown_tables.py` audits and enforces 0 unescaped table pipes vault-wide.
+
+---
+
+## 🌳 4. Obsidian Bases Dynamic Evidence Dashboards
+
+Every person profile (`People/`) queries corroborating evidence dynamically using Bases-native syntax:
+```markdown
+## 📄 Source Documents & Archival Evidence
+
+```base
+filters:
+  and:
+    - doc_type == "source"
+    - file.hasLink("Whalen, Hollis Vernon 1898-12-14.md")
+views:
+  - type: table
+    name: Corroborating Evidence
+    order:
+      - year
+      - source_type
+      - file.name
+      - repository
+```
+```
+
+---
+
+## 🏛️ 5. 3-Tier Archival Images, Tripartite Dates & Audit Tags
+
 * **3-Tier Image Lineage**: Every scan maintains `-Master.jpg` (pristine bitstream), `-Display.jpg` (Markdown embed), and `-Inference.jpg` (Sauvola-binarized machine vision input).
 * **Tripartite Date Hierarchy**: `event_date` > `registration_date` > `issue_date`. Certificate issuance dates never override event dates.
 * **4-Tier Hierarchical Geocoding**: Requires `city_town`, `county_parish`, `state_province`, `country_sovereignty`.
-* **Mandatory Post-Processing Audit Tags**: Every ingested profile is stamped with `audit_tag: verified_empirical`, `audit_date: YYYY-MM-DD`, `audit_status: passed`, and discrepancy resolutions.
+* **Zero Synthetic Evidence Prohibition**: Agents are strictly forbidden from generating artificial canvas/PIL mock certificates. All evidence must be genuine empirical archival scans.
 
