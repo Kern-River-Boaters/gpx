@@ -77,7 +77,7 @@ media_file: '[[1900-Census-CalaisME-JohnWWhalenFamily-Page1-Display.jpg]]'
 master_asset: '[[1900-JohnWWhalen-US-Census-p1-line97.jpg]]'
 display_asset: '[[1900-Census-CalaisME-JohnWWhalenFamily-Page1-Display.jpg]]'
 inference_asset: '[[1900-Census-CalaisME-JohnWWhalenFamily-Page1-Inference.png]]'
-pdf_asset: '[[1900-Census-CalaisME-JohnWWhalenFamily.pdf]]'
+pdf_asset: '`1900-Census-CalaisME-JohnWWhalenFamily.pdf`'
 sha256: 33223ae53240f98e7a7c95269007e8d56402f9d98fd642a63aca03e95018938a
 audit_tag: verified_empirical
 audit_date: '2026-08-31'
@@ -89,10 +89,10 @@ audit_status: passed
 
 ## 🛡️ 4. Mandatory Rules & Invariants
 
-1. **Basename WikiLinks Only**: ALWAYS use clean file basenames (`[[Whalen, Patrick 1811-09-01|Patrick Whalen]]` and `[[Asset.pdf]]`). NEVER use path prefixes (`[[...]]` or `[[...]]`).
-2. **Escaped Table Pipes**: Inside Markdown tables, all alias pipes MUST be escaped as `[[Target\|Alias]]`.
+1. **Basename WikiLinks Only**: ALWAYS use clean file basenames (`[[Whalen, Patrick 1811-09-01|Patrick Whalen]]` and ``Asset.pdf``). NEVER use path prefixes (``...`` or ``...``).
+2. **Escaped Table Pipes**: Inside Markdown tables, all alias pipes MUST be escaped as ``Alias``.
 3. **Strict Portfolio Scoping & Friend Data Separation**:
-   - `Genealogy` vault is strictly reserved for family members (Pino / Whalen / Leslie / Dudley / Dunklee / Rexach / Serra).
+   - 'Genealogy' vault is strictly reserved for family members (Pino / Whalen / Leslie / Dudley / Dunklee / Rexach / Serra).
    - Commercial/friend client data (`Kamas`, `Nary`) is 100% excluded from `Genealogy` and maintained in standalone client vaults.
 4. **Zero Synthetic Artifacts**: Synthetic images, mock microfilms, and simulated stamp badges are strictly forbidden.
 5. **Atomic Verification Gate**: Run `python3 _Meta/Tests/run_all_tests.py` and `python3 Common/_Meta/Tests/test_kern_publisher.py` to assert 0 broken links and 100% compliance.

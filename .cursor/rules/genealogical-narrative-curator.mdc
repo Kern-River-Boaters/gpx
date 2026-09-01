@@ -33,7 +33,7 @@ graph TD
 * **Living Oral Memory Integration (SOP-GEN-005):** Personal testimonies and authentic family memories (e.g. assisting Father Enrique Rexach during Maryland Masses) form primary qualitative provenance and must be woven seamlessly into the narrative tapestry.
 * **Anti-Hagiography / Humble Framing:** Do not place any living individual in an exaggerated heroic role. Frame contemporary challenges through observational, generational wisdom.
 * **Deep Lineage Integrity (SOP-GEN-001):** When connecting medieval or early modern figures (e.g. 13th-century knights) to 16th/17th-century descendants, always insert a generational transmission node to prevent chronological compression.
-* **Interactive WikiLinks:** Every major figure mentioned must be hyperlinked with Obsidian `[[WikiLink]]` syntax pointing to their canonical note in `People/`.
+* **Interactive WikiLinks:** Every major figure mentioned must be hyperlinked with Obsidian ``WikiLink`` syntax pointing to their canonical note in `People/`.
 
 ## 4. Execution Tools
 Run the narrative curation engine to audit and validate all narratives:

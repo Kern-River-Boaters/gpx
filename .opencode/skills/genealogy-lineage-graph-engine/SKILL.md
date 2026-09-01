@@ -23,7 +23,7 @@ This skill governs the generation, maintenance, and verification of dynamic fami
 - **ADR-GEN-018**: Generalized Lineage Path Tracing, In-Place Navigation, and Universal Accessibility Standard for Open-Source Family Tree Visualizers.
 - **ADR-045**: High-Performance Publisher Architecture, In-Memory Vault Indexing, and Zero-Latency Client SPA Routing.
 - **SOP-GEN-006**: Dynamic Family Tree Graph Governance and Record Provisioning.
-- **Engine Implementation**: [[genealogy_graph_engine.js`]] (Universal Base Engine) & [[kern_publisher.py`]] (FastAPI Publisher).
+- **Engine Implementation**: `genealogy_graph_engine.js`` (Universal Base Engine) & `kern_publisher.py`` (FastAPI Publisher).
 
 ---
 
@@ -80,7 +80,7 @@ Flags represent strictly **legal nationality**, not physical location of residen
 Before declaring completion of any lineage edits, profile creations, or publisher service changes:
 1. **Pre-Flight Test Suite**:
    ```bash
-   python3 [[test_kern_publisher.py]]
+   python3 `test_kern_publisher.py`
    ```
    *Must pass all 11 unit tests with 100% OK.*
 2. **Vault DAG & Symmetry Sentinel**:

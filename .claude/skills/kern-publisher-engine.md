@@ -17,8 +17,8 @@ Kern Obsidian Web (`kern_publisher.py` on Port 8095) serves as the primary high-
 - **ADR-029**: Kern Federated UI Design System, Glassmorphic Styling Standard, and Universal Theme Engine.
 - **ADR-045**: High-Performance Publisher Architecture, In-Memory Vault Indexing, and Zero-Latency Client SPA Routing.
 - **Genealogy ADR-GEN-016**: Bidirectional Lineage Pointer Symmetry, Dual-Hemisphere Radial Lineage Visualizers, and Publisher Pre-Flight Test Harness.
-- **Publisher Script**: [[kern_publisher.py`]]
-- **Unit Test Suite**: [[test_kern_publisher.py`]]
+- **Publisher Script**: `kern_publisher.py``
+- **Unit Test Suite**: `test_kern_publisher.py``
 
 ---
 
@@ -27,11 +27,11 @@ Kern Obsidian Web (`kern_publisher.py` on Port 8095) serves as the primary high-
 All note rendering and WikiLink resolution in Kern Publisher MUST adhere to strict sub-20ms SLAs:
 
 ### A. In-Memory Vault File Indexing
-- `find_vault_file()` MUST resolve targets via `_VAULT_FILE_INDEX` ($O(1)$ memory map with 180s TTL) rather than recursive filesystem `rglob()` traversals.
+- 'find_vault_file()' MUST resolve targets via `_VAULT_FILE_INDEX` ($O(1)$ memory map with 180s TTL) rather than recursive filesystem `rglob()` traversals.
 - Target lookups map `filename.lower()`, `relative_path.lower()`, and `stem.lower()` to exact paths in $< 1\,\mu	ext{s}$.
 
 ### B. LRU WikiLink Target Resolution
-- `resolve_wikilink_target_url()` MUST remain decorated with `@lru_cache(maxsize=8192)` to guarantee instantaneous repeat pointer resolution.
+- 'resolve_wikilink_target_url()' MUST remain decorated with `@lru_cache(maxsize=8192)` to guarantee instantaneous repeat pointer resolution.
 
 ### C. Early-Exit Preprocessor Guards
 - Every markdown preprocessor (`preprocess_base_blocks`, `preprocess_family_tree_blocks`, `preprocess_leaflet_blocks`, `preprocess_mermaid`) MUST check for code block existence via substring matching prior to running regex or disk queries:
@@ -39,7 +39,7 @@ All note rendering and WikiLink resolution in Kern Publisher MUST adhere to stri
   if "```base" not in text:
       return text
   ```
-- `load_vault_notes(vault)` MUST remain cached with a 300s TTL (`_VAULT_NOTES_CACHE`).
+- 'load_vault_notes(vault)' MUST remain cached with a 300s TTL (`_VAULT_NOTES_CACHE`).
 
 ---
 
@@ -57,7 +57,7 @@ The browser reader experience utilizes a zero-latency client navigation engine:
 Before deploying modifications to `kern_publisher.py` or restarting the service, agents MUST execute the 11-unit test suite:
 
 ```bash
-python3 [[test_kern_publisher.py]]
+python3 `test_kern_publisher.py`
 ```
 
 ### SLA Requirements:

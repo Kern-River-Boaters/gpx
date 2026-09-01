@@ -63,7 +63,7 @@ Flag any appearance of the following occupations to pinpoint the naturalization 
 * **Canadian-Citizenship Vault**: Dedicated scoped projection for Lisa Michelle Phillips (Chain A Whalen lineage).
 * **Friend Client Vaults (`Kamas`, `Nary`)**: Standalone commercial/friend client repositories completely isolated from the master `Genealogy` vault. Zero Kamas or Nary client data may exist in `Genealogy`.
 * **Zero Technical Jargon / Governance Cruft:** AI agents and scripts are **strictly prohibited** from including Architecture Decision Records (ADRs), Standard Operating Procedures (SOPs), developer skill codes, or internal telemetry within client deliverable repositories.
-* **Basename WikiLinks Only**: All links in client vaults resolve via clean basenames (`[[Whalen, Patrick 1811-09-01|Patrick Whalen]]` and `[[Asset.pdf]]`) with 0 folder prefixes.
+* **Basename WikiLinks Only**: All links in client vaults resolve via clean basenames (`[[Whalen, Patrick 1811-09-01|Patrick Whalen]]` and ``Asset.pdf``) with 0 folder prefixes.
 
 ---
 

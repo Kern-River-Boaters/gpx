@@ -39,6 +39,6 @@ python3 _Meta/Scripts/discover_kinship_across_transcriptions.py --query "Romani"
 ## 🛡️ 3. Kinship Triangulation Invariants
 
 1. **Epistemic Provenance Rule**: Back-annotation must only occur if the extracted person unambiguously matches a vault profile or establishes a new corroborated candidate.
-2. **Table Pipe Escaping Invariant**: When adding newly discovered individuals to Layer 2 tables, table WikiLinks must escape pipes as `[[Target\|Alias]]`.
+2. **Table Pipe Escaping Invariant**: When adding newly discovered individuals to Layer 2 tables, table WikiLinks must escape pipes as ``Alias``.
 3. **Reciprocal Pointer Invariance**: Ensure newly discovered family connections are reflected in bidirectional frontmatter pointers.
 

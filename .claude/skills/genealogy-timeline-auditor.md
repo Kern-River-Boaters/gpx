@@ -16,7 +16,7 @@ Perform systematic quality checks across all profiles in `People/` to detect chr
 1. **Chronological Sanity**: Parent birth date must precede child birth date by at least 12 years.
 2. **Lifespan Sanity**: Birth date must precede death date; lifespan should not exceed 115 years without explicit proof note.
 3. **Missing Vital Statistics**: Flag profiles lacking both birth and death dates/places.
-4. **Unlinked Relatives**: Detect named relatives in text/frontmatter without valid `[[WikiLinks]]`.
+4. **Unlinked Relatives**: Detect named relatives in text/frontmatter without valid ``WikiLinks``.
 5. **WikiLink Resolution**: Detect broken WikiLinks targeting non-existent note titles.
 
 ## Execution Command

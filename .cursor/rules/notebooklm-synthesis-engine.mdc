@@ -26,9 +26,9 @@ The NotebookLM engine operates via authenticated headless session storage state:
 * **Session State Path:** `~/.notebooklm/profiles/default/storage_state.json`
 * **Python Runtime:** `notebooklm-py` async client (`NotebookLMClient.from_storage(...)`)
 * **Reference Pipelines:**
-  * [[`Common/_Meta/Scripts/notebooklm_pipeline.py`]] (CLI runner & daily podcast RSS generator)
-  * [[`Common/_Meta/Tools/open_webui_notebooklm_tool.py`]] (Open WebUI tool adapter)
-  * [[`Notes/Lifestyle/Audio_Briefings/`]] (Target audio podcast repository)
+  * ``Common/_Meta/Scripts/notebooklm_pipeline.py`` (CLI runner & daily podcast RSS generator)
+  * ``Common/_Meta/Tools/open_webui_notebooklm_tool.py`` (Open WebUI tool adapter)
+  * ``Notes/Lifestyle/Audio_Briefings/`` (Target audio podcast repository)
 
 ---
 
@@ -60,7 +60,7 @@ import asyncio
 from pathlib import Path
 
 # Add notebooklm package path
-sys.path.insert(0, '[[site-packages]]')
+sys.path.insert(0, '`site-packages`')
 from notebooklm import NotebookLMClient
 
 async def sync_bundle_to_notebooklm(notebook_title: str, bundle_file: Path):
@@ -119,6 +119,6 @@ graph TD
 For every client claim portfolio or strategic review:
 1. Ingest bundle using `sync_bundle_to_notebooklm(...)`.
 2. Trigger **`Generate Audio Overview`** in NotebookLM Studio.
-3. Download the generated `.mp3` into [[`Notes/Lifestyle/Audio_Briefings/`]].
+3. Download the generated `.mp3` into ``Notes/Lifestyle/Audio_Briefings/``.
 4. Deliver to client as an exclusive, white-glove **Executive Audio Briefing**.
 
