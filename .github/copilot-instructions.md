@@ -31,6 +31,7 @@ This workspace follows the governance standards defined in the Master ADR Index:
 - **moab-nas-appliance** (Common): [moab-nas-appliance](file:///home/jpino/Obsidian/Common/_Meta/Skills/moab-nas-appliance/SKILL.md)
 - **moab-windows-node** (Common): [moab-windows-node](file:///home/jpino/Obsidian/Common/_Meta/Skills/moab-windows-node/SKILL.md)
 - **mobile-termux-node** (Common): [mobile-termux-node](file:///home/jpino/Obsidian/Common/_Meta/Skills/mobile-termux-node/SKILL.md)
+- **notebooklm-synthesis-engine** (Genealogy): [notebooklm-synthesis-engine](file:///home/jpino/Obsidian/Genealogy/_Meta/Skills/notebooklm-synthesis-engine/SKILL.md)
 - **obsidian-bases** (Common): [obsidian-bases](file:///home/jpino/Obsidian/Common/_Meta/Skills/obsidian-bases/SKILL.md)
 - **obsidian-frontmatter-standard** (Common): [obsidian-frontmatter-standard](file:///home/jpino/Obsidian/Common/_Meta/Skills/obsidian-frontmatter-standard/SKILL.md)
 - **open-webui-iac** (Common): [open-webui-iac](file:///home/jpino/Obsidian/Common/_Meta/Skills/open-webui-iac/SKILL.md)
