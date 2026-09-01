@@ -74,7 +74,7 @@ quay: 3
 epistemic_tier: 'Tier 1: Primary Archival Facsimile'
 verification_status: verified_empirical
 media_file: '[[1900-Census-CalaisME-JohnWWhalenFamily-Page1-Display.jpg]]'
-master_asset: '[[1900-Census-CalaisME-JohnWWhalenFamily-Page1-Master.jpg]]'
+master_asset: '[[1900-JohnWWhalen-US-Census-p1-line97.jpg]]'
 display_asset: '[[1900-Census-CalaisME-JohnWWhalenFamily-Page1-Display.jpg]]'
 inference_asset: '[[1900-Census-CalaisME-JohnWWhalenFamily-Page1-Inference.png]]'
 pdf_asset: '[[1900-Census-CalaisME-JohnWWhalenFamily.pdf]]'
