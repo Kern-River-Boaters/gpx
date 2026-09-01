@@ -24,6 +24,7 @@ This workspace follows the governance standards defined in the Master ADR Index:
 - **keepass-security-audit** (Common): [keepass-security-audit](file:///home/jpino/Obsidian/Common/_Meta/Skills/keepass-security-audit/SKILL.md)
 - **kern-publisher-engine** (Genealogy): [kern-publisher-engine](file:///home/jpino/Obsidian/Genealogy/_Meta/Skills/kern-publisher-engine/SKILL.md)
 - **kern-reverse-proxy-sso** (Common): [kern-reverse-proxy-sso](file:///home/jpino/Obsidian/Common/_Meta/Skills/kern-reverse-proxy-sso/SKILL.md)
+- **mac-compute-node** (Genealogy): [mac-compute-node](file:///home/jpino/Obsidian/Genealogy/_Meta/Skills/mac-compute-node/SKILL.md)
 - **macbook-ubuntu-repair** (Common): [macbook-ubuntu-repair](file:///home/jpino/Obsidian/Common/_Meta/Skills/macbook-ubuntu-repair/SKILL.md)
 - **markdown-transport-sanitizer** (Common): [markdown-transport-sanitizer](file:///home/jpino/Obsidian/Common/_Meta/Skills/markdown-transport-sanitizer/SKILL.md)
 - **moab-nas-appliance** (Common): [moab-nas-appliance](file:///home/jpino/Obsidian/Common/_Meta/Skills/moab-nas-appliance/SKILL.md)
