@@ -19,6 +19,7 @@ This workspace follows the governance standards defined in the Master ADR Index:
 - **genealogy-portal-session-manager** (Genealogy): [genealogy-portal-session-manager](file:///home/jpino/Obsidian/Genealogy/_Meta/Skills/genealogy-portal-session-manager/SKILL.md)
 - **genealogy-source-ingestion** (Genealogy): [genealogy-source-ingestion](file:///home/jpino/Obsidian/Genealogy/_Meta/Skills/genealogy-source-ingestion/SKILL.md)
 - **genealogy-timeline-auditor** (Genealogy): [genealogy-timeline-auditor](file:///home/jpino/Obsidian/Genealogy/_Meta/Skills/genealogy-timeline-auditor/SKILL.md)
+- **genealogy-transcription-search-engine** (Genealogy): [genealogy-transcription-search-engine](file:///home/jpino/Obsidian/Genealogy/_Meta/Skills/genealogy-transcription-search-engine/SKILL.md)
 - **git-crypt-vault-safety** (Common): [git-crypt-vault-safety](file:///home/jpino/Obsidian/Common/_Meta/Skills/git-crypt-vault-safety/SKILL.md)
 - **hardware-routing-constraints** (Common): [hardware-routing-constraints](file:///home/jpino/Obsidian/Common/_Meta/Skills/hardware-routing-constraints/SKILL.md)
 - **keepass-security-audit** (Common): [keepass-security-audit](file:///home/jpino/Obsidian/Common/_Meta/Skills/keepass-security-audit/SKILL.md)
