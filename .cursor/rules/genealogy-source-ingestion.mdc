@@ -7,12 +7,12 @@ globs: *.md
 
 ---
 name: genealogy-source-ingestion
-description: "Ingests raw genealogical source documents (PDFs, census images, birth/baptismal certificates, military registers) from Sources/_Inbox/ and online repositories, applies ADR-011 filename sanitization, organizes holdings into the 7-folder archival taxonomy (Vital_Statistics, Census, Military, Land_and_Probate, Immigration_and_Passports, Microfilms, Published_Histories), enforces the Basename WikiLink Invariant with zero folder prefixes, enforces strict portfolio isolation, formats canonical companion source Markdown notes with doc_type: source, and strictly enforces table WikiLink pipe escaping per ADR-GEN-023 and SOP-GEN-010."
+description: "Ingests raw genealogical source documents (PDFs, census images, birth/baptismal certificates, military registers) from Sources/_Inbox/ and online repositories, applies ADR-GEN-026 space-free canonical naming, organizes holdings into the 2-tier archival taxonomy (Vital_Statistics/Births, Census/US, etc.), binds Tri-Tier assets (Master, Display, Inference) to a single markdown companion note, consolidates multi-page records into sequential Page 1/Page 2 layouts, enforces auto-aliasing, and enforces the Basename WikiLink Invariant per ADR-GEN-023 and SOP-GEN-011."
 ---
 
 # 🏛️ Genealogical Source Ingestion & Epistemic Provenance Standard
 
-Governed under **ADR-GEN-002 (Zero-Cruft)**, **ADR-GEN-019/021 (Tri-Asset Archival Vision)**, **ADR-GEN-023 (Standardized Source Frontmatter & Table Pipe Escaping)**, and **SOP-GEN-010**.
+Governed under **ADR-GEN-002 (Zero-Cruft)**, **ADR-GEN-021 (Tri-Asset Archival Vision)**, **ADR-GEN-023 (Standardized Source Frontmatter & Table Pipe Escaping)**, **ADR-GEN-026 (Canonical Space-Free Naming & Tri-Tier Master Preservation)**, and **SOP-GEN-011**.
 
 ---
 
@@ -27,71 +27,80 @@ Governed under **ADR-GEN-002 (Zero-Cruft)**, **ADR-GEN-019/021 (Tri-Asset Archiv
 
 ---
 
-## 📂 2. Seven-Category Archival Source Taxonomy
+## 📂 2. Two-Tier Archival Source Taxonomy
 
-All source holdings are organized into 7 standard repository categories:
-1. `Sources/Vital_Statistics/`: Birth, Marriage, Death, Baptismal, and Funeral certificates.
-2. `Sources/Census/`: US and Canadian decennial census sheets and enumerations.
-3. `Sources/Military/`: Service rolls, draft cards, pensions, and discharge records.
-4. `Sources/Land_and_Probate/`: Deeds, wills, probate inventories, and land settlements.
-5. `Sources/Immigration_and_Passports/`: Visas, passports, passenger manifests, and border crossings.
-6. `Sources/Microfilms/`: Authentic dual-asset archival film stitches (PANB, LAC, NARA).
-7. `Sources/Published_Histories/`: City directories, town reports, gazettes, and historical books.
+All source holdings are organized into standard 2-tier categorical subfolders:
+1. `Sources/Vital_Statistics/` (`Births/`, `Marriages/`, `Deaths/`, `Baptisms/`)
+2. `Sources/Census/` (`US/`, `Canada/`)
+3. `Sources/Military/`
+4. `Sources/Land_and_Probate/`
+5. `Sources/Immigration_and_Passports/`
+6. `Sources/Microfilms/`
+7. `Sources/Published_Histories/` (`Directories/`, `Town_Reports/`)
 
 ---
 
-## 🔗 3. Basename WikiLink Invariant & Canonical Note Frontmatter (`doc_type: source`)
+## 🏷️ 3. Deterministic Space-Free Canonical Naming (ADR-GEN-026)
 
-Every archival asset holding in `Sources/` is defined by a canonical `.md` companion note using **clean basenames** (zero directory prefixes):
+All companion notes and binary assets use this deterministic, space-free grammar (max 100 chars):
+```
+[YYYY-MM-DD]_[Category]_[Surname-GivenNames]_[EventDetail]_[Repository-Identifier]_[TierSuffix].[ext]
+```
+* **Zero Spaces Invariant**: Major fields separated by underscores `_`; compound tokens separated by hyphens `-`.
+* **Standard Tier Suffixes**:
+  * Pristine Master Scan: `_Master.jpg` / `.pdf` / `.tiff` (**WE ALWAYS KEEP MASTER**)
+  * Display Normalized Scan: `_Display.jpg` / `_Enhanced.jpg`
+  * Machine Inference Mask: `_Inference.png` / `_Inference.jpg`
+  * Multi-Page Exhibits: `_Page1.jpg`, `_Page2.jpg`
+  * Companion Note: `.md`
+
+---
+
+## 🔗 4. Canonical Note Frontmatter (`doc_type: source`) & Tri-Tier Binding
+
+All asset tiers (`_Master`, `_Display`, `_Inference`, `_PageN`) are bound to **ONE single companion note**:
 
 ```yaml
 ---
 doc_type: source
-id: SRC-CENS-1900-1900_CENSUS_CALAIS
-title: 1900 US Federal Census - Calais ME
-description: Primary genealogical holding for 1900 US Federal Census documenting John Warren Whalen family in Calais, Maine.
+id: URN-SRC-1900-US-CEN-001
+title: "1900 US Federal Census — John Warren Whalen Household (Calais, Maine)"
+aliases:
+  - "1900 Census John W Whalen"
+  - "1900 US Census Calais ME Whalen"
+event_date: '1900-06-01'
+country: United States
+state_province: Maine
+city: Calais
+repository: National Archives and Records Administration (NARA)
+repository_ref: T623 Roll 593 ED 186 Sheet 4A-4B
+master_asset: '[[1900-06-01_Census_Whalen-JohnWarren-Household_CalaisME_NARA-T623_Master.pdf]]'
+display_asset: '[[1900-06-01_Census_Whalen-JohnWarren-Household_CalaisME_NARA-T623_Display.jpg]]'
+inference_asset: '[[1900-06-01_Census_Whalen-JohnWarren-Household_CalaisME_NARA-T623_Inference.png]]'
+media_files:
+  - '[[1900-06-01_Census_Whalen-JohnWarren-Household_CalaisME_NARA-T623_Page1.jpg]]'
+  - '[[1900-06-01_Census_Whalen-JohnWarren-Household_CalaisME_NARA-T623_Page2.jpg]]'
+people:
+  - '[[Whalen, John Warren 1860-08-12|John Warren Whalen]]'
+  - '[[Dudley, Samantha Leighton 1860|Samantha Dudley]]'
+  - '[[Whalen, Hollis Vernon 1898-12-14|Hollis Vernon Whalen]]'
+quay: 3
+epistemic_tier: tier_1_vital_or_census
 tags:
   - topic/genealogy
   - topic/census
   - provenance/primary_facsimile
-created: '2026-08-30'
-updated: '2026-08-31'
-status: verified
-version: '1.0'
-source_type: census
-people:
-  - '[[Whalen, John Warren 1860-08-12|John Warren Whalen]]'
-  - '[[Whalen, Hollis Vernon 1898-12-14|Hollis Vernon Whalen]]'
-event_date: '1900-06-01'
-year: 1900
-location: Calais, Washington County, Maine, USA
-repository: National Archives and Records Administration (NARA)
-portfolio:
-  - canadian_citizenship_chain_a
-quay: 3
-epistemic_tier: 'Tier 1: Primary Archival Facsimile'
-verification_status: verified_empirical
-media_file: '[[1900-Census-CalaisME-JohnWWhalenFamily-Page1-Display.jpg]]'
-master_asset: '[[1900-JohnWWhalen-US-Census-p1-line97.jpg]]'
-display_asset: '[[1900-Census-CalaisME-JohnWWhalenFamily-Page1-Display.jpg]]'
-inference_asset: '[[1900-Census-CalaisME-JohnWWhalenFamily-Page1-Inference.png]]'
-pdf_asset: '`1900-Census-CalaisME-JohnWWhalenFamily.pdf`'
-sha256: 33223ae53240f98e7a7c95269007e8d56402f9d98fd642a63aca03e95018938a
-audit_tag: verified_empirical
-audit_date: '2026-08-31'
-audit_status: passed
 ---
 ```
 
 ---
 
-## 🛡️ 4. Mandatory Rules & Invariants
+## 🛡️ 5. Mandatory Rules & Invariants
 
-1. **Basename WikiLinks Only**: ALWAYS use clean file basenames (`[[Whalen, Patrick 1811-09-01|Patrick Whalen]]` and ``Asset.pdf``). NEVER use path prefixes (``...`` or ``...``).
+1. **Basename WikiLinks Only**: ALWAYS use clean file basenames (`[[Whalen, Patrick 1811-09-01|Patrick Whalen]]`). NEVER use folder path prefixes (`People/...`, `Sources/...`).
 2. **Escaped Table Pipes**: Inside Markdown tables, all alias pipes MUST be escaped as ``Alias``.
-3. **Strict Portfolio Scoping & Friend Data Separation**:
-   - 'Genealogy' vault is strictly reserved for family members (Pino / Whalen / Leslie / Dudley / Dunklee / Rexach / Serra).
-   - Commercial/friend client data (`Kamas`, `Nary`) is 100% excluded from `Genealogy` and maintained in standalone client vaults.
-4. **Zero Synthetic Artifacts**: Synthetic images, mock microfilms, and simulated stamp badges are strictly forbidden.
-5. **Atomic Verification Gate**: Run `python3 _Meta/Tests/run_all_tests.py` and `python3 Common/_Meta/Tests/test_kern_publisher.py` to assert 0 broken links and 100% compliance.
+3. **Strict Master Invariant**: Ingestion pipelines are strictly forbidden from deleting or replacing `_Master` scans.
+4. **Multi-Page Single Note Consolidation**: Consecutive folios/sheets of the same household/instrument are consolidated into a single companion note with sequential Page 1 / Page 2 OCR streams.
+5. **Zero Broken Links**: Unprofiled individuals are rendered as monospace plaintext `` `Given Surname` ``.
+6. **Atomic Verification Gate**: Run `python3 _Meta/Tests/run_all_tests.py` and `python3 _Meta/Tests/test_client_vault_dod.py` to assert 0 broken links, 0 uncanonical names, and 100% compliance.
 
