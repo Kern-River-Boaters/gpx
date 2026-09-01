@@ -119,3 +119,19 @@ When running `sync_vaults` on Overlook:
   - `sync_vaults --diff` (Inspect decrypted plaintext diffs and Gitea web links)
 
 
+
+## 💻 Overlook On-Site Mobile Rig & Three-Tier Compute Routing
+
+```mermaid
+flowchart LR
+    subgraph CLIENT["Overlook Client Node (MacBookPro11,5)"]
+        INBOX["Sources/_Inbox/"] --> T1["Tier 1: Local RapidOCR ONNX (1-2s)"]
+        T1 --> L2["Local Layer 2 Extraction"]
+    end
+
+    subgraph MESH["Tailscale Distributed Mesh Routing"]
+        L2 -->|Encrypted Mesh WireGuard| KERN["Kern Primary (Ryzen AI 9): Full DAG & Hermes Consensus"]
+        L2 -->|Opportunistic SSH| MAC["Mac Node Booster (Apple Vision Neural Engine)"]
+    end
+```
+

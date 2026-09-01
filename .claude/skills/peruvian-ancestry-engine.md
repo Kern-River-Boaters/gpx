@@ -77,6 +77,29 @@ description: Governs Peruvian ancestral research, RENIEC national civil registry
 - **ADR-GEN-013 / SOP-GEN-005:** 4-Quadrant Deep Archival Harvester Standard.
 - **SOP-GEN-009:** Overlook Field Harvesting & RENIEC Retrieval Standard.
 - **GEN-SOP-008:** Dual-Asset authentic scan ingestion standard (Pristine original + enhanced display).
+- **SOP-GEN-012:** FamilySearch Library Expedition & Restricted DGS Ingestion Protocol.
+
+---
+
+## 3. Peruvian Ancestry Ingestion & Retrieval Pipeline
+
+```mermaid
+flowchart TD
+    subgraph ARCHIVES["Peruvian National & Regional Repositories"]
+        R["RENIEC Online Digital Certificates (1944-Present)"]
+        ARA["Arequipa Civil Registration (1860-1996) DGS 004812850-004812890"]
+        AAL["Lima Archdiocesan Registers (1603-1992) DGS 004278100-004278150"]
+        AGN["AGN Notarial Protocols & Wills (Manuel Zegarra Series)"]
+    end
+
+    subgraph ENGINE["Forensic Ingestion & Discrepancy Engine"]
+        ARCHIVES --> OCR["RapidOCR / Hermes LLM Transcription"]
+        OCR --> FACTS["Layer 2 Fact Extraction & Padrinos Linking"]
+        FACTS --> DAG["Lineage Graph DAG Reconciliation"]
+        DAG --> BASE["Obsidian Dynamic Base Query Dashboards"]
+    end
+```
+
 
 
 
