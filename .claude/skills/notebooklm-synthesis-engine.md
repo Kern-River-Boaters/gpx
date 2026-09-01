@@ -4,30 +4,78 @@
 
 ---
 name: notebooklm-synthesis-engine
-description: Governs the discovery, source bundling, naming taxonomy, and adversarial evaluation of Google NotebookLM and Gemini notebooks across federated vaults for zero-token grounded synthesis and LLM-as-Judge reviews.
-version: 1.0.0
+description: Governs the discovery, source bundling, naming taxonomy, and adversarial evaluation of Google NotebookLM and Gemini notebooks across federated vaults for zero-token grounded synthesis, automated ingestion via notebooklm-py, and podcast generation under ADR-014.
+version: 1.1.0
 ---
 
 # 🧠 NotebookLM & Gemini Notebook Synthesis Engine
 
 ## 🏛️ Purpose & Scope
-This skill governs how AI agents discover, bundle, structure, and query **Google NotebookLM** notebooks and **Gemini Notebooks** across the workspace. Under the user's **Google One AI Premium (Ultra)** subscription, NotebookLM provides grounded, zero-token cost, long-context reasoning over complete document corpora with strict citation integrity.
+This skill governs how AI agents discover, bundle, structure, ingest, and query **Google NotebookLM** notebooks across the workspace. Under the user's **Google One AI Premium (Ultra)** subscription, NotebookLM provides grounded, zero-token cost, long-context reasoning over complete document corpora with strict citation integrity.
+
+It integrates directly with the authenticated Python infrastructure established in `Common/_Meta/Scripts/notebooklm_pipeline.py` and `notebooklm-py` using the persistent browser session state in `~/.notebooklm/profiles/default/storage_state.json`.
+
+---
+
+## 🔐 Authentication & Session Persistence Architecture
+
+The NotebookLM engine operates via authenticated headless session storage state:
+* **Session State Path:** `~/.notebooklm/profiles/default/storage_state.json`
+* **Python Runtime:** `notebooklm-py` async client (`NotebookLMClient.from_storage(...)`)
+* **Reference Pipelines:**
+  * [[`Common/_Meta/Scripts/notebooklm_pipeline.py`]] (CLI runner & daily podcast RSS generator)
+  * [[`Common/_Meta/Tools/open_webui_notebooklm_tool.py`]] (Open WebUI tool adapter)
+  * [[`Notes/Lifestyle/Audio_Briefings/`]] (Target audio podcast repository)
 
 ---
 
 ## 🏷️ Standard Notebook Naming & Discovery Taxonomy
 
-When creating, referencing, or syncing notebooks with NotebookLM, all agents MUST follow this standardized naming convention:
+When creating, referencing, or querying notebooks via the API, all agents MUST follow this standardized naming convention:
 
 ```
 [Domain] - [Project / Target] - NotebookLM Review Bundle
 ```
 
-### Standard Workspace Notebooks:
-* `Canadian Citizenship - Master Commercial & Proof Portfolio - NotebookLM Review Bundle`
-* `Peruvian Lineage - Archival Field Guide & DGS Sourcing - NotebookLM Review Bundle`
-* `Spanish Citizenship LMD - Archival Holdings & Legal Proof - NotebookLM Review Bundle`
-* `Obsidian Knowledge Engine - Architecture & System Governance - NotebookLM Review Bundle`
+### Standard Active Notebooks in Account:
+1. `Canadian Citizenship Proof-PaaS - Master Commercial & Strategy Suite` (ID: `541f948f-35ff-4d95-beaf-b6bded4f09da`)
+2. `Canadian Citizenship - Lisa Michelle Phillips Claim Portfolio` (ID: `315b64ae-eed3-48de-9f9e-24219b202537`)
+3. `Canadian Citizenship - Alan Kamas Diagnostic & Archival Target Portfolio` (ID: `711448a8-4961-4194-a0b7-f1bfa758980b`)
+4. `Canadian Citizenship - Michelle Nary Diagnostic & Archival Target Portfolio` (ID: `aaf12e55-1866-4e22-bf1e-e26c35f4cff6`)
+5. `Kern Obsidian Meta Studio` (ID: `8fd64eba-ecf9-4365-a6b9-eab1fb715fa9`)
+6. `Spanish Nationality Application by Option (Law 20/2022)` (ID: `009617e6-5012-4566-aad0-f8f882d75553`)
+
+---
+
+## 💻 Programmatic Ingestion & Audio Generation Snippet
+
+To create notebooks and ingest Markdown files programmatically from any agent or script:
+
+```python
+import sys
+import asyncio
+from pathlib import Path
+
+# Add notebooklm package path
+sys.path.insert(0, '[[site-packages]]')
+from notebooklm import NotebookLMClient
+
+async def sync_bundle_to_notebooklm(notebook_title: str, bundle_file: Path):
+    storage_path = Path.home() / '.notebooklm' / 'profiles' / 'default' / 'storage_state.json'
+    async with NotebookLMClient.from_storage(str(storage_path)) as client:
+        # Check if notebook exists or create
+        existing = await client.notebooks.list()
+        nb = next((n for n in existing if n.title == notebook_title), None)
+        if not nb:
+            nb = await client.notebooks.create(title=notebook_title)
+        
+        # Upload bundle
+        await client.sources.add_file(nb.id, str(bundle_file))
+        print(f"✅ Ingested {bundle_file.name} into Notebook {nb.id}")
+        
+        # Generate Audio Overview (Podcast)
+        # await client.artifacts.generate_audio(nb.id)
+```
 
 ---
 
@@ -61,19 +109,13 @@ graph TD
     A --> H["7. Open-Source GitHub Sponsors & Authority Flywheel"]
 ```
 
-1. **Business Viability & Pricing**: Stress-test margins, retainer crediting, and refund resistance.
-2. **Legal & UPL Compliance**: Verify statutory self-representation boundaries and lawyer add-on separation.
-3. **Client Conversion & Psychology**: Red-team marketing copy for clarity, trust, and objection handling.
-4. **B2B Law Firm Wholesale**: Evaluate law firm incentives, wholesale margins ($2,000 flat), and non-compete safety.
-5. **Operational Capacity**: Model 10-minute Erbs Road FamilySearch Center trip logistics under high caseload.
-6. **Trade Secret Moats**: Ensure zero leakage of OCR prompt weights, bilateral filter parameters, or scraping code.
-7. **Developer Authority**: Assess GitHub Sponsors placement and open-source brand equity.
-
 ---
 
-## 🎙️ Audio Overview (Deep Dive Podcast) Standard
+## 🎙️ Executive Audio Briefing (Podcast) Delivery Standard
 
-For every newly compiled project notebook in NotebookLM:
-1. Trigger **`Generate Audio Overview`** in NotebookLM Studio.
-2. The resulting 8–15 minute AI podcast should be listened to during mobile/commute sessions for high-level adversarial feedback and conversational synthesis.
+For every client claim portfolio or strategic review:
+1. Ingest bundle using `sync_bundle_to_notebooklm(...)`.
+2. Trigger **`Generate Audio Overview`** in NotebookLM Studio.
+3. Download the generated `.mp3` into [[`Notes/Lifestyle/Audio_Briefings/`]].
+4. Deliver to client as an exclusive, white-glove **Executive Audio Briefing**.
 
