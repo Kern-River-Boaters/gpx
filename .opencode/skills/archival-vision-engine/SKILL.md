@@ -147,3 +147,12 @@ math_res = validate_ledger_math(trans_res.structured_records)
 }
 ```
 
+---
+
+## 🛡️ Asset Lifecycle & Single Master Companion Note Binding (ADR-GEN-026 / ADR-GEN-027)
+
+1. **WE ALWAYS KEEP THE MASTER**: The pristine unaltered high-resolution scan (`_Master.jpg` or `.pdf`) is permanently preserved as the legal golden copy.
+2. **Single Markdown Companion Note Binding**: All asset tiers (`_Master.jpg`, `_Display.jpg`, `_Inference.png`, `_PageN.jpg`) and multi-page microfilm stitches are bound to **ONE single companion note** (`[BaseName].md`).
+3. **SQLite Vision Indexing**: Every processed asset is indexed into `_Meta/Cache/genealogy_provenance.sqlite` with its SHA-256 hash, physical path, and Layer 3 verbatim OCR transcription stream.
+4. **Absolute Ban on Synthetic Documents**: Generation of synthetic certificates, artificial stamps, or mock censuses via PIL, canvas, or AI generators is strictly prohibited.
+

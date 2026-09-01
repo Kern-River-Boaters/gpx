@@ -34,3 +34,8 @@ description: Governs proof verification, primary archival acquisition (PARES, Ar
 - **SOP-GEN-002:** Empathetic relational modeling and bridge synthesis.
 - **SOP-GEN-003 / SOP-GEN-004:** Anti-orphan discovery quarantine and dual-asset XML 1.0 retention.
 
+## 3. SQLite Provenance & Multi-Page Expediente Consolidation (ADR-GEN-026 / ADR-GEN-027)
+- **Single Companion Note for Military Expedientes**: Multi-sheet military service dossiers (*hojas de servicios*, tribunal rulings, and aviation logs) MUST be bound into **ONE single master companion note** (`[BaseName].md`) with sequential image embeds and transcriptions.
+- **FTS5 Bilingual Full-Text Search**: Leverage `_Meta/Cache/genealogy_provenance.sqlite` (`transcriptions_fts`) for sub-millisecond retrieval of Spanish military, ecclesiastical, and civil records.
+- **Sacred Oral History Safeguard**: Qualitative family accounts (e.g. Tío Enrique Rexach's ministry, Republican aviation memories) are permanent golden evidence protected under ADR-GEN-027.
+

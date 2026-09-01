@@ -87,3 +87,12 @@ Flag any appearance of the following occupations to pinpoint the naturalization 
   ```
 * **Pre-Flight Test Gate**: Prior to client dossier delivery, run `python3 _Meta/Tests/run_all_tests.py` and `python3 Common/_Meta/Tests/test_kern_publisher.py` to assert 0 tripwires, 0 broken links, and 100% DAG integrity.
 
+---
+
+## SECTION 5: SQLITE PROVENANCE & MULTI-PAGE DOSSIER CONSOLIDATION (ADR-GEN-026 / ADR-GEN-027)
+
+* **Single Companion Note Binding for Multi-Page IRCC Exhibits**: Multi-page census folios (Page 1 + Page 2), vital certificates with apostilles, and city directories MUST be bound to **ONE single master companion note** (`[BaseName].md`). Fracturing pages across separate notes is strictly prohibited.
+* **Empirical Attestation SSoT**: Frontmatter `people:` and SQLite `attestations` strictly link individuals directly attested in the document text. Pedigree bleed (dumping extended ancestral trees into vital notes) is forbidden to maintain pristine IRCC evidentiary value.
+* **Zero Asset Loss Invariant**: High-resolution Master scans (`_Master.jpg` or `.pdf`) and Display scans are permanently preserved and sequentially embedded in the master companion note.
+* **High-Speed Provenance Queries**: The Canadian Citizenship proof engine and IRCC compilation scripts query `_Meta/Cache/genealogy_provenance.sqlite` for instantaneous chain-of-custody verification.
+

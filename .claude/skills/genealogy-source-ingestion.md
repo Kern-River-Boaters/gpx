@@ -102,4 +102,6 @@ tags:
 4. **Multi-Page Single Note Consolidation**: Consecutive folios/sheets of the same household/instrument are consolidated into a single companion note with sequential Page 1 / Page 2 OCR streams.
 5. **Zero Broken Links**: Unprofiled individuals are rendered as monospace plaintext `` `Given Surname` ``.
 6. **Atomic Verification Gate**: Run `python3 _Meta/Tests/run_all_tests.py` and `python3 _Meta/Tests/test_client_vault_dod.py` to assert 0 broken links, 0 uncanonical names, and 100% compliance.
+7. **SQLite Pre-Flight Collision Sentinel**: Before creating a new companion note, query SQLite (`_Meta/Cache/genealogy_provenance.sqlite`) for an existing holding matching the same event/subject. If found, append the new asset tier/page to the existing master note instead of spawning duplicate stubs (`_1.md`). Rebuild the cache via `rebuild_sqlite_provenance_cache.py` after ingestion.
+8. **Empirical Attestation SSoT**: Frontmatter `people:` strictly links individuals directly attested in the primary text (Subject, Parents for births, Deceased/Informant for deaths, Groom/Bride for marriages). Grandparents and collateral relatives are forbidden.
 
