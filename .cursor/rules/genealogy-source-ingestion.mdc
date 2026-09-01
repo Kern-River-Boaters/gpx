@@ -27,7 +27,7 @@ Governed under **ADR-GEN-002 (Zero-Cruft)**, **ADR-GEN-021 (Tri-Asset Archival V
 
 ---
 
-## 📂 2. Two-Tier Archival Source Taxonomy
+## 📂 2. Two-Tier Archival Source Taxonomy (9 Top-Level Categories)
 
 All source holdings are organized into standard 2-tier categorical subfolders:
 1. `Sources/Vital_Statistics/` (`Births/`, `Marriages/`, `Deaths/`, `Baptisms/`)
@@ -37,6 +37,8 @@ All source holdings are organized into standard 2-tier categorical subfolders:
 5. `Sources/Immigration_and_Passports/`
 6. `Sources/Microfilms/`
 7. `Sources/Published_Histories/` (`Directories/`, `Town_Reports/`)
+8. `Sources/Personal_Papers_and_Artifacts/` (`Education/`, `Awards_and_Honors/`, `Correspondence/`, `Memorabilia/`)
+9. `Sources/Newspapers_and_Periodicals/` (`Obituaries/`, `Articles/`, `Clippings/`)
 
 ---
 
